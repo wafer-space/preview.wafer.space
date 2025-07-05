@@ -7,10 +7,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ### CRITICAL: Working Directory Verification
 **ALWAYS verify your current working directory before running any commands.** This repository has a complex architecture with theme submodules and various working directories. Always check `pwd` and ensure you're in the expected location:
 
-- **Main repository root**: `/home/tim/github/wafer-space/wafer-space.github.io/`
-- **Theme submodule**: `/home/tim/github/wafer-space/wafer-space.github.io/_theme/`
-- **Preview cleanup**: `/tmp/preview-cleanup/`
-- **Temporary directories**: `_tmp/preview-repo/`
+- **Main repository root**: `./` (top-level directory with _config.yml)
+- **Theme submodule**: `./_theme/` (contains Jekyll theme files)
+- **Preview cleanup**: `/tmp/preview-cleanup/` (temporary cleanup workspace)
+- **Temporary directories**: `_tmp/preview-repo/` (relative to repository root)
 
 Common mistakes:
 - Running Jekyll commands from wrong directory
@@ -20,7 +20,7 @@ Common mistakes:
 ### Environment Setup
 Set Ruby path before running any Jekyll commands:
 ```bash
-export PATH=$PATH:/home/tim/.local/share/gem/ruby/3.2.0/bin
+export PATH=$PATH:~/.local/share/gem/ruby/3.2.0/bin
 ```
 
 ### Essential Commands
