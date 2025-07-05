@@ -1,15 +1,15 @@
 {
   "pr_number": 3,
   "preview_url": "https://preview.wafer.space/pr-3/",
-  "timestamp": "2025-07-05T07:58:41+00:00",
+  "timestamp": "2025-07-05T08:02:05+00:00",
   "checks": {
     "http_response": {
       "status": "pass",
-      "details": "HTTP 200, Response time: 0.080906s"
+      "details": "HTTP 200, Response time: 0.078669s"
     },
     "baseurl_configuration": {
-      "status": "warn",
-      "details": "Baseurl configuration not detected (may use alternative method)"
+      "status": "pass",
+      "details": "JavaScript baseurl configuration found"
     },
     "content_site_title_present": {
       "status": "pass",
@@ -28,32 +28,32 @@
       "details": "Page title tag found"
     },
     "asset_bootstrap_min_css": {
-      "status": "fail",
-      "details": "bootstrap.min.css failed (HTTP 404) - /assets/css/bootstrap.min.css"
+      "status": "pass",
+      "details": "bootstrap.min.css loaded successfully"
     },
     "asset_plugins_css": {
-      "status": "fail",
-      "details": "plugins.css failed (HTTP 404) - /assets/css/plugins.css"
+      "status": "pass",
+      "details": "plugins.css loaded successfully"
     },
     "asset_settings_css": {
-      "status": "fail",
-      "details": "settings.css failed (HTTP 404) - /assets/revolution/css/settings.css"
+      "status": "pass",
+      "details": "settings.css loaded successfully"
     },
     "asset_layers_css": {
-      "status": "fail",
-      "details": "layers.css failed (HTTP 404) - /assets/revolution/css/layers.css"
+      "status": "pass",
+      "details": "layers.css loaded successfully"
     },
     "asset_navigation_css": {
-      "status": "fail",
-      "details": "navigation.css failed (HTTP 404) - /assets/revolution/css/navigation.css"
+      "status": "pass",
+      "details": "navigation.css loaded successfully"
     },
     "asset_type_css": {
-      "status": "fail",
-      "details": "type.css failed (HTTP 404) - /assets/type/type.css"
+      "status": "pass",
+      "details": "type.css loaded successfully"
     },
     "asset_style_css": {
-      "status": "fail",
-      "details": "style.css failed (HTTP 404) - /assets/css/style.css"
+      "status": "pass",
+      "details": "style.css loaded successfully"
     },
     "asset_sky_css": {
       "status": "pass",
@@ -64,72 +64,72 @@
       "details": "dark.css loaded successfully"
     },
     "asset_jquery_min_js": {
-      "status": "fail",
-      "details": "jquery.min.js failed (HTTP 404) - /assets/js/jquery.min.js"
+      "status": "pass",
+      "details": "jquery.min.js loaded successfully"
     },
     "asset_popper_min_js": {
-      "status": "fail",
-      "details": "popper.min.js failed (HTTP 404) - /assets/js/popper.min.js"
+      "status": "pass",
+      "details": "popper.min.js loaded successfully"
     },
     "asset_bootstrap_min_js": {
-      "status": "fail",
-      "details": "bootstrap.min.js failed (HTTP 404) - /assets/js/bootstrap.min.js"
+      "status": "pass",
+      "details": "bootstrap.min.js loaded successfully"
     },
     "asset_jquery_themepunch_tools_min_js": {
-      "status": "fail",
-      "details": "jquery.themepunch.tools.min.js failed (HTTP 404) - /assets/revolution/js/jquery.themepunch.tools.min.js"
+      "status": "pass",
+      "details": "jquery.themepunch.tools.min.js loaded successfully"
     },
     "asset_jquery_themepunch_revolution_min_js": {
-      "status": "fail",
-      "details": "jquery.themepunch.revolution.min.js failed (HTTP 404) - /assets/revolution/js/jquery.themepunch.revolution.min.js"
+      "status": "pass",
+      "details": "jquery.themepunch.revolution.min.js loaded successfully"
     },
     "asset_revolution_extension_actions_min_js": {
-      "status": "fail",
-      "details": "revolution.extension.actions.min.js failed (HTTP 404) - /assets/revolution/js/extensions/revolution.extension.actions.min.js"
+      "status": "pass",
+      "details": "revolution.extension.actions.min.js loaded successfully"
     },
     "asset_revolution_extension_carousel_min_js": {
-      "status": "fail",
-      "details": "revolution.extension.carousel.min.js failed (HTTP 404) - /assets/revolution/js/extensions/revolution.extension.carousel.min.js"
+      "status": "pass",
+      "details": "revolution.extension.carousel.min.js loaded successfully"
     },
     "asset_revolution_extension_kenburn_min_js": {
-      "status": "fail",
-      "details": "revolution.extension.kenburn.min.js failed (HTTP 404) - /assets/revolution/js/extensions/revolution.extension.kenburn.min.js"
+      "status": "pass",
+      "details": "revolution.extension.kenburn.min.js loaded successfully"
     },
     "asset_revolution_extension_layeranimation_min_js": {
-      "status": "fail",
-      "details": "revolution.extension.layeranimation.min.js failed (HTTP 404) - /assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"
+      "status": "pass",
+      "details": "revolution.extension.layeranimation.min.js loaded successfully"
     },
     "asset_revolution_extension_migration_min_js": {
-      "status": "fail",
-      "details": "revolution.extension.migration.min.js failed (HTTP 404) - /assets/revolution/js/extensions/revolution.extension.migration.min.js"
+      "status": "pass",
+      "details": "revolution.extension.migration.min.js loaded successfully"
     },
     "asset_revolution_extension_navigation_min_js": {
-      "status": "fail",
-      "details": "revolution.extension.navigation.min.js failed (HTTP 404) - /assets/revolution/js/extensions/revolution.extension.navigation.min.js"
+      "status": "pass",
+      "details": "revolution.extension.navigation.min.js loaded successfully"
     },
     "asset_revolution_extension_parallax_min_js": {
-      "status": "fail",
-      "details": "revolution.extension.parallax.min.js failed (HTTP 404) - /assets/revolution/js/extensions/revolution.extension.parallax.min.js"
+      "status": "pass",
+      "details": "revolution.extension.parallax.min.js loaded successfully"
     },
     "asset_revolution_extension_slideanims_min_js": {
-      "status": "fail",
-      "details": "revolution.extension.slideanims.min.js failed (HTTP 404) - /assets/revolution/js/extensions/revolution.extension.slideanims.min.js"
+      "status": "pass",
+      "details": "revolution.extension.slideanims.min.js loaded successfully"
     },
     "asset_revolution_extension_video_min_js": {
-      "status": "fail",
-      "details": "revolution.extension.video.min.js failed (HTTP 404) - /assets/revolution/js/extensions/revolution.extension.video.min.js"
+      "status": "pass",
+      "details": "revolution.extension.video.min.js loaded successfully"
     },
     "asset_plugins_js": {
-      "status": "fail",
-      "details": "plugins.js failed (HTTP 404) - /assets/js/plugins.js"
+      "status": "pass",
+      "details": "plugins.js loaded successfully"
     },
     "asset_simple-jekyll-search_min_js": {
-      "status": "fail",
-      "details": "simple-jekyll-search.min.js failed (HTTP 404) - /assets/js/simple-jekyll-search.min.js"
+      "status": "pass",
+      "details": "simple-jekyll-search.min.js loaded successfully"
     },
     "asset_scripts_js": {
-      "status": "fail",
-      "details": "scripts.js failed (HTTP 404) - /assets/js/scripts.js"
+      "status": "pass",
+      "details": "scripts.js loaded successfully"
     },
     "asset_favicon_png": {
       "status": "pass",
@@ -148,8 +148,8 @@
       "details": "logo-light.webp failed (HTTP 404) - /assets/images/logo-light.webp"
     },
     "asset_logo-light_webp": {
-      "status": "fail",
-      "details": "logo-light.webp failed (HTTP 404) - /assets/images/logo-light.webp"
+      "status": "pass",
+      "details": "logo-light.webp loaded successfully"
     },
     "link__": {
       "status": "pass",
@@ -165,7 +165,7 @@
     },
     "performance_load_time": {
       "status": "pass",
-      "details": "Load time acceptable: 0.080906s"
+      "details": "Load time acceptable: 0.078669s"
     },
     "security_xframe": {
       "status": "info",
