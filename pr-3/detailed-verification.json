@@ -1,0 +1,179 @@
+{
+  "pr_number": 3,
+  "preview_url": "https://preview.wafer.space/pr-3/",
+  "timestamp": "2025-07-05T07:58:41+00:00",
+  "checks": {
+    "http_response": {
+      "status": "pass",
+      "details": "HTTP 200, Response time: 0.080906s"
+    },
+    "baseurl_configuration": {
+      "status": "warn",
+      "details": "Baseurl configuration not detected (may use alternative method)"
+    },
+    "content_site_title_present": {
+      "status": "pass",
+      "details": "Site title present found"
+    },
+    "content_tagline_present": {
+      "status": "pass",
+      "details": "Tagline present found"
+    },
+    "content_valid_html_document": {
+      "status": "pass",
+      "details": "Valid HTML document found"
+    },
+    "content_page_title_tag": {
+      "status": "pass",
+      "details": "Page title tag found"
+    },
+    "asset_bootstrap_min_css": {
+      "status": "fail",
+      "details": "bootstrap.min.css failed (HTTP 404) - /assets/css/bootstrap.min.css"
+    },
+    "asset_plugins_css": {
+      "status": "fail",
+      "details": "plugins.css failed (HTTP 404) - /assets/css/plugins.css"
+    },
+    "asset_settings_css": {
+      "status": "fail",
+      "details": "settings.css failed (HTTP 404) - /assets/revolution/css/settings.css"
+    },
+    "asset_layers_css": {
+      "status": "fail",
+      "details": "layers.css failed (HTTP 404) - /assets/revolution/css/layers.css"
+    },
+    "asset_navigation_css": {
+      "status": "fail",
+      "details": "navigation.css failed (HTTP 404) - /assets/revolution/css/navigation.css"
+    },
+    "asset_type_css": {
+      "status": "fail",
+      "details": "type.css failed (HTTP 404) - /assets/type/type.css"
+    },
+    "asset_style_css": {
+      "status": "fail",
+      "details": "style.css failed (HTTP 404) - /assets/css/style.css"
+    },
+    "asset_sky_css": {
+      "status": "pass",
+      "details": "sky.css loaded successfully"
+    },
+    "asset_dark_css": {
+      "status": "pass",
+      "details": "dark.css loaded successfully"
+    },
+    "asset_jquery_min_js": {
+      "status": "fail",
+      "details": "jquery.min.js failed (HTTP 404) - /assets/js/jquery.min.js"
+    },
+    "asset_popper_min_js": {
+      "status": "fail",
+      "details": "popper.min.js failed (HTTP 404) - /assets/js/popper.min.js"
+    },
+    "asset_bootstrap_min_js": {
+      "status": "fail",
+      "details": "bootstrap.min.js failed (HTTP 404) - /assets/js/bootstrap.min.js"
+    },
+    "asset_jquery_themepunch_tools_min_js": {
+      "status": "fail",
+      "details": "jquery.themepunch.tools.min.js failed (HTTP 404) - /assets/revolution/js/jquery.themepunch.tools.min.js"
+    },
+    "asset_jquery_themepunch_revolution_min_js": {
+      "status": "fail",
+      "details": "jquery.themepunch.revolution.min.js failed (HTTP 404) - /assets/revolution/js/jquery.themepunch.revolution.min.js"
+    },
+    "asset_revolution_extension_actions_min_js": {
+      "status": "fail",
+      "details": "revolution.extension.actions.min.js failed (HTTP 404) - /assets/revolution/js/extensions/revolution.extension.actions.min.js"
+    },
+    "asset_revolution_extension_carousel_min_js": {
+      "status": "fail",
+      "details": "revolution.extension.carousel.min.js failed (HTTP 404) - /assets/revolution/js/extensions/revolution.extension.carousel.min.js"
+    },
+    "asset_revolution_extension_kenburn_min_js": {
+      "status": "fail",
+      "details": "revolution.extension.kenburn.min.js failed (HTTP 404) - /assets/revolution/js/extensions/revolution.extension.kenburn.min.js"
+    },
+    "asset_revolution_extension_layeranimation_min_js": {
+      "status": "fail",
+      "details": "revolution.extension.layeranimation.min.js failed (HTTP 404) - /assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"
+    },
+    "asset_revolution_extension_migration_min_js": {
+      "status": "fail",
+      "details": "revolution.extension.migration.min.js failed (HTTP 404) - /assets/revolution/js/extensions/revolution.extension.migration.min.js"
+    },
+    "asset_revolution_extension_navigation_min_js": {
+      "status": "fail",
+      "details": "revolution.extension.navigation.min.js failed (HTTP 404) - /assets/revolution/js/extensions/revolution.extension.navigation.min.js"
+    },
+    "asset_revolution_extension_parallax_min_js": {
+      "status": "fail",
+      "details": "revolution.extension.parallax.min.js failed (HTTP 404) - /assets/revolution/js/extensions/revolution.extension.parallax.min.js"
+    },
+    "asset_revolution_extension_slideanims_min_js": {
+      "status": "fail",
+      "details": "revolution.extension.slideanims.min.js failed (HTTP 404) - /assets/revolution/js/extensions/revolution.extension.slideanims.min.js"
+    },
+    "asset_revolution_extension_video_min_js": {
+      "status": "fail",
+      "details": "revolution.extension.video.min.js failed (HTTP 404) - /assets/revolution/js/extensions/revolution.extension.video.min.js"
+    },
+    "asset_plugins_js": {
+      "status": "fail",
+      "details": "plugins.js failed (HTTP 404) - /assets/js/plugins.js"
+    },
+    "asset_simple-jekyll-search_min_js": {
+      "status": "fail",
+      "details": "simple-jekyll-search.min.js failed (HTTP 404) - /assets/js/simple-jekyll-search.min.js"
+    },
+    "asset_scripts_js": {
+      "status": "fail",
+      "details": "scripts.js failed (HTTP 404) - /assets/js/scripts.js"
+    },
+    "asset_favicon_png": {
+      "status": "pass",
+      "details": "favicon.png loaded successfully"
+    },
+    "asset_logo-light_webp": {
+      "status": "fail",
+      "details": "logo-light.webp failed (HTTP 404) - /assets/images/logo-light.webp"
+    },
+    "asset_logo_webp": {
+      "status": "fail",
+      "details": "logo.webp failed (HTTP 404) - /assets/images/logo.webp"
+    },
+    "asset_logo-light_webp": {
+      "status": "fail",
+      "details": "logo-light.webp failed (HTTP 404) - /assets/images/logo-light.webp"
+    },
+    "asset_logo-light_webp": {
+      "status": "fail",
+      "details": "logo-light.webp failed (HTTP 404) - /assets/images/logo-light.webp"
+    },
+    "link__": {
+      "status": "pass",
+      "details": "Home page accessible"
+    },
+    "link__about.html": {
+      "status": "pass",
+      "details": "About page accessible"
+    },
+    "mobile_viewport": {
+      "status": "pass",
+      "details": "Viewport meta tag present"
+    },
+    "performance_load_time": {
+      "status": "pass",
+      "details": "Load time acceptable: 0.080906s"
+    },
+    "security_xframe": {
+      "status": "info",
+      "details": "X-Frame-Options header missing (may be handled by CDN)"
+    },
+    "security_content_type": {
+      "status": "info",
+      "details": "X-Content-Type-Options header missing (may be handled by CDN)"
+    }
+  }
+}
