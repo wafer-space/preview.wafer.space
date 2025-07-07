@@ -1,0 +1,17 @@
+
+
+^ Shuttle run      ^ Manifest GDoc                                ^ Chip ID CSV                                                                                                                               ^ Water image?  ^
+| GF180MCU MPW18H1 | N/A                                          | [[https://foss-eda-tools.googlesource.com/third_party/shuttle/gf180mcu/mpw-18h1/foundry/+/refs/heads/main/manifest-gfmpw-18h1.csv|Link]]  |               |
+| GF180MCU MPW0    | [https://bit.ly/gf180mcu-mpw0-manifest|Link] | [[https://foss-eda-tools.googlesource.com/third_party/shuttle/gf180mcu/mpw-000/foundry/+/refs/heads/main/manifest-gfmpw-0.csv|Link]]      |               |
+| GF180MCU MPW1    | [https://bit.ly/gf180mcu-mpw1-manifest|Link] | [[https://foss-eda-tools.googlesource.com/third_party/shuttle/gf180mcu/mpw-001/foundry/+/refs/heads/main/manifest-gfmpw-1.csv|Link]]      |               |
+| SKY130 MPW1      | [https://bit.ly/sky130-mpw1-manifest|Link]   | [[https://foss-eda-tools.googlesource.com/third_party/shuttle/sky130/mpw-001/foundry/+/refs/heads/main/manifest-mpw-001.csv|Link]]        |               |
+| SKY130 MPW2      | [https://bit.ly/sky130-mpw2-manifest|Link]   | [[https://foss-eda-tools.googlesource.com/third_party/shuttle/sky130/mpw-002/foundry/+/refs/heads/main/manifest-mpw-002.csv|Link]]        |               |
+| SKY130 MPW3      | [https://bit.ly/sky130-mpw3-manifest|Link]   | [[https://foss-eda-tools.googlesource.com/third_party/shuttle/sky130/mpw-003/foundry/+/refs/heads/main/manifest-mpw-003.csv|Link]]        |               |
+| SKY130 MPW4      | [https://bit.ly/sky130-mpw4-manifest|Link]   | [[https://foss-eda-tools.googlesource.com/third_party/shuttle/sky130/mpw-004/foundry/+/refs/heads/main/manifest-mpw-004.csv|Link]]        |               |
+| SKY130 MPW5      | [https://bit.ly/sky130-mpw5-manifest|Link]   | [[https://foss-eda-tools.googlesource.com/third_party/shuttle/sky130/mpw-005/foundry/+/refs/heads/main/manifest-mpw-005.csv|Link]]        |               |
+| SKY130 MPW6      | [https://bit.ly/sky130-mpw6-manifest|Link]   | [[https://foss-eda-tools.googlesource.com/third_party/shuttle/sky130/mpw-006/foundry/+/refs/heads/main/manifest-mpw-006.csv|Link]]        |               |
+| SKY130 MPW7      | [https://bit.ly/sky130-mpw7-manifest|Link]   | [[https://foss-eda-tools.googlesource.com/third_party/shuttle/sky130/mpw-007/foundry/+/refs/heads/main/manifest-mpw-007.csv|Link]]        |               |
+| SKY130 MPW8      | [https://bit.ly/sky130-mpw8-manifest|Link]   | [[https://foss-eda-tools.googlesource.com/third_party/shuttle/sky130/mpw-008/foundry/+/refs/heads/main/manifest-mpw-8.csv|Link]]          |               |
+
+
+
