@@ -1,0 +1,798 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta Tags-->
+  <meta charset="utf-8" />
+  <meta name="git-commit" content="ea90125c6abbfc232d0329691421d1f0268de7ae">
+<!-- Primary Meta Tags -->
+<title> How wafer.space works </title>
+<meta name="title" content=" How wafer.space works ">
+<meta name="description" content="
+         Budget silicon manufacturing.">
+
+  <!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wafer.space/pr-34/how">
+<meta property="og:title" content=" How wafer.space works ">
+<meta property="og:description" content="
+    Budget silicon manufacturing.">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://wafer.space/pr-34/how">
+<meta property="twitter:title" content=" How wafer.space works ">
+<meta property="twitter:description" content="
+    Budget silicon manufacturing.">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Dark Mode Init (Prevent Flash) -->
+  <!-- Dark Mode Initialization - Prevent Flash -->
+<script>
+  // This runs immediately to prevent flash of light mode
+  (function() {
+    // Check for saved theme preference first
+    var savedTheme = localStorage.getItem('theme');
+    var theme;
+    
+    if (savedTheme) {
+      // User has explicitly chosen a theme
+      theme = savedTheme;
+    } else {
+      // No saved preference, check system preference
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        theme = 'dark';
+      } else {
+        theme = 'light';
+      }
+    }
+    
+    // Apply theme immediately to html element
+    document.documentElement.setAttribute('data-theme', theme);
+    
+    // Also add a class to body when it's available
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark-mode-init');
+    }
+  })();
+</script>
+<style>
+  /* Critical dark mode styles to prevent flash */
+  [data-theme="dark"] body,
+  .dark-mode-init body {
+    background-color: #1a1a1a !important;
+    color: #e0e0e0;
+  }
+  
+  [data-theme="dark"],
+  .dark-mode-init {
+    background-color: #1a1a1a !important;
+  }
+</style>
+  <!-- Stylesheets-->
+  <link rel="shortcut icon" href="/pr-34/favicon.png" />
+<link rel="stylesheet" type="text/css" href="/pr-34/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/pr-34/assets/css/plugins.css" />
+<link rel="stylesheet" type="text/css" href="/pr-34/assets/revolution/css/settings.css" />
+<link rel="stylesheet" type="text/css" href="/pr-34/assets/revolution/css/layers.css" />
+<link rel="stylesheet" type="text/css" href="/pr-34/assets/revolution/css/navigation.css" />
+<link rel="stylesheet" type="text/css" href="/pr-34/assets/type/type.css" />
+<link rel="stylesheet" type="text/css" href="/pr-34/assets/css/style.css" />
+<!-- Global Color Scheme for all Pages-->
+
+
+<link rel="stylesheet" type="text/css" href="/pr-34/assets/css/color/sky.css">
+
+
+<!-- Dark Mode Support -->
+<link rel="stylesheet" type="text/css" href="/pr-34/assets/css/color/dark.css">
+<!-- Global Font Scheme font-->
+
+
+  <!-- Google Analytics-->
+  
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1JB9VZY864"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1JB9VZY864');
+</script>
+
+
+
+</head>
+<body >
+  <div class="content-wrapper">
+    <!--  Nav Name : Wide Header -->
+<nav
+  class="navbar wide  absolute transparent dark-wrapper inverse-text navbar-hover-opacity navbar-expand-lg nav-uppercase">
+  <div class="container-fluid flex-row justify-content-center">
+    <div class="navbar-brand" data-default-logo="white">
+      <!-- White Logo -->
+      <a href="/pr-34/"><img
+        src="/pr-34/assets/images/logo-light.webp"
+        srcset="/pr-34/assets/images/logo-light.webp 1x, /pr-34/assets/images/logo-light@2x.webp 2x"
+        class="logo-light "
+        alt="wafer.space - Budget silicon manufacturing" /></a>
+
+      <!-- Black Logo -->
+      <a href="/pr-34/"><img
+        src="/pr-34/assets/images/logo.webp"
+        srcset="/pr-34/assets/images/logo.webp 1x, /pr-34/assets/images/logo@2x.webp 2x"
+        class="logo-dark d-none"
+        alt="wafer.space - Budget silicon manufacturing" /></a>
+    </div>
+    <div class="navbar-other ms-auto order-lg-3">
+      <ul class="navbar-nav flex-row align-items-center" data-sm-skip="true">
+        <li class="nav-item">
+    <div class="navbar-hamburger d-lg-none d-xl-none ms-auto">
+        <button class="hamburger animate plain" data-bs-toggle="offcanvas-nav"><span></span></button>
+    </div>
+</li>
+
+      
+
+        
+
+      
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-other -->
+    <div class="navbar-collapse offcanvas-nav">
+      <div class="offcanvas-header d-lg-none d-xl-none">
+        <a href="/pr-34/">
+          <img src="/pr-34/assets/images/logo-light.webp"
+            srcset="/pr-34/assets/images/logo-light.webp 1x, /pr-34/assets/images/logo-light@2x.webp 2x"
+            alt="wafer.space - Budget silicon manufacturing" /></a>
+        <button class="plain offcanvas-close offcanvas-nav-close"><i class="jam jam-close"></i></button>
+      </div>
+      <ul
+        class="navbar-nav mx-auto" data-sm-skip-collapsible-behavior="true">
+        
+        
+        
+          <li class="nav-item">
+          <a class="nav-link" href="/pr-34/">Home</a>
+        </li>
+        
+        
+        
+        
+          <li class="nav-item">
+          <a class="nav-link" href="/pr-34/about.html">About</a>
+        </li>
+        
+        
+        
+        
+          <li class="nav-item">
+          <a class="nav-link" href="/pr-34/how.html">How</a>
+        </li>
+        
+        
+        
+        
+          <li class="nav-item">
+          <a class="nav-link" href="/pr-34/help.html">Help</a>
+        </li>
+        
+        
+        
+        
+          <li class="nav-item">
+          <a class="nav-link" href="/pr-34/news">News</a>
+        </li>
+        
+        
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+<!-- /.navbar -->
+<div class="offcanvas-info inverse-text">
+    <button class="plain offcanvas-close offcanvas-info-close"><i class="jam jam-close"></i></button>
+    <a href="/pr-34/">
+      <img src="/pr-34/assets/images/logo-light.webp"
+        srcset="/pr-34/assets/images/logo-light.webp 1x, /pr-34/assets/images/logo-light@2x.webp 2x"
+        class=" logo-light "
+        alt="wafer.space - Budget silicon manufacturing" />
+    </a>
+    <div class="space30"></div>
+    <p>Budget silicon manufacturing.</p>
+    <div class="space20"></div>
+    <div class="widget">
+      <h5 class="widget-title">Contact Info</h5>
+      <address> 143&nbsp;Cecil&nbsp;Street,<br />#17&#8209;04,&nbsp;GB&nbsp;Building,<br />Singapore 069542<div class="space20"></div>
+        <a href="mailto:info@wafer.space" class="nocolor"></a><br />
+        
+      </address>
+    </div>
+    <!-- /.widget -->
+    <div class="widget">
+      
+      <h3 class="widget-title">More</h3>
+      
+      <ul class="list-unstyled">
+        
+        <li><a href="/pr-34/" class="nocolor">Home</a></li>
+        
+        <li><a href="/pr-34/about.html" class="nocolor">About</a></li>
+        
+        <li><a href="/pr-34/news" class="nocolor">News</a></li>
+        
+        <li><a href="/pr-34/how.html" class="nocolor">How</a></li>
+        
+        <li><a href="/pr-34/help.html" class="nocolor">Help</a></li>
+        
+      </ul>
+    </div>
+    <!-- /.widget -->
+    <div class="widget">
+      
+      <ul class="social social-mute social-s ms-auto">
+        
+      </ul>
+    </div>
+    <!-- /.widget -->
+  </div>
+  <!-- /.offcanvas-info -->
+
+<!--header with image-->
+<div class="wrapper image-wrapper bg-image page-title-wrapper inverse-text" data-image-src=" /assets/images/header/mpw-one-partial-dice-top-1.jpg  ">
+  <div class="container inner text-center">
+    <div class="space90"></div>
+    <h1 class="page-title"> How wafer.space works </h1>
+    <p class="lead"> Low volume manufacturing for prototyping and production.
+ </p>
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /.wrapper -->
+
+
+<div class="wrapper light-wrapper">
+    <div class="container inner">
+        <h2 class="section-title mb-20">How wafer.space works</h2>
+        <p class="lead larger">wafer.space coordinates low volume semiconductor manufacturing - perfect for prototyping and small production runs.</p>
+        <div class="space20"></div>
+        
+        <!-- Star Map Visualization -->
+        <div class="star-map-container">
+            <div class="star-map" id="starMap">
+                <!-- Background stars -->
+                <div class="stars"></div>
+                
+                <!-- Manufacturing locations -->
+                <div class="location earth" data-step="1">
+                    <div class="location-icon">🌍</div>
+                    <div class="location-label">Your Project</div>
+                    <div class="location-sublabel">GDS Files</div>
+                </div>
+                
+                <div class="location wafer-space" data-step="2">
+                    <div class="location-icon">🏢</div>
+                    <div class="location-label">wafer.space</div>
+                    <div class="location-sublabel">Singapore</div>
+                </div>
+                
+                <div class="location globalfoundries" data-step="3">
+                    <div class="location-icon">🏭</div>
+                    <div class="location-label">GlobalFoundries</div>
+                    <div class="location-sublabel">Singapore Foundry</div>
+                </div>
+                
+                <div class="location delivery" data-step="4">
+                    <div class="location-icon">📦</div>
+                    <div class="location-label">Silicon Dies</div>
+                    <div class="location-sublabel">Delivered to You</div>
+                </div>
+                
+                <!-- Animated rockets -->
+                <div class="rocket-route route-1" data-from="earth" data-to="wafer-space">
+                    <svg class="rocket-svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M12 2 L10 6 L10 16 L14 16 L14 6 Z" fill="#4A90E2"/>
+                        <path d="M10 16 L8 20 L10 18 L14 18 L16 20 L14 16 Z" fill="#87CEEB"/>
+                        <circle cx="12" cy="9" r="2" fill="#FFD700"/>
+                        <path d="M12 14 L11 17 L12 16 L13 17 Z" fill="#FF6B6B"/>
+                    </svg>
+                    <div class="route-label">Project GDS</div>
+                </div>
+                
+                <div class="rocket-route route-2" data-from="wafer-space" data-to="globalfoundries">
+                    <svg class="rocket-svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M12 2 L10 6 L10 16 L14 16 L14 6 Z" fill="#4A90E2"/>
+                        <path d="M10 16 L8 20 L10 18 L14 18 L16 20 L14 16 Z" fill="#87CEEB"/>
+                        <circle cx="12" cy="9" r="2" fill="#FFD700"/>
+                        <path d="M12 14 L11 17 L12 16 L13 17 Z" fill="#FF6B6B"/>
+                    </svg>
+                    <div class="route-label">Mask GDS</div>
+                </div>
+                
+                <div class="rocket-route route-3" data-from="globalfoundries" data-to="delivery">
+                    <svg class="rocket-svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M12 2 L10 6 L10 16 L14 16 L14 6 Z" fill="#4A90E2"/>
+                        <path d="M10 16 L8 20 L10 18 L14 18 L16 20 L14 16 Z" fill="#87CEEB"/>
+                        <circle cx="12" cy="9" r="2" fill="#FFD700"/>
+                        <path d="M12 14 L11 17 L12 16 L13 17 Z" fill="#FF6B6B"/>
+                    </svg>
+                    <div class="route-label">Silicon Dies</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Manufacturing Process Steps -->
+        <div class="space40"></div>
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h3 class="section-title text-center mb-40">The Manufacturing Journey</h3>
+                
+                <div class="process-step" data-step="1">
+                    <div class="process-icon">📂</div>
+                    <div class="process-content">
+                        <h4>1. Submit Your Design</h4>
+                        <p>Upload your GDS files (Graphic Design System) to wafer.space. These files contain the complete layout of your integrated circuit design.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step" data-step="2">
+                    <div class="process-icon">🔧</div>
+                    <div class="process-content">
+                        <h4>2. Mask Preparation</h4>
+                        <p>wafer.space processes your design and creates optimized mask GDS files. These are sent to GlobalFoundries for photomask creation.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step" data-step="3">
+                    <div class="process-icon">🏭</div>
+                    <div class="process-content">
+                        <h4>3. Wafer Fabrication</h4>
+                        <p>GlobalFoundries creates photomasks and fabricates silicon wafers using their advanced 180nm GF180MCU process in Singapore.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step" data-step="4">
+                    <div class="process-icon">✂️</div>
+                    <div class="process-content">
+                        <h4>4. Die Cutting & Sorting</h4>
+                        <p>Wafers are precision-cut into individual silicon dies, tested for quality, and sorted for packaging and delivery.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step" data-step="5">
+                    <div class="process-icon">📦</div>
+                    <div class="process-content">
+                        <h4>5. Delivery</h4>
+                        <p>Your finished silicon dies are packaged and delivered directly to you, ready for integration into your products.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Benefits Section -->
+        <div class="space60"></div>
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h3 class="section-title mb-30">Why Choose wafer.space?</h3>
+                <div class="row">
+                    <div class="col-md-4 mb-30">
+                        <div class="feature-box">
+                            <div class="feature-icon">💰</div>
+                            <h5>Low Volume Manufacturing</h5>
+                            <p>Perfect for prototyping and small production runs without the overhead of large volume orders.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-30">
+                        <div class="feature-box">
+                            <div class="feature-icon">🚀</div>
+                            <h5>Rapid Prototyping</h5>
+                            <p>Get your designs manufactured quickly to validate concepts and iterate on your product development.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-30">
+                        <div class="feature-box">
+                            <div class="feature-icon">🏆</div>
+                            <h5>Professional Quality</h5>
+                            <p>Same high-quality GlobalFoundries fabrication process used by major semiconductor companies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.star-map-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 40px 0;
+}
+
+.star-map {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #eee, transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
+        radial-gradient(1px 1px at 90px 40px, #fff, transparent),
+        radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.6), transparent),
+        radial-gradient(2px 2px at 160px 30px, #eee, transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    animation: twinkle 6s linear infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+}
+
+.location {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 10;
+    transition: transform 0.3s ease;
+}
+
+.location:hover {
+    transform: scale(1.1);
+}
+
+.location-icon {
+    font-size: 40px;
+    margin-bottom: 8px;
+    animation: pulse 2s infinite;
+}
+
+.location-label {
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.location-sublabel {
+    color: #ccc;
+    font-size: 12px;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.earth {
+    top: 20%;
+    left: 10%;
+}
+
+.wafer-space {
+    top: 40%;
+    left: 40%;
+}
+
+.globalfoundries {
+    top: 25%;
+    right: 25%;
+}
+
+.delivery {
+    bottom: 20%;
+    right: 10%;
+}
+
+.rocket-route {
+    position: absolute;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rocket-svg {
+    animation: rocket-fly 8s linear infinite;
+    filter: drop-shadow(0 0 5px rgba(74, 144, 226, 0.5));
+}
+
+.route-label {
+    color: #87CEEB;
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: 4px;
+    background: rgba(0,0,0,0.7);
+    padding: 2px 6px;
+    border-radius: 10px;
+}
+
+.route-1 {
+    top: 30%;
+    left: 25%;
+    animation: route-1-path 12s linear infinite;
+}
+
+.route-2 {
+    top: 35%;
+    right: 35%;
+    animation: route-2-path 12s linear infinite 4s;
+}
+
+.route-3 {
+    top: 50%;
+    right: 20%;
+    animation: route-3-path 12s linear infinite 8s;
+}
+
+@keyframes route-1-path {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(100px, 50px) rotate(45deg); }
+    50% { transform: translate(200px, 100px) rotate(90deg); }
+    75% { transform: translate(100px, 50px) rotate(225deg); }
+    100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+@keyframes route-2-path {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(50px, -30px) rotate(30deg); }
+    50% { transform: translate(100px, -60px) rotate(60deg); }
+    75% { transform: translate(50px, -30px) rotate(210deg); }
+    100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+@keyframes route-3-path {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(-50px, 50px) rotate(-45deg); }
+    50% { transform: translate(-100px, 100px) rotate(-90deg); }
+    75% { transform: translate(-50px, 50px) rotate(135deg); }
+    100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+@keyframes rocket-fly {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.process-step {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    transition: background 0.3s ease;
+}
+
+.process-step:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+.process-icon {
+    font-size: 40px;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.process-content h4 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.process-content p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.feature-box {
+    padding: 30px 20px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.feature-box h5 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.feature-box p {
+    color: #666;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .star-map-container {
+        height: 400px;
+    }
+    
+    .location-icon {
+        font-size: 30px;
+    }
+    
+    .location-label {
+        font-size: 12px;
+    }
+    
+    .location-sublabel {
+        font-size: 10px;
+    }
+    
+    .process-step {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .process-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+</style>
+
+<!--how wrapper-->
+
+<!--wrapper how -->
+
+<!--wrapper video CTA-->
+
+<!--/.wrapper video CTA-->
+
+<!-- clients carousel wrapper-->
+
+<!--/.wrapper clients carousel-->
+
+<div class="space120"></div>
+
+<!--/.footer Wrapper-->
+<!-- footer with details v1 -->
+<footer class=" dark-wrapper inverse-text ">
+  <div class="container inner">
+    <div class="row">
+      <div class="col-md-12 col-lg-3 text-center text-lg-start">
+        <div class="widget">
+          <a href="https://wafer.space">
+            
+            
+              <img src="/pr-34/assets/images/logo-light.webp" srcset="/pr-34/assets/images/logo-light.webp 1x, /pr-34/assets/images/logo-light@2x.webp 2x" alt="wafer.space - Budget silicon manufacturing" />
+            
+          </a>
+          
+          <div class="space20"></div>
+          <p>Budget silicon manufacturing.</p>
+          
+        </div>
+        <!-- /.widget -->
+      </div>
+      <!-- /column -->
+      <div class="space30 d-lg-none d-xl-none"></div>
+      <div class="col-6 col-md-3 col-lg-2 offset-lg-1">
+        
+        <div class="widget">
+          
+          <ul class="list-unstyled mb-0">
+            
+          </ul>
+        </div>
+        <!-- /.widget -->
+      </div>
+      <!-- /column -->
+      <div class="col-6 col-md-3 col-lg-2">
+        
+        <div class="widget">
+          
+           <h5 class="widget-title">More</h5>
+          
+          <ul class="list-unstyled mb-0">
+            
+            <li><a href="/pr-34/">Home</a></li>
+            
+            <li><a href="/pr-34/about.html">About</a></li>
+            
+            <li><a href="/pr-34/news">News</a></li>
+            
+            <li><a href="/pr-34/how.html">How</a></li>
+            
+            <li><a href="/pr-34/help.html">Help</a></li>
+            
+          </ul>
+        </div>
+        <!-- /.widget -->
+      </div>
+      <!-- /column -->
+      <div class="col-6 col-md-3 col-lg-2">
+        
+        <div class="widget">
+          
+          <ul class="list-unstyled mb-0">
+            
+          </ul>
+        </div>
+        <!-- /.widget -->
+      </div>
+      <!-- /column -->
+      <div class="col-6 col-md-3 col-lg-2">
+        <div class="widget">
+          <h5 class="widget-title">Contact</h5>
+          
+          <address>143&nbsp;Cecil&nbsp;Street,<br />#17&#8209;04,&nbsp;GB&nbsp;Building,<br />Singapore 069542</address>
+          
+          <a href="mailto:info@wafer.space">info@wafer.space</a><br />
+           
+        </div>
+        <!-- /.widget -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+  <div class="container inner pt-0 pb-40 d-flex align-items-center">
+    <p class="mb-0 mr-auto">© 2025 Wafer Space PTE. LTD. All rights reserved.</p>
+    <ul class="social social-mute social-s ms-auto">
+      
+    </ul>
+  </div>
+</footer>
+
+
+  </div>
+  <!-- Site Scripts-->
+  <script src="/pr-34/assets/js/jquery.min.js"></script>
+<script src="/pr-34/assets/js/popper.min.js"></script>
+<script src="/pr-34/assets/js/bootstrap.min.js"></script>
+<script src="/pr-34/assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+<script src="/pr-34/assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+<script src="/pr-34/assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+<script src="/pr-34/assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+<script src="/pr-34/assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script src="/pr-34/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="/pr-34/assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+<script src="/pr-34/assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="/pr-34/assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="/pr-34/assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="/pr-34/assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+<script src="/pr-34/assets/js/plugins.js"></script>
+<script src="/pr-34/assets/js/simple-jekyll-search.min.js"></script>
+<script>
+  // Pass baseurl to JavaScript for search configuration
+  window.siteBaseurl = '/pr-34';
+</script>
+<script src="/pr-34/assets/js/scripts.js"></script>
+
+
+</body>
+<!-- Generated from git commit: ea90125c6abbfc232d0329691421d1f0268de7ae (ea90125c) -->
+</html>
