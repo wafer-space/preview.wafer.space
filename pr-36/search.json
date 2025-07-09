@@ -1,0 +1,30 @@
+[
+  
+    {
+      "title"    : "New wafer.space website",
+      "category" : "",
+      "tags"     : "travel",
+      "url"      : "/pr-36/news/website",
+      "date"     : "2025-04-19 04:00:00 +0000",
+      "desc"     : "New wafer.space website"
+    } ,
+  
+    {
+      "title"    : "Matt Venn Announces Tiny Tapeout Partnership at FSiC 2025",
+      "category" : "",
+      "tags"     : "fsic-2025, tiny-tapeout, matt-venn, collaboration, gf180mcu",
+      "url"      : "/pr-36/news/fsic-2025-tiny-tapeout-announcement/",
+      "date"     : "2025-01-20 00:00:00 +0000",
+      "desc"     : "Matt Venn Announces Tiny Tapeout Partnership at FSiC 2025"
+    } ,
+  
+    {
+      "title"    : "Tiny Tapeout Partnership: Your Gateway to Silicon",
+      "category" : "",
+      "tags"     : "tiny-tapeout, collaboration, silicon, education, pathway",
+      "url"      : "/pr-36/news/tiny-tapeout-partnership/",
+      "date"     : "2025-01-15 00:00:00 +0000",
+      "desc"     : "Tiny Tapeout Partnership: Your Gateway to Silicon"
+    } 
+  
+]
