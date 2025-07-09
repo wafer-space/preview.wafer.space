@@ -1162,7 +1162,6 @@ $(document).ready(function() {
       });
 
       // Dark mode functionality
-      const darkModeToggle = document.getElementById('darkModeToggle');
       const body = document.body;
       const html = document.documentElement;
       
@@ -1188,49 +1187,60 @@ $(document).ready(function() {
       }
       
       function updateThemeUI(theme) {
-        if (darkModeToggle) {
+        // Update all dark mode toggle buttons (original and cloned)
+        const darkModeToggles = document.querySelectorAll('#darkModeToggle');
+        darkModeToggles.forEach(toggle => {
           if (theme === 'dark') {
-            darkModeToggle.innerHTML = '<i class="icofont-sun"></i>';
-            darkModeToggle.setAttribute('aria-label', 'Switch to light mode');
+            toggle.innerHTML = '<i class="icofont-sun"></i>';
+            toggle.setAttribute('aria-label', 'Switch to light mode');
           } else {
-            darkModeToggle.innerHTML = '<i class="icofont-moon"></i>';
-            darkModeToggle.setAttribute('aria-label', 'Switch to dark mode');
+            toggle.innerHTML = '<i class="icofont-moon"></i>';
+            toggle.setAttribute('aria-label', 'Switch to dark mode');
           }
+        });
+      }
+      
+      function handleDarkModeToggle(e) {
+        const currentTheme = html.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        setTheme(newTheme, true); // User choice
+      }
+      
+      function handleDarkModeRightClick(e) {
+        e.preventDefault();
+        
+        // Clear user preference
+        localStorage.removeItem('theme');
+        
+        // Apply system preference
+        const systemTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        setTheme(systemTheme, false);
+        
+        // Show feedback
+        const tooltip = bootstrap.Tooltip.getInstance(e.target);
+        if (tooltip) {
+          tooltip.hide();
+          e.target.setAttribute('data-bs-original-title', 'Auto mode enabled');
+          tooltip.show();
+          setTimeout(() => {
+            e.target.setAttribute('data-bs-original-title', 'Click to toggle, right-click for auto');
+            tooltip.hide();
+          }, 2000);
         }
       }
       
-      // Toggle theme when button is clicked
-      if (darkModeToggle) {
-        darkModeToggle.addEventListener('click', function() {
-          const currentTheme = html.getAttribute('data-theme');
-          const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-          setTheme(newTheme, true); // User choice
-        });
-        
-        // Right-click to reset to auto (system preference)
-        darkModeToggle.addEventListener('contextmenu', function(e) {
-          e.preventDefault();
-          
-          // Clear user preference
-          localStorage.removeItem('theme');
-          
-          // Apply system preference
-          const systemTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-          setTheme(systemTheme, false);
-          
-          // Show feedback
-          const tooltip = bootstrap.Tooltip.getInstance(darkModeToggle);
-          if (tooltip) {
-            tooltip.hide();
-            darkModeToggle.setAttribute('data-bs-original-title', 'Auto mode enabled');
-            tooltip.show();
-            setTimeout(() => {
-              darkModeToggle.setAttribute('data-bs-original-title', 'Click to toggle, right-click for auto');
-              tooltip.hide();
-            }, 2000);
-          }
-        });
-      }
+      // Use event delegation to handle both original and cloned dark mode toggle buttons
+      document.addEventListener('click', function(e) {
+        if (e.target.closest('#darkModeToggle')) {
+          handleDarkModeToggle(e);
+        }
+      });
+      
+      document.addEventListener('contextmenu', function(e) {
+        if (e.target.closest('#darkModeToggle')) {
+          handleDarkModeRightClick(e);
+        }
+      });
       
       // Listen for system theme changes
       if (window.matchMedia) {
