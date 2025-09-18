@@ -78,6 +78,10 @@
 }
 
 /* Buttons */
+[data-theme="dark"] .btn {
+	color: white !important;
+}
+
 [data-theme="dark"] .btn-default {
 	background-color: var(--color-default);
 	border-color: var(--color-default);
