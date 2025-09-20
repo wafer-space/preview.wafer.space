@@ -3196,12 +3196,93 @@ ul.dial li:first-child .dial-item-info {
     font-size: 2.5rem;
     line-height: 1;
     font-weight: 400;
+    margin: 0;
 }
 .countdown p {
     font-size: 0.8rem;
-    margin-bottom: 1rem;
+    margin: 0;
+    padding: 0;
     line-height: 1;
     text-transform: uppercase;
+}
+.countdown .box {
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+}
+.countdown-wrapper {
+    flex-wrap: nowrap;
+    gap: 1rem;
+}
+.countdown-wrapper .countdown {
+    flex-shrink: 0;
+    max-width: none;
+}
+.countdown .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+.countdown .col-3 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+.countdown-button {
+    display: flex;
+    align-items: center;
+}
+.countdown-button-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.countdown-button-wrapper .button-label {
+    white-space: nowrap;
+    font-size: 0.85rem;
+}
+.countdown-box-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    height: auto;
+    width: 140px;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background-color: #5AB3E8 !important;
+    border-radius: 2rem;
+    padding: 1.2rem 1.5rem !important;
+}
+.countdown-box-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25) !important;
+    background-color: #4A9FD8 !important;
+}
+.countdown-box-btn .btn-icon {
+    font-size: 1.2rem;
+    color: #fff !important;
+    line-height: 1;
+}
+.countdown-box-btn .btn-text {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #fff !important;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    margin: 0;
+}
+@media (max-width: 991.98px) {
+    .countdown-wrapper {
+        flex-direction: column;
+    }
+    .countdown-button {
+        margin-left: 0 !important;
+        margin-top: 1.5rem;
+    }
 }
 /*-----------------------------------------------------------------------------------*/
 /*  40. TABS

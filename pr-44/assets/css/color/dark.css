@@ -169,6 +169,10 @@
 	background-color: var(--color-bg-secondary) !important;
 }
 
+[data-theme="dark"] .white-wrapper {
+	background-color: var(--color-bg-tertiary) !important;
+}
+
 [data-theme="dark"] .bg-white {
 	background-color: var(--color-bg-secondary) !important;
 }
@@ -291,6 +295,26 @@
 	color: var(--color-text-secondary);
 }
 
+/* Pricing panel specific overrides */
+[data-theme="dark"] .pricing.panel {
+	background-color: var(--color-card-bg) !important;
+}
+
+[data-theme="dark"] .pricing.panel .panel-title {
+	color: var(--color-text) !important;
+}
+
+[data-theme="dark"] .pricing.panel .prices,
+[data-theme="dark"] .pricing.panel .prices .price {
+	color: var(--color-text) !important;
+}
+
+[data-theme="dark"] .pricing.panel .table td {
+	color: var(--color-text-secondary) !important;
+	border-color: var(--color-border) !important;
+}
+
+
 /* Footer */
 [data-theme="dark"] .footer {
 	background-color: #0d0d0d;
@@ -323,6 +347,11 @@
 /* Icons */
 [data-theme="dark"] .icon {
 	background-color: var(--color-bg-tertiary);
+}
+
+/* Blob icons should not have backgrounds */
+[data-theme="dark"] .icon-blob {
+	background-color: transparent !important;
 }
 
 [data-theme="dark"] .icon.icon-bg {
