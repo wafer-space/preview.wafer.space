@@ -4,7 +4,7 @@
 <head>
   <!-- Meta Tags-->
   <meta charset="utf-8" />
-  <meta name="git-commit" content="2fb5daa28d62929da2ff2e0225042c8956bb99c4">
+  <meta name="git-commit" content="9831612da3adccaf987686b1c28f6b28338b12aa">
 <!-- Primary Meta Tags -->
 <title> Design Help </title>
 <meta name="title" content=" Design Help ">
@@ -119,7 +119,13 @@
 </head>
 <body >
   <div class="content-wrapper">
-    <!--  Nav Name : Wide Header -->
+    <style>
+  #provider-list {
+    display: flex;
+    flex-direction: column;
+  }
+</style>
+<!--  Nav Name : Wide Header -->
 <nav
   class="navbar wide  absolute transparent dark-wrapper inverse-text navbar-hover-opacity navbar-expand-lg nav-uppercase">
   <div class="container-fluid flex-row justify-content-center">
@@ -296,11 +302,14 @@
       <br><small class="text-muted"><em>Note: These services are not affiliated with or endorsed by wafer.space.
       Please contact them directly to discuss your project needs.</em></small>
     </p>
+    <div class="sr-only" aria-live="polite">
+      Provider order is randomized for fairness. Visual order may differ from screen reader order.
+    </div>
 
-    <div id="provider-list" style="display: flex; flex-direction: column;">
+    <div id="provider-list">
       
       
-        <div id="chipflow" class="box bg-white shadow mb-30 provider-item" data-provider-slug="chipflow">
+        <div id="chipflow" class="box bg-white shadow mb-30 provider-item">
   <div class="row">
     
     <div class="col-md-4">
@@ -359,7 +368,7 @@
   <!-- /.row -->
 </div>
       
-        <div id="mabrains" class="box bg-white shadow mb-30 provider-item" data-provider-slug="mabrains">
+        <div id="mabrains" class="box bg-white shadow mb-30 provider-item">
   <div class="row">
     
     <div class="col-md-4">
@@ -420,7 +429,7 @@
   <!-- /.row -->
 </div>
       
-        <div id="precision" class="box bg-white shadow mb-30 provider-item" data-provider-slug="precision">
+        <div id="precision" class="box bg-white shadow mb-30 provider-item">
   <div class="row">
     
     <div class="col-md-4">
@@ -490,7 +499,7 @@
   <!-- /.row -->
 </div>
       
-        <div id="slicesemi" class="box bg-white shadow mb-30 provider-item" data-provider-slug="slicesemi">
+        <div id="slicesemi" class="box bg-white shadow mb-30 provider-item">
   <div class="row">
     
     <div class="col-md-4">
@@ -597,9 +606,17 @@
             localStorage.setItem(SEED_KEY, seed);
           } else {
             seed = parseInt(seed, 10);
+            // Validate seed is a valid number in expected range
+            if (isNaN(seed) || seed <= 0 || seed >= LCG_MODULUS) {
+              seed = Math.floor(Math.random() * LCG_MODULUS);
+              localStorage.setItem(SEED_KEY, seed);
+            }
           }
         } catch (e) {
           // localStorage not available (private mode, etc.)
+          if (console && console.debug) {
+            console.debug('Failed to access localStorage for provider shuffle:', e);
+          }
           seed = Math.floor(Math.random() * LCG_MODULUS);
         }
 
@@ -623,6 +640,14 @@
         // Apply CSS order to each provider
         for (var i = 0; i < providers.length; i++) {
           providers[i].style.order = shuffledIndices[i];
+        }
+
+        // Re-scroll to hash target if present (fixes race condition)
+        if (window.location.hash) {
+          var target = document.getElementById(window.location.hash.substring(1));
+          if (target) {
+            target.scrollIntoView();
+          }
         }
       })();
     </script>
@@ -806,5 +831,5 @@
 
 
 </body>
-<!-- Generated from git commit: 2fb5daa28d62929da2ff2e0225042c8956bb99c4 (2fb5daa2) -->
+<!-- Generated from git commit: 9831612da3adccaf987686b1c28f6b28338b12aa (9831612d) -->
 </html>
