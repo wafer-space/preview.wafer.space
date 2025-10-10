@@ -4,7 +4,7 @@
 <head>
   <!-- Meta Tags-->
   <meta charset="utf-8" />
-  <meta name="git-commit" content="53e9a6d196ebd97cef8d745732d836393e4b5bdd">
+  <meta name="git-commit" content="2fb5daa28d62929da2ff2e0225042c8956bb99c4">
 <!-- Primary Meta Tags -->
 <title> Design Help </title>
 <meta name="title" content=" Design Help ">
@@ -559,15 +559,19 @@
       (function() {
         'use strict';
 
+        // LCG (Linear Congruential Generator) parameters - MINSTD
+        var LCG_MODULUS = 2147483647; // 2^31 - 1 (Mersenne prime)
+        var LCG_MULTIPLIER = 16807;
+
         // Seeded Random Number Generator (Linear Congruential Generator)
         function SeededRandom(seed) {
-          this.seed = seed % 2147483647;
-          if (this.seed <= 0) this.seed += 2147483646;
+          this.seed = seed % LCG_MODULUS;
+          if (this.seed <= 0) this.seed += LCG_MODULUS - 1;
         }
 
         SeededRandom.prototype.next = function() {
-          this.seed = (this.seed * 16807) % 2147483647;
-          return (this.seed - 1) / 2147483646;
+          this.seed = (this.seed * LCG_MULTIPLIER) % LCG_MODULUS;
+          return (this.seed - 1) / (LCG_MODULUS - 1);
         };
 
         // Fisher-Yates shuffle with seeded random
@@ -589,14 +593,14 @@
         try {
           seed = localStorage.getItem(SEED_KEY);
           if (!seed) {
-            seed = Math.floor(Math.random() * 2147483647);
+            seed = Math.floor(Math.random() * LCG_MODULUS);
             localStorage.setItem(SEED_KEY, seed);
           } else {
             seed = parseInt(seed, 10);
           }
         } catch (e) {
           // localStorage not available (private mode, etc.)
-          seed = Math.floor(Math.random() * 2147483647);
+          seed = Math.floor(Math.random() * LCG_MODULUS);
         }
 
         // Get all provider items
@@ -618,7 +622,7 @@
 
         // Apply CSS order to each provider
         for (var i = 0; i < providers.length; i++) {
-          providers[shuffledIndices[i]].style.order = i;
+          providers[i].style.order = shuffledIndices[i];
         }
       })();
     </script>
@@ -802,5 +806,5 @@
 
 
 </body>
-<!-- Generated from git commit: 53e9a6d196ebd97cef8d745732d836393e4b5bdd (53e9a6d1) -->
+<!-- Generated from git commit: 2fb5daa28d62929da2ff2e0225042c8956bb99c4 (2fb5daa2) -->
 </html>
