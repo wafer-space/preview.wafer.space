@@ -1,0 +1,1255 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://wafer.space/pr-73/index.xml" rel="self" type="application/atom+xml" /><link href="https://wafer.space/pr-73/" rel="alternate" type="text/html" /><updated>2025-11-28T23:17:29+00:00</updated><id>https://wafer.space/pr-73/index.xml</id><entry><title type="html">Less than 48 hours to go!</title><link href="https://wafer.space/pr-73/news/final-reminder" rel="alternate" type="text/html" title="Less than 48 hours to go!" /><published>2025-11-27T12:00:00+00:00</published><updated>2025-11-27T12:00:00+00:00</updated><id>https://wafer.space/pr-73/news/final-reminder</id><content type="html" xml:base="https://wafer.space/pr-73/news/final-reminder"><![CDATA[<p><em>This update was originally published on <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/updates/less-than-48-hours">Crowd Supply</a>.</em></p>
+
+<p>Less than 48 hours remain in the first shuttle campaign! If you hope to be on this shuttle, place your order now. If you’re facing purchasing obstacles, please don’t hesitate to <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/ask-question">get in touch</a>.</p>
+
+<p><strong>The Deadline: 28th November 2025 @ 11:59 PM <a href="https://en.wikipedia.org/wiki/Anywhere_on_Earth">AoE</a></strong> (<a href="https://www.timeanddate.com/worldclock/fixedtime.html?iso=20251128T2359&amp;p1=3399">see in your timezone</a>) — After this deadline you’ll be waiting until next year for the next shuttle run.</p>
+
+<h2 id="after-you-purchase">After You Purchase</h2>
+
+<p>Once you’ve purchased your slot, you have until <strong>3rd December 2025 @ 11:59 PM <a href="https://en.wikipedia.org/wiki/Anywhere_on_Earth">AoE</a></strong> (<a href="https://www.timeanddate.com/worldclock/fixedtime.html?iso=20251203T2359&amp;p1=3399">see in your timezone</a>) to submit your GDS files.</p>
+
+<p>Run <a href="https://github.com/wafer-space/gf180mcu-precheck">gf180mcu-precheck</a> locally to verify your design before submitting. The precheck has been and will continue to be updated, so join the <a href="https://discord.gg/43y2t53jpE">Discord</a> to get notified of changes. This is the same DRC check that <a href="https://platform.wafer.space/">platform.wafer.space</a> will run, so catching issues locally saves time.</p>
+
+<p><strong>Submit early!</strong> The DRC queue will get busy as the deadline approaches. If you find problems at the last minute, you may not have time to fix them.</p>
+
+<p>If you run into issues, join the <a href="https://discord.gg/43y2t53jpE">wafer.space Discord</a>. Many people are putting the finishing touches on their designs right now, and problems you encounter have likely been solved by others who can offer guidance.</p>
+
+<figure>
+<img src="/assets/images/news/gf180mcu-run-1/final-reminder/waferspace-rainbow-open.png" alt="wafer.space bringing open accessible custom silicon fabrication" />
+<figcaption>wafer.space bringing open accessible custom silicon fabrication</figcaption>
+</figure>
+
+<p><strong>— Tim ‘mithro’ Ansell and the wafer.space Team</strong></p>]]></content><author><name>Tim &apos;mithro&apos; Ansell</name></author><category term="news" /><category term="crowdsupply" /><category term="gf180mcu" /><category term="campaign" /><summary type="html"><![CDATA[This update was originally published on Crowd Supply.]]></summary></entry><entry><title type="html">Tiny Tapeout Collaboration</title><link href="https://wafer.space/pr-73/news/tiny-tapeout" rel="alternate" type="text/html" title="Tiny Tapeout Collaboration" /><published>2025-11-22T12:00:00+00:00</published><updated>2025-11-22T12:00:00+00:00</updated><id>https://wafer.space/pr-73/news/tiny-tapeout</id><content type="html" xml:base="https://wafer.space/pr-73/news/tiny-tapeout"><![CDATA[<p><em>This update was originally published on <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/updates/tiny-tapeout">Crowd Supply</a>.</em></p>
+
+<h2 id="tiny-tapeout">Tiny Tapeout</h2>
+
+<figure>
+<img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/tinytapeout-logo.png" alt="Tiny Tapeout - Democratizing chip design" />
+<figcaption>Tiny Tapeout - Democratizing chip design</figcaption>
+</figure>
+
+<p><a href="https://wafer.space/">wafer.space</a> is excited to collaborate with <a href="https://tinytapeout.com/">Tiny Tapeout</a> to port their infrastructure to GF180MCU. Founded by <a href="https://zerotoasiccourse.com/">Matt Venn</a>, Tiny Tapeout has become a cornerstone of the open-silicon movement, empowering students, hobbyists, and even industry professionals to design and fabricate their own ASICs through approachable tools and collaborative workflows. Our collaboration provides an easy and affordable pathway from initial ideas and prototyping to building real products.</p>
+
+<figure>
+<img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/previous-tt-version.jpeg" alt="With Tiny Tapeout, you get a ready-to-go development board" />
+<figcaption>With Tiny Tapeout, you get a ready-to-go development board</figcaption>
+</figure>
+
+<p>Tiny Tapeout has already proven that accessible chip design works. By dramatically lowering the barrier to entry, they’ve enabled thousands of participants to bring their digital and analog designs to life. Now, our collaboration aims to take that further, helping designs move from prototype to product. The track record speaks for itself:</p>
+
+<figure class="gallery">
+<img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/tt03-gds.png" alt="tt03-gds" />
+<img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/tt05-gds.png" alt="tt05-gds" />
+<img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/tt06-gds.png" alt="tt06-gds" />
+<img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/tt07-gds.png" alt="tt07-gds" />
+<img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/tt09-gds.png" alt="tt09-gds" />
+<img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/ttihp0p1-gds.png" alt="ttihp0p1-gds" />
+<img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/ttsky25a-gds.png" alt="ttsky25a-gds" />
+<img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/ttsky25b-gds.png" alt="ttsky25b-gds" />
+<figcaption>GDS renders from Tiny Tapeout shuttles [TT03](https://tinytapeout.com/chips/tt03/), [TT05](https://tinytapeout.com/chips/tt05/), [TT06](https://tinytapeout.com/chips/tt06/), [TT07](https://tinytapeout.com/chips/tt07/), [TT09](https://tinytapeout.com/chips/tt09/), [IHP 0.1](https://app.tinytapeout.com/shuttles/ttihp0p1), [Sky130 25a](https://tinytapeout.com/chips/ttsky25a/), and [Sky130 25b](https://tinytapeout.com/chips/ttsky25b/)</figcaption>
+</figure>
+
+<p>Building on this experience, <strong>Tiny Tapeout</strong> now joins wafer.space to bring GF180MCU into the mix. Our collaboration has enabled Tiny Tapeout to get exactly what they need from the <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/updates/chip-on-board">standard wafer.space padframe</a>, ensuring full compatibility, consistent manufacturability, and reliable integration with COB-based packaging workflows.</p>
+
+<h2 id="whats-being-built-on-gf0p2">What’s Being Built on <a href="https://app.tinytapeout.com/shuttles/ttgf0p2">GF0p2</a></h2>
+
+<p>Both Tiny Tapeout and wafer.space have been thrilled by the community response. The <a href="https://app.tinytapeout.com/shuttles/ttgf0p2">GF0p2 shuttle</a> already has dozens of projects submitted, and more are coming in every day. Here are just a few of the designs being built:</p>
+
+<h3 id="modern-free-and-open-source-silicon-clone-of-zilogs-z80">Modern Free and Open Source Silicon Clone of Zilog’s Z80</h3>
+
+<p><a href="https://github.com/rejunity">Rejunity</a> is recreating <a href="https://app.tinytapeout.com/projects/3434">Zilog’s Z80</a> with the goal to develop a drop-in replacement for 8-bit home computers such as the ZX Spectrum and recent DIY computer kits such as the <a href="https://rc2014.co.uk/">RC2014</a>.</p>
+
+<h3 id="tiny-qv-a-risc-v-soc-for-tiny-tapeout">Tiny-QV: A RISC-V SoC for Tiny Tapeout</h3>
+
+<p><a href="https://github.com/MichaelBell/tinyQV/">Tiny-QV</a> is a 4-bit-at-a-time RV32 processor, optimized for use on Tiny Tapeout with QSPI RAM and Flash. The aim is to make a small microcontroller that is as fast as practical given the Tiny Tapeout constraints.</p>
+
+<h3 id="zedulo-test-chip">Zedulo Test Chip</h3>
+
+<p><a href="https://github.com/ZeduloTech/ttgf-zed_tc1">Zedulo TestChip1</a> is a UART-to-SPI bridge built using two IP blocks from the <a href="https://opentitan.org/">OpenTitan</a> project (an open-source Root of Trust). By porting these OpenTitan components to GF180MCU, Zedulo demonstrates that verified, trustworthy hardware IP can be reused across different processes and platforms.</p>
+
+<h3 id="and-many-more">And Many More</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Description / Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong><a href="https://app.tinytapeout.com/projects/3441">2x2 MAC Systolic array with DFT</a></strong></td>
+      <td>ASIC design for a 2x2 systolic matrix multiplier supporting multiply and accumulate operations on int8 data.</td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://github.com/TinyTapeout/tt-waferspace-vga-screensaver">WaferSpace VGA Screensaver</a></strong></td>
+      <td>A classic animated VGA demo that prominently features the <strong>wafer.space</strong> logo — great for verifying display output and timing.</td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://app.tinytapeout.com/projects/3248">Asicle v2 (2×2 tiles)</a></strong></td>
+      <td>A compact, tile-based modular layout design that explores reconfigurable logic or array instantiation.</td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://app.tinytapeout.com/projects/3119">ROM / Memory Block (1×1)</a></strong></td>
+      <td>A read-only memory block intended for basic data storage — ideal for boot code or test vectors.</td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://app.tinytapeout.com/projects/3125">Ring Oscillator (5-inverter, 1×1)</a></strong></td>
+      <td>A simple analog / digital hybrid circuit that toggles signal through five inverters to create a ring oscillator.</td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://app.tinytapeout.com/projects/3121">Simon Says Logic Game</a></strong></td>
+      <td>Implements the classic “Simon Says” memory game in hardware logic — the chip will reproduce user-input sequences.</td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://app.tinytapeout.com/projects/3430">Sound Generator (TBB143)</a></strong></td>
+      <td>A programmable sound generator that uses a ring oscillator to generate tones or effects.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The project tiles are filling up fast:</p>
+
+<figure>
+<img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/current-run.png" alt="Project tiles already allocated on the GF0p2 run" />
+<figcaption>Project tiles already allocated on the GF0p2 run</figcaption>
+</figure>
+
+<h2 id="join-us">Join Us!</h2>
+
+<p>We’re thrilled to have <strong>Tiny Tapeout</strong> and <strong>Matt Venn</strong> on board for our first wafer.space shuttle, but the most exciting part is having <strong>you</strong> join us too! Whether you’re a complete beginner or an experienced designer, now is the perfect time to get started.</p>
+
+<p>Explore the <a href="https://tinytapeout.com/">Tiny Tapeout website</a> for project ideas and tutorials, and watch the <a href="https://www.youtube.com/@ZeroToASICcourse">YouTube channel</a> for walkthroughs and interviews. If you need something more structured, Matt’s excellent <a href="https://zerotoasiccourse.com/">Zero to ASIC course</a> will give you the knowledge and confidence to bring your ideas to silicon.</p>
+
+<p>Even if you haven’t done a tapeout yet, join the community and start learning! Connect with us on the <a href="https://discord.gg/43y2t53jpE">wafer.space Discord</a> and join the <strong>#tinytapeout</strong> channel, or the <a href="https://discord.gg/rPK2nSjxy8">Tiny Tapeout Discord</a> and join the <strong>#ttgf0p2-tapeout</strong> channel. (You can also find us on <a href="https://matrix.to/#/#gf180mcu:fossi-chat.org">Matrix at #gf180mcu</a>.)</p>
+
+<p>With Tiny Tapeout, anyone can get started with just a web browser and a few hours. <a href="https://tinytapeout.com/">Why not give it a try?</a></p>
+
+<hr />
+
+<h2 id="dont-miss-your-chance-to-join-the-first-shuttle">Don’t Miss Your Chance to Join the First Shuttle</h2>
+
+<figure>
+<img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/waferspace-rainbow-open.png" alt="wafer.space bringing open accessible custom silicon fabrication" />
+<figcaption>wafer.space bringing open accessible custom silicon fabrication</figcaption>
+</figure>
+
+<p>We’re rapidly approaching the final milestones for this shuttle run, and now is the time to secure your spot:</p>
+
+<ul>
+  <li>
+    <p><strong>November 28, 2025</strong> - Last day to purchase a slot (Crowd Supply campaign closes)</p>
+  </li>
+  <li>
+    <p><strong>December 3, 2025</strong> - Final GDS submission deadline. Your design must be submitted to wafer.space by this date to be included in the run.</p>
+  </li>
+</ul>
+
+<p>If you’ve been thinking about getting your own silicon made, whether it’s your first chip or your fiftieth, this is your moment. The tools are ready, the ecosystem is growing, and we’re here to help you every step of the way.</p>
+
+<p>Reserve your slot, finish your design, and join us in shaping the future of accessible custom silicon.</p>
+
+<hr />
+
+<h3 id="special-thanks">Special Thanks</h3>
+
+<figure class="gallery">
+<img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/tillitis-logo-std.png" alt="tillitis-logo-std" />
+<img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/witcom-logo-std.png" alt="witcom-logo-std" />
+<figcaption>Sponsored by [Tillitis](https://www.tillitis.se/) and [WIT.com](https://wit.com/)</figcaption>
+</figure>
+
+<p><a href="https://www.tillitis.se/">Tillitis</a> and <a href="https://wit.com/">WIT.com</a> generously sponsored the work to bring Tiny Tapeout to GF180MCU, its third process technology. This funding is enabling the <a href="https://www.youtube.com/watch?v=30emLKLpq50">improved multiplexer</a>, <a href="https://www.youtube.com/watch?v=_m_jK7twymM">power gating, analog support</a>, and <a href="https://www.youtube.com/watch?v=cCbTyfewaCw">more</a> (designed by <a href="https://github.com/smunaut">Sylvain “tnt” Munaut</a>) to be ported to GF180MCU. Thank you for making this happen!</p>]]></content><author><name>Tim &apos;mithro&apos; Ansell</name></author><category term="news" /><category term="crowdsupply" /><category term="gf180mcu" /><category term="campaign" /><summary type="html"><![CDATA[This update was originally published on Crowd Supply.]]></summary></entry><entry><title type="html">We Have Some Amazing Projects This Run: MOSbius</title><link href="https://wafer.space/pr-73/news/mosbius-feature" rel="alternate" type="text/html" title="We Have Some Amazing Projects This Run: MOSbius" /><published>2025-11-19T12:00:00+00:00</published><updated>2025-11-19T12:00:00+00:00</updated><id>https://wafer.space/pr-73/news/mosbius-feature</id><content type="html" xml:base="https://wafer.space/pr-73/news/mosbius-feature"><![CDATA[<p><em>This update was originally published on <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/updates/mosbius">Crowd Supply</a>.</em></p>
+
+<p>Our first shuttle run spans from solo makers like Tholin to universities. This week we highlight <a href="https://mosbius.org/">MOSbius</a>, an educational platform from Columbia University bringing hands-on silicon learning to students worldwide.</p>
+
+<p>Through wafer.space, MOSbius gains 3.3V compatible I/Os, high part counts, and COB packaging—all for a low cost. What was once an expensive demonstration can now equip every student in a classroom with their own chip, for less than the cost of a textbook.</p>
+
+<h2 id="mosbius"><a href="https://mosbius.org/">MOSbius</a></h2>
+
+<figure>
+<img src="/assets/images/news/gf180mcu-run-1/mosbius-feature/mosbius_flow.png" alt="MOSbius platform enables hands-on exploration of transistor-level MOS circuits on breadboard" />
+<figcaption>MOSbius platform enables hands-on exploration of transistor-level MOS circuits on breadboard</figcaption>
+</figure>
+
+<p><strong><a href="https://mosbius.org/">MOSbius</a></strong>, developed by <strong><a href="https://peterkinget.github.io/">Professor Peter Kinget</a></strong> and his students at <strong><a href="http://www.cisl.columbia.edu/kinget_group/">Columbia University</a></strong>, is an innovative educational platform that helps students and designers explore <strong>MOS circuit topologies</strong> typically found on silicon and now accessible on a breadboard.</p>
+
+<p>The goal of <a href="https://mosbius.org/">MOSbius</a> is to give learners hands-on experience with <strong>transistor-level design</strong>, including circuit debugging, measurement, and the full “chip bring-up” process. The platform allows users to compare calculations, simulations, and real measurements using provided <strong><a href="https://wiki.analog.com/resources/tools-software/ltspice">LTspice</a> models</strong>, bridging the gap between theory and silicon.</p>
+
+<figure>
+<img src="/assets/images/news/gf180mcu-run-1/mosbius-feature/mosbius_interview.png" alt="MOSbius – A Field Programmable Transistor Array for Chip Designers (Interview with Peter Kinget)" />
+<figcaption>MOSbius – A Field Programmable Transistor Array for Chip Designers (Interview with Peter Kinget)</figcaption>
+</figure>
+
+<p><strong><a href="https://www.youtube.com/watch?v=abu3u6UX6wE">Watch the interview on YouTube</a></strong></p>
+
+<h3 id="building-on-previous-success">Building on Previous Success</h3>
+
+<p>MOSbius isn’t new to custom silicon. Previous generations of the MOSbius chip demonstrated the educational value of hands-on transistor exploration, but faced a significant barrier: cost. At $50 per packaged chip, widespread educational deployment remained challenging.</p>
+
+<p>The project’s educational impact extends beyond the classroom. The <a href="https://github.com/mosbiuschip/chipathon2025">IEEE SSCS Chipathon 2025</a> featured a MOSbius track where students learned chip design using GF180MCU—the same process used by wafer.space. This gave Chipathon participants hands-on experience with the same technology they could use for future fabrication runs.</p>
+
+<h3 id="their-own-cob-format">Their Own COB Format</h3>
+
+<p>Given the unique requirements of the MOSbius project, the team is designing their own version of a <strong>Chip-on-Board (COB)</strong> package based on the <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/updates/chip-on-board">wafer.space standard padframe</a>.</p>
+
+<p>Their application prioritizes <strong>a high number of I/O connections</strong> over power and ground pads, allowing for the maximum number of accessible signals from their transistor array.</p>
+
+<figure class="gallery">
+<img src="/assets/images/news/gf180mcu-run-1/mosbius-feature/mos_pcb.png" alt="mos_pcb" />
+<img src="/assets/images/news/gf180mcu-run-1/mosbius-feature/mos_3d.png" alt="mos_3d" />
+<figcaption>MOSbius custom COB package design - PCB layout and 3D visualization</figcaption>
+</figure>
+
+<p><strong>Peter’s student, @xianglin_pui</strong>, has taken the lead on this effort and developed derivative designs that extend the wafer.space COB standard for MOSbius’s specialized needs.</p>
+
+<h3 id="waferspace-and-mosbius">wafer.space and MOSbius</h3>
+
+<p>We’re thrilled to have <strong>MOSbius</strong> as part of this shuttle run and proud to support a project that aligns so perfectly with wafer.space’s mission.</p>
+
+<p>Their current board design requires numerous passive components due to varying pin voltage levels, and each packaged chip can cost upwards of <strong>$50</strong>. With their new design on the <strong><a href="https://wafer.space/">wafer.space</a></strong> platform, all pins will be <strong>3.3 V tolerant</strong>, eliminating the need for numerous passive components and dramatically simplifying their demo board, while wafer.space’s affordable pricing and <strong>COB packaging</strong> reduce costs.</p>
+
+<h2 id="dont-miss-your-chance-to-join-the-first-shuttle">Don’t Miss Your Chance to Join the First Shuttle</h2>
+
+<figure>
+<img src="/assets/images/news/gf180mcu-run-1/mosbius-feature/rainbow_narrow2.png" alt="wafer.space - Accessible custom silicon fabrication" />
+<figcaption>wafer.space - Accessible custom silicon fabrication</figcaption>
+</figure>
+
+<p>MOSbius is part of this run because accessible silicon enables their educational mission. What becomes possible at $7/chip? Whether you’re building educational tools, <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/updates/openfasoc">exploring new architectures</a>, or <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/updates/tholin-feature">bringing vintage designs back to life</a> - this is your opportunity.</p>
+
+<p>We’re rapidly approaching the final milestones for this shuttle run, and now is the time to secure your spot:</p>
+
+<ul>
+  <li>
+    <p><strong>November 28, 2025</strong> - Last day to purchase a slot / <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-1">Crowd Supply campaign</a> closes</p>
+  </li>
+  <li>
+    <p><strong>December 3, 2025</strong> - <a href="https://wafer.space/how">Final GDS submission deadline</a></p>
+  </li>
+</ul>
+
+<p>If you’ve been thinking about getting your own silicon made — whether it’s your first chip or your fiftieth — this is your moment. The tools are ready, the ecosystem is growing, and we’re here to help you every step of the way.</p>
+
+<p><a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-1">Reserve your slot</a>, finish your design, and join us in shaping the future of accessible custom silicon.</p>]]></content><author><name>Tim &apos;mithro&apos; Ansell</name></author><category term="news" /><category term="crowdsupply" /><category term="gf180mcu" /><category term="campaign" /><summary type="html"><![CDATA[This update was originally published on Crowd Supply.]]></summary></entry><entry><title type="html">We Have Some Amazing Projects This Run: Tholin &amp;amp; Avalon Semiconductors</title><link href="https://wafer.space/pr-73/news/tholin-feature" rel="alternate" type="text/html" title="We Have Some Amazing Projects This Run: Tholin &amp;amp; Avalon Semiconductors" /><published>2025-11-14T12:00:00+00:00</published><updated>2025-11-14T12:00:00+00:00</updated><id>https://wafer.space/pr-73/news/tholin-feature</id><content type="html" xml:base="https://wafer.space/pr-73/news/tholin-feature"><![CDATA[<p><em>This update was originally published on <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/updates/tholin-feature">Crowd Supply</a>.</em></p>
+
+<p>Our first shuttle run includes a number of incredible projects, and we wanted to take a moment to highlight one of them.</p>
+
+<hr />
+
+<h2 id="tholin--avalon-semiconductors">Tholin &amp; Avalon Semiconductors</h2>
+
+<figure>
+<img src="/assets/images/news/gf180mcu-run-1/tholin-feature/ic1.png" alt="Tholin's custom silicon designs showcase what's possible with open tooling" />
+<figcaption>Tholin's custom silicon designs showcase what's possible with open tooling</figcaption>
+</figure>
+
+<p><a href="https://tholin.dev/">Tholin</a> — the hardware designer behind <a href="https://github.com/AvalonSemiconductors"><strong>Avalon Semiconductors</strong></a> — has been exploring what’s possible when open tooling meets personal silicon. Their journey, chronicled through detailed blog posts like <a href="https://tholin.dev/custom_silicon/"><em>Custom Silicon</em></a> and <a href="https://tholin.dev/custom_silicon_two_electric_boogaloo/"><em>Custom Silicon Two: Electric Boogaloo</em></a>, shows how a single engineer can go from HDL to packaged chips using open-source flows, patience, and a healthy dose of curiosity.</p>
+
+<hr />
+
+<h3 id="as2650-and-as2650-2">AS2650 and AS2650-2</h3>
+
+<figure>
+<img src="/assets/images/news/gf180mcu-run-1/tholin-feature/as2650.png" alt="The AS2650(-2) is inspired by retro CPUs like the Signetics 2650" />
+<figcaption>The AS2650(-2) is inspired by retro CPUs like the Signetics 2650</figcaption>
+</figure>
+
+<p>Tholin’s flagship projects are the <strong>AS2650</strong> and <strong>AS2650-2</strong>, re-implementations and extensions of the historic <a href="https://en.wikipedia.org/wiki/Signetics_2650">Signetics 2650</a> microprocessor, recreated from the ground up using open EDA tools.
+You can explore the repositories here:</p>
+
+<ul>
+  <li><a href="https://github.com/AvalonSemiconductors/AS2650">AS2650 GitHub Repository</a></li>
+  <li><a href="https://github.com/AvalonSemiconductors/AS2650-2">AS2650-2 Repository</a></li>
+  <li><a href="https://avalonsemiconductors.github.io/AS2650/">AS2650-2 Documentation</a></li>
+</ul>
+
+<p>These chips aren’t just nostalgic exercises — they’re fully functional processors that have been designed, simulated, taped-out, and brought back to life with custom test boards and firmware. The AS2650-2 introduces expanded peripherals, enhanced bus control, and improved debug accessibility. All implemented with a custom cell library for GF180MCU.</p>
+
+<hr />
+
+<h3 id="porting-the-as2650v2-to-waferspace">Porting the AS2650v2 to wafer.space</h3>
+
+<p><strong>Tholin</strong> is currently porting the <strong>AS2650v2</strong> to the <a href="https://wafer.space"><strong>wafer.space</strong></a> template.
+This serves as a <strong>reference design</strong>, demonstrating a complete CPU implementation, a multi-macro layout, and new methodologies for <strong>instantiating SRAMs</strong> within the wafer.space framework.</p>
+
+<p>The project also makes use of <strong>high-performance dynamic D-type flip-flop circuits (DFFs)</strong> from the
+<a href="https://github.com/AvalonSemiconductors/gf180mcu_as_ex_mcu7t5v0"><strong>gf180mcu_as_ex_mcu7t5v0</strong></a> library.</p>
+
+<p>Tholin notes that the wafer.space padframe provides <strong>more pads than the Efabless Caravel design</strong>, resulting in a number of unused pins during this initial port. She suggests that future revisions may take advantage of these additional pads to support <strong>expanded peripherals</strong> and system features.</p>
+
+<p>You can explore the design and accompanying documentation on GitHub:
+👉 <a href="https://github.com/AvalonSemiconductors/as2650-ws"><strong>AvalonSemiconductors/as2650-ws</strong></a></p>
+
+<hr />
+
+<h3 id="waferspace-submissions">wafer.space Submissions</h3>
+
+<p>Tholin has also created a companion repository,
+<a href="https://github.com/AvalonSemiconductors/ws-submission-2025"><strong>ws-submission-2025</strong></a>, documenting her submission for the current wafer.space fabrication run.</p>
+
+<p>True to her style, the project includes <strong>artwork integrated directly into the silicon layout</strong>, reflecting the creative potential unlocked when advanced design tools are accessible and open.</p>
+
+<figure>
+<img src="/assets/images/news/gf180mcu-run-1/tholin-feature/logo_bw.png" alt="Tholin's logo, adapted for silicon artwork" />
+<figcaption>Tholin's logo, adapted for silicon artwork</figcaption>
+</figure>
+
+<p>Additionally, Tholin developed a <a href="https://github.com/AvalonSemiconductors/ws-submission-2025/blob/main/padout_gen.py"><strong>Python script</strong></a> that <strong>automatically generates padout diagrams</strong> from a <a href="https://librelane.rtfd.io/">LibreLane</a> configuration file thereby simplifying visualization and documentation of pad assignments.</p>
+
+<figure>
+<img src="/assets/images/news/gf180mcu-run-1/tholin-feature/padout.png" alt="Padout diagram generated from Python and LibreLane configuration" />
+<figcaption>Padout diagram generated from Python and LibreLane configuration</figcaption>
+</figure>
+
+<hr />
+
+<h3 id="multi-project-die-exploration">Multi-Project Die Exploration</h3>
+
+<figure class="gallery">
+<img src="/assets/images/news/gf180mcu-run-1/tholin-feature/multidie.png" alt="multidie" />
+<img src="/assets/images/news/gf180mcu-run-1/tholin-feature/multilayout.png" alt="multilayout" />
+<figcaption>Multi-project die strategy - integrating multiple designs onto a single die to maximize wafer utilization</figcaption>
+</figure>
+
+<p>Tholin is also pioneering <strong>multi-project die (MPD)</strong> strategies, maximizing wafer area by integrating multiple small designs onto a single die.
+Projects such as <a href="https://github.com/AvalonSemiconductors/gfmpw1-multi"><code class="language-plaintext highlighter-rouge">gfmpw-1-multi</code></a> and <a href="https://github.com/AvalonSemiconductors/AS2650-bring-up"><code class="language-plaintext highlighter-rouge">AS2650-bring-up</code></a> demonstrate how careful planning and padframe reuse make it possible to test multiple subsystems in one run.</p>
+
+<p>Tholin has also written thorough documentation on this project <a href="https://avalonsemiconductors.github.io/GFMPW-1-MULTI/index.html">here</a></p>
+
+<p>This approach reflects the open ethos of wafer.space — making silicon exploration more accessible, modular, and repeatable for small teams and individuals.</p>
+
+<hr />
+
+<h3 id="open-flow--librelane-experience">Open Flow &amp; LibreLane Experience</h3>
+
+<p>Tholin has been an early adopter of <a href="https://librelane.rtfd.io/"><strong>LibreLane</strong></a>, the open-source ASIC flow used by wafer.space. Their feedback and experiments with padframes, padrings, and packaging have helped refine the ecosystem for everyone.
+From RTL through layout and DRC, to bonding and board testing, Tholin’s work demonstrates that open tooling can now carry a chip from idea to reality — no closed vendor stack required.</p>
+
+<figure>
+<img src="/assets/images/news/gf180mcu-run-1/tholin-feature/3d_view.png" alt="Standard cells are a key component of RTL to GDSII flows." />
+<figcaption>Standard cells are a key component of RTL to GDSII flows.</figcaption>
+</figure>
+
+<hr />
+
+<h3 id="other-avalon-semiconductors-projects">Other Avalon Semiconductors Projects</h3>
+
+<p>Tholin has also created a number of fun and technically rich designs through <strong>Tiny Tapeout</strong>, showcasing creativity across digital design, display drivers, and compact CPUs:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>GitHub Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>AS5401</strong></td>
+      <td>4-bit CPU</td>
+      <td><a href="https://github.com/AvalonSemiconductors/tt2-AvalonSemi-5401">AvalonSemiconductors/tt2-AvalonSemi-5401</a></td>
+    </tr>
+    <tr>
+      <td><strong>TT02 Logisim Example</strong></td>
+      <td>Example and documentation on submitting Tiny Tapeout designs using Logisim Evolution</td>
+      <td><a href="https://github.com/AvalonSemiconductors/tt02-logisim-example">AvalonSemiconductors/tt02-logisim-example</a></td>
+    </tr>
+    <tr>
+      <td><strong>Diceroll</strong></td>
+      <td>Animates a random number rolling on a 7-segment display</td>
+      <td><a href="https://github.com/AvalonSemiconductors/tt2-diceroll">AvalonSemiconductors/tt2-diceroll</a></td>
+    </tr>
+    <tr>
+      <td><strong>TBB143</strong></td>
+      <td>Programmable sound generator using a ring oscillator as a faster internal clock</td>
+      <td><a href="https://github.com/AvalonSemiconductors/tt2-avalonsemi-TBB1143">AvalonSemiconductors/tt2-avalonsemi-TBB1143</a></td>
+    </tr>
+    <tr>
+      <td><strong>Multiplexed Counter</strong></td>
+      <td>Drives 4 multiplexed 7-segment displays to count time up to 99 min 59 sec</td>
+      <td><a href="https://github.com/AvalonSemiconductors/tt2-multiplexed-counter">AvalonSemiconductors/tt2-multiplexed-counter</a></td>
+    </tr>
+    <tr>
+      <td><strong>4-bit Multiplier</strong></td>
+      <td>Multiplies two 4-bit numbers into an 8-bit result</td>
+      <td><a href="https://github.com/AvalonSemiconductors/tt2-4x4-multiply">AvalonSemiconductors/tt2-4x4-multiply</a></td>
+    </tr>
+    <tr>
+      <td><strong>LCD Namebadge</strong></td>
+      <td>Experiment with character LCD interfacing</td>
+      <td><a href="https://github.com/AvalonSemiconductors/tt2-lcd-namebadge">AvalonSemiconductors/tt2-lcd-namebadge</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Each of these designs exemplifies the open-hardware spirit: compact, educational, and fully reproducible — proof that anyone can design real silicon with today’s open tools.</p>
+
+<hr />
+
+<h3 id="beyond-silicon">Beyond Silicon</h3>
+
+<p>Beyond her silicon designs, <strong>Tholin</strong> has also developed a range of PCB projects and breakout boards that make working with custom dies more accessible.</p>
+
+<figure class="gallery">
+<img src="/assets/images/news/gf180mcu-run-1/tholin-feature/dip40.png" alt="dip40" />
+<img src="/assets/images/news/gf180mcu-run-1/tholin-feature/dip40_wirebond.png" alt="dip40_wirebond" />
+<figcaption>DIP40 breakout board and wirebonding setup - making custom silicon accessible through standard packages</figcaption>
+</figure>
+
+<p>Tholin has also contributed extensively to the <strong>wafer.space standard padframe</strong>, helping shape the mechanical and electrical layout used across multiple projects.</p>
+
+<hr />
+
+<h3 id="why-were-excited-to-have-tholin-aboard">Why We’re Excited to Have Tholin Aboard</h3>
+
+<p>Tholin represents the kind of creative, self-driven engineering that wafer.space exists to empower. Her work with the AS2650 family, open flows, and multi-project dies captures the spirit of the growing open-silicon movement — one where innovation comes from curiosity, not corporate budgets.</p>
+
+<p>We’re thrilled to have <strong>Tholin &amp; Avalon Semiconductors</strong> among the first wave of wafer.space participants and can’t wait to see what they build next.</p>]]></content><author><name>Tim &apos;mithro&apos; Ansell</name></author><category term="news" /><category term="crowdsupply" /><category term="gf180mcu" /><category term="campaign" /><summary type="html"><![CDATA[This update was originally published on Crowd Supply.]]></summary></entry><entry><title type="html">Community Progress on Chip-on-Board Packaging Strategy</title><link href="https://wafer.space/pr-73/news/chip-on-board" rel="alternate" type="text/html" title="Community Progress on Chip-on-Board Packaging Strategy" /><published>2025-11-11T12:00:00+00:00</published><updated>2025-11-11T12:00:00+00:00</updated><id>https://wafer.space/pr-73/news/chip-on-board</id><content type="html" xml:base="https://wafer.space/pr-73/news/chip-on-board"><![CDATA[<p><em>This update was originally published on <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/updates/chip-on-board">Crowd Supply</a>.</em></p>
+
+<h2 id="community-progress-on-chip-on-board-packaging-strategy">Community Progress on Chip-on-Board Packaging Strategy</h2>
+
+<p>Today we have a guest post from <strong><a href="https://www.crowdsupply.com/evezor-inc">Andrew Wingate</a></strong> (of Evezor Inc), sharing his perspective on the progress the <a href="https://wafer.space/">wafer.space</a> community has been making in developing a chip-on-board packaging strategy. This work includes contributions from <strong><a href="https://tinytapeout.com/">Tiny Tapeout</a></strong>, <strong><a href="https://mosbius.org/">MosBius</a></strong> (<a href="https://peterkinget.github.io/">Columbia University</a>), and community members like <strong><a href="https://github.com/AvalonSemiconductors">@Tholin</a></strong> and <strong>@xianglin_pu</strong>.</p>
+
+<hr />
+
+<p><a href="https://wafer.space/"><strong>wafer.space</strong></a> exists to make custom silicon affordable. At <strong>$7 per chip</strong> for production quantities, the cost barrier to fabrication has been removed, but that’s only part of the story. Working with bare dies is challenging and typically requires specialized, expensive equipment.</p>
+
+<p>To make post-fabrication development more accessible, the community has been working on <strong>COB (Chip on Board)</strong> standard templates. Over the past months, various package options have been explored, including <strong>DIP, LGA, castellated breakouts,</strong> and <strong>breadboardable</strong> versions.</p>
+
+<p>The leading contender is currently a <strong>mezzanine breakout board</strong> using connectors similar to those found on the Raspberry Pi Compute Modules. This design allows wirebonding houses to mount and wirebond your dies directly onto the COB packages, which can then be shipped to you ready for integration into your own systems.</p>
+
+<p>When designing your motherboards, you’ll be able to source compatible connectors like <a href="https://www.lcsc.com/product-detail/C19089262.html">this one</a> and have your PCBA house assemble them. The community is also working on a range of breakout boards that follow a <strong>community-developed standard digital padring</strong>, to make development faster and more consistent.</p>
+
+<blockquote>
+  <p><strong>What This Means For You:</strong> If you’re backing this campaign or considering it, you won’t need specialized equipment or expensive packaging services to use your chips. While the community continues developing these COB standards, <a href="https://buy.wafer.space">wafer.space is offering wire-bonded COB packaging at buy.wafer.space</a> for this campaign run (1,000 dies mounted and wire-bonded to PCBs). Alternatively, you can work with your own wirebonding partner using these community-developed designs. Either way, you’ll solder the connector to your custom PCB and plug them in just like adding any other component to your board.</p>
+</blockquote>
+
+<hr />
+
+<h3 id="the-community-developed-standard-padframe-and-cob-design">The Community-Developed Standard Padframe and COB Design</h3>
+
+<p>While you’re free to use any pad configuration you wish, adhering to the <strong>community-developed standard</strong> ensures compatibility with wirebonding partners and simplifies the fabrication process.</p>
+
+<p><strong>Key Details:</strong></p>
+
+<ul>
+  <li>
+    <p><strong>74-pad padframe</strong> on your die</p>
+  </li>
+  <li>
+    <p><strong>20 pads</strong> on the east and west sides</p>
+  </li>
+  <li>
+    <p><strong>17 pads</strong> on the north and south sides</p>
+  </li>
+  <li>
+    <p><strong>74-pad wirebonding footprint</strong></p>
+  </li>
+  <li>
+    <p><strong>14 mm × 16 mm PCB</strong></p>
+  </li>
+  <li>
+    <p><strong>70-pin mezzanine connector:</strong> <a href="https://www.lcsc.com/product-detail/C19089236.html">C19089236</a> <em>or compatible</em></p>
+  </li>
+  <li>
+    <p><strong>1 µF decoupling capacitors</strong> on VDD_IO, VDD_CORE, and PWR_AUX pins</p>
+  </li>
+</ul>
+
+<p>Find most current designs on the <a href="https://github.com/wafer-space/chip-on-board-wire-bonded-pcbs">chip-on-board-wire-bonded-pcbs repo</a></p>
+
+<h2 id="why-standardize">Why Standardize?</h2>
+
+<p>With the technical details established, it’s worth stepping back to consider why standardization matters for the open silicon ecosystem.</p>
+
+<h3 id="a-standard-for-the-broader-community">A Standard for the Broader Community</h3>
+
+<p>While this standard emerged from the wafer.space community’s needs, the goal is to create something that could benefit the broader open silicon ecosystem. By documenting the design openly and making the <a href="https://www.kicad.org/">KiCad</a> symbols, PCB layouts, and specifications freely available, other projects and communities could adopt or adapt this approach for their own chip-on-board needs.</p>
+
+<p>The work you see here comes from contributors across the community: Discord members testing designs and providing feedback, Tiny Tapeout contributors sharing lessons from their COB runs, Columbia University students developing educational chips through the MosBius project, and veteran engineers refining the wirebonding footprints. Each brought different expertise: some from PCB design, others from silicon layout, still others from manufacturing and assembly experience.</p>
+
+<p>The hope is that as more projects use compatible footprints and connectors, the ecosystem benefits grow:</p>
+<ul>
+  <li>Wirebonding houses can optimize their processes for a common standard</li>
+  <li>More off-the-shelf breakout boards and adapters become available</li>
+  <li>Designers can share compatible motherboard designs across projects</li>
+  <li>The barrier to entry for COB assembly continues to decrease</li>
+</ul>
+
+<p>This isn’t about mandating a single approach. Diversity in packaging solutions remains valuable. Rather, it’s about establishing a well-documented baseline that communities can rally around when standardization helps everyone. If this standard proves useful beyond wafer.space, that would represent exactly the kind of collaborative progress that makes open silicon compelling.</p>
+
+<p>This design hopefully meets the needs of a majority of projects on wafer.space. If your project needs something different, other open source packaging options are available to explore, such as the University of Washington’s <strong><a href="https://bjump.org/">BaseJump project</a></strong>, which offers <strong><a href="https://github.com/bespoke-silicon-group/bsg_packaging">BGA packaging standards</a></strong> including their 352-pin BaseJump Socket for designs requiring hundreds of I/O pins or more complex integration.</p>
+
+<h2 id="the-implementation-from-concept-to-physical-boards">The Implementation: From Concept to Physical Boards</h2>
+
+<p>So what does this standard look like in practice? Let’s walk through the actual hardware, tools, and resources the community has developed.</p>
+
+<h3 id="70-pin-mezzanine-cob">70-Pin Mezzanine COB</h3>
+
+<p>The centerpiece of the standard is a 70-pin mezzanine COB board that connects your wirebonded die to a standard connector.</p>
+
+<figure class="gallery">
+<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-mezzanine-front.png" alt="padframes-cob-mezzanine-front" />
+<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-mezzanine-back.png" alt="padframes-cob-mezzanine-back" />
+<figcaption>70-pin mezzanine COB front and back views</figcaption>
+</figure>
+
+<p>Panelized for efficient handling and assembly by wirebonding partners:</p>
+
+<figure class="gallery">
+<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-mezzanine-panel-front.png" alt="padframes-cob-mezzanine-panel-front" />
+<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-mezzanine-panel-rear.png" alt="padframes-cob-mezzanine-panel-rear" />
+<figcaption>Mezzanine panel front and rear for efficient wirebonding assembly</figcaption>
+</figure>
+
+<p>The standard configuration can be found in the <a href="https://github.com/wafer-space/gf180mcu-project-template/blob/main/librelane/config.yaml">GitHub repository</a>. For easier viewing, it’s also available as a <a href="https://docs.google.com/spreadsheets/d/1pI2BAEWEexXcXN3vah3SR85zPIV6eAXPGXc2bcvoSGU/edit?gid=0#gid=0">Google Sheet</a> that shows the complete pad mapping.</p>
+
+<figure>
+<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-die-padring.png" alt="Die padring layout with 74-pad configuration" />
+<figcaption>Die padring layout with 74-pad configuration</figcaption>
+</figure>
+
+<p>To help visualize your own pad layouts, Discord user <strong>@Tholin</strong> has developed a Python-based pad viewer that generates an image of the pad layout defined in your template. This is useful for verifying your configuration matches your design intent. You can find the tool <a href="https://github.com/AvalonSemiconductors/ws-submission-2025/blob/main/padout_gen.py">here</a>.</p>
+
+<hr />
+
+<h2 id="design-tools-and-ecosystem">Design Tools and Ecosystem</h2>
+
+<p>Having the physical COB boards is only part of the picture. To actually use them, designers need schematic symbols, footprints, and integration tools. Here’s what the community has built to support the full design workflow.</p>
+
+<h3 id="default-kicad-symbols">Default KiCad Symbols</h3>
+
+<p>The community has developed several <strong><a href="https://www.kicad.org/">KiCad</a> symbols</strong> to support design and integration with COB layouts.</p>
+
+<p>The <strong>pad mapping symbol</strong> corresponds to the default 74-pad wirebonding padframe and <a href="https://github.com/wafer-space/gf180mcu-project-template/blob/main/librelane/config.yaml">default configuration</a> from the <a href="https://github.com/wafer-space/gf180mcu-project-template"><strong>GF180MCU Project Template</strong></a>.</p>
+
+<blockquote>
+  <p>Some users have suggested reducing the number of ground and power pads. If there is sufficient demand, an alternate default configuration will be created.
+Join the discussion on our <a href="https://discord.gg/43y2t53jpE"><strong>Discord server</strong></a>.</p>
+</blockquote>
+
+<figure>
+<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-default-74pad-wirebond-symbol.png" alt="Default 74-pad wirebonding padframe symbol" />
+<figcaption>Default 74-pad wirebonding padframe symbol</figcaption>
+</figure>
+
+<hr />
+
+<h3 id="70-pin-mezzanine-connector-symbol">70-Pin Mezzanine Connector Symbol</h3>
+
+<p>The <strong>mezzanine connector symbol</strong> provides a 1:1 pin mapping to the 70-pin default layout.
+All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a> naming conventions, useful for those familiar with the TT ecosystem who are designing custom chips for this wafer.space run.</p>
+
+<figure>
+&lt;img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-default-70pin-mezzanine-symbol.png" alt=""Default 70-pin mezzanine COB breakout symbol"" &gt;
+<figcaption>"Default 70-pin mezzanine COB breakout symbol"</figcaption>
+</figure>
+
+<p>An alternate version is also available that organizes pins by signal type. This version is particularly useful for Tiny Tapeout-style breakout motherboard designs where grouping by function makes routing clearer.</p>
+
+<figure>
+&lt;img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-tinytapeout-kicad-symbols.png" alt=""70-pin mezzanine COB symbol organized by signal type (Tiny Tapeout version)"" &gt;
+<figcaption>"70-pin mezzanine COB symbol organized by signal type (Tiny Tapeout version)"</figcaption>
+</figure>
+
+<h3 id="kicad-resources-for-cob-design">KiCad Resources for COB Design</h3>
+
+<p>While the initial symbols are in KiCad, the community welcomes contributions of symbols and libraries for other PCB design tools. If you use Altium, Eagle, or another tool, please submit a pull request to the <a href="https://github.com/wafer-space/chip-on-board-wire-bonded-pcbs">chip-on-board-wire-bonded-pcbs repo</a>!</p>
+
+<p>For those new to KiCad or looking to deepen their PCB design skills, <strong>Pat Deegan</strong> (developer of the <strong><a href="https://github.com/TinyTapeout/tt-demo-pcb">Tiny Tapeout demo board</a></strong>) offers <strong><a href="https://inductive-kickback.com/2024/07/kicadunlocked-a-course-for-deep-kicad/">KiCad:Unlocked</a></strong>, a comprehensive free course that covers everything from basic circuit design to advanced PCB layout techniques. The community hopes to work with Pat in the future on a tutorial specifically focused on wire bonding integration and designing motherboards for wafer.space COB packages.</p>
+
+<p>If you want to quickly review KiCad designs without installing software, <strong><a href="https://kicanvas.org/">KiCanvas</a></strong> provides a browser-based viewer for KiCad files. You can use it to inspect the standard COB layouts, verify connector pinouts, and review community-contributed designs, all directly in your browser.</p>
+
+<hr />
+
+<h3 id="beyond-the-standard-expanding-options">Beyond the Standard: Expanding Options</h3>
+
+<p>While the 70-pin mezzanine connector serves as the standard, the community recognizes that different projects have different needs.</p>
+
+<h4 id="castellated-and-breadboardable-breakouts">Castellated and Breadboardable Breakouts</h4>
+
+<p>The community is developing a series of breakout boards designed to make it easier to prototype, experiment, and integrate your dies into existing systems.</p>
+
+<figure>
+<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-breakouts.png" alt="Castellated and breadboardable breakout board designs" />
+<figcaption>Castellated and breadboardable breakout board designs</figcaption>
+</figure>
+
+<hr />
+
+<h2 id="real-world-adoption">Real-World Adoption</h2>
+
+<p>The real test of any standard is whether people actually use it. Here’s how the community is already building on this work.</p>
+
+<h3 id="derivative-designs">Derivative Designs</h3>
+
+<p>It’s exciting to see others building on the <a href="https://wafer.space/">wafer.space</a> platform!
+<strong><a href="https://peterkinget.github.io/">Professor Peter Kinget</a></strong> and his students at <strong><a href="https://peterkinget.github.io/">Columbia University</a></strong> are developing educational chips using <a href="https://wafer.space/">wafer.space</a> for their <a href="https://mosbius.org/0_front_matter/intro.html"><strong>MosBius Project</strong></a>.</p>
+
+<p>MosBius provides students and designers the opportunity to explore MOS circuit topologies through a unique <strong>analog switch matrix</strong>, where each pin can connect to any of ten on-chip buses. This enables flexible on-chip circuit wiring and simplifies testing setups.</p>
+
+<figure>
+<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-mosbius.png" alt="MosBius Project chip design from Columbia University" />
+<figcaption>MosBius Project chip design from Columbia University</figcaption>
+</figure>
+
+<p><em>Image and design by @xianglin_pu on <a href="https://discord.gg/43y2t53jpE">wafer.space Discord</a></em></p>
+
+<hr />
+
+<h3 id="the-path-not-yet-taken">The Path Not (Yet) Taken</h3>
+
+<p>Before settling on the mezzanine connector as the standard, the community explored several alternative packaging approaches. While these didn’t become the primary standard, they represent valuable experiments that informed the final design and may still serve specialized use cases.</p>
+
+<h4 id="lga-land-grid-array">LGA (Land Grid Array)</h4>
+
+<figure>
+<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-lga-cob.png" alt="LGA (Land Grid Array) COB package design" />
+<figcaption>LGA (Land Grid Array) COB package design</figcaption>
+</figure>
+
+<h4 id="dip">DIP</h4>
+
+<figure class="gallery">
+<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-dip.png" alt="padframes-cob-dip" />
+<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-dip1.png" alt="padframes-cob-dip1" />
+<figcaption>DIP package designs for through-hole applications</figcaption>
+</figure>
+
+<h4 id="castellated">Castellated</h4>
+
+<figure>
+<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-castellated.png" alt="Castellated edge COB package design" />
+<figcaption>Castellated edge COB package design</figcaption>
+</figure>
+
+<hr />
+
+<h2 id="learning-from-pioneers">Learning from Pioneers</h2>
+
+<p>The wafer.space COB work doesn’t exist in isolation. Other projects have tackled similar challenges, and their experiences directly inform this effort.</p>
+
+<figure>
+<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-tt-cob.jpg" alt="Tiny Tapeout chip-on-board implementation" />
+<figcaption>Tiny Tapeout chip-on-board implementation</figcaption>
+</figure>
+
+<p>Tiny Tapeout recently <a href="https://www.zerotoasiccourse.com/post/cob/">published an update</a> on their first successful Chip-on-Board (COB) implementation, highlighting their bare-die submission on the Zero to ASIC Course “MPW-7” run.</p>
+
+<figure>
+<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-tt-youtube.png" alt="Video thumbnail - Tiny Tapeout 9 First COB samples" />
+<figcaption>Video thumbnail - Tiny Tapeout 9 First COB samples</figcaption>
+</figure>
+
+<p><a href="https://www.youtube.com/watch?v=XJmWoBJjvlI"><strong>Watch the video: Tiny Tapeout 9 - First COB samples!</strong></a></p>
+
+<p>While Tiny Tapeout achieved a significant milestone, they also noted limitations: the long bonding wires increased inductance and degraded performance, and securing small-volume wire-bonding services remains difficult.</p>
+
+<p>For those interested in understanding the wire bonding process in detail, Stephan Bökelmann’s talk at Kicon 2025 provides an excellent introduction to the practical challenges and techniques:</p>
+
+<p><a href="https://www.youtube.com/watch?v=dNBwY7L6niI"><strong>Watch: Poor man’s intro to Wire-Bonding @ Kicon 2025</strong></a></p>
+
+<p>The <a href="https://wafer.space/">wafer.space</a> community views these learnings as a springboard. By introducing standardized COB templates, the goal is to make COB packaging more accessible, more scalable, and better optimized. The objective is to build upon the success of Tiny Tapeout and improve their future runs by reducing parasitics, streamlining the supply chain, and enabling anyone to pick up a COB-mounted die and integrate it into their system with ease.</p>
+
+<hr />
+
+<h2 id="join-the-effort">Join the Effort</h2>
+
+<p>This community-developed standard is exactly that: community-developed. The designs, symbols, and approaches documented here represent months of collaborative work, but they’re far from finished.</p>
+
+<p>The community is exploring multiple <strong>COB packaging varieties</strong> and would love your contribution:</p>
+
+<p><strong>If you’re designing a chip for this run:</strong></p>
+<ul>
+  <li>Share your I/O requirements in the <strong>#cob</strong> Discord channel. Your needs help refine future designs</li>
+  <li>Test the pad viewer tool and report any issues or feature requests</li>
+</ul>
+
+<p><strong>If you have COB or wirebonding experience:</strong></p>
+<ul>
+  <li>Share vendor recommendations or tips for small-volume runs</li>
+  <li>Provide feedback on the wirebonding footprint design</li>
+  <li>Help identify potential manufacturing issues before they become problems</li>
+</ul>
+
+<p><strong>If you use other PCB design tools:</strong></p>
+<ul>
+  <li>Contribute symbols and footprints for Altium, Eagle, or other platforms</li>
+  <li>Submit pull requests to the <a href="https://github.com/wafer-space/chip-on-board-wire-bonded-pcbs">chip-on-board-wire-bonded-pcbs repo</a></li>
+</ul>
+
+<p><strong>If you’re curious or have questions:</strong></p>
+<ul>
+  <li>Ask in Discord. The community includes experienced designers happy to help</li>
+  <li>Review the designs using KiCanvas and suggest improvements</li>
+  <li>Help test breakout board designs and report what works (or doesn’t)</li>
+</ul>
+
+<p>Join the community and help shape the future of accessible silicon design:</p>
+
+<ul>
+  <li>
+    <p><strong>Discord:</strong> <a href="https://discord.gg/43y2t53jpE">discord.gg/43y2t53jpE</a> (see <strong>#cob</strong> channel)</p>
+  </li>
+  <li>
+    <p><strong>Matrix:</strong> <a href="https://matrix.to/#/#gf180mcu:fossi-chat.org">#gf180mcu.org</a></p>
+  </li>
+</ul>
+
+<p>Together, the community can make custom silicon as easy and affordable as PCB design.</p>
+
+<hr />
+
+<p><strong>Thanks to Andrew Wingate for this guest post!</strong> If you’re interested in chip-on-board packaging, join the <strong>#cob channel</strong> on the <a href="https://discord.gg/43y2t53jpE">wafer.space Discord</a> to discuss designs, share feedback, and help contribute to making COB packaging accessible for everyone.</p>]]></content><author><name>Tim &apos;mithro&apos; Ansell</name></author><category term="news" /><category term="crowdsupply" /><category term="gf180mcu" /><category term="campaign" /><summary type="html"><![CDATA[This update was originally published on Crowd Supply.]]></summary></entry><entry><title type="html">Building Real Sensors with GF180MCU</title><link href="https://wafer.space/pr-73/news/openfasoc-sensors" rel="alternate" type="text/html" title="Building Real Sensors with GF180MCU" /><published>2025-11-05T12:00:00+00:00</published><updated>2025-11-05T12:00:00+00:00</updated><id>https://wafer.space/pr-73/news/openfasoc-sensors</id><content type="html" xml:base="https://wafer.space/pr-73/news/openfasoc-sensors"><![CDATA[<p><em>This update was originally published on <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/updates/openfasoc">Crowd Supply</a>.</em></p>
+
+<p>Hey everyone! 👋</p>
+
+<p>As we get closer to our <strong>December 3rd tape-in deadline</strong> (that’s coming up fast!), I wanted to share something that really shows the power of what you can build with the <a href="https://gf180mcu-pdk.readthedocs.io/">GF180MCU process</a> we’re pooling together.</p>
+
+<h2 id="real-silicon-real-applications">Real Silicon, Real Applications</h2>
+
+<p><a href="https://vivo.brown.edu/display/msaligan">Saligane</a>’s group at the University of Michigan - now at Brown University - recently published <a href="https://ieeexplore.ieee.org/document/10584418">a paper in IEEE Solid-State Circuits Magazine</a> showing off an analog front-end (AFE) chip they designed entirely with open-source tools on GF180MCU. And it’s not just a test chip — they’re using it to read out flexible laser-induced graphene sensors for wearables!</p>
+
+<figure>
+<img src="/assets/images/news/gf180mcu-run-1/openfasoc-sensors/annotated_shot.png" alt="The fabricated GF180MCU chip showing OPAMP blocks, SAR ADC, and switched-capacitance circuits" />
+<figcaption>The fabricated GF180MCU chip showing OPAMP blocks, SAR ADC, and switched-capacitance circuits</figcaption>
+</figure>
+
+<p>(<a href="https://siliconprawn.org/archive/doku.php?id=mcmaster:efabless:gf180mcu-mpw18h1-18100004">View high-resolution die photography on Silicon Prawn</a>)</p>
+
+<p>The chip integrates operational amplifiers, a 14-bit SAR ADC, and a capacitive DAC to create a complete sensor readout platform. They demonstrated it working with:</p>
+
+<ul>
+  <li><strong>Strain/flex sensors</strong> (detecting finger bending in real-time)</li>
+  <li><strong>Temperature sensors</strong> (tracking body temperature with 0.9989 R² accuracy)</li>
+  <li><strong>Multi-modal sensing</strong> (combining different sensor types on one platform)</li>
+</ul>
+
+<figure>
+<img src="/assets/images/news/gf180mcu-run-1/openfasoc-sensors/test_setup.png" alt="The fabricated chip wire-bonded to a PCB, ready to interface with flexible sensor patches" />
+<figcaption>The fabricated chip wire-bonded to a PCB, ready to interface with flexible sensor patches</figcaption>
+</figure>
+
+<h2 id="the-open-source-flow-works">The Open Source Flow Works!</h2>
+
+<p>What’s exciting is they used the exact same open-source toolchain you have access to:</p>
+<ul>
+  <li><a href="https://xschem.sourceforge.io/stefan/index.html">XSchem</a> for schematic capture</li>
+  <li><a href="https://ngspice.sourceforge.io/">Ngspice</a> for simulation</li>
+  <li><a href="https://www.klayout.de/">KLayout</a> and <a href="https://github.com/RTimothyEdwards/magic">Magic</a> for layout</li>
+  <li>Standard DRC/LVS checks</li>
+</ul>
+
+<p>They’ve published their designs on GitHub in the <a href="https://github.com/idea-fasoc/openfasoc-tapeouts?tab=readme-ov-file#analog-front-end-and-mixed-signal">OpenFASoC-Tapeouts repository</a>, and the <a href="https://foss-eda-tools.googlesource.com/third_party/shuttle/gf180mcu/mpw-18h1/slot-004/+/refs/heads/main">final submission is available on foss-eda-tools</a>, which means you can actually look at exactly how they did it.</p>
+
+<figure>
+<img src="/assets/images/news/gf180mcu-run-1/openfasoc-sensors/analog_flow.png" alt="The complete open-source analog design flow used for this project" />
+<figcaption>The complete open-source analog design flow used for this project</figcaption>
+</figure>
+
+<h2 id="reuse-dont-reinvent">Reuse, Don’t Reinvent!</h2>
+
+<p>This is where it gets really interesting for your designs. The <a href="https://github.com/idea-fasoc/OpenFASOC">OpenFASoC project</a> provides <strong>building blocks you can directly reuse</strong>:</p>
+
+<ul>
+  <li><strong><a href="https://github.com/idea-fasoc/openfasoc-tapeouts/tree/main/mpw18h1/opamp-gen/Programmable_2stage">Folded-cascode OPAMP</a></strong> with programmable bias for noise/power trade-offs</li>
+  <li><strong><a href="https://github.com/idea-fasoc/openfasoc-tapeouts/tree/main/mpw18h1/adc-gen/comparator">14-bit SAR ADC</a></strong> (asynchronous, monotonic switching)</li>
+  <li><strong><a href="https://github.com/idea-fasoc/openfasoc-tapeouts/tree/main/mpw18h1/cisar-gen/spice">Bootstrapper and switch circuits</a></strong> for high-performance sampling</li>
+  <li><strong><a href="https://github.com/idea-fasoc/openfasoc-tapeouts/tree/main/mpw18h1/adc-gen/comparator">Comparator circuits</a></strong> (double-tail latch and StrongArm topologies)</li>
+</ul>
+
+<p>You can literally take their <a href="https://github.com/idea-fasoc/openfasoc-tapeouts/tree/main/mpw18h1/gds">GDSII files</a>, study their layout techniques, and adapt their circuits for your own sensor applications. Need to read out a resistive sensor? Temperature probe? Custom transducer? The hard work of building reliable analog blocks is already done.</p>
+
+<figure>
+<img src="/assets/images/news/gf180mcu-run-1/openfasoc-sensors/testing.png" alt="Real-time flex sensor demonstration showing finger bending detection with the AFE chip" />
+<figcaption>Real-time flex sensor demonstration showing finger bending detection with the AFE chip</figcaption>
+</figure>
+
+<h2 id="what-could-you-build">What Could You Build?</h2>
+
+<p>Think about applications like:</p>
+<ul>
+  <li>Environmental monitoring devices</li>
+  <li>Biomedical wearables</li>
+  <li>Industrial sensor nodes</li>
+  <li>Custom instrumentation</li>
+  <li>IoT edge devices with analog sensing</li>
+</ul>
+
+<p>With <a href="https://gf180mcu-pdk.readthedocs.io/">GF180MCU’s</a> 5 metal layers, MIM capacitors, multiple resistor types, and mixed-signal capabilities, you have everything needed for serious analog and mixed-signal designs.</p>
+
+<h2 id="get-inspired-get-building">Get Inspired, Get Building</h2>
+
+<p>Check out the <a href="https://siliconprawn.org/archive/lib/exe/fetch.php?media=mcmaster:efabless:gf180mcu-mpw18h1-18100004:rapid-prototyping-of-laser-induced-graphene-sensors-with-open-source-silicon-paving-the-way-small.pdf">full paper</a> to see detailed schematics, measurement results, and their complete design flow. This is real silicon, designed with open tools, doing real work — exactly what we’re enabling with this pooled run.</p>
+
+<p>Questions about the campaign or getting started with GF180MCU? Hit reply or join our community discussions!</p>
+
+<ul>
+  <li>Tim “mithro” Ansell</li>
+</ul>
+
+<p><em>P.S. — If you haven’t reserved your slot yet, head over to <a href="https://buy.wafer.space/">buy.wafer.space</a> before November 28th. After that, you’ll be waiting for Run 2!</em></p>]]></content><author><name>Tim &apos;mithro&apos; Ansell</name></author><category term="news" /><category term="crowdsupply" /><category term="gf180mcu" /><category term="campaign" /><summary type="html"><![CDATA[This update was originally published on Crowd Supply.]]></summary></entry><entry><title type="html">Understanding wafer.space: Resources to Learn More About Our Mission</title><link href="https://wafer.space/pr-73/news/recent-publicity" rel="alternate" type="text/html" title="Understanding wafer.space: Resources to Learn More About Our Mission" /><published>2025-10-31T12:00:00+00:00</published><updated>2025-10-31T12:00:00+00:00</updated><id>https://wafer.space/pr-73/news/recent-publicity</id><content type="html" xml:base="https://wafer.space/pr-73/news/recent-publicity"><![CDATA[<p><em>This update was originally published on <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/updates/recent-publicity">Crowd Supply</a>.</em></p>
+
+<p>Hey everyone,</p>
+
+<p>When Efabless shut down earlier this year, it left a critical gap: affordable access to custom silicon disappeared overnight. <a href="https://wafer.space/">wafer.space</a> exists to fill that gap by providing pooled fabrication services that make custom silicon accessible at $7 per chip.</p>
+
+<figure>
+<img src="/assets/images/news/gf180mcu-run-1/recent-publicity/shiny_sticker.png" alt="wafer.space - Making custom silicon accessible" />
+<figcaption>wafer.space - Making custom silicon accessible</figcaption>
+</figure>
+
+<p>Since launching our campaign, we’ve had the opportunity to explain this mission across various platforms. Each conversation reveals different aspects of why accessible silicon matters and how we’re making it happen. Here’s your guide to learning more.</p>
+
+<h2 id="quick-start-understanding-the-vision">Quick Start: Understanding the Vision</h2>
+
+<p><strong>Why does <a href="https://wafer.space/">wafer.space</a> exist?</strong> Start with these resources to quickly understand what we’re building:</p>
+
+<h3 id="electronics-lab-interview-article---10-min-read"><a href="https://www.electronics-lab.com/e-lab-interview-wafer-space-founder-aims-to-make-custom-silicon-accessible-again/">Electronics-Lab Interview</a> (Article - 10 min read)</h3>
+<p><strong>What you’ll learn:</strong> Why Tim created wafer.space after Efabless collapsed, why GF180MCU was chosen (cost-optimized process from a major foundry), how the pricing works ($7k for 1,000 dies enables real product development), toolchain options (open source via LibreLane or proprietary), packaging choices, and the path from prototype to production. Covers the full journey from concept to manufactured chips.</p>
+
+<h3 id="hackware-singapore-talk-video---30-min"><a href="https://www.youtube.com/watch?v=0nqV9Eo17wA">HackWare Singapore Talk</a> (Video - 30 min)</h3>
+<p><strong>What you’ll learn:</strong> The journey from requiring NDAs and expensive tools to accessible silicon design, how Tiny Tapeout demonstrated that anyone can create chips (5,000+ people have taped out), why <a href="https://wafer.space/">wafer.space</a> uses GlobalFoundries’ cost structure for better pricing, and making Arduino-like products with custom silicon at $7,000 for 1,000 parts.</p>
+
+<h2 id="deep-dive-technical--business-details">Deep Dive: Technical &amp; Business Details</h2>
+
+<p><strong>How does it actually work?</strong> These resources explore the mechanics, economics, and ecosystem:</p>
+
+<h3 id="teardown-session-56-waferspace-with-tim-ansell--leo-moser-video---45-min"><a href="https://youtu.be/tEOmnN8IAjs">Teardown Session 56: wafer.space with Tim Ansell &amp; Leo Moser</a> (Video - 45 min)</h3>
+<p><strong>What you’ll learn:</strong> How silicon pooling works like PCB services (OSH Park for chips), the journey from Google’s open PDK program through Efabless to <a href="https://wafer.space/">wafer.space</a>, why 1,000 chips for $7,000 ($7/chip) makes custom silicon accessible for small-scale production (100-1000 units), and how open-source tools (LibreLane) and open PDKs enable this infrastructure.</p>
+
+<h3 id="the-amp-hour-703-podcast---90-min"><a href="https://theamphour.com/703-building-wafer-space-with-tim-ansell/">The Amp Hour #703</a> (Podcast - 90 min)</h3>
+<p><strong>What you’ll learn:</strong> The economics of pooled fabrication ($7k for 1,000 dies vs eFabless $10k for 150-200 dies), packaging options (bare die, chip-on-board, wirebonding with secondhand equipment), design tools from Tiny Tapeout to Verilog to analog layout, post-eFabless ecosystem (IHP Europe, ChipFoundry US, <a href="https://wafer.space/">wafer.space</a> Singapore), professional help options (ChipFlow, Mabrains), and honest discussion about what makes $7/chip sustainable. Essential listening for anyone considering their own silicon project.</p>
+
+<h2 id="community-perspectives-why-this-matters">Community Perspectives: Why This Matters</h2>
+
+<p>The tech press and community discussions reveal something important—this isn’t just about one company or service. It’s about fundamental infrastructure:</p>
+
+<h3 id="what-resonates-three-key-themes">What Resonates: Three Key Themes</h3>
+
+<p><strong>“Like OSH Park for silicon”</strong> - Writers keep making this comparison because it captures something essential: predictable pricing, regular runs, and community-driven infrastructure that just works. Read more in <a href="https://www.hackster.io/news/wafer-space-delivers-1-000-chips-of-your-own-design-starting-at-just-7-each-75bbf49fd8b0">Hackster.io’s coverage</a>.</p>
+
+<p><strong>“Democratizing chip design”</strong> - When <a href="https://www.cnx-software.com/2025/10/07/wafer-space-lets-you-design-your-custom-silicon-just-for-7-per-die/">CNX Software</a> and <a href="https://linuxgizmos.com/wafer-space-launches-gf180mcu-run-1-for-custom-silicon-fabrication/">LinuxGizmos</a> cover the $7/die pricing, they’re recognizing a shift: different people with different budgets can now participate in hardware innovation.</p>
+
+<p><strong>“Post-Efabless infrastructure”</strong> - The <a href="https://forum.contextualelectronics.com/t/wafer-space-low-cost-silicon-manufacturing-7k-1-000-ics/7313">Contextual Electronics forum discussion</a> digs into what this means practically: continuing critical work that an existing community depends on.</p>
+
+<h3 id="active-discussions--questions">Active Discussions &amp; Questions</h3>
+
+<p>Community conversations reveal the questions people are asking and projects they’re planning:</p>
+
+<p><strong><a href="https://bsky.app/profile/dshadoff.bsky.social/post/3m2ie2vm2ns2y">David Shadoff on Bluesky</a></strong> explores retro-computer and console chip designs: “Most can be done on FPGA today, custom silicon could make assembly cheaper (reducing FPGA support).” This captures a key use case—when custom ASICs make more sense than FPGAs for production.</p>
+
+<p><strong><a href="https://types.pl/@wren6991/115267990436492107">Luke Wren on Mastodon</a></strong> does the math on what fits in 20mm²: “The smallest NAND2 is 11 square microns, so assuming 2/3rds of the die is non padding, that’s 1.2 million gates. The densest SRAM macro they provide is 512 bytes in 0.21 mm², so if you fill the area with RAM that’s around 31 kB. Enough for a small Linux SoC.” Real calculations showing what’s actually achievable.</p>
+
+<p>Other discussions across <a href="https://mastodon.social/tags/OpenSilicon">Mastodon (#OpenSilicon)</a>, <a href="https://www.reddit.com/r/chipdesign/">Reddit (/r/chipdesign)</a>, and <a href="https://www.linkedin.com/feed/hashtag/opensilicon/">LinkedIn</a> explore:</p>
+<ul>
+  <li>Technical: “What’s achievable in 20mm²?”</li>
+  <li>Practical: “Can this work for small production runs?”</li>
+  <li>Strategic: “How does this change who can design chips?”</li>
+</ul>
+
+<p>Join these discussions to learn from others exploring the same questions.</p>
+
+<h2 id="your-learning-path-forward">Your Learning Path Forward</h2>
+
+<p>Whether you’re curious or committed, here’s how to engage:</p>
+
+<ol>
+  <li><strong>Quick start</strong> - Read the <a href="https://www.electronics-lab.com/e-lab-interview-wafer-space-founder-aims-to-make-custom-silicon-accessible-again/">Electronics-Lab interview</a> or watch the <a href="https://www.youtube.com/watch?v=0nqV9Eo17wA">HackWare talk</a> to grasp the mission</li>
+  <li><strong>Deep dive</strong> - Watch the <a href="https://youtu.be/tEOmnN8IAjs">Teardown session</a> or listen to <a href="https://theamphour.com/703-building-wafer-space-with-tim-ansell/">The Amp Hour</a> for technical and business insights</li>
+  <li><strong>Connect with community</strong> - Join <a href="https://discord.gg/43y2t53jpE">Discord</a> or <a href="https://matrix.to/#/#gf180mcu:fossi-chat.org">Matrix</a> to ask questions and learn from others</li>
+  <li><strong>Evaluate your project</strong> - Use the resources above to determine if Run 1 fits your needs</li>
+</ol>
+
+<p><strong>Ready to participate?</strong> Campaign closes November 28th. Reserve your slot at <a href="https://buy.wafer.space/">buy.wafer.space</a>.</p>
+
+<p><strong>Still learning?</strong> That’s perfect. Use these resources to understand not just what we’re offering, but why rebuilding accessible silicon infrastructure matters for the future of open hardware.</p>
+
+<h2 id="coming-updates-practical-guidance">Coming Updates: Practical Guidance</h2>
+
+<p>Future updates will provide hands-on learning:</p>
+<ul>
+  <li>Example designs - what fits in 20mm² with detailed analysis</li>
+  <li>Submission process - step-by-step guide for December 3rd deadline</li>
+  <li>Packaging options - understanding your choices from bare dies to chip on board option</li>
+</ul>
+
+<h2 id="the-bigger-picture">The Bigger Picture</h2>
+
+<p>When custom silicon costs $7 per chip instead of requiring $70,000 minimum orders, different people with different projects can participate. Students can learn chip design alongside programming. Hardware startups can prototype with custom ASICs instead of compromising with FPGAs. Retro computing enthusiasts can recreate vintage chips. Small production runs become viable.</p>
+
+<p>The conversations above explore this shift from multiple angles—technical, economic, and practical. They document not just what <a href="https://wafer.space/">wafer.space</a> offers, but why rebuilding accessible fabrication infrastructure matters for hardware innovation.</p>
+
+<p>Thanks for taking the time to learn about this mission. Whether you join Run 1 or future runs, understanding why this infrastructure matters is the first step.</p>
+
+<ul>
+  <li>Tim ‘mithro’ Ansell</li>
+</ul>]]></content><author><name>Tim &apos;mithro&apos; Ansell</name></author><category term="news" /><category term="crowdsupply" /><category term="gf180mcu" /><category term="campaign" /><summary type="html"><![CDATA[This update was originally published on Crowd Supply.]]></summary></entry><entry><title type="html">Professional Design Support: Your Options for GF180MCU Success</title><link href="https://wafer.space/pr-73/news/getting-help" rel="alternate" type="text/html" title="Professional Design Support: Your Options for GF180MCU Success" /><published>2025-10-27T12:00:00+00:00</published><updated>2025-10-27T12:00:00+00:00</updated><id>https://wafer.space/pr-73/news/getting-help</id><content type="html" xml:base="https://wafer.space/pr-73/news/getting-help"><![CDATA[<p><em>This update was originally published on <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/updates/getting-help">Crowd Supply</a>.</em></p>
+
+<p>Hey everyone,</p>
+
+<p>With the <strong>December 3rd GDS submission deadline</strong> getting closer, I wanted to talk about something that might be on your mind: completing your design on time.</p>
+
+<p>Whether you’ve already <a href="https://buy.wafer.space/">reserved a slot</a> or you’re still on the fence because of timeline concerns, this update is for you. The short version: you have options. Professional paid engineering services are available if you want to accelerate your timeline, get expert review, or have someone handle parts (or all) of your design.</p>
+
+<p><img src="/assets/images/news/gf180mcu-run-1/getting-help/timeline.svg" alt="timeline" /></p>
+
+<h2 id="two-important-things-up-front">Two Important Things Up Front</h2>
+
+<p><strong>First</strong>: Professional services are completely optional. You can absolutely complete your GF180MCU design independently using the open-source tools, documentation, and community resources. Many participants will do exactly that.</p>
+
+<p><strong>Second</strong>: The following companies offer paid consulting and engineering services. They’re not free support—they’re professional partners you can hire to help ensure your success.</p>
+
+<h2 id="when-might-professional-services-make-sense">When Might Professional Services Make Sense?</h2>
+
+<p>Different people have different needs and constraints. Here are some scenarios where bringing in professional help might accelerate your project or reduce risk:</p>
+
+<ul>
+  <li>
+    <p>⏰ <strong>Time-Constrained Projects</strong>: Reserved a slot but juggling multiple priorities? Professional help can accelerate your timeline and ensure you meet the December 3rd deadline.</p>
+  </li>
+  <li>
+    <p>🎓 <strong>First-Time Fabrication</strong>: Never taped out a design before? Expert review can catch issues before going to silicon - much cheaper than discovering problems after fabrication.</p>
+  </li>
+  <li>
+    <p>💼 <strong>Commercial Projects</strong>: Building a product for market? Professional contracts establish clear responsibilities, deliverables, and recourse if things go wrong - important when your business depends on it.</p>
+  </li>
+  <li>
+    <p>📊 <strong>Complex Analog/Mixed-Signal</strong>: Sensitive analog circuits or complex interfaces? Experienced designers can optimize performance and help avoid subtle issues that only show up in silicon.</p>
+  </li>
+  <li>
+    <p>🔧 <strong>Tool-Specific Challenges</strong>: Stuck with OpenROAD configuration or hitting tool limitations? Get help from the tool developers themselves - Precision Innovations built OpenROAD.</p>
+  </li>
+</ul>
+
+<p>These are just examples. Maybe you’re working on something unique, or you need the contractual accountability that comes with paid professional services. The point is: you get to choose the approach that works for your situation.</p>
+
+<h2 id="meet-the-companies-offering-design-services">Meet the Companies Offering Design Services</h2>
+
+<p>Four companies are offering paid professional services specifically for <a href="https://wafer.space/">wafer.space</a> GF180MCU designs. They’re listed here in alphabetical order:</p>
+
+<hr />
+
+<p><img src="/assets/images/news/gf180mcu-run-1/getting-help/chipflow-logo-std-rounded.png" alt="chipflow-logo-std-rounded" style="max-width: 200px;" /></p>
+
+<h4 id="chipflow--spain"><a href="https://wafer.space/design-help.html#chipflow">ChipFlow</a> · <em>Spain</em></h4>
+
+<p>Full-service ASIC development platform with cloud-based design tools, collaborative workflows, and pre-verified reference designs.</p>
+
+<blockquote>
+  <p>ChipFlow is excited to help you succeed with your wafer.space projects using our powerful design tools.
+— Rob Taylor, CTO</p>
+</blockquote>
+
+<hr />
+
+<p><img src="/assets/images/news/gf180mcu-run-1/getting-help/mabrains-logo-std-rounded.png" alt="mabrains-logo-std-rounded" style="max-width: 200px;" /></p>
+
+<h4 id="mabrains--egypt"><a href="https://wafer.space/design-help.html#mabrains">Mabrains</a> · <em>Egypt</em></h4>
+
+<p>PDK development, analog &amp; digital design, physical design &amp; layout, design verification, and AMS modeling. Over 25 years of experience, with expertise in AI/ML integration.</p>
+
+<blockquote>
+  <p>We at Mabrains are truly excited to empower designers and innovators working with the wafer.space process. Our goal is to help you bring your ideas to life and succeed every step of the way.
+— Amro Tork, CEO</p>
+</blockquote>
+
+<hr />
+
+<p><img src="/assets/images/news/gf180mcu-run-1/getting-help/precision-logo-std-rounded.png" alt="precision-logo-std-rounded" style="max-width: 200px;" /></p>
+
+<h4 id="precision-innovations--usa"><a href="https://wafer.space/design-help.html#precision-innovations">Precision Innovations</a> · <em>USA</em></h4>
+
+<p>Primary developers of OpenROAD, offering commercial support, custom development, training &amp; education, and rapid turnaround design flows. If you’re using OpenROAD and need expert tool support, these are the people who built it.</p>
+
+<blockquote>
+  <p>Precision Innovations Inc provides paid professional support for OpenROAD in Industrial Applications. We are here to ensure your success!
+— Tom Spyrou, CEO</p>
+</blockquote>
+
+<hr />
+
+<p><img src="/assets/images/news/gf180mcu-run-1/getting-help/slice-logo-std-rounded.png" alt="slice-logo-std-rounded" style="max-width: 200px;" /></p>
+
+<h4 id="slice-semiconductor--ireland"><a href="https://wafer.space/design-help.html#slice-semiconductor">SLICE Semiconductor</a> · <em>Ireland</em></h4>
+
+<p>Low-cost ASIC development, mixed-signal IC design contracting, and consulting across technology nodes from 180nm to 3nm.</p>
+
+<blockquote>
+  <p>SLICE Semiconductor is excited to take your project from initial concept, right through to final silicon, targeting the wafer.space process.
+— Diarmuid, CEO</p>
+</blockquote>
+
+<hr />
+
+<h2 id="your-design-your-approach">Your Design, Your Approach</h2>
+
+<p>Think of professional services as part of a spectrum of options, not an all-or-nothing choice:</p>
+
+<div class="gallery">
+<img src="/assets/images/news/gf180mcu-run-1/getting-help/support-spectrum-independent.svg" alt="support-spectrum-independent" />
+<img src="/assets/images/news/gf180mcu-run-1/getting-help/support-spectrum-hybrid.svg" alt="support-spectrum-hybrid" />
+<img src="/assets/images/news/gf180mcu-run-1/getting-help/support-spectrum-fullservice.svg" alt="support-spectrum-fullservice" />
+</div>
+
+<p>You might handle 90% of your design independently and bring in expert review for critical analog sections. Or maybe you want someone to handle the entire physical design while you focus on verification. The approach you choose depends on your timeline, budget, and where you want to spend your effort.</p>
+
+<p><strong>Important note about community resources</strong>: The <a href="https://discord.gg/43y2t53jpE">Discord</a> and <a href="https://matrix.to/#/#gf180mcu:fossi-chat.org">Matrix</a> channels are great places to learn and get guidance from others in the community. However, remember that ultimately you’re responsible for your own design—either doing the work directly or paying someone to do it for you. Community members can point you in the right direction, but they’re not substitute engineers for your project.</p>
+
+<h2 id="what-should-you-do-next">What Should You Do Next?</h2>
+
+<h3 id="if-you-havent-purchased-a-slot-yet">If you haven’t purchased a slot yet:</h3>
+
+<p>Don’t let timeline concerns stop you from <a href="https://buy.wafer.space/">reserving your spot</a>. Professional help is available if you need it, but the <strong>purchase deadline is November 28th</strong>. After that, you’re waiting for Run 2.</p>
+
+<ol>
+  <li>Reserve your slot at <a href="https://buy.wafer.space/">buy.wafer.space</a></li>
+  <li>Assess your design timeline and needs</li>
+  <li>Reach out for professional quotes if helpful</li>
+</ol>
+
+<h3 id="if-youve-already-purchased-a-slot">If you’ve already purchased a slot:</h3>
+
+<p>If you’re feeling time pressure or want expert assistance, reach out to companies sooner rather than later. The <strong>December 3rd GDS submission deadline</strong> is approaching.</p>
+
+<ol>
+  <li>Visit <a href="https://wafer.space/design-help.html">wafer.space/design-help.html</a> for full company details</li>
+  <li>Contact companies directly for quotes and availability</li>
+  <li>Be specific about what you need (review, partial help, full service)</li>
+</ol>
+
+<h3 id="free-community-resources-always-available">Free community resources (always available):</h3>
+
+<ul>
+  <li><strong>Discord</strong>: <a href="https://discord.gg/43y2t53jpE">discord.gg/43y2t53jpE</a></li>
+  <li><strong>Matrix</strong>: <a href="https://matrix.to/#/#gf180mcu:fossi-chat.org">#gf180mcu:fossi-chat.org</a></li>
+  <li><strong>Documentation</strong>: <a href="https://gf180mcu-pdk.readthedocs.io/">gf180mcu-pdk.readthedocs.io</a></li>
+</ul>
+
+<p>Remember: community members can offer guidance and share their experiences, but you’re responsible for executing your design—whether that’s by doing the work yourself or hiring professional help.</p>
+
+<h2 id="making-silicon-truly-accessible">Making Silicon Truly Accessible</h2>
+
+<p><a href="https://wafer.space/">wafer.space</a> exists to make custom silicon affordable. At $7 per chip for production quantities, we’ve removed the cost barrier to fabrication.</p>
+
+<p>These professional service companies extend that mission by making silicon accessible in another way: offering the option to pay for expertise when you need it. Not everyone has unlimited time to climb the learning curve. Having professional engineering services available means more people can participate in open silicon manufacturing.</p>
+
+<p>Your idea deserves to become real silicon. Whether you get there independently, with community help, with targeted professional help, or through full-service design, what matters is that you get there.</p>
+
+<ul>
+  <li>Tim ‘mithro’ Ansell</li>
+</ul>]]></content><author><name>Tim &apos;mithro&apos; Ansell</name></author><category term="news" /><category term="crowdsupply" /><category term="gf180mcu" /><category term="campaign" /><summary type="html"><![CDATA[This update was originally published on Crowd Supply.]]></summary></entry><entry><title type="html">Easier Design Flow: LibreLane &amp;amp; the gf180mcu Project Template</title><link href="https://wafer.space/pr-73/news/librelane-template" rel="alternate" type="text/html" title="Easier Design Flow: LibreLane &amp;amp; the gf180mcu Project Template" /><published>2025-10-23T12:00:00+00:00</published><updated>2025-10-23T12:00:00+00:00</updated><id>https://wafer.space/pr-73/news/librelane-template</id><content type="html" xml:base="https://wafer.space/pr-73/news/librelane-template"><![CDATA[<p><em>This update was originally published on <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/updates/librelane-template">Crowd Supply</a>.</em></p>
+
+<p>Hey everyone,</p>
+
+<p>If you’ve been following open silicon over the past few years, you know the story: Google’s <a href="https://developers.google.com/silicon">open PDK program</a> changed everything, but when <a href="https://efabless.com/">Efabless</a> shut down earlier this year, a lot of infrastructure disappeared. That’s part of why <a href="https://wafer.space/">wafer.space</a> exists - to rebuild accessible fabrication services.</p>
+
+<p>But fabrication is only half the equation. You also need tools to actually design your chip. That’s where <strong><a href="https://librelane.rtfd.io/">LibreLane</a></strong> comes in.</p>
+
+<p>Last month at <a href="https://orconf.org/">ORConf 2025</a> in Valencia, Mohamed Gaber and Leo Moser presented LibreLane - the next-generation design flow for open silicon. And there’s now a ready-to-use <a href="https://github.com/wafer-space/gf180mcu-project-template">gf180mcu project template</a> that makes starting your wafer.space design even easier.</p>
+
+<figure class="gallery">
+<img src="/assets/images/news/gf180mcu-run-1/librelane-template/librelane-step1-design.svg" alt="librelane-step1-design" />
+<img src="/assets/images/news/gf180mcu-run-1/librelane-template/librelane-step2-config.svg" alt="librelane-step2-config" />
+<img src="/assets/images/news/gf180mcu-run-1/librelane-template/librelane-step3-run.svg" alt="librelane-step3-run" />
+<img src="/assets/images/news/gf180mcu-run-1/librelane-template/librelane-step4-gds.svg" alt="librelane-step4-gds" />
+<figcaption>Simple LibreLane Workflow - Synthesis → Floorplan → Placement → Routing → Verification — all automated</figcaption>
+</figure>
+
+<h2 id="what-is-librelane">What is LibreLane?</h2>
+
+<p>LibreLane is a ground-up rewrite of <a href="https://github.com/The-OpenROAD-Project/OpenLane">OpenLane</a> - the tool that made hundreds of open-source tapeouts possible through Google’s MPW shuttles and Efabless programs. Originally developed as “OpenLane 2” at Efabless, it’s now community-driven under the <a href="https://fossi-foundation.org/">FOSSi Foundation</a> after being officially released in July 2025.</p>
+
+<p>If you used OpenLane 1, you know it works: you give it a Verilog file and a config, run one command, and get GDS ready for fabrication. LibreLane keeps that simplicity while fixing the pain points.</p>
+
+<h3 id="why-the-rewrite">Why the Rewrite?</h3>
+
+<p>OpenLane 1 was built under tight deadlines to enable the first Google MPW shuttles. It worked amazingly well for that goal, but had some limitations:</p>
+
+<ul>
+  <li>Written in Tcl, which made debugging and extending difficult</li>
+  <li>Hard to run individual steps or insert custom tools</li>
+  <li>No standard way to report design metrics</li>
+  <li>Difficult to integrate with other workflows</li>
+</ul>
+
+<p>LibreLane addresses all of this while maintaining backwards compatibility - your existing OpenLane 1 configs work with LibreLane.</p>
+
+<h2 id="what-makes-librelane-better">What Makes LibreLane Better?</h2>
+
+<ul>
+  <li>
+    <p>🐍 <strong>Python-Based Infrastructure</strong>: Modern Python instead of Tcl means better tooling, clearer code, and a real API if you need programmatic control. No more fighting with “stringly-typed” scripts.</p>
+  </li>
+  <li>
+    <p>🔧 <strong>Modular Architecture</strong>: Run individual steps (synthesis, placement, routing) independently. Insert custom tools into the flow. Debug specific stages without rerunning everything. The flow is a pipeline you can actually customize.</p>
+  </li>
+  <li>
+    <p>📊 <strong>Clear Error Reporting</strong>: Standardized metrics and status reporting at every step. When something fails, you know exactly where and why.</p>
+  </li>
+  <li>
+    <p>🎯 <strong>Automated Padframe Generation</strong>: LibreLane handles IO pad insertion and configuration automatically. This is huge - pad ring creation used to be one of the most error-prone manual steps. Now it just works.</p>
+  </li>
+  <li>
+    <p>🌍 <strong>Multi-PDK Support</strong>: The same design can target different process design kits. <a href="https://gf180mcu-pdk.readthedocs.io/">gf180mcu</a> is fully supported on the main branch, as is <a href="https://skywater-pdk.readthedocs.io/">sky130</a>, while <a href="https://github.com/IHP-GmbH/IHP-Open-PDK">ihp-sg13g2</a> is supported in the dev branch. Write once, fabricate anywhere.</p>
+  </li>
+  <li>
+    <p>↔ <strong>Backwards Compatible</strong>: Existing OpenLane 1 configurations work with LibreLane. Easy migration path if you’ve used OpenLane before.</p>
+  </li>
+</ul>
+
+<h2 id="real-world-adoption">Real-World Adoption</h2>
+
+<p>LibreLane isn’t experimental - it’s already in production use:</p>
+
+<ul>
+  <li><strong><a href="https://tinytapeout.com/">Tiny Tapeout</a></strong> has adopted LibreLane for their automated tapeout service</li>
+  <li><strong><a href="https://chipfoundry.com/">ChipFoundry</a></strong> is using it for their fab pooling platform</li>
+  <li><strong><a href="https://wafer.space/">wafer.space</a></strong> uses it for their gf180mcu project template</li>
+</ul>
+
+<p>The shift from OpenLane 1 to LibreLane mirrors what happened in the fabrication world: when Efabless shut down, the community rebuilt better infrastructure. wafer.space rebuilt affordable fabrication access. LibreLane rebuilt the design flow. Both are about making open silicon sustainable.</p>
+
+<h2 id="the-gf180mcu-project-template">The gf180mcu Project Template</h2>
+
+<p>To make getting started even easier, there’s now a <a href="https://github.com/wafer-space/gf180mcu-project-template">project template</a> specifically configured for wafer.space designs targetting the gf180mcuD PDK variant.</p>
+
+<p>This template gives you a working starting point with everything included:</p>
+
+<ul>
+  <li><strong>LibreLane configuration</strong> pre-configured for gf180mcuD and wafer.space requirements</li>
+  <li><strong><a href="https://nixos.org/">Nix</a>-based development environment</strong> - <code class="language-plaintext highlighter-rouge">nix-shell</code> and you’re ready to go, no manual tool installation</li>
+  <li><strong><a href="https://www.cocotb.org/">cocotb</a> testbench framework</strong> - Python-based verification for your design</li>
+  <li><strong>Complete workflow</strong> - from RTL to GDS, including LVS, DRC and gate-level simulation</li>
+  <li><strong>Example counter design</strong> - shows the whole flow working</li>
+</ul>
+
+<h3 id="getting-started">Getting Started</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Clone the template</span>
+git clone https://github.com/wafer-space/gf180mcu-project-template
+<span class="nb">cd </span>gf180mcu-project-template
+
+<span class="c"># Set up environment (installs everything automatically)</span>
+nix-shell
+
+<span class="c"># Add your design to src/</span>
+<span class="c"># Update librelane/config.yaml with your design parameters</span>
+
+<span class="c"># Run the flow</span>
+make librelane
+
+<span class="c"># View the results</span>
+<span class="c"># Opens in OpenROAD GUI or KLayout</span>
+make librelane-openroad
+make librelane-klayout
+</code></pre></div></div>
+
+<p>That’s it. Five steps from empty directory to GDS output.</p>
+
+<p>Everything is set up to work together. You focus on your design, the template handles the infrastructure.</p>
+
+<h2 id="watch-the-orconf-talk">Watch the ORConf Talk</h2>
+
+<p>Want to see LibreLane in action? The full ORConf 2025 presentation by Mohamed Gaber and Leo Moser is on YouTube:</p>
+
+<p><strong><a href="https://youtu.be/GAEWpbXhhdg">LibreLane - ORConf 2025</a></strong></p>
+
+<p>The talk covers:</p>
+<ul>
+  <li>Technical architecture and design decisions</li>
+  <li>Live demos of the flow</li>
+  <li>Advanced use cases and customization</li>
+  <li>Future development roadmap</li>
+  <li>Q&amp;A with the community</li>
+</ul>
+
+<p>It’s worth watching if you want to understand the full capabilities beyond just running <code class="language-plaintext highlighter-rouge">make librelane</code>.</p>
+
+<h2 id="important-notes">Important Notes</h2>
+
+<p><strong>This is a work in progress.</strong> LibreLane and the template are actively developed and improving. If you use them:</p>
+
+<ul>
+  <li>Stay up to date with the latest changes</li>
+  <li>Report issues you encounter</li>
+  <li>Contribute improvements if you can</li>
+  <li>Join the community chat for help</li>
+</ul>
+
+<p><strong>The template is an example to help you get started</strong>, not a mandatory requirement. You can use LibreLane directly, adapt the template to your needs, or build your own workflow entirely. It’s there to make your life easier, not to constrain how you work.</p>
+
+<p><strong>Community support is available</strong> through the <a href="https://fossi-chat.org/">FOSSi Foundation chat</a> and the wafer.space <a href="https://discord.gg/43y2t53jpE">Discord</a> / <a href="https://matrix.to/#/#gf180mcu:fossi-chat.org">Matrix</a> channels. LibreLane has active developers and users who can help.</p>
+
+<h2 id="resources">Resources</h2>
+
+<p><strong>LibreLane</strong>:</p>
+<ul>
+  <li>Documentation: <a href="https://librelane.rtfd.io/">librelane.rtfd.io</a></li>
+  <li>Announcement: <a href="https://fossi-foundation.org/blog/2025-08-17-librelane">FOSSi Foundation Blog</a></li>
+  <li>ORConf Talk: <a href="https://youtu.be/GAEWpbXhhdg">YouTube</a></li>
+</ul>
+
+<p><strong>gf180mcu Project Template</strong>:</p>
+<ul>
+  <li>Repository: <a href="https://github.com/wafer-space/gf180mcu-project-template">github.com/wafer-space/gf180mcu-project-template</a></li>
+  <li>README with detailed instructions</li>
+  <li>Example designs showing best practices</li>
+</ul>
+
+<p><strong>Community</strong>:</p>
+<ul>
+  <li>FOSSi Foundation: <a href="https://fossi-chat.org/">fossi-chat.org</a></li>
+  <li>wafer.space Discord: <a href="https://discord.gg/43y2t53jpE">discord.gg/43y2t53jpE</a></li>
+  <li>wafer.space Matrix: <a href="https://matrix.to/#/#gf180mcu:fossi-chat.org">#gf180mcu:fossi-chat.org</a></li>
+</ul>
+
+<h2 id="why-this-matters">Why This Matters</h2>
+
+<p>Open silicon has come a long way in just a few years. We went from “you need millions of dollars and proprietary tools” to “here’s an affordable MPW run and free, open-source tools.”</p>
+
+<p>But accessible doesn’t mean easy. Chip design is inherently complex. Projects like LibreLane and templates like this one are about removing the incidental complexity - the tool installation headaches, the configuration mysteries, the “why doesn’t this work” debugging sessions.</p>
+
+<p>Your time should go into designing your chip, not fighting your tools.</p>
+
+<p>LibreLane handles the flow. The template handles the setup. You handle the innovation.</p>
+
+<p>Whether you’re targeting the December 3rd deadline or planning for a future run, these tools are here to help you go from idea to silicon faster and with less friction.</p>
+
+<ul>
+  <li>Tim ‘mithro’ Ansell</li>
+</ul>]]></content><author><name>Tim &apos;mithro&apos; Ansell</name></author><category term="news" /><category term="crowdsupply" /><category term="gf180mcu" /><category term="campaign" /><summary type="html"><![CDATA[This update was originally published on Crowd Supply.]]></summary></entry><entry><title type="html">GF180MCU Run 1 is Live!</title><link href="https://wafer.space/pr-73/news/gf180mcu-run1-live" rel="alternate" type="text/html" title="GF180MCU Run 1 is Live!" /><published>2025-10-02T12:00:00+00:00</published><updated>2025-10-02T12:00:00+00:00</updated><id>https://wafer.space/pr-73/news/gf180mcu-run1-live</id><content type="html" xml:base="https://wafer.space/pr-73/news/gf180mcu-run1-live"><![CDATA[<p><em>This update was originally published on <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/updates/we-re-live">Crowd Supply</a>.</em></p>
+
+<p>Hey folks,</p>
+
+<p>The <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-1">wafer.space GF180MCU Run 1 campaign</a> just went live on Crowd Supply!</p>
+
+<p>For those who haven’t been following along: <a href="https://wafer.space">wafer.space</a> brings the <a href="https://oshpark.com">OSH Park</a> model to silicon. $7k gets you 1,000 dies. That’s $7 per chip from GlobalFoundries’ <a href="https://gf180mcu-pdk.readthedocs.io/">GF180MCU</a> process. Real production quantities, not just a handful of prototypes.</p>
+
+<p>Efabless shutting down earlier this year left the open silicon community without a clear path to fabrication. I started wafer.space to rebuild that infrastructure with transparent pricing, predictable timelines, and no gatekeeping - and it’s even more affordable now!</p>
+
+<h2 id="the-timeline"><a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-1#schedule">The timeline</a></h2>
+
+<ul>
+  <li><strong>November 28</strong>: Last day to buy a slot</li>
+  <li><strong>December 3</strong>: GDS submission deadline</li>
+  <li><strong>March 15, 2026</strong>: Target ship date for dies to customers</li>
+</ul>
+
+<h2 id="what-youre-getting">What you’re getting</h2>
+
+<p>20mm² on <a href="https://gf180mcu-pdk.readthedocs.io/">GF180MCU</a>, replicated 1,000 times. This is the same mature 180nm mixed-signal process used for tons of production chips and the two <a href="https://developers.google.com/silicon">Google open MPW runs</a>. Five metal layers, MIM caps, poly resistors - all the basics you need for mixed-signal designs, MCUs, sensor interfaces, whatever.</p>
+
+<h2 id="get-involved">Get involved</h2>
+
+<p>Jump on our <a href="https://discord.gg/43y2t53jpE">Discord</a> or <a href="https://matrix.to/#/#gf180mcu:fossi-chat.org">Matrix</a> if you need help with pad rings, DRC issues, or just want to see what others are building.</p>
+
+<p>Subscribe for future updates including reference designs, highlights of projects being built on GF180MCU, interviews with community members, and technical deep-dives into how things work behind the scenes.</p>
+
+<p>This is about enabling open, community-driven silicon manufacturing to grow and expand. Let’s make it happen.</p>
+
+<p>-Tim ‘mithro’ Ansell</p>
+
+<p>P.S. I was on <a href="https://www.crowdsupply.com/crowd-supply/the-teardown-sessions">The Teardown Sessions</a> earlier today discussing wafer.space and open silicon - you can watch the recording at <a href="http://youtu.be/tEOmnN8IAjs">http://youtu.be/tEOmnN8IAjs</a>.</p>]]></content><author><name>Tim &apos;mithro&apos; Ansell</name></author><category term="news" /><category term="crowdsupply" /><category term="gf180mcu" /><category term="campaign" /><summary type="html"><![CDATA[This update was originally published on Crowd Supply.]]></summary></entry></feed>
