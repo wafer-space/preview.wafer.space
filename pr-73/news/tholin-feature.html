@@ -4,7 +4,7 @@
 <head>
   <!-- Meta Tags-->
   <meta charset="utf-8" />
-  <meta name="git-commit" content="d301956af22c65734ea0a288476336b0b99551c6">
+  <meta name="git-commit" content="9f0a06da9a6de974dcf1778b35869d78a4950140">
 <!-- Primary Meta Tags -->
 <title> We Have Some Amazing Projects This Run: Tholin & Avalon Semiconductors </title>
 <meta name="title" content=" We Have Some Amazing Projects This Run: Tholin & Avalon Semiconductors ">
@@ -315,10 +315,9 @@
 
 <h2 id="tholin--avalon-semiconductors">Tholin &amp; Avalon Semiconductors</h2>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/tholin-feature/ic1.png" alt="Tholin's custom silicon designs showcase what's possible with open tooling" />
-<figcaption>Tholin's custom silicon designs showcase what's possible with open tooling</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/tholin-feature/ic1.png" alt="Tholin's custom silicon designs showcase what's possible with open tooling" /></p>
+
+<p><em>Tholin’s custom silicon designs showcase what’s possible with open tooling</em></p>
 
 <p><a href="https://tholin.dev/">Tholin</a> — the hardware designer behind <a href="https://github.com/AvalonSemiconductors"><strong>Avalon Semiconductors</strong></a> — has been exploring what’s possible when open tooling meets personal silicon. Their journey, chronicled through detailed blog posts like <a href="https://tholin.dev/custom_silicon/"><em>Custom Silicon</em></a> and <a href="https://tholin.dev/custom_silicon_two_electric_boogaloo/"><em>Custom Silicon Two: Electric Boogaloo</em></a>, shows how a single engineer can go from HDL to packaged chips using open-source flows, patience, and a healthy dose of curiosity.</p>
 
@@ -326,10 +325,9 @@
 
 <h3 id="as2650-and-as2650-2">AS2650 and AS2650-2</h3>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/tholin-feature/as2650.png" alt="The AS2650(-2) is inspired by retro CPUs like the Signetics 2650" />
-<figcaption>The AS2650(-2) is inspired by retro CPUs like the Signetics 2650</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/tholin-feature/as2650.png" alt="The AS2650(-2) is inspired by retro CPUs like the Signetics 2650" /></p>
+
+<p><em>The AS2650(-2) is inspired by retro CPUs like the Signetics 2650</em></p>
 
 <p>Tholin’s flagship projects are the <strong>AS2650</strong> and <strong>AS2650-2</strong>, re-implementations and extensions of the historic <a href="https://en.wikipedia.org/wiki/Signetics_2650">Signetics 2650</a> microprocessor, recreated from the ground up using open EDA tools.
 You can explore the repositories here:</p>
@@ -366,27 +364,29 @@ This serves as a <strong>reference design</strong>, demonstrating a complete CPU
 
 <p>True to her style, the project includes <strong>artwork integrated directly into the silicon layout</strong>, reflecting the creative potential unlocked when advanced design tools are accessible and open.</p>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/tholin-feature/logo_bw.png" alt="Tholin's logo, adapted for silicon artwork" />
-<figcaption>Tholin's logo, adapted for silicon artwork</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/tholin-feature/logo_bw.png" alt="Tholin's logo, adapted for silicon artwork" /></p>
+
+<p><em>Tholin’s logo, adapted for silicon artwork</em></p>
 
 <p>Additionally, Tholin developed a <a href="https://github.com/AvalonSemiconductors/ws-submission-2025/blob/main/padout_gen.py"><strong>Python script</strong></a> that <strong>automatically generates padout diagrams</strong> from a <a href="https://librelane.rtfd.io/">LibreLane</a> configuration file thereby simplifying visualization and documentation of pad assignments.</p>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/tholin-feature/padout.png" alt="Padout diagram generated from Python and LibreLane configuration" />
-<figcaption>Padout diagram generated from Python and LibreLane configuration</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/tholin-feature/padout.png" alt="Padout diagram generated from Python and LibreLane configuration" /></p>
+
+<p><em>Padout diagram generated from Python and LibreLane configuration</em></p>
 
 <hr />
 
 <h3 id="multi-project-die-exploration">Multi-Project Die Exploration</h3>
 
-<figure class="gallery">
-<img src="/assets/images/news/gf180mcu-run-1/tholin-feature/multidie.png" alt="multidie" />
-<img src="/assets/images/news/gf180mcu-run-1/tholin-feature/multilayout.png" alt="multilayout" />
-<figcaption>Multi-project die strategy - integrating multiple designs onto a single die to maximize wafer utilization</figcaption>
-</figure>
+<table>
+  <tr>
+    <td><img src="/assets/images/news/gf180mcu-run-1/tholin-feature/multidie.png" alt="" /></td>
+    <td><img src="/assets/images/news/gf180mcu-run-1/tholin-feature/multilayout.png" alt="" /></td>
+  </tr>
+  <tr>
+    <td colspan="2"><em>Multi-project die strategy - integrating multiple designs onto a single die to maximize wafer utilization</em></td>
+  </tr>
+</table>
 
 <p>Tholin is also pioneering <strong>multi-project die (MPD)</strong> strategies, maximizing wafer area by integrating multiple small designs onto a single die.
 Projects such as <a href="https://github.com/AvalonSemiconductors/gfmpw1-multi"><code class="language-plaintext highlighter-rouge">gfmpw-1-multi</code></a> and <a href="https://github.com/AvalonSemiconductors/AS2650-bring-up"><code class="language-plaintext highlighter-rouge">AS2650-bring-up</code></a> demonstrate how careful planning and padframe reuse make it possible to test multiple subsystems in one run.</p>
@@ -402,10 +402,9 @@ Projects such as <a href="https://github.com/AvalonSemiconductors/gfmpw1-multi">
 <p>Tholin has been an early adopter of <a href="https://librelane.rtfd.io/"><strong>LibreLane</strong></a>, the open-source ASIC flow used by wafer.space. Their feedback and experiments with padframes, padrings, and packaging have helped refine the ecosystem for everyone.
 From RTL through layout and DRC, to bonding and board testing, Tholin’s work demonstrates that open tooling can now carry a chip from idea to reality — no closed vendor stack required.</p>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/tholin-feature/3d_view.png" alt="Standard cells are a key component of RTL to GDSII flows." />
-<figcaption>Standard cells are a key component of RTL to GDSII flows.</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/tholin-feature/3d_view.png" alt="Standard cells are a key component of RTL to GDSII flows." /></p>
+
+<p><em>Standard cells are a key component of RTL to GDSII flows.</em></p>
 
 <hr />
 
@@ -468,11 +467,15 @@ From RTL through layout and DRC, to bonding and board testing, Tholin’s work d
 
 <p>Beyond her silicon designs, <strong>Tholin</strong> has also developed a range of PCB projects and breakout boards that make working with custom dies more accessible.</p>
 
-<figure class="gallery">
-<img src="/assets/images/news/gf180mcu-run-1/tholin-feature/dip40.png" alt="dip40" />
-<img src="/assets/images/news/gf180mcu-run-1/tholin-feature/dip40_wirebond.png" alt="dip40_wirebond" />
-<figcaption>DIP40 breakout board and wirebonding setup - making custom silicon accessible through standard packages</figcaption>
-</figure>
+<table>
+  <tr>
+    <td><img src="/assets/images/news/gf180mcu-run-1/tholin-feature/dip40.png" alt="" /></td>
+    <td><img src="/assets/images/news/gf180mcu-run-1/tholin-feature/dip40_wirebond.png" alt="" /></td>
+  </tr>
+  <tr>
+    <td colspan="2"><em>DIP40 breakout board and wirebonding setup - making custom silicon accessible through standard packages</em></td>
+  </tr>
+</table>
 
 <p>Tholin has also contributed extensively to the <strong>wafer.space standard padframe</strong>, helping shape the mechanical and electrical layout used across multiple projects.</p>
 
@@ -747,5 +750,5 @@ s.setAttribute('data-timestamp', +new Date());
 
 
 </body>
-<!-- Generated from git commit: d301956af22c65734ea0a288476336b0b99551c6 (d301956a) -->
+<!-- Generated from git commit: 9f0a06da9a6de974dcf1778b35869d78a4950140 (9f0a06da) -->
 </html>

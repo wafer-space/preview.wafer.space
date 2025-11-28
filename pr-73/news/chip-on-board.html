@@ -4,7 +4,7 @@
 <head>
   <!-- Meta Tags-->
   <meta charset="utf-8" />
-  <meta name="git-commit" content="d301956af22c65734ea0a288476336b0b99551c6">
+  <meta name="git-commit" content="9f0a06da9a6de974dcf1778b35869d78a4950140">
 <!-- Primary Meta Tags -->
 <title> Community Progress on Chip-on-Board Packaging Strategy </title>
 <meta name="title" content=" Community Progress on Chip-on-Board Packaging Strategy ">
@@ -391,26 +391,33 @@
 
 <p>The centerpiece of the standard is a 70-pin mezzanine COB board that connects your wirebonded die to a standard connector.</p>
 
-<figure class="gallery">
-<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-mezzanine-front.png" alt="padframes-cob-mezzanine-front" />
-<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-mezzanine-back.png" alt="padframes-cob-mezzanine-back" />
-<figcaption>70-pin mezzanine COB front and back views</figcaption>
-</figure>
+<table>
+  <tr>
+    <td><img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-mezzanine-front.png" alt="" /></td>
+    <td><img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-mezzanine-back.png" alt="" /></td>
+  </tr>
+  <tr>
+    <td colspan="2"><em>70-pin mezzanine COB front and back views</em></td>
+  </tr>
+</table>
 
 <p>Panelized for efficient handling and assembly by wirebonding partners:</p>
 
-<figure class="gallery">
-<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-mezzanine-panel-front.png" alt="padframes-cob-mezzanine-panel-front" />
-<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-mezzanine-panel-rear.png" alt="padframes-cob-mezzanine-panel-rear" />
-<figcaption>Mezzanine panel front and rear for efficient wirebonding assembly</figcaption>
-</figure>
+<table>
+  <tr>
+    <td><img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-mezzanine-panel-front.png" alt="" /></td>
+    <td><img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-mezzanine-panel-rear.png" alt="" /></td>
+  </tr>
+  <tr>
+    <td colspan="2"><em>Mezzanine panel front and rear for efficient wirebonding assembly</em></td>
+  </tr>
+</table>
 
 <p>The standard configuration can be found in the <a href="https://github.com/wafer-space/gf180mcu-project-template/blob/main/librelane/config.yaml">GitHub repository</a>. For easier viewing, it’s also available as a <a href="https://docs.google.com/spreadsheets/d/1pI2BAEWEexXcXN3vah3SR85zPIV6eAXPGXc2bcvoSGU/edit?gid=0#gid=0">Google Sheet</a> that shows the complete pad mapping.</p>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-die-padring.png" alt="Die padring layout with 74-pad configuration" />
-<figcaption>Die padring layout with 74-pad configuration</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-die-padring.png" alt="Die padring layout with 74-pad configuration" /></p>
+
+<p><em>Die padring layout with 74-pad configuration</em></p>
 
 <p>To help visualize your own pad layouts, Discord user <strong>@Tholin</strong> has developed a Python-based pad viewer that generates an image of the pad layout defined in your template. This is useful for verifying your configuration matches your design intent. You can find the tool <a href="https://github.com/AvalonSemiconductors/ws-submission-2025/blob/main/padout_gen.py">here</a>.</p>
 
@@ -431,10 +438,9 @@
 Join the discussion on our <a href="https://discord.gg/43y2t53jpE"><strong>Discord server</strong></a>.</p>
 </blockquote>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-default-74pad-wirebond-symbol.png" alt="Default 74-pad wirebonding padframe symbol" />
-<figcaption>Default 74-pad wirebonding padframe symbol</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-default-74pad-wirebond-symbol.png" alt="Default 74-pad wirebonding padframe symbol" /></p>
+
+<p><em>Default 74-pad wirebonding padframe symbol</em></p>
 
 <hr />
 
@@ -443,17 +449,15 @@ Join the discussion on our <a href="https://discord.gg/43y2t53jpE"><strong>Disco
 <p>The <strong>mezzanine connector symbol</strong> provides a 1:1 pin mapping to the 70-pin default layout.
 All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a> naming conventions, useful for those familiar with the TT ecosystem who are designing custom chips for this wafer.space run.</p>
 
-<figure>
-&lt;img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-default-70pin-mezzanine-symbol.png" alt=""Default 70-pin mezzanine COB breakout symbol"" &gt;
-<figcaption>"Default 70-pin mezzanine COB breakout symbol"</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-default-70pin-mezzanine-symbol.png" alt="&quot;Default 70-pin mezzanine COB breakout symbol&quot;" /></p>
+
+<p><em>“Default 70-pin mezzanine COB breakout symbol”</em></p>
 
 <p>An alternate version is also available that organizes pins by signal type. This version is particularly useful for Tiny Tapeout-style breakout motherboard designs where grouping by function makes routing clearer.</p>
 
-<figure>
-&lt;img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-tinytapeout-kicad-symbols.png" alt=""70-pin mezzanine COB symbol organized by signal type (Tiny Tapeout version)"" &gt;
-<figcaption>"70-pin mezzanine COB symbol organized by signal type (Tiny Tapeout version)"</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-tinytapeout-kicad-symbols.png" alt="&quot;70-pin mezzanine COB symbol organized by signal type (Tiny Tapeout version)&quot;" /></p>
+
+<p><em>“70-pin mezzanine COB symbol organized by signal type (Tiny Tapeout version)”</em></p>
 
 <h3 id="kicad-resources-for-cob-design">KiCad Resources for COB Design</h3>
 
@@ -473,10 +477,9 @@ All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a
 
 <p>The community is developing a series of breakout boards designed to make it easier to prototype, experiment, and integrate your dies into existing systems.</p>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-breakouts.png" alt="Castellated and breadboardable breakout board designs" />
-<figcaption>Castellated and breadboardable breakout board designs</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-breakouts.png" alt="Castellated and breadboardable breakout board designs" /></p>
+
+<p><em>Castellated and breadboardable breakout board designs</em></p>
 
 <hr />
 
@@ -491,10 +494,9 @@ All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a
 
 <p>MosBius provides students and designers the opportunity to explore MOS circuit topologies through a unique <strong>analog switch matrix</strong>, where each pin can connect to any of ten on-chip buses. This enables flexible on-chip circuit wiring and simplifies testing setups.</p>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-mosbius.png" alt="MosBius Project chip design from Columbia University" />
-<figcaption>MosBius Project chip design from Columbia University</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-mosbius.png" alt="MosBius Project chip design from Columbia University" /></p>
+
+<p><em>MosBius Project chip design from Columbia University</em></p>
 
 <p><em>Image and design by @xianglin_pu on <a href="https://discord.gg/43y2t53jpE">wafer.space Discord</a></em></p>
 
@@ -506,25 +508,27 @@ All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a
 
 <h4 id="lga-land-grid-array">LGA (Land Grid Array)</h4>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-lga-cob.png" alt="LGA (Land Grid Array) COB package design" />
-<figcaption>LGA (Land Grid Array) COB package design</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-lga-cob.png" alt="LGA (Land Grid Array) COB package design" /></p>
+
+<p><em>LGA (Land Grid Array) COB package design</em></p>
 
 <h4 id="dip">DIP</h4>
 
-<figure class="gallery">
-<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-dip.png" alt="padframes-cob-dip" />
-<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-dip1.png" alt="padframes-cob-dip1" />
-<figcaption>DIP package designs for through-hole applications</figcaption>
-</figure>
+<table>
+  <tr>
+    <td><img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-dip.png" alt="" /></td>
+    <td><img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-dip1.png" alt="" /></td>
+  </tr>
+  <tr>
+    <td colspan="2"><em>DIP package designs for through-hole applications</em></td>
+  </tr>
+</table>
 
 <h4 id="castellated">Castellated</h4>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-castellated.png" alt="Castellated edge COB package design" />
-<figcaption>Castellated edge COB package design</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-castellated.png" alt="Castellated edge COB package design" /></p>
+
+<p><em>Castellated edge COB package design</em></p>
 
 <hr />
 
@@ -532,17 +536,15 @@ All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a
 
 <p>The wafer.space COB work doesn’t exist in isolation. Other projects have tackled similar challenges, and their experiences directly inform this effort.</p>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-tt-cob.jpg" alt="Tiny Tapeout chip-on-board implementation" />
-<figcaption>Tiny Tapeout chip-on-board implementation</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-tt-cob.jpg" alt="Tiny Tapeout chip-on-board implementation" /></p>
+
+<p><em>Tiny Tapeout chip-on-board implementation</em></p>
 
 <p>Tiny Tapeout recently <a href="https://www.zerotoasiccourse.com/post/cob/">published an update</a> on their first successful Chip-on-Board (COB) implementation, highlighting their bare-die submission on the Zero to ASIC Course “MPW-7” run.</p>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-tt-youtube.png" alt="Video thumbnail - Tiny Tapeout 9 First COB samples" />
-<figcaption>Video thumbnail - Tiny Tapeout 9 First COB samples</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-tt-youtube.png" alt="Video thumbnail - Tiny Tapeout 9 First COB samples" /></p>
+
+<p><em>Video thumbnail - Tiny Tapeout 9 First COB samples</em></p>
 
 <p><a href="https://www.youtube.com/watch?v=XJmWoBJjvlI"><strong>Watch the video: Tiny Tapeout 9 - First COB samples!</strong></a></p>
 
@@ -867,5 +869,5 @@ s.setAttribute('data-timestamp', +new Date());
 
 
 </body>
-<!-- Generated from git commit: d301956af22c65734ea0a288476336b0b99551c6 (d301956a) -->
+<!-- Generated from git commit: 9f0a06da9a6de974dcf1778b35869d78a4950140 (9f0a06da) -->
 </html>

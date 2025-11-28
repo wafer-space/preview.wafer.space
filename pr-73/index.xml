@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://wafer.space/pr-73/index.xml" rel="self" type="application/atom+xml" /><link href="https://wafer.space/pr-73/" rel="alternate" type="text/html" /><updated>2025-11-28T23:17:29+00:00</updated><id>https://wafer.space/pr-73/index.xml</id><entry><title type="html">Less than 48 hours to go!</title><link href="https://wafer.space/pr-73/news/final-reminder" rel="alternate" type="text/html" title="Less than 48 hours to go!" /><published>2025-11-27T12:00:00+00:00</published><updated>2025-11-27T12:00:00+00:00</updated><id>https://wafer.space/pr-73/news/final-reminder</id><content type="html" xml:base="https://wafer.space/pr-73/news/final-reminder"><![CDATA[<p><em>This update was originally published on <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/updates/less-than-48-hours">Crowd Supply</a>.</em></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://wafer.space/pr-73/index.xml" rel="self" type="application/atom+xml" /><link href="https://wafer.space/pr-73/" rel="alternate" type="text/html" /><updated>2025-11-28T23:30:06+00:00</updated><id>https://wafer.space/pr-73/index.xml</id><entry><title type="html">Less than 48 hours to go!</title><link href="https://wafer.space/pr-73/news/final-reminder" rel="alternate" type="text/html" title="Less than 48 hours to go!" /><published>2025-11-27T12:00:00+00:00</published><updated>2025-11-27T12:00:00+00:00</updated><id>https://wafer.space/pr-73/news/final-reminder</id><content type="html" xml:base="https://wafer.space/pr-73/news/final-reminder"><![CDATA[<p><em>This update was originally published on <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/updates/less-than-48-hours">Crowd Supply</a>.</em></p>
 
 <p>Less than 48 hours remain in the first shuttle campaign! If you hope to be on this shuttle, place your order now. If you’re facing purchasing obstacles, please don’t hesitate to <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/ask-question">get in touch</a>.</p>
 
@@ -14,40 +14,41 @@
 
 <p>If you run into issues, join the <a href="https://discord.gg/43y2t53jpE">wafer.space Discord</a>. Many people are putting the finishing touches on their designs right now, and problems you encounter have likely been solved by others who can offer guidance.</p>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/final-reminder/waferspace-rainbow-open.png" alt="wafer.space bringing open accessible custom silicon fabrication" />
-<figcaption>wafer.space bringing open accessible custom silicon fabrication</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/final-reminder/waferspace-rainbow-open.png" alt="wafer.space bringing open accessible custom silicon fabrication" /></p>
+
+<p><em>wafer.space bringing open accessible custom silicon fabrication</em></p>
 
 <p><strong>— Tim ‘mithro’ Ansell and the wafer.space Team</strong></p>]]></content><author><name>Tim &apos;mithro&apos; Ansell</name></author><category term="news" /><category term="crowdsupply" /><category term="gf180mcu" /><category term="campaign" /><summary type="html"><![CDATA[This update was originally published on Crowd Supply.]]></summary></entry><entry><title type="html">Tiny Tapeout Collaboration</title><link href="https://wafer.space/pr-73/news/tiny-tapeout" rel="alternate" type="text/html" title="Tiny Tapeout Collaboration" /><published>2025-11-22T12:00:00+00:00</published><updated>2025-11-22T12:00:00+00:00</updated><id>https://wafer.space/pr-73/news/tiny-tapeout</id><content type="html" xml:base="https://wafer.space/pr-73/news/tiny-tapeout"><![CDATA[<p><em>This update was originally published on <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/updates/tiny-tapeout">Crowd Supply</a>.</em></p>
 
 <h2 id="tiny-tapeout">Tiny Tapeout</h2>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/tinytapeout-logo.png" alt="Tiny Tapeout - Democratizing chip design" />
-<figcaption>Tiny Tapeout - Democratizing chip design</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/tinytapeout-logo.png" alt="Tiny Tapeout - Democratizing chip design" /></p>
+
+<p><em>Tiny Tapeout - Democratizing chip design</em></p>
 
 <p><a href="https://wafer.space/">wafer.space</a> is excited to collaborate with <a href="https://tinytapeout.com/">Tiny Tapeout</a> to port their infrastructure to GF180MCU. Founded by <a href="https://zerotoasiccourse.com/">Matt Venn</a>, Tiny Tapeout has become a cornerstone of the open-silicon movement, empowering students, hobbyists, and even industry professionals to design and fabricate their own ASICs through approachable tools and collaborative workflows. Our collaboration provides an easy and affordable pathway from initial ideas and prototyping to building real products.</p>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/previous-tt-version.jpeg" alt="With Tiny Tapeout, you get a ready-to-go development board" />
-<figcaption>With Tiny Tapeout, you get a ready-to-go development board</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/previous-tt-version.jpeg" alt="With Tiny Tapeout, you get a ready-to-go development board" /></p>
+
+<p><em>With Tiny Tapeout, you get a ready-to-go development board</em></p>
 
 <p>Tiny Tapeout has already proven that accessible chip design works. By dramatically lowering the barrier to entry, they’ve enabled thousands of participants to bring their digital and analog designs to life. Now, our collaboration aims to take that further, helping designs move from prototype to product. The track record speaks for itself:</p>
 
-<figure class="gallery">
-<img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/tt03-gds.png" alt="tt03-gds" />
-<img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/tt05-gds.png" alt="tt05-gds" />
-<img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/tt06-gds.png" alt="tt06-gds" />
-<img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/tt07-gds.png" alt="tt07-gds" />
-<img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/tt09-gds.png" alt="tt09-gds" />
-<img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/ttihp0p1-gds.png" alt="ttihp0p1-gds" />
-<img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/ttsky25a-gds.png" alt="ttsky25a-gds" />
-<img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/ttsky25b-gds.png" alt="ttsky25b-gds" />
-<figcaption>GDS renders from Tiny Tapeout shuttles [TT03](https://tinytapeout.com/chips/tt03/), [TT05](https://tinytapeout.com/chips/tt05/), [TT06](https://tinytapeout.com/chips/tt06/), [TT07](https://tinytapeout.com/chips/tt07/), [TT09](https://tinytapeout.com/chips/tt09/), [IHP 0.1](https://app.tinytapeout.com/shuttles/ttihp0p1), [Sky130 25a](https://tinytapeout.com/chips/ttsky25a/), and [Sky130 25b](https://tinytapeout.com/chips/ttsky25b/)</figcaption>
-</figure>
+<table>
+  <tr>
+    <td><img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/tt03-gds.png" alt="" /></td>
+    <td><img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/tt05-gds.png" alt="" /></td>
+    <td><img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/tt06-gds.png" alt="" /></td>
+    <td><img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/tt07-gds.png" alt="" /></td>
+    <td><img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/tt09-gds.png" alt="" /></td>
+    <td><img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/ttihp0p1-gds.png" alt="" /></td>
+    <td><img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/ttsky25a-gds.png" alt="" /></td>
+    <td><img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/ttsky25b-gds.png" alt="" /></td>
+  </tr>
+  <tr>
+    <td colspan="8"><em>GDS renders from Tiny Tapeout shuttles [TT03](https://tinytapeout.com/chips/tt03/), [TT05](https://tinytapeout.com/chips/tt05/), [TT06](https://tinytapeout.com/chips/tt06/), [TT07](https://tinytapeout.com/chips/tt07/), [TT09](https://tinytapeout.com/chips/tt09/), [IHP 0.1](https://app.tinytapeout.com/shuttles/ttihp0p1), [Sky130 25a](https://tinytapeout.com/chips/ttsky25a/), and [Sky130 25b](https://tinytapeout.com/chips/ttsky25b/)</em></td>
+  </tr>
+</table>
 
 <p>Building on this experience, <strong>Tiny Tapeout</strong> now joins wafer.space to bring GF180MCU into the mix. Our collaboration has enabled Tiny Tapeout to get exactly what they need from the <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/updates/chip-on-board">standard wafer.space padframe</a>, ensuring full compatibility, consistent manufacturability, and reliable integration with COB-based packaging workflows.</p>
 
@@ -110,10 +111,9 @@
 
 <p>The project tiles are filling up fast:</p>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/current-run.png" alt="Project tiles already allocated on the GF0p2 run" />
-<figcaption>Project tiles already allocated on the GF0p2 run</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/current-run.png" alt="Project tiles already allocated on the GF0p2 run" /></p>
+
+<p><em>Project tiles already allocated on the GF0p2 run</em></p>
 
 <h2 id="join-us">Join Us!</h2>
 
@@ -129,10 +129,9 @@
 
 <h2 id="dont-miss-your-chance-to-join-the-first-shuttle">Don’t Miss Your Chance to Join the First Shuttle</h2>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/waferspace-rainbow-open.png" alt="wafer.space bringing open accessible custom silicon fabrication" />
-<figcaption>wafer.space bringing open accessible custom silicon fabrication</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/waferspace-rainbow-open.png" alt="wafer.space bringing open accessible custom silicon fabrication" /></p>
+
+<p><em>wafer.space bringing open accessible custom silicon fabrication</em></p>
 
 <p>We’re rapidly approaching the final milestones for this shuttle run, and now is the time to secure your spot:</p>
 
@@ -153,11 +152,15 @@
 
 <h3 id="special-thanks">Special Thanks</h3>
 
-<figure class="gallery">
-<img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/tillitis-logo-std.png" alt="tillitis-logo-std" />
-<img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/witcom-logo-std.png" alt="witcom-logo-std" />
-<figcaption>Sponsored by [Tillitis](https://www.tillitis.se/) and [WIT.com](https://wit.com/)</figcaption>
-</figure>
+<table>
+  <tr>
+    <td><img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/tillitis-logo-std.png" alt="" /></td>
+    <td><img src="/assets/images/news/gf180mcu-run-1/tiny-tapeout/witcom-logo-std.png" alt="" /></td>
+  </tr>
+  <tr>
+    <td colspan="2"><em>Sponsored by [Tillitis](https://www.tillitis.se/) and [WIT.com](https://wit.com/)</em></td>
+  </tr>
+</table>
 
 <p><a href="https://www.tillitis.se/">Tillitis</a> and <a href="https://wit.com/">WIT.com</a> generously sponsored the work to bring Tiny Tapeout to GF180MCU, its third process technology. This funding is enabling the <a href="https://www.youtube.com/watch?v=30emLKLpq50">improved multiplexer</a>, <a href="https://www.youtube.com/watch?v=_m_jK7twymM">power gating, analog support</a>, and <a href="https://www.youtube.com/watch?v=cCbTyfewaCw">more</a> (designed by <a href="https://github.com/smunaut">Sylvain “tnt” Munaut</a>) to be ported to GF180MCU. Thank you for making this happen!</p>]]></content><author><name>Tim &apos;mithro&apos; Ansell</name></author><category term="news" /><category term="crowdsupply" /><category term="gf180mcu" /><category term="campaign" /><summary type="html"><![CDATA[This update was originally published on Crowd Supply.]]></summary></entry><entry><title type="html">We Have Some Amazing Projects This Run: MOSbius</title><link href="https://wafer.space/pr-73/news/mosbius-feature" rel="alternate" type="text/html" title="We Have Some Amazing Projects This Run: MOSbius" /><published>2025-11-19T12:00:00+00:00</published><updated>2025-11-19T12:00:00+00:00</updated><id>https://wafer.space/pr-73/news/mosbius-feature</id><content type="html" xml:base="https://wafer.space/pr-73/news/mosbius-feature"><![CDATA[<p><em>This update was originally published on <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/updates/mosbius">Crowd Supply</a>.</em></p>
 
@@ -167,19 +170,17 @@
 
 <h2 id="mosbius"><a href="https://mosbius.org/">MOSbius</a></h2>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/mosbius-feature/mosbius_flow.png" alt="MOSbius platform enables hands-on exploration of transistor-level MOS circuits on breadboard" />
-<figcaption>MOSbius platform enables hands-on exploration of transistor-level MOS circuits on breadboard</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/mosbius-feature/mosbius_flow.png" alt="MOSbius platform enables hands-on exploration of transistor-level MOS circuits on breadboard" /></p>
+
+<p><em>MOSbius platform enables hands-on exploration of transistor-level MOS circuits on breadboard</em></p>
 
 <p><strong><a href="https://mosbius.org/">MOSbius</a></strong>, developed by <strong><a href="https://peterkinget.github.io/">Professor Peter Kinget</a></strong> and his students at <strong><a href="http://www.cisl.columbia.edu/kinget_group/">Columbia University</a></strong>, is an innovative educational platform that helps students and designers explore <strong>MOS circuit topologies</strong> typically found on silicon and now accessible on a breadboard.</p>
 
 <p>The goal of <a href="https://mosbius.org/">MOSbius</a> is to give learners hands-on experience with <strong>transistor-level design</strong>, including circuit debugging, measurement, and the full “chip bring-up” process. The platform allows users to compare calculations, simulations, and real measurements using provided <strong><a href="https://wiki.analog.com/resources/tools-software/ltspice">LTspice</a> models</strong>, bridging the gap between theory and silicon.</p>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/mosbius-feature/mosbius_interview.png" alt="MOSbius – A Field Programmable Transistor Array for Chip Designers (Interview with Peter Kinget)" />
-<figcaption>MOSbius – A Field Programmable Transistor Array for Chip Designers (Interview with Peter Kinget)</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/mosbius-feature/mosbius_interview.png" alt="MOSbius – A Field Programmable Transistor Array for Chip Designers (Interview with Peter Kinget)" /></p>
+
+<p><em>MOSbius – A Field Programmable Transistor Array for Chip Designers (Interview with Peter Kinget)</em></p>
 
 <p><strong><a href="https://www.youtube.com/watch?v=abu3u6UX6wE">Watch the interview on YouTube</a></strong></p>
 
@@ -195,11 +196,15 @@
 
 <p>Their application prioritizes <strong>a high number of I/O connections</strong> over power and ground pads, allowing for the maximum number of accessible signals from their transistor array.</p>
 
-<figure class="gallery">
-<img src="/assets/images/news/gf180mcu-run-1/mosbius-feature/mos_pcb.png" alt="mos_pcb" />
-<img src="/assets/images/news/gf180mcu-run-1/mosbius-feature/mos_3d.png" alt="mos_3d" />
-<figcaption>MOSbius custom COB package design - PCB layout and 3D visualization</figcaption>
-</figure>
+<table>
+  <tr>
+    <td><img src="/assets/images/news/gf180mcu-run-1/mosbius-feature/mos_pcb.png" alt="" /></td>
+    <td><img src="/assets/images/news/gf180mcu-run-1/mosbius-feature/mos_3d.png" alt="" /></td>
+  </tr>
+  <tr>
+    <td colspan="2"><em>MOSbius custom COB package design - PCB layout and 3D visualization</em></td>
+  </tr>
+</table>
 
 <p><strong>Peter’s student, @xianglin_pui</strong>, has taken the lead on this effort and developed derivative designs that extend the wafer.space COB standard for MOSbius’s specialized needs.</p>
 
@@ -211,10 +216,9 @@
 
 <h2 id="dont-miss-your-chance-to-join-the-first-shuttle">Don’t Miss Your Chance to Join the First Shuttle</h2>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/mosbius-feature/rainbow_narrow2.png" alt="wafer.space - Accessible custom silicon fabrication" />
-<figcaption>wafer.space - Accessible custom silicon fabrication</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/mosbius-feature/rainbow_narrow2.svg" alt="wafer.space - Accessible custom silicon fabrication" /></p>
+
+<p><em>wafer.space - Accessible custom silicon fabrication</em></p>
 
 <p>MOSbius is part of this run because accessible silicon enables their educational mission. What becomes possible at $7/chip? Whether you’re building educational tools, <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/updates/openfasoc">exploring new architectures</a>, or <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/updates/tholin-feature">bringing vintage designs back to life</a> - this is your opportunity.</p>
 
@@ -239,10 +243,9 @@
 
 <h2 id="tholin--avalon-semiconductors">Tholin &amp; Avalon Semiconductors</h2>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/tholin-feature/ic1.png" alt="Tholin's custom silicon designs showcase what's possible with open tooling" />
-<figcaption>Tholin's custom silicon designs showcase what's possible with open tooling</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/tholin-feature/ic1.png" alt="Tholin's custom silicon designs showcase what's possible with open tooling" /></p>
+
+<p><em>Tholin’s custom silicon designs showcase what’s possible with open tooling</em></p>
 
 <p><a href="https://tholin.dev/">Tholin</a> — the hardware designer behind <a href="https://github.com/AvalonSemiconductors"><strong>Avalon Semiconductors</strong></a> — has been exploring what’s possible when open tooling meets personal silicon. Their journey, chronicled through detailed blog posts like <a href="https://tholin.dev/custom_silicon/"><em>Custom Silicon</em></a> and <a href="https://tholin.dev/custom_silicon_two_electric_boogaloo/"><em>Custom Silicon Two: Electric Boogaloo</em></a>, shows how a single engineer can go from HDL to packaged chips using open-source flows, patience, and a healthy dose of curiosity.</p>
 
@@ -250,10 +253,9 @@
 
 <h3 id="as2650-and-as2650-2">AS2650 and AS2650-2</h3>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/tholin-feature/as2650.png" alt="The AS2650(-2) is inspired by retro CPUs like the Signetics 2650" />
-<figcaption>The AS2650(-2) is inspired by retro CPUs like the Signetics 2650</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/tholin-feature/as2650.png" alt="The AS2650(-2) is inspired by retro CPUs like the Signetics 2650" /></p>
+
+<p><em>The AS2650(-2) is inspired by retro CPUs like the Signetics 2650</em></p>
 
 <p>Tholin’s flagship projects are the <strong>AS2650</strong> and <strong>AS2650-2</strong>, re-implementations and extensions of the historic <a href="https://en.wikipedia.org/wiki/Signetics_2650">Signetics 2650</a> microprocessor, recreated from the ground up using open EDA tools.
 You can explore the repositories here:</p>
@@ -290,27 +292,29 @@ This serves as a <strong>reference design</strong>, demonstrating a complete CPU
 
 <p>True to her style, the project includes <strong>artwork integrated directly into the silicon layout</strong>, reflecting the creative potential unlocked when advanced design tools are accessible and open.</p>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/tholin-feature/logo_bw.png" alt="Tholin's logo, adapted for silicon artwork" />
-<figcaption>Tholin's logo, adapted for silicon artwork</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/tholin-feature/logo_bw.png" alt="Tholin's logo, adapted for silicon artwork" /></p>
+
+<p><em>Tholin’s logo, adapted for silicon artwork</em></p>
 
 <p>Additionally, Tholin developed a <a href="https://github.com/AvalonSemiconductors/ws-submission-2025/blob/main/padout_gen.py"><strong>Python script</strong></a> that <strong>automatically generates padout diagrams</strong> from a <a href="https://librelane.rtfd.io/">LibreLane</a> configuration file thereby simplifying visualization and documentation of pad assignments.</p>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/tholin-feature/padout.png" alt="Padout diagram generated from Python and LibreLane configuration" />
-<figcaption>Padout diagram generated from Python and LibreLane configuration</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/tholin-feature/padout.png" alt="Padout diagram generated from Python and LibreLane configuration" /></p>
+
+<p><em>Padout diagram generated from Python and LibreLane configuration</em></p>
 
 <hr />
 
 <h3 id="multi-project-die-exploration">Multi-Project Die Exploration</h3>
 
-<figure class="gallery">
-<img src="/assets/images/news/gf180mcu-run-1/tholin-feature/multidie.png" alt="multidie" />
-<img src="/assets/images/news/gf180mcu-run-1/tholin-feature/multilayout.png" alt="multilayout" />
-<figcaption>Multi-project die strategy - integrating multiple designs onto a single die to maximize wafer utilization</figcaption>
-</figure>
+<table>
+  <tr>
+    <td><img src="/assets/images/news/gf180mcu-run-1/tholin-feature/multidie.png" alt="" /></td>
+    <td><img src="/assets/images/news/gf180mcu-run-1/tholin-feature/multilayout.png" alt="" /></td>
+  </tr>
+  <tr>
+    <td colspan="2"><em>Multi-project die strategy - integrating multiple designs onto a single die to maximize wafer utilization</em></td>
+  </tr>
+</table>
 
 <p>Tholin is also pioneering <strong>multi-project die (MPD)</strong> strategies, maximizing wafer area by integrating multiple small designs onto a single die.
 Projects such as <a href="https://github.com/AvalonSemiconductors/gfmpw1-multi"><code class="language-plaintext highlighter-rouge">gfmpw-1-multi</code></a> and <a href="https://github.com/AvalonSemiconductors/AS2650-bring-up"><code class="language-plaintext highlighter-rouge">AS2650-bring-up</code></a> demonstrate how careful planning and padframe reuse make it possible to test multiple subsystems in one run.</p>
@@ -326,10 +330,9 @@ Projects such as <a href="https://github.com/AvalonSemiconductors/gfmpw1-multi">
 <p>Tholin has been an early adopter of <a href="https://librelane.rtfd.io/"><strong>LibreLane</strong></a>, the open-source ASIC flow used by wafer.space. Their feedback and experiments with padframes, padrings, and packaging have helped refine the ecosystem for everyone.
 From RTL through layout and DRC, to bonding and board testing, Tholin’s work demonstrates that open tooling can now carry a chip from idea to reality — no closed vendor stack required.</p>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/tholin-feature/3d_view.png" alt="Standard cells are a key component of RTL to GDSII flows." />
-<figcaption>Standard cells are a key component of RTL to GDSII flows.</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/tholin-feature/3d_view.png" alt="Standard cells are a key component of RTL to GDSII flows." /></p>
+
+<p><em>Standard cells are a key component of RTL to GDSII flows.</em></p>
 
 <hr />
 
@@ -392,11 +395,15 @@ From RTL through layout and DRC, to bonding and board testing, Tholin’s work d
 
 <p>Beyond her silicon designs, <strong>Tholin</strong> has also developed a range of PCB projects and breakout boards that make working with custom dies more accessible.</p>
 
-<figure class="gallery">
-<img src="/assets/images/news/gf180mcu-run-1/tholin-feature/dip40.png" alt="dip40" />
-<img src="/assets/images/news/gf180mcu-run-1/tholin-feature/dip40_wirebond.png" alt="dip40_wirebond" />
-<figcaption>DIP40 breakout board and wirebonding setup - making custom silicon accessible through standard packages</figcaption>
-</figure>
+<table>
+  <tr>
+    <td><img src="/assets/images/news/gf180mcu-run-1/tholin-feature/dip40.png" alt="" /></td>
+    <td><img src="/assets/images/news/gf180mcu-run-1/tholin-feature/dip40_wirebond.png" alt="" /></td>
+  </tr>
+  <tr>
+    <td colspan="2"><em>DIP40 breakout board and wirebonding setup - making custom silicon accessible through standard packages</em></td>
+  </tr>
+</table>
 
 <p>Tholin has also contributed extensively to the <strong>wafer.space standard padframe</strong>, helping shape the mechanical and electrical layout used across multiple projects.</p>
 
@@ -490,26 +497,33 @@ From RTL through layout and DRC, to bonding and board testing, Tholin’s work d
 
 <p>The centerpiece of the standard is a 70-pin mezzanine COB board that connects your wirebonded die to a standard connector.</p>
 
-<figure class="gallery">
-<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-mezzanine-front.png" alt="padframes-cob-mezzanine-front" />
-<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-mezzanine-back.png" alt="padframes-cob-mezzanine-back" />
-<figcaption>70-pin mezzanine COB front and back views</figcaption>
-</figure>
+<table>
+  <tr>
+    <td><img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-mezzanine-front.png" alt="" /></td>
+    <td><img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-mezzanine-back.png" alt="" /></td>
+  </tr>
+  <tr>
+    <td colspan="2"><em>70-pin mezzanine COB front and back views</em></td>
+  </tr>
+</table>
 
 <p>Panelized for efficient handling and assembly by wirebonding partners:</p>
 
-<figure class="gallery">
-<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-mezzanine-panel-front.png" alt="padframes-cob-mezzanine-panel-front" />
-<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-mezzanine-panel-rear.png" alt="padframes-cob-mezzanine-panel-rear" />
-<figcaption>Mezzanine panel front and rear for efficient wirebonding assembly</figcaption>
-</figure>
+<table>
+  <tr>
+    <td><img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-mezzanine-panel-front.png" alt="" /></td>
+    <td><img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-mezzanine-panel-rear.png" alt="" /></td>
+  </tr>
+  <tr>
+    <td colspan="2"><em>Mezzanine panel front and rear for efficient wirebonding assembly</em></td>
+  </tr>
+</table>
 
 <p>The standard configuration can be found in the <a href="https://github.com/wafer-space/gf180mcu-project-template/blob/main/librelane/config.yaml">GitHub repository</a>. For easier viewing, it’s also available as a <a href="https://docs.google.com/spreadsheets/d/1pI2BAEWEexXcXN3vah3SR85zPIV6eAXPGXc2bcvoSGU/edit?gid=0#gid=0">Google Sheet</a> that shows the complete pad mapping.</p>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-die-padring.png" alt="Die padring layout with 74-pad configuration" />
-<figcaption>Die padring layout with 74-pad configuration</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-die-padring.png" alt="Die padring layout with 74-pad configuration" /></p>
+
+<p><em>Die padring layout with 74-pad configuration</em></p>
 
 <p>To help visualize your own pad layouts, Discord user <strong>@Tholin</strong> has developed a Python-based pad viewer that generates an image of the pad layout defined in your template. This is useful for verifying your configuration matches your design intent. You can find the tool <a href="https://github.com/AvalonSemiconductors/ws-submission-2025/blob/main/padout_gen.py">here</a>.</p>
 
@@ -530,10 +544,9 @@ From RTL through layout and DRC, to bonding and board testing, Tholin’s work d
 Join the discussion on our <a href="https://discord.gg/43y2t53jpE"><strong>Discord server</strong></a>.</p>
 </blockquote>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-default-74pad-wirebond-symbol.png" alt="Default 74-pad wirebonding padframe symbol" />
-<figcaption>Default 74-pad wirebonding padframe symbol</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-default-74pad-wirebond-symbol.png" alt="Default 74-pad wirebonding padframe symbol" /></p>
+
+<p><em>Default 74-pad wirebonding padframe symbol</em></p>
 
 <hr />
 
@@ -542,17 +555,15 @@ Join the discussion on our <a href="https://discord.gg/43y2t53jpE"><strong>Disco
 <p>The <strong>mezzanine connector symbol</strong> provides a 1:1 pin mapping to the 70-pin default layout.
 All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a> naming conventions, useful for those familiar with the TT ecosystem who are designing custom chips for this wafer.space run.</p>
 
-<figure>
-&lt;img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-default-70pin-mezzanine-symbol.png" alt=""Default 70-pin mezzanine COB breakout symbol"" &gt;
-<figcaption>"Default 70-pin mezzanine COB breakout symbol"</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-default-70pin-mezzanine-symbol.png" alt="&quot;Default 70-pin mezzanine COB breakout symbol&quot;" /></p>
+
+<p><em>“Default 70-pin mezzanine COB breakout symbol”</em></p>
 
 <p>An alternate version is also available that organizes pins by signal type. This version is particularly useful for Tiny Tapeout-style breakout motherboard designs where grouping by function makes routing clearer.</p>
 
-<figure>
-&lt;img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-tinytapeout-kicad-symbols.png" alt=""70-pin mezzanine COB symbol organized by signal type (Tiny Tapeout version)"" &gt;
-<figcaption>"70-pin mezzanine COB symbol organized by signal type (Tiny Tapeout version)"</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-tinytapeout-kicad-symbols.png" alt="&quot;70-pin mezzanine COB symbol organized by signal type (Tiny Tapeout version)&quot;" /></p>
+
+<p><em>“70-pin mezzanine COB symbol organized by signal type (Tiny Tapeout version)”</em></p>
 
 <h3 id="kicad-resources-for-cob-design">KiCad Resources for COB Design</h3>
 
@@ -572,10 +583,9 @@ All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a
 
 <p>The community is developing a series of breakout boards designed to make it easier to prototype, experiment, and integrate your dies into existing systems.</p>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-breakouts.png" alt="Castellated and breadboardable breakout board designs" />
-<figcaption>Castellated and breadboardable breakout board designs</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-breakouts.png" alt="Castellated and breadboardable breakout board designs" /></p>
+
+<p><em>Castellated and breadboardable breakout board designs</em></p>
 
 <hr />
 
@@ -590,10 +600,9 @@ All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a
 
 <p>MosBius provides students and designers the opportunity to explore MOS circuit topologies through a unique <strong>analog switch matrix</strong>, where each pin can connect to any of ten on-chip buses. This enables flexible on-chip circuit wiring and simplifies testing setups.</p>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-mosbius.png" alt="MosBius Project chip design from Columbia University" />
-<figcaption>MosBius Project chip design from Columbia University</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-mosbius.png" alt="MosBius Project chip design from Columbia University" /></p>
+
+<p><em>MosBius Project chip design from Columbia University</em></p>
 
 <p><em>Image and design by @xianglin_pu on <a href="https://discord.gg/43y2t53jpE">wafer.space Discord</a></em></p>
 
@@ -605,25 +614,27 @@ All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a
 
 <h4 id="lga-land-grid-array">LGA (Land Grid Array)</h4>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-lga-cob.png" alt="LGA (Land Grid Array) COB package design" />
-<figcaption>LGA (Land Grid Array) COB package design</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-lga-cob.png" alt="LGA (Land Grid Array) COB package design" /></p>
+
+<p><em>LGA (Land Grid Array) COB package design</em></p>
 
 <h4 id="dip">DIP</h4>
 
-<figure class="gallery">
-<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-dip.png" alt="padframes-cob-dip" />
-<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-dip1.png" alt="padframes-cob-dip1" />
-<figcaption>DIP package designs for through-hole applications</figcaption>
-</figure>
+<table>
+  <tr>
+    <td><img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-dip.png" alt="" /></td>
+    <td><img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-dip1.png" alt="" /></td>
+  </tr>
+  <tr>
+    <td colspan="2"><em>DIP package designs for through-hole applications</em></td>
+  </tr>
+</table>
 
 <h4 id="castellated">Castellated</h4>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-castellated.png" alt="Castellated edge COB package design" />
-<figcaption>Castellated edge COB package design</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-castellated.png" alt="Castellated edge COB package design" /></p>
+
+<p><em>Castellated edge COB package design</em></p>
 
 <hr />
 
@@ -631,17 +642,15 @@ All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a
 
 <p>The wafer.space COB work doesn’t exist in isolation. Other projects have tackled similar challenges, and their experiences directly inform this effort.</p>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-tt-cob.jpg" alt="Tiny Tapeout chip-on-board implementation" />
-<figcaption>Tiny Tapeout chip-on-board implementation</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-tt-cob.jpg" alt="Tiny Tapeout chip-on-board implementation" /></p>
+
+<p><em>Tiny Tapeout chip-on-board implementation</em></p>
 
 <p>Tiny Tapeout recently <a href="https://www.zerotoasiccourse.com/post/cob/">published an update</a> on their first successful Chip-on-Board (COB) implementation, highlighting their bare-die submission on the Zero to ASIC Course “MPW-7” run.</p>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-tt-youtube.png" alt="Video thumbnail - Tiny Tapeout 9 First COB samples" />
-<figcaption>Video thumbnail - Tiny Tapeout 9 First COB samples</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/chip-on-board/padframes-cob-tt-youtube.png" alt="Video thumbnail - Tiny Tapeout 9 First COB samples" /></p>
+
+<p><em>Video thumbnail - Tiny Tapeout 9 First COB samples</em></p>
 
 <p><a href="https://www.youtube.com/watch?v=XJmWoBJjvlI"><strong>Watch the video: Tiny Tapeout 9 - First COB samples!</strong></a></p>
 
@@ -712,10 +721,9 @@ All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a
 
 <p><a href="https://vivo.brown.edu/display/msaligan">Saligane</a>’s group at the University of Michigan - now at Brown University - recently published <a href="https://ieeexplore.ieee.org/document/10584418">a paper in IEEE Solid-State Circuits Magazine</a> showing off an analog front-end (AFE) chip they designed entirely with open-source tools on GF180MCU. And it’s not just a test chip — they’re using it to read out flexible laser-induced graphene sensors for wearables!</p>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/openfasoc-sensors/annotated_shot.png" alt="The fabricated GF180MCU chip showing OPAMP blocks, SAR ADC, and switched-capacitance circuits" />
-<figcaption>The fabricated GF180MCU chip showing OPAMP blocks, SAR ADC, and switched-capacitance circuits</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/openfasoc-sensors/annotated_shot.png" alt="The fabricated GF180MCU chip showing OPAMP blocks, SAR ADC, and switched-capacitance circuits" /></p>
+
+<p><em>The fabricated GF180MCU chip showing OPAMP blocks, SAR ADC, and switched-capacitance circuits</em></p>
 
 <p>(<a href="https://siliconprawn.org/archive/doku.php?id=mcmaster:efabless:gf180mcu-mpw18h1-18100004">View high-resolution die photography on Silicon Prawn</a>)</p>
 
@@ -727,10 +735,9 @@ All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a
   <li><strong>Multi-modal sensing</strong> (combining different sensor types on one platform)</li>
 </ul>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/openfasoc-sensors/test_setup.png" alt="The fabricated chip wire-bonded to a PCB, ready to interface with flexible sensor patches" />
-<figcaption>The fabricated chip wire-bonded to a PCB, ready to interface with flexible sensor patches</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/openfasoc-sensors/test_setup.png" alt="The fabricated chip wire-bonded to a PCB, ready to interface with flexible sensor patches" /></p>
+
+<p><em>The fabricated chip wire-bonded to a PCB, ready to interface with flexible sensor patches</em></p>
 
 <h2 id="the-open-source-flow-works">The Open Source Flow Works!</h2>
 
@@ -744,10 +751,9 @@ All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a
 
 <p>They’ve published their designs on GitHub in the <a href="https://github.com/idea-fasoc/openfasoc-tapeouts?tab=readme-ov-file#analog-front-end-and-mixed-signal">OpenFASoC-Tapeouts repository</a>, and the <a href="https://foss-eda-tools.googlesource.com/third_party/shuttle/gf180mcu/mpw-18h1/slot-004/+/refs/heads/main">final submission is available on foss-eda-tools</a>, which means you can actually look at exactly how they did it.</p>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/openfasoc-sensors/analog_flow.png" alt="The complete open-source analog design flow used for this project" />
-<figcaption>The complete open-source analog design flow used for this project</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/openfasoc-sensors/analog_flow.png" alt="The complete open-source analog design flow used for this project" /></p>
+
+<p><em>The complete open-source analog design flow used for this project</em></p>
 
 <h2 id="reuse-dont-reinvent">Reuse, Don’t Reinvent!</h2>
 
@@ -762,10 +768,9 @@ All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a
 
 <p>You can literally take their <a href="https://github.com/idea-fasoc/openfasoc-tapeouts/tree/main/mpw18h1/gds">GDSII files</a>, study their layout techniques, and adapt their circuits for your own sensor applications. Need to read out a resistive sensor? Temperature probe? Custom transducer? The hard work of building reliable analog blocks is already done.</p>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/openfasoc-sensors/testing.png" alt="Real-time flex sensor demonstration showing finger bending detection with the AFE chip" />
-<figcaption>Real-time flex sensor demonstration showing finger bending detection with the AFE chip</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/openfasoc-sensors/testing.png" alt="Real-time flex sensor demonstration showing finger bending detection with the AFE chip" /></p>
+
+<p><em>Real-time flex sensor demonstration showing finger bending detection with the AFE chip</em></p>
 
 <h2 id="what-could-you-build">What Could You Build?</h2>
 
@@ -796,10 +801,9 @@ All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a
 
 <p>When Efabless shut down earlier this year, it left a critical gap: affordable access to custom silicon disappeared overnight. <a href="https://wafer.space/">wafer.space</a> exists to fill that gap by providing pooled fabrication services that make custom silicon accessible at $7 per chip.</p>
 
-<figure>
-<img src="/assets/images/news/gf180mcu-run-1/recent-publicity/shiny_sticker.png" alt="wafer.space - Making custom silicon accessible" />
-<figcaption>wafer.space - Making custom silicon accessible</figcaption>
-</figure>
+<p><img src="/assets/images/news/gf180mcu-run-1/recent-publicity/shiny_sticker.svg" alt="wafer.space - Making custom silicon accessible" /></p>
+
+<p><em>wafer.space - Making custom silicon accessible</em></p>
 
 <p>Since launching our campaign, we’ve had the opportunity to explain this mission across various platforms. Each conversation reveals different aspects of why accessible silicon matters and how we’re making it happen. Here’s your guide to learning more.</p>
 
@@ -932,7 +936,7 @@ All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a
 
 <hr />
 
-<p><img src="/assets/images/news/gf180mcu-run-1/getting-help/chipflow-logo-std-rounded.png" alt="chipflow-logo-std-rounded" style="max-width: 200px;" /></p>
+<p><img src="/assets/images/news/gf180mcu-run-1/getting-help/chipflow-logo-std-rounded.png" alt="chipflow-logo-std-rounded" /></p>
 
 <h4 id="chipflow--spain"><a href="https://wafer.space/design-help.html#chipflow">ChipFlow</a> · <em>Spain</em></h4>
 
@@ -945,7 +949,7 @@ All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a
 
 <hr />
 
-<p><img src="/assets/images/news/gf180mcu-run-1/getting-help/mabrains-logo-std-rounded.png" alt="mabrains-logo-std-rounded" style="max-width: 200px;" /></p>
+<p><img src="/assets/images/news/gf180mcu-run-1/getting-help/mabrains-logo-std-rounded.png" alt="mabrains-logo-std-rounded" /></p>
 
 <h4 id="mabrains--egypt"><a href="https://wafer.space/design-help.html#mabrains">Mabrains</a> · <em>Egypt</em></h4>
 
@@ -958,7 +962,7 @@ All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a
 
 <hr />
 
-<p><img src="/assets/images/news/gf180mcu-run-1/getting-help/precision-logo-std-rounded.png" alt="precision-logo-std-rounded" style="max-width: 200px;" /></p>
+<p><img src="/assets/images/news/gf180mcu-run-1/getting-help/precision-logo-std-rounded.png" alt="precision-logo-std-rounded" /></p>
 
 <h4 id="precision-innovations--usa"><a href="https://wafer.space/design-help.html#precision-innovations">Precision Innovations</a> · <em>USA</em></h4>
 
@@ -971,7 +975,7 @@ All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a
 
 <hr />
 
-<p><img src="/assets/images/news/gf180mcu-run-1/getting-help/slice-logo-std-rounded.png" alt="slice-logo-std-rounded" style="max-width: 200px;" /></p>
+<p><img src="/assets/images/news/gf180mcu-run-1/getting-help/slice-logo-std-rounded.png" alt="slice-logo-std-rounded" /></p>
 
 <h4 id="slice-semiconductor--ireland"><a href="https://wafer.space/design-help.html#slice-semiconductor">SLICE Semiconductor</a> · <em>Ireland</em></h4>
 
@@ -988,11 +992,13 @@ All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a
 
 <p>Think of professional services as part of a spectrum of options, not an all-or-nothing choice:</p>
 
-<div class="gallery">
-<img src="/assets/images/news/gf180mcu-run-1/getting-help/support-spectrum-independent.svg" alt="support-spectrum-independent" />
-<img src="/assets/images/news/gf180mcu-run-1/getting-help/support-spectrum-hybrid.svg" alt="support-spectrum-hybrid" />
-<img src="/assets/images/news/gf180mcu-run-1/getting-help/support-spectrum-fullservice.svg" alt="support-spectrum-fullservice" />
-</div>
+<table>
+  <tr>
+    <td><img src="/assets/images/news/gf180mcu-run-1/getting-help/support-spectrum-independent.svg" alt="" /></td>
+    <td><img src="/assets/images/news/gf180mcu-run-1/getting-help/support-spectrum-hybrid.svg" alt="" /></td>
+    <td><img src="/assets/images/news/gf180mcu-run-1/getting-help/support-spectrum-fullservice.svg" alt="" /></td>
+  </tr>
+</table>
 
 <p>You might handle 90% of your design independently and bring in expert review for critical analog sections. Or maybe you want someone to handle the entire physical design while you focus on verification. The approach you choose depends on your timeline, budget, and where you want to spend your effort.</p>
 
@@ -1050,13 +1056,17 @@ All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a
 
 <p>Last month at <a href="https://orconf.org/">ORConf 2025</a> in Valencia, Mohamed Gaber and Leo Moser presented LibreLane - the next-generation design flow for open silicon. And there’s now a ready-to-use <a href="https://github.com/wafer-space/gf180mcu-project-template">gf180mcu project template</a> that makes starting your wafer.space design even easier.</p>
 
-<figure class="gallery">
-<img src="/assets/images/news/gf180mcu-run-1/librelane-template/librelane-step1-design.svg" alt="librelane-step1-design" />
-<img src="/assets/images/news/gf180mcu-run-1/librelane-template/librelane-step2-config.svg" alt="librelane-step2-config" />
-<img src="/assets/images/news/gf180mcu-run-1/librelane-template/librelane-step3-run.svg" alt="librelane-step3-run" />
-<img src="/assets/images/news/gf180mcu-run-1/librelane-template/librelane-step4-gds.svg" alt="librelane-step4-gds" />
-<figcaption>Simple LibreLane Workflow - Synthesis → Floorplan → Placement → Routing → Verification — all automated</figcaption>
-</figure>
+<table>
+  <tr>
+    <td><img src="/assets/images/news/gf180mcu-run-1/librelane-template/librelane-step1-design.svg" alt="" /></td>
+    <td><img src="/assets/images/news/gf180mcu-run-1/librelane-template/librelane-step2-config.svg" alt="" /></td>
+    <td><img src="/assets/images/news/gf180mcu-run-1/librelane-template/librelane-step3-run.svg" alt="" /></td>
+    <td><img src="/assets/images/news/gf180mcu-run-1/librelane-template/librelane-step4-gds.svg" alt="" /></td>
+  </tr>
+  <tr>
+    <td colspan="4"><em>Simple LibreLane Workflow - Synthesis → Floorplan → Placement → Routing → Verification — all automated</em></td>
+  </tr>
+</table>
 
 <h2 id="what-is-librelane">What is LibreLane?</h2>
 
