@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://wafer.space/pr-73/index.xml" rel="self" type="application/atom+xml" /><link href="https://wafer.space/pr-73/" rel="alternate" type="text/html" /><updated>2025-11-29T00:26:47+00:00</updated><id>https://wafer.space/pr-73/index.xml</id><entry><title type="html">Less than 48 hours to go!</title><link href="https://wafer.space/pr-73/news/final-reminder" rel="alternate" type="text/html" title="Less than 48 hours to go!" /><published>2025-11-27T12:00:00+00:00</published><updated>2025-11-27T12:00:00+00:00</updated><id>https://wafer.space/pr-73/news/final-reminder</id><content type="html" xml:base="https://wafer.space/pr-73/news/final-reminder"><![CDATA[<p><em>This update was originally published on <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/updates/less-than-48-hours">Crowd Supply</a>.</em></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://wafer.space/pr-73/index.xml" rel="self" type="application/atom+xml" /><link href="https://wafer.space/pr-73/" rel="alternate" type="text/html" /><updated>2025-11-29T00:42:35+00:00</updated><id>https://wafer.space/pr-73/index.xml</id><entry><title type="html">Less than 48 hours to go!</title><link href="https://wafer.space/pr-73/news/final-reminder" rel="alternate" type="text/html" title="Less than 48 hours to go!" /><published>2025-11-27T12:00:00+00:00</published><updated>2025-11-27T12:00:00+00:00</updated><id>https://wafer.space/pr-73/news/final-reminder</id><content type="html" xml:base="https://wafer.space/pr-73/news/final-reminder"><![CDATA[<p><em>This update was originally published on <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/updates/less-than-48-hours">Crowd Supply</a>.</em></p>
 
 <p>Less than 48 hours remain in the first shuttle campaign! If you hope to be on this shuttle, place your order now. If you’re facing purchasing obstacles, please don’t hesitate to <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/ask-question">get in touch</a>.</p>
 
@@ -748,7 +748,7 @@ All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a
   <li>Standard DRC/LVS checks</li>
 </ul>
 
-<p>They’ve published their designs on GitHub in the <a href="https://github.com/idea-fasoc/openfasoc-tapeouts?tab=readme-ov-file#analog-front-end-and-mixed-signal">OpenFASoC-Tapeouts repository</a>, and the <a href="https://foss-eda-tools.googlesource.com/third_party/shuttle/gf180mcu/mpw-18h1/slot-004/+/refs/heads/main">final submission is available on foss-eda-tools</a>, which means you can actually look at exactly how they did it.</p>
+<p>They’ve published their designs on GitHub in the <a href="https://github.com/idea-fasoc/openfasoc-tapeouts?tab=readme-ov-file#user-content-analog-front-end-and-mixed-signal">OpenFASoC-Tapeouts repository</a>, and the <a href="https://foss-eda-tools.googlesource.com/third_party/shuttle/gf180mcu/mpw-18h1/slot-004/+/refs/heads/main">final submission is available on foss-eda-tools</a>, which means you can actually look at exactly how they did it.</p>
 
 <p><img src="/pr-73/assets/images/news/gf180mcu-run-1/openfasoc-sensors/analog_flow.png" alt="The complete open-source analog design flow used for this project" /></p>
 
@@ -963,7 +963,7 @@ All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a
 
 <p><img src="/pr-73/assets/images/news/gf180mcu-run-1/getting-help/precision-logo-std-rounded.png" alt="precision-logo-std-rounded" /></p>
 
-<h4 id="precision-innovations--usa"><a href="https://wafer.space/design-help.html#precision-innovations">Precision Innovations</a> · <em>USA</em></h4>
+<h4 id="precision-innovations--usa"><a href="https://wafer.space/design-help.html#precision">Precision Innovations</a> · <em>USA</em></h4>
 
 <p>Primary developers of OpenROAD, offering commercial support, custom development, training &amp; education, and rapid turnaround design flows. If you’re using OpenROAD and need expert tool support, these are the people who built it.</p>
 
@@ -976,7 +976,7 @@ All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a
 
 <p><img src="/pr-73/assets/images/news/gf180mcu-run-1/getting-help/slice-logo-std-rounded.png" alt="slice-logo-std-rounded" /></p>
 
-<h4 id="slice-semiconductor--ireland"><a href="https://wafer.space/design-help.html#slice-semiconductor">SLICE Semiconductor</a> · <em>Ireland</em></h4>
+<h4 id="slice-semiconductor--ireland"><a href="https://wafer.space/design-help.html#slicesemi">SLICE Semiconductor</a> · <em>Ireland</em></h4>
 
 <p>Low-cost ASIC development, mixed-signal IC design contracting, and consulting across technology nodes from 180nm to 3nm.</p>
 
