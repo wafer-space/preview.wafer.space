@@ -4,7 +4,7 @@
 <head>
   <!-- Meta Tags-->
   <meta charset="utf-8" />
-  <meta name="git-commit" content="00cd1c12512888cb75b73c9e3257ad543d9a68b9">
+  <meta name="git-commit" content="40601ecd32005d7422a7c212fbe09da1c4cb79da">
 <!-- Primary Meta Tags -->
 <title> wafer.space - Budget silicon manufacturing. </title>
 <meta name="title" content=" wafer.space - Budget silicon manufacturing. ">
@@ -2028,17 +2028,17 @@
   </div>
 </div>
 <script>
-(function() {
-  var prev = document.querySelector('#run1 .carousel-prev');
-  var next = document.querySelector('#run1 .carousel-next');
-  if (prev && next && typeof jQuery !== 'undefined') {
-    jQuery(document).ready(function() {
-      var $c = jQuery('#run1-carousel');
-      prev.addEventListener('click', function() { $c.trigger('prev.owl.carousel'); });
-      next.addEventListener('click', function() { $c.trigger('next.owl.carousel'); });
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(function() {
+    var $c = jQuery('#run1-carousel');
+    document.querySelector('#run1 .carousel-prev').addEventListener('click', function() {
+      $c.trigger('prev.owl.carousel');
     });
-  }
-})();
+    document.querySelector('#run1 .carousel-next').addEventListener('click', function() {
+      $c.trigger('next.owl.carousel');
+    });
+  }, 500);
+});
 </script>
 
 
@@ -2631,5 +2631,5 @@
 
 
 </body>
-<!-- Generated from git commit: 00cd1c12512888cb75b73c9e3257ad543d9a68b9 (00cd1c12) -->
+<!-- Generated from git commit: 40601ecd32005d7422a7c212fbe09da1c4cb79da (40601ecd) -->
 </html>
