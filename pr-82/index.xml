@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://wafer.space/pr-82/index.xml" rel="self" type="application/atom+xml" /><link href="https://wafer.space/pr-82/" rel="alternate" type="text/html" /><updated>2026-03-22T23:44:40+00:00</updated><id>https://wafer.space/pr-82/index.xml</id><entry><title type="html">GF180MCU Run 2 is Coming!</title><link href="https://wafer.space/pr-82/news/run2-coming-soon" rel="alternate" type="text/html" title="GF180MCU Run 2 is Coming!" /><published>2026-03-01T12:00:00+00:00</published><updated>2026-03-01T12:00:00+00:00</updated><id>https://wafer.space/pr-82/news/run2-coming-soon</id><content type="html" xml:base="https://wafer.space/pr-82/news/run2-coming-soon"><![CDATA[<p>Hey folks,</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://wafer.space/pr-82/index.xml" rel="self" type="application/atom+xml" /><link href="https://wafer.space/pr-82/" rel="alternate" type="text/html" /><updated>2026-03-22T23:50:11+00:00</updated><id>https://wafer.space/pr-82/index.xml</id><entry><title type="html">GF180MCU Run 2 is Coming!</title><link href="https://wafer.space/pr-82/news/run2-coming-soon" rel="alternate" type="text/html" title="GF180MCU Run 2 is Coming!" /><published>2026-03-01T12:00:00+00:00</published><updated>2026-03-01T12:00:00+00:00</updated><id>https://wafer.space/pr-82/news/run2-coming-soon</id><content type="html" xml:base="https://wafer.space/pr-82/news/run2-coming-soon"><![CDATA[<p>Hey folks,</p>
 
 <p>If you are reading this, you have just subscribed to the <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-2">wafer.space GF180MCU Run 2 campaign</a>. Welcome! Whether you followed Run 1 or this is your first time hearing about wafer.space, we are glad you are here.</p>
 
@@ -451,8 +451,7 @@ You can explore the repositories here:</p>
 
 <ul>
   <li><a href="https://github.com/AvalonSemiconductors/AS2650">AS2650 GitHub Repository</a></li>
-  <li><a href="https://github.com/AvalonSemiconductors/AS2650-2">AS2650-2 Repository</a></li>
-  <li><a href="https://avalonsemiconductors.github.io/AS2650/">AS2650-2 Documentation</a></li>
+  <li><a href="https://avalonsemiconductors.github.io/AS2650/">AS2650 Documentation</a></li>
 </ul>
 
 <p>These chips aren’t just nostalgic exercises — they’re fully functional processors that have been designed, simulated, taped-out, and brought back to life with custom test boards and firmware. The AS2650-2 introduces expanded peripherals, enhanced bus control, and improved debug accessibility. All implemented with a custom cell library for GF180MCU.</p>
