@@ -1,25 +1,718 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://wafer.space/pr-82/index.xml" rel="self" type="application/atom+xml" /><link href="https://wafer.space/pr-82/" rel="alternate" type="text/html" /><updated>2026-05-30T00:14:51+00:00</updated><id>https://wafer.space/pr-82/index.xml</id><entry><title type="html">Die Sorting with Robots</title><link href="https://wafer.space/pr-82/news/sorting-bare-dies" rel="alternate" type="text/html" title="Die Sorting with Robots" /><published>2026-05-29T12:00:00+00:00</published><updated>2026-05-29T12:00:00+00:00</updated><id>https://wafer.space/pr-82/news/sorting-bare-dies</id><content type="html" xml:base="https://wafer.space/pr-82/news/sorting-bare-dies"><![CDATA[<p>The Run 1 wafers are diced and the individual dies can now be sorted. Here is a look at the process.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://wafer.space/pr-82/index.xml" rel="self" type="application/atom+xml" /><link href="https://wafer.space/pr-82/" rel="alternate" type="text/html" /><updated>2026-05-30T12:56:53+00:00</updated><id>https://wafer.space/pr-82/index.xml</id><entry><title type="html">Taping Out KianV - a Linux/XV6-capable RISC-V SoC</title><link href="https://wafer.space/pr-82/news/kianv-riscv-soc" rel="alternate" type="text/html" title="Taping Out KianV - a Linux/XV6-capable RISC-V SoC" /><published>2026-06-05T12:00:00+00:00</published><updated>2026-06-05T12:00:00+00:00</updated><id>https://wafer.space/pr-82/news/kianv-riscv-soc</id><content type="html" xml:base="https://wafer.space/pr-82/news/kianv-riscv-soc"><![CDATA[<p>Hi everybody!</p>
 
-<div>
-    <p class="text-center text-muted mb-10">
-        <small>A diced wafer - note
-the score marks visible on the lower half</small>
-    </p>
-    <p class="text-center">
-        <img src="/pr-82/assets/images/news/run1-wafers-arrived/wafer-closeup.jpg" alt="A diced wafer - note
-the score marks visible on the lower half" class="img-fluid rounded" />
-    </p>
+<p>In this update we’ll be exploring a homegrown SoC which is capable of booting Linux, µLinux and XV6. It
+implements the RISC-V RV32IMA ISA alongside additional extensions for more functionality.</p>
+
+<p>If you’d like to explore the design, the source is available on the author’s GitHub: <a href="https://github.com/splinedrive/kianRiscV">github.com/splinedrive/kianRiscV</a></p>
+
+<p>In addition to the ASIC, a compact bring-up PCB was designed to enable hardware validation and early software development.</p>
+
+<h2 id="soc-overview">SoC Overview</h2>
+
+<p>The KianV SoC is built around an RV32IMA core - that’s a 32-bit base with integer multiplication &amp; division (<code class="language-plaintext highlighter-rouge">M</code>) and
+atomic instructions (<code class="language-plaintext highlighter-rouge">A</code>) extensions. In addition to those, it has support for <a href="https://docs.riscv.org/reference/isa/unpriv/counters.html#7-1-1-zicntr-extension-for-base-counters-and-timers">Zicntr</a>, <a href="https://docs.riscv.org/reference/isa/unpriv/zicsr.html#csrinsts">Zicsr</a>,
+<a href="https://docs.riscv.org/reference/isa/unpriv/zifencei.html#zifencei">Zifencei</a>, <a href="https://docs.riscv.org/reference/isa/priv/sstc.html#Sstc">SSTC</a> and
+<a href="https://docs.riscv.org/reference/isa/priv/supervisor.html#sv32">Sv32</a>.</p>
+
+<p>The Sv32 extension allows KianV to access memory - this is done using a page-based 32-bit virtual memory system,
+which then interacts with 32MiB of external memory through an on-board SDRAM controller.</p>
+
+<p>The CPU itself includes a 2-way set-associative instruction cache, a direct-mapped data cache, and 4-way associative
+instruction and data TLBs, sufficient for MMU-based operating systems.</p>
+
+<p>Furthermore, KianV integrates a minimal peripheral set connected via an internal system bus. The peripherals are listed below:</p>
+
+<ul>
+  <li>SDRAM controller (interacting with 32 MiB external memory)</li>
+  <li>UART</li>
+  <li>2× SPI interfaces</li>
+  <li>GPIO</li>
+  <li>NOR flash controller</li>
+</ul>
+
+<p>With these peripherals, the system is capable of booting from an external SD card and accessing networked resources via
+an SPI-based Ethernet connection. A system like this may find uses in a variety of situations: industrial, IoT or educational.</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>Block diagram of the KianV RV32 SV32-capable RISC-V SoC</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-82/assets/images/news/kianv-riscv-soc/soc-overview.svg" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-82/assets/images/news/kianv-riscv-soc/soc-overview.svg" alt="Block diagram of the KianV RV32 SV32-capable RISC-V SoC" />
+        </a>
+    </figure>
+</div>
+
+<h2 id="pinout">Pinout</h2>
+
+<p>The pinout is designed around a strict 58 external IO signal limit, all divided between the peripherals mentioned
+beforehand. The <a href="https://github.com/wafer-space/gf180mcu-project-template">wafer.space template</a> provides access to 74
+pads, however these also include power and ground connections.</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>KianV SoC external IO pinout</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-82/assets/images/news/kianv-riscv-soc/chip_symbol.png" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-82/assets/images/news/kianv-riscv-soc/chip_symbol.png" alt="KianV SoC external IO pinout" />
+        </a>
+    </figure>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Interface</th>
+      <th>Signals</th>
+      <th style="text-align: center">Dir</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><strong>UART</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">RX</code>, <code class="language-plaintext highlighter-rouge">TX</code></td>
+      <td style="text-align: center">I/O</td>
+      <td>Serial console</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>SPI0</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">CS#</code>, <code class="language-plaintext highlighter-rouge">SCLK</code>, <code class="language-plaintext highlighter-rouge">MOSI</code>, <code class="language-plaintext highlighter-rouge">MISO</code></td>
+      <td style="text-align: center">I/O</td>
+      <td>SD card</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>SPI1</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">CS#</code>, <code class="language-plaintext highlighter-rouge">SCLK</code>, <code class="language-plaintext highlighter-rouge">MOSI</code>, <code class="language-plaintext highlighter-rouge">MISO</code></td>
+      <td style="text-align: center">I/O</td>
+      <td>Ethernet</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>Flash</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">CS#</code>, <code class="language-plaintext highlighter-rouge">SCLK</code>, <code class="language-plaintext highlighter-rouge">MOSI</code>, <code class="language-plaintext highlighter-rouge">MISO</code></td>
+      <td style="text-align: center">I/O</td>
+      <td>SPI NOR flash</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>SDRAM</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">CLK</code>, <code class="language-plaintext highlighter-rouge">CKE</code></td>
+      <td style="text-align: center">Out</td>
+      <td>Clocking</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"> </td>
+      <td><code class="language-plaintext highlighter-rouge">ADDR[12:0]</code></td>
+      <td style="text-align: center">Out</td>
+      <td>Address bus</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"> </td>
+      <td><code class="language-plaintext highlighter-rouge">BA[1:0]</code></td>
+      <td style="text-align: center">Out</td>
+      <td>Bank select</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"> </td>
+      <td><code class="language-plaintext highlighter-rouge">DQ[15:0]</code></td>
+      <td style="text-align: center">I/O</td>
+      <td>Data bus</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"> </td>
+      <td><code class="language-plaintext highlighter-rouge">DQM[1:0]</code></td>
+      <td style="text-align: center">Out</td>
+      <td>Byte mask</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"> </td>
+      <td><code class="language-plaintext highlighter-rouge">CS#</code>, <code class="language-plaintext highlighter-rouge">RAS#</code>, <code class="language-plaintext highlighter-rouge">CAS#</code>, <code class="language-plaintext highlighter-rouge">WE#</code></td>
+      <td style="text-align: center">Out</td>
+      <td>Control signals</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>GPIO</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">GPIO0</code></td>
+      <td style="text-align: center">I/O</td>
+      <td>General-purpose IO</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>Signals are grouped by function; directions are given from the SoC perspective.</em></p>
+
+<hr />
+
+<h2 id="design-philosophy">Design Philosophy</h2>
+
+<p>The RISC-V processor in this SoC is a multi-cycle RV32 core, optimized for area. The architecture was validated
+prior to taping out on FPGA platforms, where SV32-capable mainline Linux and network connectivity were demonstrated.</p>
+
+<p>Likewise, a µLinux (no-MMU) version of the KianV SoC was fabricated on multiple shuttles run by Tiny Tapeout, providing
+silicon validation of the core and peripheral subsystems. You can view these submissions online on the Tiny Tapeout
+website: <a href="https://tinytapeout.com/chips/ttsky25a/tt_um_kianV_rv32ima_uLinux_SoC">TTSky25a</a>, <a href="https://tinytapeout.com/chips/ttihp25b/tt_um_kianV_rv32ima_uLinux_SoC">TTIHP25b</a>,
+<a href="https://tinytapeout.com/chips/ttsky25b/tt_um_kianV_rv32ima_uLinux_SoC">TTSky25b</a> and <a href="https://tinytapeout.com/chips/ttihp26a/tt_um_kianv_sv32_soc">TTIHP26a</a>.</p>
+
+<p>KianV is also mentioned in a <a href="https://fossi-foundation.org/blog/2025-01-14-ecl82">FOSSi Foundation article</a> and
+referenced in an <a href="https://ieeexplore.ieee.org/document/10584359">IEEE Solid-State Circuits Magazine publication</a>.</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>SkyWater 130 nm die layout of the Tiny Tapeout KianV uLinux (no-MMU) SoC</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-82/assets/images/news/kianv-riscv-soc/tt_ulinux_soc_kianv.png" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-82/assets/images/news/kianv-riscv-soc/tt_ulinux_soc_kianv.png" alt="SkyWater 130 nm die layout of the Tiny Tapeout KianV uLinux (no-MMU) SoC" />
+        </a>
+    </figure>
+</div>
+
+<h2 id="design-flow">Design Flow</h2>
+
+<p>KianV was brought to life using <strong>LibreLane</strong> and the <strong><a href="https://github.com/wafer-space/gf180mcu-project-template">wafer.space GF180MCU project template</a></strong>,
+which was then submitted to Run 1, and manufactured using the GlobalFoundries 180 nm PDK.</p>
+
+<p>The flow provided by the project template covers everything you’d need to produce and successfully tapeout a design. It
+contains software for RTL synthesis, floorplanning, place-and-route, clock tree synthesis and physical verification
+using known open-source tools.</p>
+
+<h2 id="implementation-results">Implementation Results</h2>
+
+<p>Linux was booted in a gate-level simulation which painstakingly ran for an entire month before reaching the login prompt.
+This was using the mainline 6.19 version of the Linux kernel, and was validated against a Micron SDRAM simulation model
+driven by the author’s SDRAM controller.</p>
+
+<p>Run 1 silicon is being shipped as we speak, so why not join our <a href="https://discord.gg/43y2t53jpE">Discord</a> or <a href="https://matrix.to/#/#gf180mcu:fossi-chat.org">Matrix</a>
+channels to see some silicon validation?</p>
+
+<p>KianV was taped out onto a full-sized die (20.1 mm²), with an approximate core utilization of 65% and an estimated
+~13 mW of power consumption.</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>KianV chip layout: cache SRAM blocks surround the central core, with peripherals and IO placed around the perimeter</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-82/assets/images/news/kianv-riscv-soc/chip_top_white.png" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-82/assets/images/news/kianv-riscv-soc/chip_top_white.png" alt="KianV chip layout: cache SRAM blocks surround the central core, with peripherals and IO placed around the perimeter" />
+        </a>
+    </figure>
+</div>
+
+<h2 id="design-validation-pcb">Design Validation PCB</h2>
+
+<p>As mentioned in the introduction, a small bring-up PCB was designed to support validation and software bring-up.</p>
+
+<p>The board provides a number of supporting components, such as the 32 MiB of SDRAM, an SPI-based Ethernet connection,
+SPI flash, SPI SD card interface, UART access and a power supply.</p>
+
+<p>This PCB is available to view on GitHub too: <a href="https://github.com/splinedrive/gf180mcu-kianv-pcb">github.com/splinedrive/gf180mcu-kianv-pcb</a></p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+  
+  <p class="text-center text-muted mb-10"><small>KianV bring-up PCB</small></p>
+  
+  <div class="tiles tiles-s">
+    <div class="items row">
+      
+      
+        
+          <div class="item col-md-6">
+        
+            <figure class="overlay overlay1 rounded">
+              <a href="/pr-82/assets/images/news/kianv-riscv-soc/pcb_top.png" class="lightbox">
+                <span class="bg"></span>
+                <img src="/pr-82/assets/images/news/kianv-riscv-soc/pcb_top.png" alt="Bring-up PCB - top view" />
+              </a>
+              
+            </figure>
+          </div>
+      
+        
+          <div class="item col-md-6">
+        
+            <figure class="overlay overlay1 rounded">
+              <a href="/pr-82/assets/images/news/kianv-riscv-soc/pcb_bottom.png" class="lightbox">
+                <span class="bg"></span>
+                <img src="/pr-82/assets/images/news/kianv-riscv-soc/pcb_bottom.png" alt="Bring-up PCB - bottom view" />
+              </a>
+              
+            </figure>
+          </div>
+      
+    </div>
+  </div>
+</div>
+
+<h2 id="software-status">Software Status</h2>
+
+<p>KianV uses a custom bootloader, followed by <a href="https://github.com/riscv-software-src/opensbi">OpenSBI</a>, and then boots
+the Linux kernel. Only minimal driver adaptations were required to boot mainline Linux with Sv32 MMU support on the SoC.</p>
+
+<p>In addition to Linux, the system also runs µLinux and XV6 on the same hardware platform.</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>Linux 6.19.0-rc1 booting on KianV, with the wafer.space logo being drawn to the terminal</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-82/assets/images/news/kianv-riscv-soc/console.png" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-82/assets/images/news/kianv-riscv-soc/console.png" alt="Linux 6.19.0-rc1 booting on KianV, with the wafer.space logo being drawn to the terminal" />
+        </a>
+    </figure>
+</div>
+
+<h2 id="acknowledgments">Acknowledgments</h2>
+
+<ul>
+  <li><strong>Andrew Wingate</strong> - Board design review (wafer.space)</li>
+  <li><strong>Christian Stredicke</strong> - Voida PBX</li>
+  <li><strong>Goran Maholvic</strong> - Board design support and SDRAM routing</li>
+  <li><strong>Leo Moser</strong> - ASIC flow and PDK support (wafer.space)</li>
+  <li><strong>Marcelo Samsoniuk</strong> - For the technical and personal exchange over the past few years (DarkRiscV)</li>
+  <li><strong>Matt Venn</strong> - Tiny Tapeout</li>
+  <li><strong>Sylvain Munaut</strong> - Tiny Tapeout</li>
+  <li><strong>Tim Ansell</strong> - Founder of wafer.space</li>
+  <li><strong>Uri Shaked</strong> - Tiny Tapeout</li>
+</ul>
+
+<h2 id="additional-resources">Additional Resources</h2>
+
+<ul>
+  <li>KianV SoC Design: <a href="https://github.com/splinedrive/gf180mcu-kianv-rv32ima-sv32">github.com/splinedrive/gf180mcu-kianv-rv32ima-sv32</a></li>
+  <li>Bring-up PCB Design: <a href="https://github.com/splinedrive/gf180mcu-kianv-pcb">github.com/splinedrive/gf180mcu-kianv-pcb</a></li>
+  <li>Carl Karsten - Online access to FPGAs (with ASICs coming soon): <a href="https://ps1.fpgas.online/">https://ps1.fpgas.online/</a></li>
+  <li>Matt Venn - RISC-V/Open Source Silicon Stream updates: <a href="https://www.linkedin.com/posts/matt-venn_riscv-opensourcesiliconstream-activity-7290765655132274690-Hfgw">linkedin.com/posts/matt-venn_riscv-opensourcesiliconstream-activity-7290765655132274690-Hfgw</a></li>
+  <li>Matt Venn - Tiny Tapeout ASIC/Open Source development: <a href="https://www.linkedin.com/posts/matt-venn_asic-opensource-riscv-activity-7279556029233704960-d5ZO">linkedin.com/posts/matt-venn_asic-opensource-riscv-activity-7279556029233704960-d5ZO</a></li>
+  <li>Uri Shaked - Tiny Tapeout project update: <a href="https://www.linkedin.com/feed/update/urn:li:activity:7312742011252490240/">linkedin.com/feed/update/urn:li:activity:7312742011252490240/</a></li>
+  <li>Zero to ASIC Course 2024 Highlights: <a href="https://www.zerotoasiccourse.com/post/year_update_2024/#2024-highlights">zerotoasiccourse.com/post/year_update_2024/#2024-highlights</a></li>
+</ul>]]></content><author><name>Hirosh Dabui</name></author><category term="news" /><category term="gf180mcu" /><category term="run1" /><category term="featured-project" /><category term="risc-v" /><category term="kianv" /><summary type="html"><![CDATA[KianV is a RISC-V SoC capable of running µLinux, Linux, and XV6. Taped out using a fully open-source ASIC flow.]]></summary></entry><entry><title type="html">Chip-on-Board Packaging Progress</title><link href="https://wafer.space/pr-82/news/chip-on-board-progress" rel="alternate" type="text/html" title="Chip-on-Board Packaging Progress" /><published>2026-06-03T12:00:00+00:00</published><updated>2026-06-03T12:00:00+00:00</updated><id>https://wafer.space/pr-82/news/chip-on-board-progress</id><content type="html" xml:base="https://wafer.space/pr-82/news/chip-on-board-progress"><![CDATA[<p>Run 1 bare dies and chips-on-board (COBs) have shipped - join us to have a look into the process.</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>A wafer.space die wirebonded to a PCB, covered in protective epoxy</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-82/assets/images/news/chip-on-board-progress/closeup-single-cob.jpg" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-82/assets/images/news/chip-on-board-progress/closeup-single-cob.jpg" alt="A wafer.space die wirebonded to a PCB, covered in protective epoxy" />
+        </a>
+    </figure>
+</div>
+
+<h2 id="the-chip-on-board-boards">The Chip-on-Board Boards</h2>
+
+<p>If you’ve been following along, you may remember a <a href="/news/chip-on-board-strategy">previous update</a>
+where we discussed different potential strategies for chip-on-board packaging. In this update we will see all that hard
+work come to fruition, as we wirebond some of the very first dies from this run.</p>
+
+<p>The top-level view of the process is that each die is placed onto a small PCB and wirebonded to connect the die to the board.
+Then, an epoxy glob-top is applied to protect the sensitive die and wires. The result is a packaged part that you can
+plug into your own board and start testing immediately, no specialized equipment needed.</p>
+
+<p>Wirebonding is inaccessible for most people, and traditional packaging solutions remain cost prohibitive due to the low
+volume nature of the manufacturing runs. The COB boards were designed as an accessible way for people to use their
+wafer.space dies.</p>
+
+<p>These boards use an easily sourceable mezzanine connector for you to make your own motherboard. As always, the design
+of this COB is available on <a href="https://github.com/wafer-space/chip-on-board-wire-bonded-pcbs">GitHub</a>.</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+  
+  <p class="text-center text-muted mb-10"><small>Blank COB boards waiting for their die</small></p>
+  
+  <div class="tiles tiles-s">
+    <div class="items row">
+      
+      
+        
+          <div class="item col-md-4">
+        
+            <figure class="overlay overlay1 rounded">
+              <a href="/pr-82/assets/images/news/chip-on-board-progress/cob-panel-front-back-view.jpg" class="lightbox">
+                <span class="bg"></span>
+                <img src="/pr-82/assets/images/news/chip-on-board-progress/cob-panel-front-back-view.jpg" alt="Two panels held side-by-side" />
+              </a>
+              
+            </figure>
+          </div>
+      
+        
+          <div class="item col-md-4">
+        
+            <figure class="overlay overlay1 rounded">
+              <a href="/pr-82/assets/images/news/chip-on-board-progress/cob-single-top.jpg" class="lightbox">
+                <span class="bg"></span>
+                <img src="/pr-82/assets/images/news/chip-on-board-progress/cob-single-top.jpg" alt="Top view of the board" />
+              </a>
+              
+            </figure>
+          </div>
+      
+        
+          <div class="item col-md-4">
+        
+            <figure class="overlay overlay1 rounded">
+              <a href="/pr-82/assets/images/news/chip-on-board-progress/cob-single-bottom.jpg" class="lightbox">
+                <span class="bg"></span>
+                <img src="/pr-82/assets/images/news/chip-on-board-progress/cob-single-bottom.jpg" alt="Bottom view of the board" />
+              </a>
+              
+            </figure>
+          </div>
+      
+    </div>
+  </div>
+</div>
+
+<h2 id="preparing-for-wirebonding">Preparing for Wirebonding</h2>
+
+<p>The COB boards arrive as a panel of 20 from the PCB house, but these are too large to fit onto the vacuum chuck used by
+the wirebonders. The solution is simple: snap the panels in half!</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>Half-a-panel of COBs fixed to the vacuum chuck</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-82/assets/images/news/chip-on-board-progress/cob-on-vacuum-chuck.jpg" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-82/assets/images/news/chip-on-board-progress/cob-on-vacuum-chuck.jpg" alt="Half-a-panel of COBs fixed to the vacuum chuck" />
+        </a>
+    </figure>
+</div>
+
+<p>Components moving during the wirebonding process is a concern. Tiny pads on the die and sharp movements caused by the
+wirebonder mean that any misalignment could result in a failed bond (or multiple). These failed bonds could prevent
+the chip from working properly, so our goal is to minimize any excessive movement.</p>
+
+<p>The PCB itself is affixed to the chuck using a vacuum, and the die is physically glued to the PCB.</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>wafer.space dies being glued to a COB board</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-82/assets/images/news/chip-on-board-progress/die-glueing-to-cob.jpg" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-82/assets/images/news/chip-on-board-progress/die-glueing-to-cob.jpg" alt="wafer.space dies being glued to a COB board" />
+        </a>
+    </figure>
+</div>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>An unpopulated COB (left) next to one with a die (right)</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-82/assets/images/news/chip-on-board-progress/cob-empty-vs-populated.jpg" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-82/assets/images/news/chip-on-board-progress/cob-empty-vs-populated.jpg" alt="An unpopulated COB (left) next to one with a die (right)" />
+        </a>
+    </figure>
+</div>
+
+<h2 id="performing-the-wirebonding">Performing the Wirebonding</h2>
+
+<p>Everything so far has been quite hands-on, and this is no different with the wirebonding machine. Before any bonding
+can take place, the machine must first be programmed with the desired locations and settings, and only then can it
+proceed. The machine operator is provided with a diagram showing all of our requested bonds, which they will interpret
+and configure the machine with.</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>Example wirebonding diagram showcasing visual landmarks and bond locations</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-82/assets/images/news/chip-on-board-progress/BTAP-wirebond-diagram.png" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-82/assets/images/news/chip-on-board-progress/BTAP-wirebond-diagram.png" alt="Example wirebonding diagram showcasing visual landmarks and bond locations" />
+        </a>
+    </figure>
+</div>
+
+<p>Since the die is mounted by hand, the machine uses a computer vision system to readjust the bond based on the visual
+location.</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>Wirebond operator configuring the bond path visually using a high-power microscope</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-82/assets/images/news/chip-on-board-progress/wirebonder-operator.jpg" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-82/assets/images/news/chip-on-board-progress/wirebonder-operator.jpg" alt="Wirebond operator configuring the bond path visually using a high-power microscope" />
+        </a>
+    </figure>
 </div>
 
 <div>
+    
     <p class="text-center text-muted mb-10">
-        <small>The die sorting
-robot picking up individual dies from the diced wafer</small>
+        <small>Wirebond operator programming the bonds the machine needs to perform</small>
     </p>
-    <p class="text-center">
-        <img src="/pr-82/assets/images/news/sorting-bare-dies/robot-picking-up-die.png" alt="The die sorting
-robot picking up individual dies from the diced wafer" class="img-fluid rounded" />
+    
+    <div style="width:100%; aspect-ratio: 16/9; display: flex; flex-direction: column; justify-content: center; align-items: center; border: dashed red;">
+        <div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-82/assets/images/logo.webp" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-82/assets/images/logo.webp" alt="" />
+        </a>
+    </figure>
+</div>
+        <p><b>Placeholder video box</b></p>
+    </div>
+</div>
+
+<p>Now we’re ready for the fun part! Once programmed, the machine will begin performing the wirebonding - all 74 pins.</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+  
+  <p class="text-center text-muted mb-10"><small>Tiny Tapeout's TTGF0p2 die fully wirebonded and ready for epoxy</small></p>
+  
+  <div class="tiles tiles-s">
+    <div class="items row">
+      
+      
+        
+          <div class="item col-md-6">
+        
+            <figure class="overlay overlay1 rounded">
+              <a href="/pr-82/assets/images/news/chip-on-board-progress/cob-bonded-top-view.jpg" class="lightbox">
+                <span class="bg"></span>
+                <img src="/pr-82/assets/images/news/chip-on-board-progress/cob-bonded-top-view.jpg" alt="Top view of TTGF0p2 on a black COB PCB" />
+              </a>
+              
+            </figure>
+          </div>
+      
+        
+          <div class="item col-md-6">
+        
+            <figure class="overlay overlay1 rounded">
+              <a href="/pr-82/assets/images/news/chip-on-board-progress/cob-bonded-side-view.jpg" class="lightbox">
+                <span class="bg"></span>
+                <img src="/pr-82/assets/images/news/chip-on-board-progress/cob-bonded-side-view.jpg" alt="Side view of TTGF0p2 on a black COB PCB" />
+              </a>
+              
+            </figure>
+          </div>
+      
+    </div>
+  </div>
+</div>
+
+<p>We’re not finished yet - the die and bonds are extremely fragile, so for them to survive the journey back to you, we must
+first cover them with an epoxy resin and bake them in the oven to harden.</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+  
+  <p class="text-center text-muted mb-10"><small>Finished COBs: wirebonded and epoxied, ready for your project</small></p>
+  
+  <div class="tiles tiles-s">
+    <div class="items row">
+      
+      
+        
+          <div class="item col-md-6">
+        
+            <figure class="overlay overlay1 rounded">
+              <a href="/pr-82/assets/images/news/chip-on-board-progress/closeup-multiple-cobs.jpg" class="lightbox">
+                <span class="bg"></span>
+                <img src="/pr-82/assets/images/news/chip-on-board-progress/closeup-multiple-cobs.jpg" alt="Four COBs next to each other" />
+              </a>
+              
+            </figure>
+          </div>
+      
+        
+          <div class="item col-md-6">
+        
+            <figure class="overlay overlay1 rounded">
+              <a href="/pr-82/assets/images/news/chip-on-board-progress/closeup-single-cob.jpg" class="lightbox">
+                <span class="bg"></span>
+                <img src="/pr-82/assets/images/news/chip-on-board-progress/closeup-single-cob.jpg" alt="A single COB" />
+              </a>
+              
+            </figure>
+          </div>
+      
+    </div>
+  </div>
+</div>
+
+<h2 id="final-steps">Final Steps</h2>
+
+<p><em>Do they work?</em></p>
+
+<p>…</p>
+
+<p><strong>Yes!!</strong></p>
+
+<p>We’ve been able to successfully run Tiny Tapeout’s own factory test on their TTGF0p2 shuttle, and can confirm that it
+works as expected. We’d love to hear about your testing successes when you get your hands on your COBs, so please
+come join our community on <a href="https://discord.gg/43y2t53jpE">Discord</a>!</p>
+
+<div>
+    
+    <p class="text-center text-muted mb-10">
+        <small>Tiny Tapeout's TTGF0p2 factory test counting up (in binary, as shown on the LEDs)</small>
     </p>
+    
+    <div style="width:100%; aspect-ratio: 16/9; display: flex; flex-direction: column; justify-content: center; align-items: center; border: dashed red;">
+        <div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-82/assets/images/logo.webp" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-82/assets/images/logo.webp" alt="" />
+        </a>
+    </figure>
+</div>
+        <p><b>Placeholder video box</b></p>
+    </div>
+</div>
+
+<p>That’s not all though - check out this scrolling VGA screensaver with the <a href="https://wafer.space">wafer.space</a> logo. You can
+view the source code for this on <a href="https://github.com/TinyTapeout/tt-waferspace-vga-screensaver">GitHub</a>, or experiment
+with it on <a href="https://vga-playground.com/?repo=https://github.com/TinyTapeout/tt-waferspace-vga-screensaver">VGA Playground</a>.</p>
+
+<div>
+    
+    <p class="text-center text-muted mb-10">
+        <small>An animated wafer.space logo screensaver output over VGA</small>
+    </p>
+    
+    <div style="width:100%; aspect-ratio: 16/9; display: flex; flex-direction: column; justify-content: center; align-items: center; border: dashed red;">
+        <div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-82/assets/images/logo.webp" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-82/assets/images/logo.webp" alt="" />
+        </a>
+    </figure>
+</div>
+        <p><b>Placeholder video box</b></p>
+    </div>
+</div>
+
+<p><a href="https://github.com/smunaut">Sylvain “tnt” Munaut</a> has also been hard at work testing several designs onboard the TTGF0p2
+shuttle and reporting their status. You can view these on Tiny Tapeout’s “Silicon Proven Projects” page - head to
+<a href="https://tinytapeout.com/chips/silicon-proven/#ttgf0p2">tinytapeout.com/chips/silicon-proven/#ttgf0p2</a> to view the
+currently tested projects on TTGF0p2.</p>
+
+<p>If you’d like to see some more packaging goodness, Tiny Tapeout recently uploaded a video with some more behind the scenes
+footage for their TT08 shuttle.</p>
+
+<div>
+    
+        <p class="text-center text-muted mb-10">
+            <small>Behind the scenes footage of TT08 being wirebonded</small>
+        </p>
+    
+    <iframe style="width:100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/okJ7NFNJdfs?start=&amp;end=
+&amp;autoplay=0&amp;mute=1&amp;playsinline=1&amp;fs=1&amp;disablekb=1&amp;controls=1&amp;loop=1&amp;playlist=okJ7NFNJdfs
+" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+    </iframe>
+</div>
+
+<p>Of course, COBs aren’t the only way to package your chip. Community member <a href="https://www.thorbenmoos.de/">Thorben Moos</a>
+bonded their die to a stunning ceramic DIP, with others doing (or planning to do) their own bonding too.</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+  
+  <p class="text-center text-muted mb-10"><small>Thorben Moos' Cloneless1 die in a ceramic package</small></p>
+  
+  <div class="tiles tiles-s">
+    <div class="items row">
+      
+      
+        
+          <div class="item col-md-6">
+        
+            <figure class="overlay overlay1 rounded">
+              <a href="/pr-82/assets/images/news/chip-on-board-progress/cloneless1-closeup.jpg" class="lightbox">
+                <span class="bg"></span>
+                <img src="/pr-82/assets/images/news/chip-on-board-progress/cloneless1-closeup.jpg" alt="Closeup image of the Cloneless1 die" />
+              </a>
+              
+            </figure>
+          </div>
+      
+        
+          <div class="item col-md-6">
+        
+            <figure class="overlay overlay1 rounded">
+              <a href="/pr-82/assets/images/news/chip-on-board-progress/cloneless1-breadboard.jpg" class="lightbox">
+                <span class="bg"></span>
+                <img src="/pr-82/assets/images/news/chip-on-board-progress/cloneless1-breadboard.jpg" alt="Cloneless1 mounted in a ceramic package on a breadboard, wired to a microcontroller" />
+              </a>
+              
+            </figure>
+          </div>
+      
+    </div>
+  </div>
+</div>
+
+<h2 id="shipping-timeline">Shipping Timeline</h2>
+
+<p>COB packaged parts have started to ship. You will receive a notification from Crowd Supply when your order is on its way.</p>
+
+<h2 id="run-2-slots-still-available">Run 2: Slots Still Available</h2>
+
+<p>Run 2 slots are available on Crowd Supply until <strong>30 June 2026</strong>. Standard pricing is now in effect:</p>
+
+<ul>
+  <li><strong>1x1 (full) slot</strong>: $7,500 ($7.50/die)</li>
+  <li><strong>0.5x1 (half width) slot</strong>: $4,500 ($4.50/die)</li>
+  <li><strong>1x0.5 (half height) slot</strong>: $4,500 ($4.50/die)</li>
+</ul>
+
+<p>Chip-on-board packaging is available as an add-on for $1,500 ($1.50/die).</p>
+
+<ul>
+  <li><a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-2">Run 2 on Crowd Supply</a></li>
+  <li><a href="https://discord.gg/43y2t53jpE">Discord</a></li>
+</ul>
+
+<p>- Tim ‘mithro’ Ansell</p>]]></content><author><name>Tim &apos;mithro&apos; Ansell</name></author><category term="news" /><category term="gf180mcu" /><category term="run1" /><category term="packaging" /><category term="chip-on-board" /><summary type="html"><![CDATA[Run 1 bare dies have shipped. Now we are working through chip-on-board packaging for customers who ordered that add-on.]]></summary></entry><entry><title type="html">Die Sorting with Robots</title><link href="https://wafer.space/pr-82/news/sorting-bare-dies" rel="alternate" type="text/html" title="Die Sorting with Robots" /><published>2026-05-29T12:00:00+00:00</published><updated>2026-05-29T12:00:00+00:00</updated><id>https://wafer.space/pr-82/news/sorting-bare-dies</id><content type="html" xml:base="https://wafer.space/pr-82/news/sorting-bare-dies"><![CDATA[<p>The Run 1 wafers are diced and the individual dies can now be sorted. Here is a look at the process.</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>A diced wafer - note
+the score marks visible on the lower half</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-82/assets/images/news/run1-wafers-arrived/wafer-closeup.jpg" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-82/assets/images/news/run1-wafers-arrived/wafer-closeup.jpg" alt="A diced wafer - note
+the score marks visible on the lower half" />
+        </a>
+    </figure>
+</div>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>The die sorting
+robot picking up individual dies from the diced wafer</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-82/assets/images/news/sorting-bare-dies/robot-picking-up-die.png" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-82/assets/images/news/sorting-bare-dies/robot-picking-up-die.png" alt="The die sorting
+robot picking up individual dies from the diced wafer" />
+        </a>
+    </figure>
 </div>
 
 <h2 id="how-die-sorting-works">How Die Sorting Works</h2>
@@ -149,15 +842,18 @@ sure to keep an eye out.</p>
 <p>After 12 weeks at GlobalFoundries, the Run 1 wafers have been manufactured and returned to us. This is the moment where
 your designs stop being GDSII files and start being real silicon.</p>
 
-<div>
-    <p class="text-center text-muted mb-10">
-        <small>Tim 'mithro' Ansell
-with the box containing Run 1 wafers fresh from GlobalFoundries</small>
-    </p>
-    <p class="text-center">
-        <img src="/pr-82/assets/images/news/run1-wafers-arrived/tim-wafer-box.jpg" alt="Tim 'mithro' Ansell
-with the box containing Run 1 wafers fresh from GlobalFoundries" class="img-fluid rounded" />
-    </p>
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>Tim 'mithro' Ansell
+with the box containing Run 1 wafers fresh from GlobalFoundries</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-82/assets/images/news/run1-wafers-arrived/tim-wafer-box.jpg" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-82/assets/images/news/run1-wafers-arrived/tim-wafer-box.jpg" alt="Tim 'mithro' Ansell
+with the box containing Run 1 wafers fresh from GlobalFoundries" />
+        </a>
+    </figure>
 </div>
 
 <h2 id="what-happens-next">What Happens Next</h2>
@@ -371,13 +1067,31 @@ and have a chat!</p>
 
 <p>If you run into issues, join the <a href="https://discord.gg/43y2t53jpE">wafer.space Discord</a>. Many people are putting the finishing touches on their designs right now, and problems you encounter have likely been solved by others who can offer guidance.</p>
 
-<p><img src="/pr-82/assets/images/news/final-reminder/waferspace-rainbow-open.png" alt="wafer.space bringing open accessible custom silicon fabrication" class="img-fluid rounded" /></p>
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>wafer.space bringing open accessible custom silicon fabrication</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-82/assets/images/news/final-reminder/waferspace-rainbow-open.png" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-82/assets/images/news/final-reminder/waferspace-rainbow-open.png" alt="wafer.space bringing open accessible custom silicon fabrication" />
+        </a>
+    </figure>
+</div>
 
-<p><strong>— Tim ‘mithro’ Ansell and the wafer.space Team</strong></p>]]></content><author><name>Tim &apos;mithro&apos; Ansell</name></author><category term="news" /><category term="gf180mcu" /><category term="run1" /><category term="deadline" /><summary type="html"><![CDATA[Less than 48 hours remain in the first shuttle campaign! If you hope to be on this shuttle, place your order now.]]></summary></entry><entry><title type="html">Tiny Tapeout</title><link href="https://wafer.space/pr-82/news/tinytapeout-feature" rel="alternate" type="text/html" title="Tiny Tapeout" /><published>2025-11-22T12:00:00+00:00</published><updated>2025-11-22T12:00:00+00:00</updated><id>https://wafer.space/pr-82/news/tinytapeout-feature</id><content type="html" xml:base="https://wafer.space/pr-82/news/tinytapeout-feature"><![CDATA[<p><img src="/pr-82/assets/images/news/tinytapeout-feature/tinytapeout-logo.png" alt="Tiny Tapeout - Democratizing chip design" class="img-fluid rounded" /></p>
+<p><strong>— Tim ‘mithro’ Ansell and the wafer.space Team</strong></p>]]></content><author><name>Tim &apos;mithro&apos; Ansell</name></author><category term="news" /><category term="gf180mcu" /><category term="run1" /><category term="deadline" /><summary type="html"><![CDATA[Less than 48 hours remain in the first shuttle campaign! If you hope to be on this shuttle, place your order now.]]></summary></entry><entry><title type="html">Tiny Tapeout</title><link href="https://wafer.space/pr-82/news/tinytapeout-feature" rel="alternate" type="text/html" title="Tiny Tapeout" /><published>2025-11-22T12:00:00+00:00</published><updated>2025-11-22T12:00:00+00:00</updated><id>https://wafer.space/pr-82/news/tinytapeout-feature</id><content type="html" xml:base="https://wafer.space/pr-82/news/tinytapeout-feature"><![CDATA[<p><a href="https://wafer.space/">wafer.space</a> is excited to collaborate with <a href="https://tinytapeout.com/">Tiny Tapeout</a> to port their infrastructure to GF180MCU. Founded by <a href="https://zerotoasiccourse.com/">Matt Venn</a>, Tiny Tapeout has become a cornerstone of the open-silicon movement, empowering students, hobbyists, and even industry professionals to design and fabricate their own ASICs through approachable tools and collaborative workflows. Our collaboration provides an easy and affordable pathway from initial ideas and prototyping to building real products.</p>
 
-<p><a href="https://wafer.space/">wafer.space</a> is excited to collaborate with <a href="https://tinytapeout.com/">Tiny Tapeout</a> to port their infrastructure to GF180MCU. Founded by <a href="https://zerotoasiccourse.com/">Matt Venn</a>, Tiny Tapeout has become a cornerstone of the open-silicon movement, empowering students, hobbyists, and even industry professionals to design and fabricate their own ASICs through approachable tools and collaborative workflows. Our collaboration provides an easy and affordable pathway from initial ideas and prototyping to building real products.</p>
-
-<p><img src="/pr-82/assets/images/news/tinytapeout-feature/previous-tt-version.jpeg" alt="With Tiny Tapeout, you get a ready-to-go development board" class="img-fluid rounded" /></p>
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>With Tiny Tapeout, you get a ready-to-go development board</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-82/assets/images/news/tinytapeout-feature/previous-tt-version.jpeg" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-82/assets/images/news/tinytapeout-feature/previous-tt-version.jpeg" alt="With Tiny Tapeout, you get a ready-to-go development board" />
+        </a>
+    </figure>
+</div>
 
 <p>Tiny Tapeout has already proven that accessible chip design works. By dramatically lowering the barrier to entry, they’ve enabled thousands of participants to bring their digital and analog designs to life. Now, our collaboration aims to take that further, helping designs move from prototype to product. The track record speaks for itself:</p>
 
@@ -566,7 +1280,17 @@ and have a chat!</p>
 
 <p>The project tiles are filling up fast:</p>
 
-<p><img src="/pr-82/assets/images/news/tinytapeout-feature/current-run.png" alt="Project tiles already allocated on the GF0p2 run" class="img-fluid rounded" /></p>
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>Project tiles already allocated on the GF0p2 run</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-82/assets/images/news/tinytapeout-feature/current-run.png" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-82/assets/images/news/tinytapeout-feature/current-run.png" alt="Project tiles already allocated on the GF0p2 run" />
+        </a>
+    </figure>
+</div>
 
 <h2 id="join-us">Join Us!</h2>
 
@@ -582,8 +1306,17 @@ and have a chat!</p>
 
 <h2 id="dont-miss-your-chance-to-join-the-first-shuttle">Don’t Miss Your Chance to Join the First Shuttle</h2>
 
-<p><img src="/pr-82/assets/images/news/tinytapeout-feature/waferspace-rainbow-open.png" alt="wafer.space bringing open accessible custom silicon fabrication" class="img-fluid rounded" /></p>
-
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>wafer.space bringing open accessible custom silicon fabrication</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-82/assets/images/news/tinytapeout-feature/waferspace-rainbow-open.png" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-82/assets/images/news/tinytapeout-feature/waferspace-rainbow-open.png" alt="wafer.space bringing open accessible custom silicon fabrication" />
+        </a>
+    </figure>
+</div>
 <p>We’re rapidly approaching the final milestones for this shuttle run, and now is the time to secure your spot:</p>
 
 <ul>
@@ -645,15 +1378,33 @@ and have a chat!</p>
 
 <h2 id="mosbius"><a href="https://mosbius.org/">MOSbius</a></h2>
 
-<p><img src="/pr-82/assets/images/news/mosbius-feature/mosbius_flow.png" alt="MOSbius platform enables hands-on exploration of transistor-level MOS circuits on breadboard" class="img-fluid rounded" /></p>
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>MOSbius platform enables hands-on exploration of transistor-level MOS circuits on breadboard</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-82/assets/images/news/mosbius-feature/mosbius_flow.png" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-82/assets/images/news/mosbius-feature/mosbius_flow.png" alt="MOSbius platform enables hands-on exploration of transistor-level MOS circuits on breadboard" />
+        </a>
+    </figure>
+</div>
 
 <p><strong><a href="https://mosbius.org/">MOSbius</a></strong>, developed by <strong><a href="https://peterkinget.github.io/">Professor Peter Kinget</a></strong> and his students at <strong><a href="http://www.cisl.columbia.edu/kinget_group/">Columbia University</a></strong>, is an innovative educational platform that helps students and designers explore <strong>MOS circuit topologies</strong> typically found on silicon and now accessible on a breadboard.</p>
 
 <p>The goal of <a href="https://mosbius.org/">MOSbius</a> is to give learners hands-on experience with <strong>transistor-level design</strong>, including circuit debugging, measurement, and the full “chip bring-up” process. The platform allows users to compare calculations, simulations, and real measurements using provided <strong><a href="https://wiki.analog.com/resources/tools-software/ltspice">LTspice</a> models</strong>, bridging the gap between theory and silicon.</p>
 
-<p><img src="/pr-82/assets/images/news/mosbius-feature/mosbius_interview.png" alt="MOSbius – A Field Programmable Transistor Array for Chip Designers (Interview with Peter Kinget)" class="img-fluid rounded" /></p>
-
-<p><strong><a href="https://www.youtube.com/watch?v=abu3u6UX6wE">Watch the interview on YouTube</a></strong></p>
+<div>
+    
+        <p class="text-center text-muted mb-10">
+            <small>MOSbius - A Field Programmable Transistor Array for Chip Designers (Interview with Peter Kinget)</small>
+        </p>
+    
+    <iframe style="width:100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/abu3u6UX6wE?start=&amp;end=
+&amp;autoplay=0&amp;mute=0&amp;playsinline=1&amp;fs=1&amp;disablekb=1&amp;controls=1&amp;loop=0&amp;playlist=abu3u6UX6wE
+" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+    </iframe>
+</div>
 
 <h3 id="building-on-previous-success">Building on Previous Success</h3>
 
@@ -713,7 +1464,17 @@ and have a chat!</p>
 
 <h2 id="dont-miss-your-chance-to-join-the-first-shuttle">Don’t Miss Your Chance to Join the First Shuttle</h2>
 
-<p><img src="/pr-82/assets/images/news/mosbius-feature/rainbow_narrow2.png" alt="wafer.space - Accessible custom silicon fabrication" class="img-fluid rounded" /></p>
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>wafer.space - Accessible custom silicon fabrication</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-82/assets/images/news/mosbius-feature/rainbow_narrow2.png" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-82/assets/images/news/mosbius-feature/rainbow_narrow2.png" alt="wafer.space - Accessible custom silicon fabrication" />
+        </a>
+    </figure>
+</div>
 
 <p>MOSbius is part of this run because accessible silicon enables their educational mission. What becomes possible at $7/chip? Whether you’re building educational tools, <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/updates/openfasoc">exploring new architectures</a>, or <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/updates/tholin-feature">bringing vintage designs back to life</a> - this is your opportunity.</p>
 
@@ -730,573 +1491,4 @@ and have a chat!</p>
 
 <p>If you’ve been thinking about getting your own silicon made — whether it’s your first chip or your fiftieth — this is your moment. The tools are ready, the ecosystem is growing, and we’re here to help you every step of the way.</p>
 
-<p><a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-1">Reserve your slot</a>, finish your design, and join us in shaping the future of accessible custom silicon.</p>]]></content><author><name>Tim &apos;mithro&apos; Ansell</name></author><category term="news" /><category term="gf180mcu" /><category term="run1" /><category term="featured-project" /><category term="mosbius" /><summary type="html"><![CDATA[This week we highlight MOSbius, an educational platform from Columbia University bringing hands-on silicon learning to students worldwide.]]></summary></entry><entry><title type="html">We Have Some Amazing Projects This Run</title><link href="https://wafer.space/pr-82/news/tholin-feature" rel="alternate" type="text/html" title="We Have Some Amazing Projects This Run" /><published>2025-11-14T12:00:00+00:00</published><updated>2025-11-14T12:00:00+00:00</updated><id>https://wafer.space/pr-82/news/tholin-feature</id><content type="html" xml:base="https://wafer.space/pr-82/news/tholin-feature"><![CDATA[<p>Our first shuttle run includes a number of incredible projects, and we wanted to take a moment to highlight one of them.</p>
-
-<hr />
-
-<h2 id="tholin--avalon-semiconductors">Tholin &amp; Avalon Semiconductors</h2>
-
-<p><img src="/pr-82/assets/images/news/tholin-feature/ic1.png" alt="Tholin's custom silicon designs showcase what's possible with open tooling" class="img-fluid rounded" /></p>
-
-<p><a href="https://tholin.dev/">Tholin</a> — the hardware designer behind <a href="https://github.com/AvalonSemiconductors"><strong>Avalon Semiconductors</strong></a> — has been exploring what’s possible when open tooling meets personal silicon. Their journey, chronicled through detailed blog posts like <a href="https://tholin.dev/custom_silicon/"><em>Custom Silicon</em></a> and <a href="https://tholin.dev/custom_silicon_two_electric_boogaloo/"><em>Custom Silicon Two: Electric Boogaloo</em></a>, shows how a single engineer can go from HDL to packaged chips using open-source flows, patience, and a healthy dose of curiosity.</p>
-
-<hr />
-
-<h3 id="as2650-and-as2650-2">AS2650 and AS2650-2</h3>
-
-<p><img src="/pr-82/assets/images/news/tholin-feature/as2650.png" alt="The AS2650(-2) is inspired by retro CPUs like the Signetics 2650" class="img-fluid rounded" /></p>
-
-<p>Tholin’s flagship projects are the <strong>AS2650</strong> and <strong>AS2650-2</strong>, re-implementations and extensions of the historic <a href="https://en.wikipedia.org/wiki/Signetics_2650">Signetics 2650</a> microprocessor, recreated from the ground up using open EDA tools.
-You can explore the repositories here:</p>
-
-<ul>
-  <li><a href="https://github.com/AvalonSemiconductors/AS2650">AS2650 GitHub Repository</a></li>
-  <li><a href="https://avalonsemiconductors.github.io/AS2650/">AS2650 Documentation</a></li>
-</ul>
-
-<p>These chips aren’t just nostalgic exercises — they’re fully functional processors that have been designed, simulated, taped-out, and brought back to life with custom test boards and firmware. The AS2650-2 introduces expanded peripherals, enhanced bus control, and improved debug accessibility. All implemented with a custom cell library for GF180MCU.</p>
-
-<hr />
-
-<h3 id="porting-the-as2650v2-to-waferspace">Porting the AS2650v2 to wafer.space</h3>
-
-<p><strong>Tholin</strong> is currently porting the <strong>AS2650v2</strong> to the <a href="https://wafer.space"><strong>wafer.space</strong></a> template.
-This serves as a <strong>reference design</strong>, demonstrating a complete CPU implementation, a multi-macro layout, and new methodologies for <strong>instantiating SRAMs</strong> within the wafer.space framework.</p>
-
-<p>The project also makes use of <strong>high-performance dynamic D-type flip-flop circuits (DFFs)</strong> from the
-<a href="https://github.com/AvalonSemiconductors/gf180mcu_as_ex_mcu7t5v0"><strong>gf180mcu_as_ex_mcu7t5v0</strong></a> library.</p>
-
-<p>Tholin notes that the wafer.space padframe provides <strong>more pads than the Efabless Caravel design</strong>, resulting in a number of unused pins during this initial port. She suggests that future revisions may take advantage of these additional pads to support <strong>expanded peripherals</strong> and system features.</p>
-
-<p>You can explore the design and accompanying documentation on GitHub:
-👉 <a href="https://github.com/AvalonSemiconductors/as2650-ws"><strong>AvalonSemiconductors/as2650-ws</strong></a></p>
-
-<hr />
-
-<h3 id="waferspace-submissions">wafer.space Submissions</h3>
-
-<p>Tholin has also created a companion repository,
-<a href="https://github.com/AvalonSemiconductors/ws-submission-2025"><strong>ws-submission-2025</strong></a>, documenting her submission for the current wafer.space fabrication run.</p>
-
-<p>True to her style, the project includes <strong>artwork integrated directly into the silicon layout</strong>, reflecting the creative potential unlocked when advanced design tools are accessible and open.</p>
-
-<p><img src="/pr-82/assets/images/news/tholin-feature/logo_bw.png" alt="Tholin's logo, adapted for silicon artwork" class="img-fluid rounded" /></p>
-
-<p>Additionally, Tholin developed a <a href="https://github.com/AvalonSemiconductors/ws-submission-2025/blob/main/padout_gen.py"><strong>Python script</strong></a> that <strong>automatically generates padout diagrams</strong> from a <a href="https://librelane.rtfd.io/">LibreLane</a> configuration file thereby simplifying visualization and documentation of pad assignments.</p>
-
-<p><img src="/pr-82/assets/images/news/tholin-feature/padout.png" alt="Padout diagram generated from Python and LibreLane configuration" class="img-fluid rounded" /></p>
-
-<hr />
-
-<h3 id="multi-project-die-exploration">Multi-Project Die Exploration</h3>
-
-<div class="post-gallery light-gallery-wrapper mb-30">
-  
-  <p class="text-center text-muted mb-10"><small>Multi-project die strategy</small></p>
-  
-  <div class="tiles tiles-s">
-    <div class="items row">
-      
-      
-        
-          <div class="item col-md-6">
-        
-            <figure class="overlay overlay1 rounded">
-              <a href="/pr-82/assets/images/news/tholin-feature/multidie.png" class="lightbox">
-                <span class="bg"></span>
-                <img src="/pr-82/assets/images/news/tholin-feature/multidie.png" alt="Multi-project die layout combining multiple designs on one die" />
-              </a>
-              
-            </figure>
-          </div>
-      
-        
-          <div class="item col-md-6">
-        
-            <figure class="overlay overlay1 rounded">
-              <a href="/pr-82/assets/images/news/tholin-feature/multilayout.png" class="lightbox">
-                <span class="bg"></span>
-                <img src="/pr-82/assets/images/news/tholin-feature/multilayout.png" alt="Multi-project die floorplan showing design placement" />
-              </a>
-              
-            </figure>
-          </div>
-      
-    </div>
-  </div>
-</div>
-
-<p>Tholin is also pioneering <strong>multi-project die (MPD)</strong> strategies, maximizing wafer area by integrating multiple small designs onto a single die.
-Projects such as <a href="https://github.com/AvalonSemiconductors/gfmpw1-multi"><code class="language-plaintext highlighter-rouge">gfmpw-1-multi</code></a> and <a href="https://github.com/AvalonSemiconductors/AS2650-bring-up"><code class="language-plaintext highlighter-rouge">AS2650-bring-up</code></a> demonstrate how careful planning and padframe reuse make it possible to test multiple subsystems in one run.</p>
-
-<p>Tholin has also written thorough documentation on this project <a href="https://avalonsemiconductors.github.io/GFMPW-1-MULTI/index.html">here</a></p>
-
-<p>This approach reflects the open ethos of wafer.space — making silicon exploration more accessible, modular, and repeatable for small teams and individuals.</p>
-
-<hr />
-
-<h3 id="open-flow--librelane-experience">Open Flow &amp; LibreLane Experience</h3>
-
-<p>Tholin has been an early adopter of <a href="https://librelane.rtfd.io/"><strong>LibreLane</strong></a>, the open-source ASIC flow used by wafer.space. Their feedback and experiments with padframes, padrings, and packaging have helped refine the ecosystem for everyone.
-From RTL through layout and DRC, to bonding and board testing, Tholin’s work demonstrates that open tooling can now carry a chip from idea to reality — no closed vendor stack required.</p>
-
-<p><img src="/pr-82/assets/images/news/tholin-feature/3d_view.png" alt="Standard cells are a key component of RTL to GDSII flows." class="img-fluid rounded" /></p>
-
-<hr />
-
-<h3 id="other-avalon-semiconductors-projects">Other Avalon Semiconductors Projects</h3>
-
-<p>Tholin has also created a number of fun and technically rich designs through <strong>Tiny Tapeout</strong>, showcasing creativity across digital design, display drivers, and compact CPUs:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>GitHub Link</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>AS5401</strong></td>
-      <td>4-bit CPU</td>
-      <td><a href="https://github.com/AvalonSemiconductors/tt2-AvalonSemi-5401">AvalonSemiconductors/tt2-AvalonSemi-5401</a></td>
-    </tr>
-    <tr>
-      <td><strong>TT02 Logisim Example</strong></td>
-      <td>Example and documentation on submitting Tiny Tapeout designs using Logisim Evolution</td>
-      <td><a href="https://github.com/AvalonSemiconductors/tt02-logisim-example">AvalonSemiconductors/tt02-logisim-example</a></td>
-    </tr>
-    <tr>
-      <td><strong>Diceroll</strong></td>
-      <td>Animates a random number rolling on a 7-segment display</td>
-      <td><a href="https://github.com/AvalonSemiconductors/tt2-diceroll">AvalonSemiconductors/tt2-diceroll</a></td>
-    </tr>
-    <tr>
-      <td><strong>TBB143</strong></td>
-      <td>Programmable sound generator using a ring oscillator as a faster internal clock</td>
-      <td><a href="https://github.com/AvalonSemiconductors/tt2-avalonsemi-TBB1143">AvalonSemiconductors/tt2-avalonsemi-TBB1143</a></td>
-    </tr>
-    <tr>
-      <td><strong>Multiplexed Counter</strong></td>
-      <td>Drives 4 multiplexed 7-segment displays to count time up to 99 min 59 sec</td>
-      <td><a href="https://github.com/AvalonSemiconductors/tt2-multiplexed-counter">AvalonSemiconductors/tt2-multiplexed-counter</a></td>
-    </tr>
-    <tr>
-      <td><strong>4-bit Multiplier</strong></td>
-      <td>Multiplies two 4-bit numbers into an 8-bit result</td>
-      <td><a href="https://github.com/AvalonSemiconductors/tt2-4x4-multiply">AvalonSemiconductors/tt2-4x4-multiply</a></td>
-    </tr>
-    <tr>
-      <td><strong>LCD Namebadge</strong></td>
-      <td>Experiment with character LCD interfacing</td>
-      <td><a href="https://github.com/AvalonSemiconductors/tt2-lcd-namebadge">AvalonSemiconductors/tt2-lcd-namebadge</a></td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Each of these designs exemplifies the open-hardware spirit: compact, educational, and fully reproducible — proof that anyone can design real silicon with today’s open tools.</p>
-
-<hr />
-
-<h3 id="beyond-silicon">Beyond Silicon</h3>
-
-<p>Beyond her silicon designs, <strong>Tholin</strong> has also developed a range of PCB projects and breakout boards that make working with custom dies more accessible.</p>
-
-<div class="post-gallery light-gallery-wrapper mb-30">
-  
-  <p class="text-center text-muted mb-10"><small>DIP40 breakout board and wirebonding</small></p>
-  
-  <div class="tiles tiles-s">
-    <div class="items row">
-      
-      
-        
-          <div class="item col-md-6">
-        
-            <figure class="overlay overlay1 rounded">
-              <a href="/pr-82/assets/images/news/tholin-feature/dip40.png" class="lightbox">
-                <span class="bg"></span>
-                <img src="/pr-82/assets/images/news/tholin-feature/dip40.png" alt="DIP40 breakout board for custom silicon" />
-              </a>
-              
-            </figure>
-          </div>
-      
-        
-          <div class="item col-md-6">
-        
-            <figure class="overlay overlay1 rounded">
-              <a href="/pr-82/assets/images/news/tholin-feature/dip40_wirebond.png" class="lightbox">
-                <span class="bg"></span>
-                <img src="/pr-82/assets/images/news/tholin-feature/dip40_wirebond.png" alt="DIP40 wirebonding setup connecting die pads to package pins" />
-              </a>
-              
-            </figure>
-          </div>
-      
-    </div>
-  </div>
-</div>
-
-<p>Tholin has also contributed extensively to the <strong>wafer.space standard padframe</strong>, helping shape the mechanical and electrical layout used across multiple projects.</p>
-
-<hr />
-
-<h3 id="why-were-excited-to-have-tholin-aboard">Why We’re Excited to Have Tholin Aboard</h3>
-
-<p>Tholin represents the kind of creative, self-driven engineering that wafer.space exists to empower. Her work with the AS2650 family, open flows, and multi-project dies captures the spirit of the growing open-silicon movement — one where innovation comes from curiosity, not corporate budgets.</p>
-
-<p>We’re thrilled to have <strong>Tholin &amp; Avalon Semiconductors</strong> among the first wave of wafer.space participants and can’t wait to see what they build next.</p>]]></content><author><name>Tim &apos;mithro&apos; Ansell</name></author><category term="news" /><category term="gf180mcu" /><category term="run1" /><category term="featured-project" /><category term="tholin" /><summary type="html"><![CDATA[Our first shuttle run includes incredible projects. We highlight Tholin and Avalon Semiconductors: an open reimplementation of the historic Signetics 2650 microprocessor.]]></summary></entry><entry><title type="html">Community Progress on Chip-on-Board Packaging Strategy</title><link href="https://wafer.space/pr-82/news/chip-on-board-strategy" rel="alternate" type="text/html" title="Community Progress on Chip-on-Board Packaging Strategy" /><published>2025-11-11T12:00:00+00:00</published><updated>2025-11-11T12:00:00+00:00</updated><id>https://wafer.space/pr-82/news/chip-on-board-strategy</id><content type="html" xml:base="https://wafer.space/pr-82/news/chip-on-board-strategy"><![CDATA[<p>Today we have a guest post from <strong><a href="https://www.crowdsupply.com/evezor-inc">Andrew Wingate</a></strong> (of Evezor Inc), sharing his perspective on the progress the <a href="https://wafer.space/">wafer.space</a> community has been making in developing a chip-on-board packaging strategy. This work includes contributions from <strong><a href="https://tinytapeout.com/">Tiny Tapeout</a></strong>, <strong><a href="https://mosbius.org/">MosBius</a></strong> (<a href="https://peterkinget.github.io/">Columbia University</a>), and community members like <strong><a href="https://github.com/AvalonSemiconductors">@Tholin</a></strong> and <strong>@xianglin_pu</strong>.</p>
-
-<hr />
-
-<p><a href="https://wafer.space/"><strong>wafer.space</strong></a> exists to make custom silicon affordable. At <strong>$7 per chip</strong> for production quantities, the cost barrier to fabrication has been removed, but that’s only part of the story. Working with bare dies is challenging and typically requires specialized, expensive equipment.</p>
-
-<p>To make post-fabrication development more accessible, the community has been working on <strong>COB (Chip on Board)</strong> standard templates. Over the past months, various package options have been explored, including <strong>DIP, LGA, castellated breakouts,</strong> and <strong>breadboardable</strong> versions.</p>
-
-<p>The leading contender is currently a <strong>mezzanine breakout board</strong> using connectors similar to those found on the Raspberry Pi Compute Modules. This design allows wirebonding houses to mount and wirebond your dies directly onto the COB packages, which can then be shipped to you ready for integration into your own systems.</p>
-
-<p>When designing your motherboards, you’ll be able to source compatible connectors like <a href="https://www.lcsc.com/product-detail/C19089262.html">this one</a> and have your PCBA house assemble them. The community is also working on a range of breakout boards that follow a <strong>community-developed standard digital padring</strong>, to make development faster and more consistent.</p>
-
-<blockquote>
-  <p><strong>What This Means For You:</strong> If you’re backing this campaign or considering it, you won’t need specialized equipment or expensive packaging services to use your chips. While the community continues developing these COB standards, <a href="https://buy.wafer.space">wafer.space is offering wire-bonded COB packaging at buy.wafer.space</a> for this campaign run (1,000 dies mounted and wire-bonded to PCBs). Alternatively, you can work with your own wirebonding partner using these community-developed designs. Either way, you’ll solder the connector to your custom PCB and plug them in just like adding any other component to your board.</p>
-</blockquote>
-
-<hr />
-
-<h3 id="the-community-developed-standard-padframe-and-cob-design">The Community-Developed Standard Padframe and COB Design</h3>
-
-<p>While you’re free to use any pad configuration you wish, adhering to the <strong>community-developed standard</strong> ensures compatibility with wirebonding partners and simplifies the fabrication process.</p>
-
-<p><strong>Key Details:</strong></p>
-
-<ul>
-  <li>
-    <p><strong>74-pad padframe</strong> on your die</p>
-  </li>
-  <li>
-    <p><strong>20 pads</strong> on the east and west sides</p>
-  </li>
-  <li>
-    <p><strong>17 pads</strong> on the north and south sides</p>
-  </li>
-  <li>
-    <p><strong>74-pad wirebonding footprint</strong></p>
-  </li>
-  <li>
-    <p><strong>14 mm × 16 mm PCB</strong></p>
-  </li>
-  <li>
-    <p><strong>70-pin mezzanine connector:</strong> <a href="https://www.lcsc.com/product-detail/C19089236.html">C19089236</a> <em>or compatible</em></p>
-  </li>
-  <li>
-    <p><strong>1 µF decoupling capacitors</strong> on VDD_IO, VDD_CORE, and PWR_AUX pins</p>
-  </li>
-</ul>
-
-<p>Find most current designs on the <a href="https://github.com/wafer-space/chip-on-board-wire-bonded-pcbs">chip-on-board-wire-bonded-pcbs repo</a></p>
-
-<h2 id="why-standardize">Why Standardize?</h2>
-
-<p>With the technical details established, it’s worth stepping back to consider why standardization matters for the open silicon ecosystem.</p>
-
-<h3 id="a-standard-for-the-broader-community">A Standard for the Broader Community</h3>
-
-<p>While this standard emerged from the wafer.space community’s needs, the goal is to create something that could benefit the broader open silicon ecosystem. By documenting the design openly and making the <a href="https://www.kicad.org/">KiCad</a> symbols, PCB layouts, and specifications freely available, other projects and communities could adopt or adapt this approach for their own chip-on-board needs.</p>
-
-<p>The work you see here comes from contributors across the community: Discord members testing designs and providing feedback, Tiny Tapeout contributors sharing lessons from their COB runs, Columbia University students developing educational chips through the MosBius project, and veteran engineers refining the wirebonding footprints. Each brought different expertise: some from PCB design, others from silicon layout, still others from manufacturing and assembly experience.</p>
-
-<p>The hope is that as more projects use compatible footprints and connectors, the ecosystem benefits grow:</p>
-<ul>
-  <li>Wirebonding houses can optimize their processes for a common standard</li>
-  <li>More off-the-shelf breakout boards and adapters become available</li>
-  <li>Designers can share compatible motherboard designs across projects</li>
-  <li>The barrier to entry for COB assembly continues to decrease</li>
-</ul>
-
-<p>This isn’t about mandating a single approach. Diversity in packaging solutions remains valuable. Rather, it’s about establishing a well-documented baseline that communities can rally around when standardization helps everyone. If this standard proves useful beyond wafer.space, that would represent exactly the kind of collaborative progress that makes open silicon compelling.</p>
-
-<p>This design hopefully meets the needs of a majority of projects on wafer.space. If your project needs something different, other open source packaging options are available to explore, such as the University of Washington’s <strong><a href="https://bjump.org/">BaseJump project</a></strong>, which offers <strong><a href="https://github.com/bespoke-silicon-group/bsg_packaging">BGA packaging standards</a></strong> including their 352-pin BaseJump Socket for designs requiring hundreds of I/O pins or more complex integration.</p>
-
-<h2 id="the-implementation-from-concept-to-physical-boards">The Implementation: From Concept to Physical Boards</h2>
-
-<p>So what does this standard look like in practice? Let’s walk through the actual hardware, tools, and resources the community has developed.</p>
-
-<h3 id="70-pin-mezzanine-cob">70-Pin Mezzanine COB</h3>
-
-<p>The centerpiece of the standard is a 70-pin mezzanine COB board that connects your wirebonded die to a standard connector.</p>
-
-<div class="post-gallery light-gallery-wrapper mb-30">
-  
-  <p class="text-center text-muted mb-10"><small>Mezzanine COB board design</small></p>
-  
-  <div class="tiles tiles-s">
-    <div class="items row">
-      
-      
-        
-          <div class="item col-md-6">
-        
-            <figure class="overlay overlay1 rounded">
-              <a href="/pr-82/assets/images/news/chip-on-board-strategy/padframes-cob-mezzanine-front.png" class="lightbox">
-                <span class="bg"></span>
-                <img src="/pr-82/assets/images/news/chip-on-board-strategy/padframes-cob-mezzanine-front.png" alt="Mezzanine COB board - front view" />
-              </a>
-              
-            </figure>
-          </div>
-      
-        
-          <div class="item col-md-6">
-        
-            <figure class="overlay overlay1 rounded">
-              <a href="/pr-82/assets/images/news/chip-on-board-strategy/padframes-cob-mezzanine-back.png" class="lightbox">
-                <span class="bg"></span>
-                <img src="/pr-82/assets/images/news/chip-on-board-strategy/padframes-cob-mezzanine-back.png" alt="Mezzanine COB board - back view" />
-              </a>
-              
-            </figure>
-          </div>
-      
-    </div>
-  </div>
-</div>
-
-<p>Panelized for efficient handling and assembly by wirebonding partners:</p>
-
-<div class="post-gallery light-gallery-wrapper mb-30">
-  
-  <p class="text-center text-muted mb-10"><small>Mezzanine panel for wirebonding assembly</small></p>
-  
-  <div class="tiles tiles-s">
-    <div class="items row">
-      
-      
-        
-          <div class="item col-md-6">
-        
-            <figure class="overlay overlay1 rounded">
-              <a href="/pr-82/assets/images/news/chip-on-board-strategy/padframes-cob-mezzanine-panel-front.png" class="lightbox">
-                <span class="bg"></span>
-                <img src="/pr-82/assets/images/news/chip-on-board-strategy/padframes-cob-mezzanine-panel-front.png" alt="Mezzanine panel - front view for wirebonding assembly" />
-              </a>
-              
-            </figure>
-          </div>
-      
-        
-          <div class="item col-md-6">
-        
-            <figure class="overlay overlay1 rounded">
-              <a href="/pr-82/assets/images/news/chip-on-board-strategy/padframes-cob-mezzanine-panel-rear.png" class="lightbox">
-                <span class="bg"></span>
-                <img src="/pr-82/assets/images/news/chip-on-board-strategy/padframes-cob-mezzanine-panel-rear.png" alt="Mezzanine panel - rear view" />
-              </a>
-              
-            </figure>
-          </div>
-      
-    </div>
-  </div>
-</div>
-
-<p>The standard configuration can be found in the <a href="https://github.com/wafer-space/gf180mcu-project-template/blob/main/librelane/config.yaml">GitHub repository</a>. For easier viewing, it’s also available as a <a href="https://docs.google.com/spreadsheets/d/1pI2BAEWEexXcXN3vah3SR85zPIV6eAXPGXc2bcvoSGU/edit?gid=0#gid=0">Google Sheet</a> that shows the complete pad mapping.</p>
-
-<p><img src="/pr-82/assets/images/news/chip-on-board-strategy/padframes-cob-die-padring.png" alt="Die padring layout with 74-pad configuration" class="img-fluid rounded" /></p>
-
-<p>To help visualize your own pad layouts, Discord user <strong>@Tholin</strong> has developed a Python-based pad viewer that generates an image of the pad layout defined in your template. This is useful for verifying your configuration matches your design intent. You can find the tool <a href="https://github.com/AvalonSemiconductors/ws-submission-2025/blob/main/padout_gen.py">here</a>.</p>
-
-<hr />
-
-<h2 id="design-tools-and-ecosystem">Design Tools and Ecosystem</h2>
-
-<p>Having the physical COB boards is only part of the picture. To actually use them, designers need schematic symbols, footprints, and integration tools. Here’s what the community has built to support the full design workflow.</p>
-
-<h3 id="default-kicad-symbols">Default KiCad Symbols</h3>
-
-<p>The community has developed several <strong><a href="https://www.kicad.org/">KiCad</a> symbols</strong> to support design and integration with COB layouts.</p>
-
-<p>The <strong>pad mapping symbol</strong> corresponds to the default 74-pad wirebonding padframe and <a href="https://github.com/wafer-space/gf180mcu-project-template/blob/main/librelane/config.yaml">default configuration</a> from the <a href="https://github.com/wafer-space/gf180mcu-project-template"><strong>GF180MCU Project Template</strong></a>.</p>
-
-<blockquote>
-  <p>Some users have suggested reducing the number of ground and power pads. If there is sufficient demand, an alternate default configuration will be created.
-Join the discussion on our <a href="https://discord.gg/43y2t53jpE"><strong>Discord server</strong></a>.</p>
-</blockquote>
-
-<p><img src="/pr-82/assets/images/news/chip-on-board-strategy/padframes-cob-default-74pad-wirebond-symbol.png" alt="Default 74-pad wirebonding padframe symbol" class="img-fluid rounded" /></p>
-
-<hr />
-
-<h3 id="70-pin-mezzanine-connector-symbol">70-Pin Mezzanine Connector Symbol</h3>
-
-<p>The <strong>mezzanine connector symbol</strong> provides a 1:1 pin mapping to the 70-pin default layout.
-All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a> naming conventions, useful for those familiar with the TT ecosystem who are designing custom chips for this wafer.space run.</p>
-
-<p><img src="/pr-82/assets/images/news/chip-on-board-strategy/padframes-cob-default-70pin-mezzanine-symbol.png" alt="Default 70-pin mezzanine COB breakout symbol" class="img-fluid rounded" /></p>
-
-<p>An alternate version is also available that organizes pins by signal type. This version is particularly useful for Tiny Tapeout-style breakout motherboard designs where grouping by function makes routing clearer.</p>
-
-<p><img src="/pr-82/assets/images/news/chip-on-board-strategy/padframes-cob-tinytapeout-kicad-symbols.png" alt="70-pin mezzanine COB symbol organized by signal type (Tiny Tapeout version)" class="img-fluid rounded" /></p>
-
-<h3 id="kicad-resources-for-cob-design">KiCad Resources for COB Design</h3>
-
-<p>While the initial symbols are in KiCad, the community welcomes contributions of symbols and libraries for other PCB design tools. If you use Altium, Eagle, or another tool, please submit a pull request to the <a href="https://github.com/wafer-space/chip-on-board-wire-bonded-pcbs">chip-on-board-wire-bonded-pcbs repo</a>!</p>
-
-<p>For those new to KiCad or looking to deepen their PCB design skills, <strong>Pat Deegan</strong> (developer of the <strong><a href="https://github.com/TinyTapeout/tt-demo-pcb">Tiny Tapeout demo board</a></strong>) offers <strong><a href="https://inductive-kickback.com/2024/07/kicadunlocked-a-course-for-deep-kicad/">KiCad:Unlocked</a></strong>, a comprehensive free course that covers everything from basic circuit design to advanced PCB layout techniques. The community hopes to work with Pat in the future on a tutorial specifically focused on wire bonding integration and designing motherboards for wafer.space COB packages.</p>
-
-<p>If you want to quickly review KiCad designs without installing software, <strong><a href="https://kicanvas.org/">KiCanvas</a></strong> provides a browser-based viewer for KiCad files. You can use it to inspect the standard COB layouts, verify connector pinouts, and review community-contributed designs, all directly in your browser.</p>
-
-<hr />
-
-<h3 id="beyond-the-standard-expanding-options">Beyond the Standard: Expanding Options</h3>
-
-<p>While the 70-pin mezzanine connector serves as the standard, the community recognizes that different projects have different needs.</p>
-
-<h4 id="castellated-and-breadboardable-breakouts">Castellated and Breadboardable Breakouts</h4>
-
-<p>The community is developing a series of breakout boards designed to make it easier to prototype, experiment, and integrate your dies into existing systems.</p>
-
-<p><img src="/pr-82/assets/images/news/chip-on-board-strategy/padframes-cob-breakouts.png" alt="Castellated and breadboardable breakout board designs" class="img-fluid rounded" /></p>
-
-<hr />
-
-<h2 id="real-world-adoption">Real-World Adoption</h2>
-
-<p>The real test of any standard is whether people actually use it. Here’s how the community is already building on this work.</p>
-
-<h3 id="derivative-designs">Derivative Designs</h3>
-
-<p>It’s exciting to see others building on the <a href="https://wafer.space/">wafer.space</a> platform!
-<strong><a href="https://peterkinget.github.io/">Professor Peter Kinget</a></strong> and his students at <strong><a href="https://peterkinget.github.io/">Columbia University</a></strong> are developing educational chips using <a href="https://wafer.space/">wafer.space</a> for their <a href="https://mosbius.org/0_front_matter/intro.html"><strong>MosBius Project</strong></a>.</p>
-
-<p>MosBius provides students and designers the opportunity to explore MOS circuit topologies through a unique <strong>analog switch matrix</strong>, where each pin can connect to any of ten on-chip buses. This enables flexible on-chip circuit wiring and simplifies testing setups.</p>
-
-<p><img src="/pr-82/assets/images/news/chip-on-board-strategy/padframes-cob-mosbius.png" alt="MosBius Project chip design from Columbia University" class="img-fluid rounded" /></p>
-
-<p><em>Image and design by @xianglin_pu on <a href="https://discord.gg/43y2t53jpE">wafer.space Discord</a></em></p>
-
-<hr />
-
-<h3 id="the-path-not-yet-taken">The Path Not (Yet) Taken</h3>
-
-<p>Before settling on the mezzanine connector as the standard, the community explored several alternative packaging approaches. While these didn’t become the primary standard, they represent valuable experiments that informed the final design and may still serve specialized use cases.</p>
-
-<h4 id="lga-land-grid-array">LGA (Land Grid Array)</h4>
-
-<p><img src="/pr-82/assets/images/news/chip-on-board-strategy/padframes-cob-lga-cob.png" alt="LGA (Land Grid Array) COB package design" class="img-fluid rounded" /></p>
-
-<h4 id="dip">DIP</h4>
-
-<div class="post-gallery light-gallery-wrapper mb-30">
-  
-  <p class="text-center text-muted mb-10"><small>DIP package designs</small></p>
-  
-  <div class="tiles tiles-s">
-    <div class="items row">
-      
-      
-        
-          <div class="item col-md-6">
-        
-            <figure class="overlay overlay1 rounded">
-              <a href="/pr-82/assets/images/news/chip-on-board-strategy/padframes-cob-dip.png" class="lightbox">
-                <span class="bg"></span>
-                <img src="/pr-82/assets/images/news/chip-on-board-strategy/padframes-cob-dip.png" alt="DIP package design - standard through-hole format" />
-              </a>
-              
-            </figure>
-          </div>
-      
-        
-          <div class="item col-md-6">
-        
-            <figure class="overlay overlay1 rounded">
-              <a href="/pr-82/assets/images/news/chip-on-board-strategy/padframes-cob-dip1.png" class="lightbox">
-                <span class="bg"></span>
-                <img src="/pr-82/assets/images/news/chip-on-board-strategy/padframes-cob-dip1.png" alt="DIP package design - alternative layout" />
-              </a>
-              
-            </figure>
-          </div>
-      
-    </div>
-  </div>
-</div>
-
-<h4 id="castellated">Castellated</h4>
-
-<p><img src="/pr-82/assets/images/news/chip-on-board-strategy/padframes-cob-castellated.png" alt="Castellated edge COB package design" class="img-fluid rounded" /></p>
-
-<hr />
-
-<h2 id="learning-from-pioneers">Learning from Pioneers</h2>
-
-<p>The wafer.space COB work doesn’t exist in isolation. Other projects have tackled similar challenges, and their experiences directly inform this effort.</p>
-
-<p><img src="/pr-82/assets/images/news/chip-on-board-strategy/padframes-cob-tt-cob.jpg" alt="Tiny Tapeout chip-on-board implementation" class="img-fluid rounded" /></p>
-
-<p>Tiny Tapeout recently <a href="https://www.zerotoasiccourse.com/post/cob/">published an update</a> on their first successful Chip-on-Board (COB) implementation, highlighting their bare-die submission on the Zero to ASIC Course “MPW-7” run.</p>
-
-<p><img src="/pr-82/assets/images/news/chip-on-board-strategy/padframes-cob-tt-youtube.png" alt="Video thumbnail - Tiny Tapeout 9 First COB samples" class="img-fluid rounded" /></p>
-
-<p><a href="https://www.youtube.com/watch?v=XJmWoBJjvlI"><strong>Watch the video: Tiny Tapeout 9 - First COB samples!</strong></a></p>
-
-<p>While Tiny Tapeout achieved a significant milestone, they also noted limitations: the long bonding wires increased inductance and degraded performance, and securing small-volume wire-bonding services remains difficult.</p>
-
-<p>For those interested in understanding the wire bonding process in detail, Stephan Bökelmann’s talk at Kicon 2025 provides an excellent introduction to the practical challenges and techniques:</p>
-
-<p><a href="https://www.youtube.com/watch?v=dNBwY7L6niI"><strong>Watch: Poor man’s intro to Wire-Bonding @ Kicon 2025</strong></a></p>
-
-<p>The <a href="https://wafer.space/">wafer.space</a> community views these learnings as a springboard. By introducing standardized COB templates, the goal is to make COB packaging more accessible, more scalable, and better optimized. The objective is to build upon the success of Tiny Tapeout and improve their future runs by reducing parasitics, streamlining the supply chain, and enabling anyone to pick up a COB-mounted die and integrate it into their system with ease.</p>
-
-<hr />
-
-<h2 id="join-the-effort">Join the Effort</h2>
-
-<p>This community-developed standard is exactly that: community-developed. The designs, symbols, and approaches documented here represent months of collaborative work, but they’re far from finished.</p>
-
-<p>The community is exploring multiple <strong>COB packaging varieties</strong> and would love your contribution:</p>
-
-<p><strong>If you’re designing a chip for this run:</strong></p>
-<ul>
-  <li>Share your I/O requirements in the <strong>#cob</strong> Discord channel. Your needs help refine future designs</li>
-  <li>Test the pad viewer tool and report any issues or feature requests</li>
-</ul>
-
-<p><strong>If you have COB or wirebonding experience:</strong></p>
-<ul>
-  <li>Share vendor recommendations or tips for small-volume runs</li>
-  <li>Provide feedback on the wirebonding footprint design</li>
-  <li>Help identify potential manufacturing issues before they become problems</li>
-</ul>
-
-<p><strong>If you use other PCB design tools:</strong></p>
-<ul>
-  <li>Contribute symbols and footprints for Altium, Eagle, or other platforms</li>
-  <li>Submit pull requests to the <a href="https://github.com/wafer-space/chip-on-board-wire-bonded-pcbs">chip-on-board-wire-bonded-pcbs repo</a></li>
-</ul>
-
-<p><strong>If you’re curious or have questions:</strong></p>
-<ul>
-  <li>Ask in Discord. The community includes experienced designers happy to help</li>
-  <li>Review the designs using KiCanvas and suggest improvements</li>
-  <li>Help test breakout board designs and report what works (or doesn’t)</li>
-</ul>
-
-<p>Join the community and help shape the future of accessible silicon design:</p>
-
-<ul>
-  <li>
-    <p><strong>Discord:</strong> <a href="https://discord.gg/43y2t53jpE">discord.gg/43y2t53jpE</a> (see <strong>#cob</strong> channel)</p>
-  </li>
-  <li>
-    <p><strong>Matrix:</strong> <a href="https://matrix.to/#/#gf180mcu:fossi-chat.org">#gf180mcu.org</a></p>
-  </li>
-</ul>
-
-<p>Together, the community can make custom silicon as easy and affordable as PCB design.</p>
-
-<hr />
-
-<p><strong>Thanks to Andrew Wingate for this guest post!</strong> If you’re interested in chip-on-board packaging, join the <strong>#cob channel</strong> on the <a href="https://discord.gg/43y2t53jpE">wafer.space Discord</a> to discuss designs, share feedback, and help contribute to making COB packaging accessible for everyone.</p>]]></content><author><name>Andrew Wingate</name></author><category term="news" /><category term="gf180mcu" /><category term="run1" /><category term="packaging" /><category term="chip-on-board" /><summary type="html"><![CDATA[The wafer.space community is developing a flexible chip-on-board packaging strategy, so you won't need specialised equipment or expensive packaging services to use your chips.]]></summary></entry></feed>
+<p><a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-1">Reserve your slot</a>, finish your design, and join us in shaping the future of accessible custom silicon.</p>]]></content><author><name>Tim &apos;mithro&apos; Ansell</name></author><category term="news" /><category term="gf180mcu" /><category term="run1" /><category term="featured-project" /><category term="mosbius" /><summary type="html"><![CDATA[This week we highlight MOSbius, an educational platform from Columbia University bringing hands-on silicon learning to students worldwide.]]></summary></entry></feed>

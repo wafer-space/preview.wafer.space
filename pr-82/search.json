@@ -1,6 +1,24 @@
 [
   
     {
+      "title"    : "Taping Out KianV - a Linux/XV6-capable RISC-V SoC",
+      "category" : "",
+      "tags"     : "gf180mcu, run1, featured-project, risc-v, kianv",
+      "url"      : "/pr-82/news/kianv-riscv-soc",
+      "date"     : "2026-06-05 12:00:00 +0000",
+      "desc"     : "Taping Out KianV - a Linux/XV6-capable RISC-V SoC"
+    } ,
+  
+    {
+      "title"    : "Chip-on-Board Packaging Progress",
+      "category" : "",
+      "tags"     : "gf180mcu, run1, packaging, chip-on-board",
+      "url"      : "/pr-82/news/chip-on-board-progress",
+      "date"     : "2026-06-03 12:00:00 +0000",
+      "desc"     : "Chip-on-Board Packaging Progress"
+    } ,
+  
+    {
       "title"    : "Die Sorting with Robots",
       "category" : "",
       "tags"     : "gf180mcu, run1, manufacturing",
