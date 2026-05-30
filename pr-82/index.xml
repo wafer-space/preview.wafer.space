@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://wafer.space/pr-82/index.xml" rel="self" type="application/atom+xml" /><link href="https://wafer.space/pr-82/" rel="alternate" type="text/html" /><updated>2026-05-30T12:56:53+00:00</updated><id>https://wafer.space/pr-82/index.xml</id><entry><title type="html">Taping Out KianV - a Linux/XV6-capable RISC-V SoC</title><link href="https://wafer.space/pr-82/news/kianv-riscv-soc" rel="alternate" type="text/html" title="Taping Out KianV - a Linux/XV6-capable RISC-V SoC" /><published>2026-06-05T12:00:00+00:00</published><updated>2026-06-05T12:00:00+00:00</updated><id>https://wafer.space/pr-82/news/kianv-riscv-soc</id><content type="html" xml:base="https://wafer.space/pr-82/news/kianv-riscv-soc"><![CDATA[<p>Hi everybody!</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://wafer.space/pr-82/index.xml" rel="self" type="application/atom+xml" /><link href="https://wafer.space/pr-82/" rel="alternate" type="text/html" /><updated>2026-05-30T13:41:33+00:00</updated><id>https://wafer.space/pr-82/index.xml</id><entry><title type="html">Taping Out KianV - a Linux/XV6-capable RISC-V SoC</title><link href="https://wafer.space/pr-82/news/kianv-riscv-soc" rel="alternate" type="text/html" title="Taping Out KianV - a Linux/XV6-capable RISC-V SoC" /><published>2026-06-05T12:00:00+00:00</published><updated>2026-06-05T12:00:00+00:00</updated><id>https://wafer.space/pr-82/news/kianv-riscv-soc</id><content type="html" xml:base="https://wafer.space/pr-82/news/kianv-riscv-soc"><![CDATA[<p>Hi everybody!</p>
 
 <p>In this update we’ll be exploring a homegrown SoC which is capable of booting Linux, µLinux and XV6. It
 implements the RISC-V RV32IMA ISA alongside additional extensions for more functionality.</p>
@@ -619,9 +619,7 @@ footage for their TT08 shuttle.</p>
             <small>Behind the scenes footage of TT08 being wirebonded</small>
         </p>
     
-    <iframe style="width:100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/okJ7NFNJdfs?start=&amp;end=
-&amp;autoplay=0&amp;mute=1&amp;playsinline=1&amp;fs=1&amp;disablekb=1&amp;controls=1&amp;loop=1&amp;playlist=okJ7NFNJdfs
-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+    <iframe style="width:100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/okJ7NFNJdfs?start=&amp;end=&amp;autoplay=0&amp;mute=1&amp;playsinline=1&amp;fs=1&amp;disablekb=1&amp;controls=1&amp;loop=1&amp;playlist=okJ7NFNJdfs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
     </iframe>
 </div>
 
@@ -725,9 +723,7 @@ since the wafer loses all rigidity after the dicing.</p>
 
 <div>
     
-    <iframe style="width:100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/ZBQ0eKzSZ8o?start=&amp;end=
-&amp;autoplay=1&amp;mute=1&amp;playsinline=1&amp;fs=1&amp;disablekb=1&amp;controls=0&amp;loop=1&amp;playlist=ZBQ0eKzSZ8o
-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+    <iframe style="width:100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/ZBQ0eKzSZ8o?start=&amp;end=&amp;autoplay=1&amp;mute=1&amp;playsinline=1&amp;fs=1&amp;disablekb=1&amp;controls=0&amp;loop=1&amp;playlist=ZBQ0eKzSZ8o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
     </iframe>
 </div>
 
@@ -735,9 +731,7 @@ since the wafer loses all rigidity after the dicing.</p>
 
 <div>
     
-    <iframe style="width:100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/9acyV8S0Q74?start=&amp;end=
-&amp;autoplay=1&amp;mute=1&amp;playsinline=1&amp;fs=1&amp;disablekb=1&amp;controls=0&amp;loop=1&amp;playlist=9acyV8S0Q74
-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+    <iframe style="width:100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/9acyV8S0Q74?start=&amp;end=&amp;autoplay=1&amp;mute=1&amp;playsinline=1&amp;fs=1&amp;disablekb=1&amp;controls=0&amp;loop=1&amp;playlist=9acyV8S0Q74" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
     </iframe>
 </div>
 
@@ -1400,9 +1394,7 @@ and have a chat!</p>
             <small>MOSbius - A Field Programmable Transistor Array for Chip Designers (Interview with Peter Kinget)</small>
         </p>
     
-    <iframe style="width:100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/abu3u6UX6wE?start=&amp;end=
-&amp;autoplay=0&amp;mute=0&amp;playsinline=1&amp;fs=1&amp;disablekb=1&amp;controls=1&amp;loop=0&amp;playlist=abu3u6UX6wE
-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+    <iframe style="width:100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/abu3u6UX6wE?start=&amp;end=&amp;autoplay=0&amp;mute=0&amp;playsinline=1&amp;fs=1&amp;disablekb=1&amp;controls=1&amp;loop=0&amp;playlist=abu3u6UX6wE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
     </iframe>
 </div>
 
