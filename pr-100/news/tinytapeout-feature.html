@@ -1,0 +1,877 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta Tags-->
+  <meta charset="utf-8" />
+  <meta name="git-commit" content="4a49bfa538b32ed938cb2c93a28057fa4b4b6eec">
+<!-- Primary Meta Tags -->
+<title> Tiny Tapeout </title>
+<meta name="title" content=" Tiny Tapeout ">
+<meta name="description" content="
+         Budget silicon manufacturing.">
+
+  <!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wafer.space/pr-100/news/tinytapeout-feature">
+<meta property="og:title" content=" Tiny Tapeout ">
+<meta property="og:description" content="
+    Budget silicon manufacturing.">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://wafer.space/pr-100/news/tinytapeout-feature">
+<meta property="twitter:title" content=" Tiny Tapeout ">
+<meta property="twitter:description" content="
+    Budget silicon manufacturing.">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Dark Mode Init (Prevent Flash) -->
+  <!-- Dark Mode Initialization - Prevent Flash -->
+<script>
+  // This runs immediately to prevent flash of light mode
+  (function() {
+    // Check for saved theme preference first
+    var savedTheme = localStorage.getItem('theme');
+    var theme;
+    
+    if (savedTheme) {
+      // User has explicitly chosen a theme
+      theme = savedTheme;
+    } else {
+      // No saved preference, check system preference
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        theme = 'dark';
+      } else {
+        theme = 'light';
+      }
+    }
+    
+    // Apply theme immediately to html element
+    document.documentElement.setAttribute('data-theme', theme);
+    
+    // Also add a class to body when it's available
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark-mode-init');
+    }
+  })();
+</script>
+<style>
+  /* Critical dark mode styles to prevent flash */
+  [data-theme="dark"] body,
+  .dark-mode-init body {
+    background-color: #1a1a1a !important;
+    color: #e0e0e0;
+  }
+  
+  [data-theme="dark"],
+  .dark-mode-init {
+    background-color: #1a1a1a !important;
+  }
+</style>
+  <!-- Stylesheets-->
+  <link rel="shortcut icon" href="/pr-100/favicon.png" />
+<link rel="stylesheet" type="text/css" href="/pr-100/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/pr-100/assets/css/plugins.css" />
+<link rel="stylesheet" type="text/css" href="/pr-100/assets/revolution/css/settings.css" />
+<link rel="stylesheet" type="text/css" href="/pr-100/assets/revolution/css/layers.css" />
+<link rel="stylesheet" type="text/css" href="/pr-100/assets/revolution/css/navigation.css" />
+<link rel="stylesheet" type="text/css" href="/pr-100/assets/type/type.css" />
+<link rel="stylesheet" type="text/css" href="/pr-100/assets/css/style.css" />
+<!-- Global Color Scheme for all Pages-->
+
+
+<link rel="stylesheet" type="text/css" href="/pr-100/assets/css/color/sky.css">
+
+
+<!-- Dark Mode Support -->
+<link rel="stylesheet" type="text/css" href="/pr-100/assets/css/color/dark.css">
+<!-- Global Font Scheme font-->
+
+<!-- Site-specific custom CSS (if exists) -->
+
+
+  
+
+  
+
+  
+
+  
+<link rel="stylesheet" type="text/css" href="/pr-100/assets/css/custom.css">
+    
+
+  <!-- Google Analytics-->
+  
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1JB9VZY864"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1JB9VZY864');
+</script>
+
+
+
+</head>
+<body >
+  <div class="content-wrapper">
+    <!--  Nav Name : Wide Header -->
+<nav
+  class="navbar wide  absolute transparent dark-wrapper inverse-text navbar-hover-opacity navbar-expand-lg nav-uppercase">
+  <div class="container-fluid flex-row justify-content-center">
+    <div class="navbar-brand" data-default-logo="black">
+      <!-- White Logo -->
+      <a href="/pr-100/"><img
+        src="/pr-100/assets/images/logo-light.webp"
+        srcset="/pr-100/assets/images/logo-light.webp 1x, /pr-100/assets/images/logo-light@2x.webp 2x"
+        class="logo-light d-none"
+        alt="wafer.space - Budget silicon manufacturing" /></a>
+
+      <!-- Black Logo -->
+      <a href="/pr-100/"><img
+        src="/pr-100/assets/images/logo.webp"
+        srcset="/pr-100/assets/images/logo.webp 1x, /pr-100/assets/images/logo@2x.webp 2x"
+        class="logo-dark "
+        alt="wafer.space - Budget silicon manufacturing" /></a>
+    </div>
+    <div class="navbar-other ms-auto order-lg-3">
+      <ul class="navbar-nav flex-row align-items-center" data-sm-skip="true">
+        <li class="nav-item">
+    <div class="navbar-hamburger d-lg-none d-xl-none ms-auto">
+        <button class="hamburger animate plain" data-bs-toggle="offcanvas-nav"><span></span></button>
+    </div>
+</li>
+
+      
+
+        
+
+      
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-other -->
+    <div class="navbar-collapse offcanvas-nav">
+      <div class="offcanvas-header d-lg-none d-xl-none">
+        <a href="/pr-100/">
+          <img src="/pr-100/assets/images/logo-light.webp"
+            srcset="/pr-100/assets/images/logo-light.webp 1x, /pr-100/assets/images/logo-light@2x.webp 2x"
+            alt="wafer.space - Budget silicon manufacturing" /></a>
+        <button class="plain offcanvas-close offcanvas-nav-close"><i class="jam jam-close"></i></button>
+      </div>
+      <ul
+        class="navbar-nav mx-auto" data-sm-skip-collapsible-behavior="true">
+        
+        
+        
+          <li class="nav-item">
+          <a class="nav-link" href="/pr-100/">Home</a>
+        </li>
+        
+        
+        
+        
+          <li class="nav-item">
+          <a class="nav-link" href="/pr-100/about.html">About</a>
+        </li>
+        
+        
+        
+        
+          <li class="nav-item">
+          <a class="nav-link" href="/pr-100/price.html">Pricing</a>
+        </li>
+        
+        
+        
+        
+          <li class="nav-item">
+          <a class="nav-link" href="/pr-100/technology.html">Technology</a>
+        </li>
+        
+        
+        
+        
+          <li class="nav-item">
+          <a class="nav-link" href="/pr-100/design-help.html">Design Help</a>
+        </li>
+        
+        
+        
+        
+          <li class="nav-item">
+          <a class="nav-link" href="/pr-100/news">News</a>
+        </li>
+        
+        
+        
+        
+          <li class="nav-item">
+          <a class="nav-link" href="/pr-100/faq.html">FAQ</a>
+        </li>
+        
+        
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+<!-- /.navbar -->
+<div class="offcanvas-info inverse-text">
+    <button class="plain offcanvas-close offcanvas-info-close"><i class="jam jam-close"></i></button>
+    <a href="/pr-100/">
+      <img src="/pr-100/assets/images/logo-light.webp"
+        srcset="/pr-100/assets/images/logo-light.webp 1x, /pr-100/assets/images/logo-light@2x.webp 2x"
+        class=" logo-light "
+        alt="wafer.space - Budget silicon manufacturing" />
+    </a>
+    <div class="space30"></div>
+    <p>Budget silicon manufacturing.</p>
+    <div class="space20"></div>
+    <div class="widget">
+      <h5 class="widget-title">Contact Info</h5>
+      <address> 143&nbsp;Cecil&nbsp;Street,<br />#17&#8209;04,&nbsp;GB&nbsp;Building,<br />Singapore 069542<div class="space20"></div>
+        <a href="mailto:info@wafer.space" class="nocolor"></a><br />
+        
+      </address>
+    </div>
+    <!-- /.widget -->
+    <div class="widget">
+      
+      <h3 class="widget-title">More</h3>
+      
+      <ul class="list-unstyled">
+        
+        <li><a href="/pr-100/" class="nocolor">Home</a></li>
+        
+        <li><a href="/pr-100/about.html" class="nocolor">About</a></li>
+        
+        <li><a href="/pr-100/price.html" class="nocolor">Pricing</a></li>
+        
+        <li><a href="/pr-100/technology.html" class="nocolor">Technology</a></li>
+        
+        <li><a href="/pr-100/design-help.html" class="nocolor">Design Help</a></li>
+        
+        <li><a href="/pr-100/news" class="nocolor">News</a></li>
+        
+        <li><a href="/pr-100/faq.html" class="nocolor">FAQ</a></li>
+        
+      </ul>
+    </div>
+    <!-- /.widget -->
+    <div class="widget">
+      
+      <ul class="social social-mute social-s ms-auto">
+        
+      </ul>
+    </div>
+    <!-- /.widget -->
+  </div>
+  <!-- /.offcanvas-info -->
+
+
+<div class="wrapper light-wrapper">
+  <div class="container inner pt-80">
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1 ">
+        <div class="blog classic-view boxed">
+          <div class="post mb-0">
+            <div class="box bg-white shadow">
+              
+              <figure class="rounded text-center">
+                <img src="/pr-100/assets/images/news/tinytapeout-feature/tinytapeout-logo.png" alt="Tiny Tapeout" />
+              </figure>
+              
+              <div class="space40"></div>
+              <div class="post-content">
+                
+                <div class="category text-center">
+                  
+                  <a href="/pr-100/category/news" class="badge rounded-pill bg-purple">news</a>
+                  
+                </div>
+                
+                <h2 class="post-title text-center">Tiny Tapeout</h2>
+                <div class="meta text-center">
+                  
+                  <span class="date"><i class="jam jam-clock"></i>22 Nov 2025</span>
+                  
+                  
+                  
+                  
+                  
+                  <span class="author"><i class="jam jam-user"></i><a href="/pr-100/authors/tim">By
+                      Tim 'mithro' Ansell</a></span>
+                  
+                  
+                </div>
+                <p><a href="https://wafer.space/">wafer.space</a> is excited to collaborate with <a href="https://tinytapeout.com/">Tiny Tapeout</a> to port their infrastructure to GF180MCU. Founded by <a href="https://zerotoasiccourse.com/">Matt Venn</a>, Tiny Tapeout has become a cornerstone of the open-silicon movement, empowering students, hobbyists, and even industry professionals to design and fabricate their own ASICs through approachable tools and collaborative workflows. Our collaboration provides an easy and affordable pathway from initial ideas and prototyping to building real products.</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>With Tiny Tapeout, you get a ready-to-go development board</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-100/assets/images/news/tinytapeout-feature/previous-tt-version.jpeg" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-100/assets/images/news/tinytapeout-feature/previous-tt-version.jpeg" alt="With Tiny Tapeout, you get a ready-to-go development board" />
+        </a>
+    </figure>
+</div>
+
+<p>Tiny Tapeout has already proven that accessible chip design works. By dramatically lowering the barrier to entry, they’ve enabled thousands of participants to bring their digital and analog designs to life. Now, our collaboration aims to take that further, helping designs move from prototype to product. The track record speaks for itself:</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+  
+  <p class="text-center text-muted mb-10"><small>GDS renders from Tiny Tapeout shuttles</small></p>
+  
+  <div class="tiles tiles-s">
+    <div class="items row">
+      
+      
+        
+          
+            <div class="item col-md-6">
+          
+        
+            <figure class="overlay overlay1 rounded">
+              <a href="/pr-100/assets/images/news/tinytapeout-feature/tt03-gds.png" class="lightbox">
+                <span class="bg"></span>
+                <img src="/pr-100/assets/images/news/tinytapeout-feature/tt03-gds.png" alt="GDS render of Tiny Tapeout TT03" />
+              </a>
+              
+            </figure>
+          </div>
+      
+        
+          
+            <div class="item col-md-6">
+          
+        
+            <figure class="overlay overlay1 rounded">
+              <a href="/pr-100/assets/images/news/tinytapeout-feature/tt05-gds.png" class="lightbox">
+                <span class="bg"></span>
+                <img src="/pr-100/assets/images/news/tinytapeout-feature/tt05-gds.png" alt="GDS render of Tiny Tapeout TT05" />
+              </a>
+              
+            </figure>
+          </div>
+      
+        
+          
+            <div class="item col-md-4">
+          
+        
+            <figure class="overlay overlay1 rounded">
+              <a href="/pr-100/assets/images/news/tinytapeout-feature/tt06-gds.png" class="lightbox">
+                <span class="bg"></span>
+                <img src="/pr-100/assets/images/news/tinytapeout-feature/tt06-gds.png" alt="GDS render of Tiny Tapeout TT06" />
+              </a>
+              
+            </figure>
+          </div>
+      
+        
+          
+            <div class="item col-md-4">
+          
+        
+            <figure class="overlay overlay1 rounded">
+              <a href="/pr-100/assets/images/news/tinytapeout-feature/tt07-gds.png" class="lightbox">
+                <span class="bg"></span>
+                <img src="/pr-100/assets/images/news/tinytapeout-feature/tt07-gds.png" alt="GDS render of Tiny Tapeout TT07" />
+              </a>
+              
+            </figure>
+          </div>
+      
+        
+          
+            <div class="item col-md-4">
+          
+        
+            <figure class="overlay overlay1 rounded">
+              <a href="/pr-100/assets/images/news/tinytapeout-feature/tt09-gds.png" class="lightbox">
+                <span class="bg"></span>
+                <img src="/pr-100/assets/images/news/tinytapeout-feature/tt09-gds.png" alt="GDS render of Tiny Tapeout TT09" />
+              </a>
+              
+            </figure>
+          </div>
+      
+        
+          
+            <div class="item col-md-4">
+          
+        
+            <figure class="overlay overlay1 rounded">
+              <a href="/pr-100/assets/images/news/tinytapeout-feature/ttihp0p1-gds.png" class="lightbox">
+                <span class="bg"></span>
+                <img src="/pr-100/assets/images/news/tinytapeout-feature/ttihp0p1-gds.png" alt="GDS render of Tiny Tapeout IHP 0.1" />
+              </a>
+              
+            </figure>
+          </div>
+      
+        
+          
+            <div class="item col-md-4">
+          
+        
+            <figure class="overlay overlay1 rounded">
+              <a href="/pr-100/assets/images/news/tinytapeout-feature/ttsky25a-gds.png" class="lightbox">
+                <span class="bg"></span>
+                <img src="/pr-100/assets/images/news/tinytapeout-feature/ttsky25a-gds.png" alt="GDS render of Tiny Tapeout Sky130 25a" />
+              </a>
+              
+            </figure>
+          </div>
+      
+        
+          
+            <div class="item col-md-4">
+          
+        
+            <figure class="overlay overlay1 rounded">
+              <a href="/pr-100/assets/images/news/tinytapeout-feature/ttsky25b-gds.png" class="lightbox">
+                <span class="bg"></span>
+                <img src="/pr-100/assets/images/news/tinytapeout-feature/ttsky25b-gds.png" alt="GDS render of Tiny Tapeout Sky130 25b" />
+              </a>
+              
+            </figure>
+          </div>
+      
+    </div>
+  </div>
+</div>
+
+<p>Building on this experience, <strong>Tiny Tapeout</strong> now joins wafer.space to bring GF180MCU into the mix. Our collaboration has enabled Tiny Tapeout to get exactly what they need from the <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/updates/chip-on-board">standard wafer.space padframe</a>, ensuring full compatibility, consistent manufacturability, and reliable integration with COB-based packaging workflows.</p>
+
+<h2 id="whats-being-built-on-gf0p2">What’s Being Built on <a href="https://app.tinytapeout.com/shuttles/ttgf0p2">GF0p2</a></h2>
+
+<p>Both Tiny Tapeout and wafer.space have been thrilled by the community response. The <a href="https://app.tinytapeout.com/shuttles/ttgf0p2">GF0p2 shuttle</a> already has dozens of projects submitted, and more are coming in every day. Here are just a few of the designs being built:</p>
+
+<h3 id="modern-free-and-open-source-silicon-clone-of-zilogs-z80">Modern Free and Open Source Silicon Clone of Zilog’s Z80</h3>
+
+<p><a href="https://github.com/rejunity">Rejunity</a> is recreating <a href="https://app.tinytapeout.com/projects/3434">Zilog’s Z80</a> with the goal to develop a drop-in replacement for 8-bit home computers such as the ZX Spectrum and recent DIY computer kits such as the <a href="https://rc2014.co.uk/">RC2014</a>.</p>
+
+<h3 id="tiny-qv-a-risc-v-soc-for-tiny-tapeout">Tiny-QV: A RISC-V SoC for Tiny Tapeout</h3>
+
+<p><a href="https://github.com/MichaelBell/tinyQV/">Tiny-QV</a> is a 4-bit-at-a-time RV32 processor, optimized for use on Tiny Tapeout with QSPI RAM and Flash. The aim is to make a small microcontroller that is as fast as practical given the Tiny Tapeout constraints.</p>
+
+<h3 id="zedulo-test-chip">Zedulo Test Chip</h3>
+
+<p><a href="https://github.com/ZeduloTech/ttgf-zed_tc1">Zedulo TestChip1</a> is a UART-to-SPI bridge built using two IP blocks from the <a href="https://opentitan.org/">OpenTitan</a> project (an open-source Root of Trust). By porting these OpenTitan components to GF180MCU, Zedulo demonstrates that verified, trustworthy hardware IP can be reused across different processes and platforms.</p>
+
+<h3 id="and-many-more">And Many More</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Description / Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong><a href="https://app.tinytapeout.com/projects/3441">2x2 MAC Systolic array with DFT</a></strong></td>
+      <td>ASIC design for a 2x2 systolic matrix multiplier supporting multiply and accumulate operations on int8 data.</td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://github.com/TinyTapeout/tt-waferspace-vga-screensaver">WaferSpace VGA Screensaver</a></strong></td>
+      <td>A classic animated VGA demo that prominently features the <strong>wafer.space</strong> logo — great for verifying display output and timing.</td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://app.tinytapeout.com/projects/3248">Asicle v2 (2×2 tiles)</a></strong></td>
+      <td>A compact, tile-based modular layout design that explores reconfigurable logic or array instantiation.</td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://app.tinytapeout.com/projects/3119">ROM / Memory Block (1×1)</a></strong></td>
+      <td>A read-only memory block intended for basic data storage — ideal for boot code or test vectors.</td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://app.tinytapeout.com/projects/3125">Ring Oscillator (5-inverter, 1×1)</a></strong></td>
+      <td>A simple analog / digital hybrid circuit that toggles signal through five inverters to create a ring oscillator.</td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://app.tinytapeout.com/projects/3121">Simon Says Logic Game</a></strong></td>
+      <td>Implements the classic “Simon Says” memory game in hardware logic — the chip will reproduce user-input sequences.</td>
+    </tr>
+    <tr>
+      <td><strong><a href="https://app.tinytapeout.com/projects/3430">Sound Generator (TBB143)</a></strong></td>
+      <td>A programmable sound generator that uses a ring oscillator to generate tones or effects.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The project tiles are filling up fast:</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>Project tiles already allocated on the GF0p2 run</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-100/assets/images/news/tinytapeout-feature/current-run.png" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-100/assets/images/news/tinytapeout-feature/current-run.png" alt="Project tiles already allocated on the GF0p2 run" />
+        </a>
+    </figure>
+</div>
+
+<h2 id="join-us">Join Us!</h2>
+
+<p>We’re thrilled to have <strong>Tiny Tapeout</strong> and <strong>Matt Venn</strong> on board for our first wafer.space shuttle, but the most exciting part is having <strong>you</strong> join us too! Whether you’re a complete beginner or an experienced designer, now is the perfect time to get started.</p>
+
+<p>Explore the <a href="https://tinytapeout.com/">Tiny Tapeout website</a> for project ideas and tutorials, and watch the <a href="https://www.youtube.com/@ZeroToASICcourse">YouTube channel</a> for walkthroughs and interviews. If you need something more structured, Matt’s excellent <a href="https://zerotoasiccourse.com/">Zero to ASIC course</a> will give you the knowledge and confidence to bring your ideas to silicon.</p>
+
+<p>Even if you haven’t done a tapeout yet, join the community and start learning! Connect with us on the <a href="https://discord.gg/43y2t53jpE">wafer.space Discord</a> and join the <strong>#tinytapeout</strong> channel, or the <a href="https://discord.gg/rPK2nSjxy8">Tiny Tapeout Discord</a> and join the <strong>#ttgf0p2-tapeout</strong> channel. (You can also find us on <a href="https://matrix.to/#/#gf180mcu:fossi-chat.org">Matrix at #gf180mcu</a>.)</p>
+
+<p>With Tiny Tapeout, anyone can get started with just a web browser and a few hours. <a href="https://tinytapeout.com/">Why not give it a try?</a></p>
+
+<hr />
+
+<h2 id="dont-miss-your-chance-to-join-the-first-shuttle">Don’t Miss Your Chance to Join the First Shuttle</h2>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>wafer.space bringing open accessible custom silicon fabrication</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-100/assets/images/news/tinytapeout-feature/waferspace-rainbow-open.png" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-100/assets/images/news/tinytapeout-feature/waferspace-rainbow-open.png" alt="wafer.space bringing open accessible custom silicon fabrication" />
+        </a>
+    </figure>
+</div>
+<p>We’re rapidly approaching the final milestones for this shuttle run, and now is the time to secure your spot:</p>
+
+<ul>
+  <li>
+    <p><strong>November 28, 2025</strong> - Last day to purchase a slot (Crowd Supply campaign closes)</p>
+  </li>
+  <li>
+    <p><strong>December 3, 2025</strong> - Final GDS submission deadline. Your design must be submitted to wafer.space by this date to be included in the run.</p>
+  </li>
+</ul>
+
+<p>If you’ve been thinking about getting your own silicon made, whether it’s your first chip or your fiftieth, this is your moment. The tools are ready, the ecosystem is growing, and we’re here to help you every step of the way.</p>
+
+<p>Reserve your slot, finish your design, and join us in shaping the future of accessible custom silicon.</p>
+
+<hr />
+
+<h3 id="special-thanks">Special Thanks</h3>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+  
+  <p class="text-center text-muted mb-10"><small>Sponsored by Tillitis and WIT.com</small></p>
+  
+  <div class="tiles tiles-s">
+    <div class="items row">
+      
+      
+        
+          <div class="item col-md-6">
+        
+            <figure class="overlay overlay1 rounded">
+              <a href="/pr-100/assets/images/news/tinytapeout-feature/tillitis-logo-std.png" class="lightbox">
+                <span class="bg"></span>
+                <img src="/pr-100/assets/images/news/tinytapeout-feature/tillitis-logo-std.png" alt="Tillitis logo" />
+              </a>
+              
+            </figure>
+          </div>
+      
+        
+          <div class="item col-md-6">
+        
+            <figure class="overlay overlay1 rounded">
+              <a href="/pr-100/assets/images/news/tinytapeout-feature/witcom-logo-std.png" class="lightbox">
+                <span class="bg"></span>
+                <img src="/pr-100/assets/images/news/tinytapeout-feature/witcom-logo-std.png" alt="WIT.com logo" />
+              </a>
+              
+            </figure>
+          </div>
+      
+    </div>
+  </div>
+</div>
+
+<p><a href="https://www.tillitis.se/">Tillitis</a> and <a href="https://wit.com/">WIT.com</a> generously sponsored the work to bring Tiny Tapeout to GF180MCU, its third process technology. This funding is enabling the <a href="https://www.youtube.com/watch?v=30emLKLpq50">improved multiplexer</a>, <a href="https://www.youtube.com/watch?v=_m_jK7twymM">power gating, analog support</a>, and <a href="https://www.youtube.com/watch?v=cCbTyfewaCw">more</a> (designed by <a href="https://github.com/smunaut">Sylvain “tnt” Munaut</a>) to be ported to GF180MCU. Thank you for making this happen!</p>
+
+                <div class="clearfix"></div>
+                <div class="space40"></div>
+                <div class="space10"></div>
+                <div class="d-lg-flex justify-content-between align-items-center meta-footer">
+                  <ul class="list-unstyled tag-list">
+                    
+                    
+                    
+                    </li>
+                    
+                    
+                    <li data-sort="0002">
+                      <a class="btn btn-s" href="/pr-100/tag/gf180mcu/">gf180mcu</a>
+                    </li>
+                    
+                    
+                    <li data-sort="0003">
+                      <a class="btn btn-s" href="/pr-100/tag/run1/">run1</a>
+                    </li>
+                    
+                    
+                    <li data-sort="0014">
+                      <a class="btn btn-s" href="/pr-100/tag/featured-project/">featured-project</a>
+                    </li>
+                    
+                    
+                    <li data-sort="0017">
+                      <a class="btn btn-s" href="/pr-100/tag/tiny-tapeout/">tiny-tapeout</a>
+                    
+                  </ul>
+                  <div class="space20 d-lg-none"></div>
+                  <div class="d-flex align-items-center">
+                    <p class="pr-20 mb-0"><strong>Share on:</strong></p>
+<ul class="social social-mute">
+    <!-- Removed Facebook and Twitter sharing due to verification issues -->
+    <li>
+    <a  href="http://pinterest.com/pin/create/button/?url=&media=https://wafer.space/assets/images/news/tinytapeout-feature/tinytapeout-logo.png&description=" onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" title="Share on Pinterest" >
+        <i class="jam jam-pinterest"></i>
+    </a>
+    </li>
+</ul>
+                  </div>
+                </div>
+              </div>
+              <!-- /.post-content -->
+            </div>
+          </div>
+          <!-- /.post -->
+          
+          
+
+
+<div class="wrapper light-wrapper">
+  <div class="container inner">
+  <div class="box bg-white shadow">
+    <div class="row">
+          
+          <div class="col-md-4">
+            <figure class="rounded">
+              <a href="/pr-100/authors/tim"><img alt="Tim 'mithro' Ansell" src="/pr-100/assets/images/people/tim.jpg" /></a>
+            </figure>
+          </div>
+          <!--/column -->
+          
+          <div class="col-md-8">
+            <h3>Tim 'mithro' Ansell</h3>
+            <h4>Founder</h4>
+            
+	    <p class="mb-10"><p><a href="https://wafer.space">wafer.space</a> was founded by <strong><a href="mailto:me@mith.ro">Tim ‘mithro’ Ansell</a></strong>, a pioneer in open-source silicon and a dedicated advocate for accessible chip design. With extensive expertise spanning over two decades in <a href="https://en.wikipedia.org/wiki/Open-source_hardware">open-source hardware</a> and software, Tim has significantly influenced the development and adoption of open-source FPGA toolchains and Electronic Design Automation (<a href="https://en.wikipedia.org/wiki/Electronic_design_automation">EDA</a>) software. He has played instrumental roles in various community-driven projects, including <a href="https://theopenroadproject.org/">OpenROAD</a>, the <a href="https://fossi-foundation.org/">FOSSi Foundation</a>, and Google’s open-source initiatives such as <a href="https://github.com/google/skywater-pdk">SkyWater’s open PDK</a> and the <a href="https://developers.google.com/silicon">Open MPW program</a>.</p>
+
+<p>Following the collapse of <a href="https://efabless.com">Efabless</a> in 2025, Tim saw an urgent need to rebuild trust and expand opportunities within the silicon community. Leveraging his robust industry connections, community management experience, and deep technical expertise, he established wafer.space with the mission to create a transparent, community-oriented silicon pooling service.</p>
+
+<p>Under Tim’s leadership, wafer.space is committed to breaking down barriers to custom silicon fabrication, fostering collaboration, and driving forward the democratization of semiconductor technology, enabling engineers, startups, and researchers globally to innovate freely and efficiently.</p>
+</p>
+            
+            
+            <ul class="social">
+              
+               <li><a href="https://www.linkedin.com/in/mithro/"><i class="jam jam-linkedin"></i></a></li>
+              
+               <li><a href="https://blog.mithis.net"><i class="jam jam-wordpress"></i></a></li>
+              
+               <li><a href="https://youtube.com/mithro"><i class="jam jam-youtube"></i></a></li>
+              
+               <li><a href="mailto:tim@wafer.space"><i class="jam jam-newsletter"></i></a></li>
+              
+            </ul>
+            
+          </div>
+          <!--/column -->
+
+
+    </div>
+    <!-- /.row -->
+  </div>
+</div>
+<!-- /.container -->
+</div>
+<!-- /.wrapper -->
+
+
+
+          
+        </div>
+        <!-- /.blog -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /.wrapper -->
+
+
+
+<div class="wrapper gray-wrapper">
+  <div class="container inner">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div id="disqus_thread"></div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://wafer.space/pr-100/news/tinytapeout-feature';  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = '/news/tinytapeout-feature'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://https-snowlake-netlify-app.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script id="dsq-count-scr" src="//https-snowlake-netlify-app.disqus.com/count.js" async></script>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /.wrapper -->
+</div>
+<!-- footer with details v1 -->
+<footer class=" dark-wrapper inverse-text ">
+  <div class="container inner">
+    <div class="row">
+      <div class="col-md-12 col-lg-3 text-center text-lg-start">
+        <div class="widget">
+          <a href="https://wafer.space">
+            
+            
+              <img src="/pr-100/assets/images/logo-light.webp" srcset="/pr-100/assets/images/logo-light.webp 1x, /pr-100/assets/images/logo-light@2x.webp 2x" alt="wafer.space - Budget silicon manufacturing" />
+            
+          </a>
+          
+          <div class="space20"></div>
+          <p>Budget silicon manufacturing.</p>
+          
+        </div>
+        <!-- /.widget -->
+      </div>
+      <!-- /column -->
+      <div class="space30 d-lg-none d-xl-none"></div>
+      <div class="col-6 col-md-3 col-lg-2 offset-lg-1">
+        
+        <div class="widget">
+          
+          <ul class="list-unstyled mb-0">
+            
+          </ul>
+        </div>
+        <!-- /.widget -->
+      </div>
+      <!-- /column -->
+      <div class="col-6 col-md-3 col-lg-2">
+        
+        <div class="widget">
+          
+           <h5 class="widget-title">More</h5>
+          
+          <ul class="list-unstyled mb-0">
+            
+            <li><a href="/pr-100/">Home</a></li>
+            
+            <li><a href="/pr-100/about.html">About</a></li>
+            
+            <li><a href="/pr-100/price.html">Pricing</a></li>
+            
+            <li><a href="/pr-100/technology.html">Technology</a></li>
+            
+            <li><a href="/pr-100/design-help.html">Design Help</a></li>
+            
+            <li><a href="/pr-100/news">News</a></li>
+            
+            <li><a href="/pr-100/faq.html">FAQ</a></li>
+            
+          </ul>
+        </div>
+        <!-- /.widget -->
+      </div>
+      <!-- /column -->
+      <div class="col-6 col-md-3 col-lg-2">
+        
+        <div class="widget">
+          
+          <ul class="list-unstyled mb-0">
+            
+          </ul>
+        </div>
+        <!-- /.widget -->
+      </div>
+      <!-- /column -->
+      <div class="col-6 col-md-3 col-lg-2">
+        <div class="widget">
+          <h5 class="widget-title">Contact</h5>
+          
+          <address>143&nbsp;Cecil&nbsp;Street,<br />#17&#8209;04,&nbsp;GB&nbsp;Building,<br />Singapore 069542</address>
+          
+          <a href="mailto:info@wafer.space">info@wafer.space</a><br />
+           
+        </div>
+        <!-- /.widget -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+  <div class="container inner pt-0 pb-40 d-flex align-items-center">
+    <p class="mb-0 mr-auto">© 2025 Wafer Space PTE. LTD. All rights reserved.</p>
+    <ul class="social social-mute social-s ms-auto">
+      
+    </ul>
+  </div>
+</footer>
+
+
+  </div>
+  <!-- Site Scripts-->
+  <script src="/pr-100/assets/js/jquery.min.js"></script>
+<script src="/pr-100/assets/js/popper.min.js"></script>
+<script src="/pr-100/assets/js/bootstrap.min.js"></script>
+<script src="/pr-100/assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+<script src="/pr-100/assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+<script src="/pr-100/assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+<script src="/pr-100/assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+<script src="/pr-100/assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script src="/pr-100/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="/pr-100/assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+<script src="/pr-100/assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="/pr-100/assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="/pr-100/assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="/pr-100/assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+<script src="/pr-100/assets/js/plugins.js"></script>
+<script src="/pr-100/assets/js/simple-jekyll-search.min.js"></script>
+<script>
+  // Pass baseurl to JavaScript for search configuration
+  window.siteBaseurl = '/pr-100';
+</script>
+<script src="/pr-100/assets/js/scripts.js"></script>
+
+
+</body>
+<!-- Generated from git commit: 4a49bfa538b32ed938cb2c93a28057fa4b4b6eec (4a49bfa5) -->
+</html>
