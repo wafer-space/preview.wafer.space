@@ -1,0 +1,192 @@
+[
+  
+    {
+      "title"    : "GF180MCU Run 3 is Here!",
+      "category" : "",
+      "tags"     : "gf180mcu, run3",
+      "url"      : "/pr-107/news/run3-announcement",
+      "date"     : "2026-08-01 12:00:00 +0000",
+      "desc"     : "GF180MCU Run 3 is Here!"
+    } ,
+  
+    {
+      "title"    : "GF180MCU Run 3 is Coming!",
+      "category" : "",
+      "tags"     : "gf180mcu, run3, crowd-supply",
+      "url"      : "/pr-107/news/run3-coming-soon",
+      "date"     : "2026-07-24 12:00:00 +0000",
+      "desc"     : "GF180MCU Run 3 is Coming!"
+    } ,
+  
+    {
+      "title"    : "Run 2 Deadline Update and Reminder",
+      "category" : "",
+      "tags"     : "gf180mcu, run2, announcement, deadline",
+      "url"      : "/pr-107/news/run2-deadline-update",
+      "date"     : "2026-06-24 12:00:00 +0000",
+      "desc"     : "Run 2 Deadline Update and Reminder"
+    } ,
+  
+    {
+      "title"    : "Taping Out KianV - a Linux/XV6-capable RISC-V SoC",
+      "category" : "",
+      "tags"     : "gf180mcu, run1, featured-project, risc-v, kianv",
+      "url"      : "/pr-107/news/kianv-riscv-soc",
+      "date"     : "2026-06-05 12:00:00 +0000",
+      "desc"     : "Taping Out KianV - a Linux/XV6-capable RISC-V SoC"
+    } ,
+  
+    {
+      "title"    : "Chip-on-Board Packaging Progress",
+      "category" : "",
+      "tags"     : "gf180mcu, run1, packaging, chip-on-board",
+      "url"      : "/pr-107/news/chip-on-board-progress",
+      "date"     : "2026-06-03 12:00:00 +0000",
+      "desc"     : "Chip-on-Board Packaging Progress"
+    } ,
+  
+    {
+      "title"    : "Die Sorting with Robots",
+      "category" : "",
+      "tags"     : "gf180mcu, run1, manufacturing",
+      "url"      : "/pr-107/news/sorting-bare-dies",
+      "date"     : "2026-05-29 12:00:00 +0000",
+      "desc"     : "Die Sorting with Robots"
+    } ,
+  
+    {
+      "title"    : "Run 1 Wafers Have Arrived",
+      "category" : "",
+      "tags"     : "gf180mcu, run1, manufacturing",
+      "url"      : "/pr-107/news/run1-wafers-arrived",
+      "date"     : "2026-05-27 12:00:00 +0000",
+      "desc"     : "Run 1 Wafers Have Arrived"
+    } ,
+  
+    {
+      "title"    : "GF180MCU Run 2 is Here!",
+      "category" : "",
+      "tags"     : "gf180mcu, run1, run2",
+      "url"      : "/pr-107/news/run2-announcement",
+      "date"     : "2026-05-17 12:00:00 +0000",
+      "desc"     : "GF180MCU Run 2 is Here!"
+    } ,
+  
+    {
+      "title"    : "wafer.space @ Hackaday Europe 2026",
+      "category" : "",
+      "tags"     : "wafer-space, announcement",
+      "url"      : "/pr-107/news/wafer-space-at-hackaday-europe-2026",
+      "date"     : "2026-05-15 12:00:00 +0000",
+      "desc"     : "wafer.space @ Hackaday Europe 2026"
+    } ,
+  
+    {
+      "title"    : "GF180MCU Run 2 is Coming!",
+      "category" : "",
+      "tags"     : "gf180mcu, run2, crowd-supply",
+      "url"      : "/pr-107/news/run2-coming-soon",
+      "date"     : "2026-03-01 12:00:00 +0000",
+      "desc"     : "GF180MCU Run 2 is Coming!"
+    } ,
+  
+    {
+      "title"    : "Less than 48 hours to go!",
+      "category" : "",
+      "tags"     : "gf180mcu, run1, deadline",
+      "url"      : "/pr-107/news/final-reminder",
+      "date"     : "2025-11-27 12:00:00 +0000",
+      "desc"     : "Less than 48 hours to go!"
+    } ,
+  
+    {
+      "title"    : "Tiny Tapeout",
+      "category" : "",
+      "tags"     : "gf180mcu, run1, featured-project, tiny-tapeout",
+      "url"      : "/pr-107/news/tinytapeout-feature",
+      "date"     : "2025-11-22 12:00:00 +0000",
+      "desc"     : "Tiny Tapeout"
+    } ,
+  
+    {
+      "title"    : "We Have Some Amazing Projects This Run: MOSbius",
+      "category" : "",
+      "tags"     : "gf180mcu, run1, featured-project, mosbius",
+      "url"      : "/pr-107/news/mosbius-feature",
+      "date"     : "2025-11-19 12:00:00 +0000",
+      "desc"     : "We Have Some Amazing Projects This Run: MOSbius"
+    } ,
+  
+    {
+      "title"    : "We Have Some Amazing Projects This Run",
+      "category" : "",
+      "tags"     : "gf180mcu, run1, featured-project, tholin",
+      "url"      : "/pr-107/news/tholin-feature",
+      "date"     : "2025-11-14 12:00:00 +0000",
+      "desc"     : "We Have Some Amazing Projects This Run"
+    } ,
+  
+    {
+      "title"    : "Community Progress on Chip-on-Board Packaging Strategy",
+      "category" : "",
+      "tags"     : "gf180mcu, run1, packaging, chip-on-board",
+      "url"      : "/pr-107/news/chip-on-board-strategy",
+      "date"     : "2025-11-11 12:00:00 +0000",
+      "desc"     : "Community Progress on Chip-on-Board Packaging Strategy"
+    } ,
+  
+    {
+      "title"    : "Campaign Update: Building Real Sensors with GF180MCU — See What&#39;s Possible!",
+      "category" : "",
+      "tags"     : "gf180mcu, run1, openfasoc, analog",
+      "url"      : "/pr-107/news/openfasoc-sensor",
+      "date"     : "2025-11-05 12:00:00 +0000",
+      "desc"     : "Campaign Update: Building Real Sensors with GF180MCU — See What's Possible!"
+    } ,
+  
+    {
+      "title"    : "Understanding wafer.space: Resources to Learn More About Our Mission",
+      "category" : "",
+      "tags"     : "gf180mcu, run1, press",
+      "url"      : "/pr-107/news/recent-publicity",
+      "date"     : "2025-10-31 12:00:00 +0000",
+      "desc"     : "Understanding wafer.space: Resources to Learn More About Our Mission"
+    } ,
+  
+    {
+      "title"    : "Professional Design Support: Your Options for GF180MCU Success",
+      "category" : "",
+      "tags"     : "gf180mcu, run1, design-help",
+      "url"      : "/pr-107/news/getting-help",
+      "date"     : "2025-10-27 12:00:00 +0000",
+      "desc"     : "Professional Design Support: Your Options for GF180MCU Success"
+    } ,
+  
+    {
+      "title"    : "Easier Design Flow: LibreLane &amp; the gf180mcu Project Template",
+      "category" : "",
+      "tags"     : "gf180mcu, run1, librelane, tooling",
+      "url"      : "/pr-107/news/librelane-template",
+      "date"     : "2025-10-23 12:00:00 +0000",
+      "desc"     : "Easier Design Flow: LibreLane & the gf180mcu Project Template"
+    } ,
+  
+    {
+      "title"    : "GF180MCU Run 1 is Live!",
+      "category" : "",
+      "tags"     : "gf180mcu, run1, crowd-supply",
+      "url"      : "/pr-107/news/gf180mcu-run1-live",
+      "date"     : "2025-10-02 12:00:00 +0000",
+      "desc"     : "GF180MCU Run 1 is Live!"
+    } ,
+  
+    {
+      "title"    : "New wafer.space website",
+      "category" : "",
+      "tags"     : "wafer-space, website",
+      "url"      : "/pr-107/news/website",
+      "date"     : "2025-04-19 04:00:00 +0000",
+      "desc"     : "New wafer.space website"
+    } 
+  
+]
