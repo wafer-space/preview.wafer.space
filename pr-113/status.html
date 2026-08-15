@@ -1,0 +1,876 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta Tags-->
+  <meta charset="utf-8" />
+  <meta name="git-commit" content="76de0595a0e9df2c08b71f0ed40a1b657bc07dbb">
+<!-- Primary Meta Tags -->
+<title> Shuttle Status </title>
+<meta name="title" content=" Shuttle Status ">
+<meta name="description" content=" Live status of the wafer.space GF180MCU shuttle runs — from ordering deadlines through GlobalFoundries manufacturing to parts shipped. ">
+
+  <!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wafer.space/pr-113/status">
+<meta property="og:title" content=" Shuttle Status ">
+<meta property="og:description" content=" Live status of the wafer.space GF180MCU shuttle runs — from ordering deadlines through GlobalFoundries manufacturing to parts shipped. ">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://wafer.space/pr-113/status">
+<meta property="twitter:title" content=" Shuttle Status ">
+<meta property="twitter:description" content=" Live status of the wafer.space GF180MCU shuttle runs — from ordering deadlines through GlobalFoundries manufacturing to parts shipped. ">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Dark Mode Init (Prevent Flash) -->
+  <!-- Dark Mode Initialization - Prevent Flash -->
+<script>
+  // This runs immediately to prevent flash of light mode
+  (function() {
+    // Check for saved theme preference first
+    var savedTheme = localStorage.getItem('theme');
+    var theme;
+    
+    if (savedTheme) {
+      // User has explicitly chosen a theme
+      theme = savedTheme;
+    } else {
+      // No saved preference, check system preference
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        theme = 'dark';
+      } else {
+        theme = 'light';
+      }
+    }
+    
+    // Apply theme immediately to html element
+    document.documentElement.setAttribute('data-theme', theme);
+    
+    // Also add a class to body when it's available
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark-mode-init');
+    }
+  })();
+</script>
+<style>
+  /* Critical dark mode styles to prevent flash */
+  [data-theme="dark"] body,
+  .dark-mode-init body {
+    background-color: #1a1a1a !important;
+    color: #e0e0e0;
+  }
+  
+  [data-theme="dark"],
+  .dark-mode-init {
+    background-color: #1a1a1a !important;
+  }
+</style>
+  <!-- Stylesheets-->
+  <link rel="shortcut icon" href="/pr-113/favicon.png" />
+<link rel="stylesheet" type="text/css" href="/pr-113/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/pr-113/assets/css/plugins.css" />
+<link rel="stylesheet" type="text/css" href="/pr-113/assets/revolution/css/settings.css" />
+<link rel="stylesheet" type="text/css" href="/pr-113/assets/revolution/css/layers.css" />
+<link rel="stylesheet" type="text/css" href="/pr-113/assets/revolution/css/navigation.css" />
+<link rel="stylesheet" type="text/css" href="/pr-113/assets/type/type.css" />
+<link rel="stylesheet" type="text/css" href="/pr-113/assets/css/style.css" />
+<!-- Global Color Scheme for all Pages-->
+
+
+<link rel="stylesheet" type="text/css" href="/pr-113/assets/css/color/sky.css">
+
+
+<!-- Dark Mode Support -->
+<link rel="stylesheet" type="text/css" href="/pr-113/assets/css/color/dark.css">
+<!-- Global Font Scheme font-->
+
+<!-- Site-specific custom CSS (if exists) -->
+
+
+  
+
+  
+
+  
+
+  
+<link rel="stylesheet" type="text/css" href="/pr-113/assets/css/custom.css">
+    
+
+  <!-- Google Analytics-->
+  
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1JB9VZY864"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1JB9VZY864');
+</script>
+
+
+
+</head>
+<body >
+  <div class="content-wrapper">
+    <!--  Nav Name : Wide Header -->
+<nav
+  class="navbar wide  absolute transparent dark-wrapper inverse-text navbar-hover-opacity navbar-expand-lg nav-uppercase">
+  <div class="container-fluid flex-row justify-content-center">
+    <div class="navbar-brand" data-default-logo="white">
+      <!-- White Logo -->
+      <a href="/pr-113/"><img
+        src="/pr-113/assets/images/logo-light.webp"
+        srcset="/pr-113/assets/images/logo-light.webp 1x, /pr-113/assets/images/logo-light@2x.webp 2x"
+        class="logo-light "
+        alt="wafer.space - Budget silicon manufacturing" /></a>
+
+      <!-- Black Logo -->
+      <a href="/pr-113/"><img
+        src="/pr-113/assets/images/logo.webp"
+        srcset="/pr-113/assets/images/logo.webp 1x, /pr-113/assets/images/logo@2x.webp 2x"
+        class="logo-dark d-none"
+        alt="wafer.space - Budget silicon manufacturing" /></a>
+    </div>
+    <div class="navbar-other ms-auto order-lg-3">
+      <ul class="navbar-nav flex-row align-items-center" data-sm-skip="true">
+        <li class="nav-item">
+    <div class="navbar-hamburger d-lg-none d-xl-none ms-auto">
+        <button class="hamburger animate plain" data-bs-toggle="offcanvas-nav"><span></span></button>
+    </div>
+</li>
+
+      
+
+        
+
+      
+      <li class="dropdown search-dropdown position-static nav-item">
+    <a href="#" role="button" class="collapse-toggle" data-bs-toggle="collapse" data-bs-target=".search-dropdown-menu"
+        aria-haspopup="true" aria-expanded="false"><i class="jam jam-search"></i></a>
+    <div class="dropdown-menu search-dropdown-menu w-100 collapse">
+        <div class="form-wrapper">
+            <form class="inverse-text">
+                <input type="text" id="search-input" class="form-control" placeholder="Search blog posts.." />
+            </form>
+            <!-- /.search-form -->
+            <i class="dropdown-close jam jam-close"></i>
+        </div>
+        <!-- /.form-wrapper -->
+        <ul id="results-container" class="position-static"></ul>
+    </div>
+</li>
+<li class="nav-item"><button class="plain" data-bs-toggle="offcanvas-info"><i class="jam jam-info"></i></button>
+</li>
+      
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-other -->
+    <div class="navbar-collapse offcanvas-nav">
+      <div class="offcanvas-header d-lg-none d-xl-none">
+        <a href="/pr-113/">
+          <img src="/pr-113/assets/images/logo-light.webp"
+            srcset="/pr-113/assets/images/logo-light.webp 1x, /pr-113/assets/images/logo-light@2x.webp 2x"
+            alt="wafer.space - Budget silicon manufacturing" /></a>
+        <button class="plain offcanvas-close offcanvas-nav-close"><i class="jam jam-close"></i></button>
+      </div>
+      <ul
+        class="navbar-nav mx-auto" data-sm-skip-collapsible-behavior="true">
+        
+        
+        
+          <li class="nav-item">
+          <a class="nav-link" href="/pr-113/">Home</a>
+        </li>
+        
+        
+        
+        
+          <li class="nav-item">
+          <a class="nav-link" href="/pr-113/about.html">About</a>
+        </li>
+        
+        
+        
+        
+          <li class="nav-item">
+          <a class="nav-link" href="/pr-113/price.html">Pricing</a>
+        </li>
+        
+        
+        
+        
+          <li class="nav-item">
+          <a class="nav-link" href="/pr-113/technology.html">Technology</a>
+        </li>
+        
+        
+        
+        
+          <li class="nav-item">
+          <a class="nav-link" href="/pr-113/design-help.html">Design Help</a>
+        </li>
+        
+        
+        
+        
+          <li class="nav-item">
+          <a class="nav-link" href="/pr-113/news">News</a>
+        </li>
+        
+        
+        
+        
+          <li class="nav-item">
+          <a class="nav-link" href="/pr-113/status.html">Status</a>
+        </li>
+        
+        
+        
+        
+          <li class="nav-item">
+          <a class="nav-link" href="/pr-113/faq.html">FAQ</a>
+        </li>
+        
+        
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+<!-- /.navbar -->
+<div class="offcanvas-info inverse-text">
+    <button class="plain offcanvas-close offcanvas-info-close"><i class="jam jam-close"></i></button>
+    <a href="/pr-113/">
+      <img src="/pr-113/assets/images/logo-light.webp"
+        srcset="/pr-113/assets/images/logo-light.webp 1x, /pr-113/assets/images/logo-light@2x.webp 2x"
+        class=" logo-light "
+        alt="wafer.space - Budget silicon manufacturing" />
+    </a>
+    <div class="space30"></div>
+    <p>Budget silicon manufacturing.</p>
+    <div class="space20"></div>
+    <div class="widget">
+      <h5 class="widget-title">Contact Info</h5>
+      <address> 143&nbsp;Cecil&nbsp;Street,<br />#17&#8209;04,&nbsp;GB&nbsp;Building,<br />Singapore 069542<div class="space20"></div>
+        <a href="mailto:info@wafer.space" class="nocolor"></a><br />
+        
+      </address>
+    </div>
+    <!-- /.widget -->
+    <div class="widget">
+      
+      <h3 class="widget-title">More</h3>
+      
+      <ul class="list-unstyled">
+        
+        <li><a href="/pr-113/" class="nocolor">Home</a></li>
+        
+        <li><a href="/pr-113/about.html" class="nocolor">About</a></li>
+        
+        <li><a href="/pr-113/price.html" class="nocolor">Pricing</a></li>
+        
+        <li><a href="/pr-113/technology.html" class="nocolor">Technology</a></li>
+        
+        <li><a href="/pr-113/design-help.html" class="nocolor">Design Help</a></li>
+        
+        <li><a href="/pr-113/news" class="nocolor">News</a></li>
+        
+        <li><a href="/pr-113/faq.html" class="nocolor">FAQ</a></li>
+        
+      </ul>
+    </div>
+    <!-- /.widget -->
+    <div class="widget">
+      
+      <ul class="social social-mute social-s ms-auto">
+        
+      </ul>
+    </div>
+    <!-- /.widget -->
+  </div>
+  <!-- /.offcanvas-info -->
+
+<!--header with image-->
+<div class="wrapper image-wrapper bg-image page-title-wrapper inverse-text" data-image-src="/pr-113/assets/images/header/mpw-one-partial-dice-top-1.jpg">
+  <div class="container inner text-center">
+    <div class="space90"></div>
+    <h1 class="page-title"> Shuttle Status </h1>
+    <p class="lead"> Where each wafer.space shuttle is on its journey from final orders to silicon in your hands </p>
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /.wrapper -->
+
+
+<div class="wrapper light-wrapper">
+  <div class="container inner">
+    <div class="row">
+      
+      
+        
+        
+
+          
+          
+          
+          
+
+          
+          
+          
+
+          
+          
+          
+
+          
+
+          
+          <div class="col-lg-4 mb-30">
+            <div class="ws-shuttle-card">
+              <header class="ws-shuttle-header">
+                <h2 class="ws-shuttle-name" id="gf180mcu-run-1">GF180MCU Run 1</h2>
+                <span class="ws-badge ws-badge--flight">In Flight</span>
+              </header>
+
+              <ol class="ws-route">
+                
+
+                
+                  
+                  
+                  
+                  
+                  <li class="ws-stop is-done">
+                    
+                    <span class="ws-stop-dot"><i class="jam jam-check"></i></span>
+                    <span class="ws-stop-title">
+                      <span class="visually-hidden">Completed: </span>
+                      Final Order Date
+                    </span>
+                    <span class="ws-stop-date">28 November 2025</span>
+                  </li>
+                
+                  
+                  
+                  
+                  
+                  <li class="ws-stop is-done">
+                    
+                    <span class="ws-stop-dot"><i class="jam jam-check"></i></span>
+                    <span class="ws-stop-title">
+                      <span class="visually-hidden">Completed: </span>
+                      GDS In Date
+                    </span>
+                    <span class="ws-stop-date">3 December 2025</span>
+                  </li>
+                
+                  
+                  
+                  
+                  
+                  <li class="ws-stop is-done">
+                    
+                    <span class="ws-stop-dot"><i class="jam jam-check"></i></span>
+                    <span class="ws-stop-title">
+                      <span class="visually-hidden">Completed: </span>
+                      GF Mask Manufacturing
+                    </span>
+                    <span class="ws-stop-date">January – February 2026</span>
+                  </li>
+                
+                  
+                  
+                  
+                  
+                  <li class="ws-stop is-done">
+                    
+                    <span class="ws-stop-dot"><i class="jam jam-check"></i></span>
+                    <span class="ws-stop-title">
+                      <span class="visually-hidden">Completed: </span>
+                      GF Wafer Manufacturing
+                    </span>
+                    <span class="ws-stop-date">March – May 2026</span>
+                  </li>
+                
+                  
+                  
+                  
+                  
+                  <li class="ws-stop is-done">
+                    
+                    <span class="ws-stop-dot"><i class="jam jam-check"></i></span>
+                    <span class="ws-stop-title">
+                      <span class="visually-hidden">Completed: </span>
+                      Dicing & Sorting
+                    </span>
+                    <span class="ws-stop-date">Late May 2026</span>
+                  </li>
+                
+                  
+                  
+                  
+                  
+                  <li class="ws-stop is-done">
+                    
+                    <span class="ws-stop-dot"><i class="jam jam-check"></i></span>
+                    <span class="ws-stop-title">
+                      <span class="visually-hidden">Completed: </span>
+                      Bare Dies Shipped
+                    </span>
+                    <span class="ws-stop-date">Early June 2026</span>
+                  </li>
+                
+                  
+                  
+                  
+                  
+                  <li class="ws-stop is-done">
+                    
+                    <span class="ws-stop-dot"><i class="jam jam-check"></i></span>
+                    <span class="ws-stop-title">
+                      <span class="visually-hidden">Completed: </span>
+                      Chip on Board Packaging
+                    </span>
+                    <span class="ws-stop-date">June 2026</span>
+                  </li>
+                
+                  
+                  
+                  
+                  
+                  <li class="ws-stop is-current has-rocket">
+                    
+                      
+<span class="ws-rocket ws-rocket--flying" aria-hidden="true">
+  <svg class="ws-rocket-svg" viewBox="0 0 24 36" width="24" height="36" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <path class="ws-rocket-flame" d="M12 25.5 C10.2 28 10.2 31 12 34.5 C13.8 31 13.8 28 12 25.5 Z"/>
+    <path class="ws-rocket-fin" d="M8 15.5 C5.2 17.5 4 20.5 4 24 L8 21.5 Z"/>
+    <path class="ws-rocket-fin" d="M16 15.5 C18.8 17.5 20 20.5 20 24 L16 21.5 Z"/>
+    <path class="ws-rocket-body" d="M12 1 C15 4 16 8 16 13 L16 21.5 C16 22.9 15 24 13.6 24 L10.4 24 C9 24 8 22.9 8 21.5 L8 13 C8 8 9 4 12 1 Z"/>
+    <circle class="ws-rocket-window" cx="12" cy="12" r="2.6"/>
+  </svg>
+</span>
+
+                    
+                    <span class="ws-stop-dot"></span>
+                    <span class="ws-stop-title">
+                      <span class="visually-hidden">In progress: </span>
+                      Chip on Board Packaged Shipped
+                    </span>
+                    <span class="ws-stop-date">Rolling out from June 2026</span>
+                  </li>
+                
+
+                
+              </ol>
+            </div>
+          </div>
+
+        
+      
+        
+        
+
+          
+          
+          
+          
+
+          
+          
+          
+
+          
+          
+          
+
+          
+
+          
+          <div class="col-lg-4 mb-30">
+            <div class="ws-shuttle-card">
+              <header class="ws-shuttle-header">
+                <h2 class="ws-shuttle-name" id="gf180mcu-run-2">GF180MCU Run 2</h2>
+                <span class="ws-badge ws-badge--flight">In Flight</span>
+              </header>
+
+              <ol class="ws-route">
+                
+
+                
+                  
+                  
+                  
+                  
+                  <li class="ws-stop is-done">
+                    
+                    <span class="ws-stop-dot"><i class="jam jam-check"></i></span>
+                    <span class="ws-stop-title">
+                      <span class="visually-hidden">Completed: </span>
+                      Early Bird Deadline
+                    </span>
+                    <span class="ws-stop-date">30 April 2026</span>
+                  </li>
+                
+                  
+                  
+                  
+                  
+                  <li class="ws-stop is-done">
+                    
+                    <span class="ws-stop-dot"><i class="jam jam-check"></i></span>
+                    <span class="ws-stop-title">
+                      <span class="visually-hidden">Completed: </span>
+                      Final Order Date
+                    </span>
+                    <span class="ws-stop-date">30 June 2026</span>
+                  </li>
+                
+                  
+                  
+                  
+                  
+                  <li class="ws-stop is-done">
+                    
+                    <span class="ws-stop-dot"><i class="jam jam-check"></i></span>
+                    <span class="ws-stop-title">
+                      <span class="visually-hidden">Completed: </span>
+                      GDS In Date
+                    </span>
+                    <span class="ws-stop-date">14 July 2026</span>
+                  </li>
+                
+                  
+                  
+                  
+                  
+                  <li class="ws-stop is-done">
+                    
+                    <span class="ws-stop-dot"><i class="jam jam-check"></i></span>
+                    <span class="ws-stop-title">
+                      <span class="visually-hidden">Completed: </span>
+                      GF Mask Manufacturing
+                    </span>
+                    <span class="ws-stop-date">Late July 2026</span>
+                  </li>
+                
+                  
+                  
+                  
+                  
+                  <li class="ws-stop is-current has-rocket">
+                    
+                      
+<span class="ws-rocket ws-rocket--flying" aria-hidden="true">
+  <svg class="ws-rocket-svg" viewBox="0 0 24 36" width="24" height="36" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <path class="ws-rocket-flame" d="M12 25.5 C10.2 28 10.2 31 12 34.5 C13.8 31 13.8 28 12 25.5 Z"/>
+    <path class="ws-rocket-fin" d="M8 15.5 C5.2 17.5 4 20.5 4 24 L8 21.5 Z"/>
+    <path class="ws-rocket-fin" d="M16 15.5 C18.8 17.5 20 20.5 20 24 L16 21.5 Z"/>
+    <path class="ws-rocket-body" d="M12 1 C15 4 16 8 16 13 L16 21.5 C16 22.9 15 24 13.6 24 L10.4 24 C9 24 8 22.9 8 21.5 L8 13 C8 8 9 4 12 1 Z"/>
+    <circle class="ws-rocket-window" cx="12" cy="12" r="2.6"/>
+  </svg>
+</span>
+
+                    
+                    <span class="ws-stop-dot"></span>
+                    <span class="ws-stop-title">
+                      <span class="visually-hidden">In progress: </span>
+                      GF Wafer Manufacturing
+                    </span>
+                    <span class="ws-stop-date">Est. August – October 2026</span>
+                  </li>
+                
+                  
+                  
+                  
+                  
+                  <li class="ws-stop is-pending">
+                    
+                    <span class="ws-stop-dot"></span>
+                    <span class="ws-stop-title">
+                      
+                      Dicing & Sorting
+                    </span>
+                    <span class="ws-stop-date">Est. October 2026</span>
+                  </li>
+                
+                  
+                  
+                  
+                  
+                  <li class="ws-stop is-pending">
+                    
+                    <span class="ws-stop-dot"></span>
+                    <span class="ws-stop-title">
+                      
+                      Bare Dies Shipped
+                    </span>
+                    <span class="ws-stop-date">Est. 16 October 2026</span>
+                  </li>
+                
+                  
+                  
+                  
+                  
+                  <li class="ws-stop is-pending">
+                    
+                    <span class="ws-stop-dot"></span>
+                    <span class="ws-stop-title">
+                      
+                      Chip on Board Packaging
+                    </span>
+                    <span class="ws-stop-date">Est. November 2026</span>
+                  </li>
+                
+                  
+                  
+                  
+                  
+                  <li class="ws-stop is-pending">
+                    
+                    <span class="ws-stop-dot"></span>
+                    <span class="ws-stop-title">
+                      
+                      Chip on Board Packaged Shipped
+                    </span>
+                    <span class="ws-stop-date">Est. November 2026</span>
+                  </li>
+                
+
+                
+              </ol>
+            </div>
+          </div>
+
+        
+      
+        
+        
+
+          
+          
+          
+          
+
+          
+          
+          
+
+          
+          
+          
+
+          
+
+          
+          <div class="col-lg-4 mb-30">
+            <div class="ws-shuttle-card">
+              <header class="ws-shuttle-header">
+                <h2 class="ws-shuttle-name" id="gf180mcu-run-3">GF180MCU Run 3</h2>
+                <span class="ws-badge ws-badge--boarding">Boarding</span>
+              </header>
+
+              <ol class="ws-route">
+                
+                  <li class="ws-route-pad">
+                    
+<span class="ws-rocket ws-rocket--parked" aria-hidden="true">
+  <svg class="ws-rocket-svg" viewBox="0 0 24 36" width="24" height="36" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <path class="ws-rocket-flame" d="M12 25.5 C10.2 28 10.2 31 12 34.5 C13.8 31 13.8 28 12 25.5 Z"/>
+    <path class="ws-rocket-fin" d="M8 15.5 C5.2 17.5 4 20.5 4 24 L8 21.5 Z"/>
+    <path class="ws-rocket-fin" d="M16 15.5 C18.8 17.5 20 20.5 20 24 L16 21.5 Z"/>
+    <path class="ws-rocket-body" d="M12 1 C15 4 16 8 16 13 L16 21.5 C16 22.9 15 24 13.6 24 L10.4 24 C9 24 8 22.9 8 21.5 L8 13 C8 8 9 4 12 1 Z"/>
+    <circle class="ws-rocket-window" cx="12" cy="12" r="2.6"/>
+  </svg>
+</span>
+
+                    <span class="ws-route-pad-label">Boarding &mdash; orders open</span>
+                  </li>
+                
+
+                
+                  
+                  
+                  
+                  
+                  <li class="ws-stop is-pending">
+                    
+                    <span class="ws-stop-dot"></span>
+                    <span class="ws-stop-title">
+                      
+                      Early Bird Deadline
+                    </span>
+                    <span class="ws-stop-date">30 September 2026</span>
+                  </li>
+                
+                  
+                  
+                  
+                  
+                  <li class="ws-stop is-pending">
+                    
+                    <span class="ws-stop-dot"></span>
+                    <span class="ws-stop-title">
+                      
+                      Final Order Date
+                    </span>
+                    <span class="ws-stop-date">9 December 2026</span>
+                  </li>
+                
+                  
+                  
+                  
+                  
+                  <li class="ws-stop is-pending">
+                    
+                    <span class="ws-stop-dot"></span>
+                    <span class="ws-stop-title">
+                      
+                      GDS In Date
+                    </span>
+                    <span class="ws-stop-date">16 December 2026</span>
+                  </li>
+                
+                  
+                  
+                  
+                  
+                  <li class="ws-stop is-pending">
+                    
+                    <span class="ws-stop-dot"></span>
+                    <span class="ws-stop-title">
+                      
+                      GF Mask Manufacturing
+                    </span>
+                    <span class="ws-stop-date">Est. January 2027</span>
+                  </li>
+                
+                  
+                  
+                  
+                  
+                  <li class="ws-stop is-pending">
+                    
+                    <span class="ws-stop-dot"></span>
+                    <span class="ws-stop-title">
+                      
+                      GF Wafer Manufacturing
+                    </span>
+                    <span class="ws-stop-date">Est. January – April 2027</span>
+                  </li>
+                
+                  
+                  
+                  
+                  
+                  <li class="ws-stop is-pending">
+                    
+                    <span class="ws-stop-dot"></span>
+                    <span class="ws-stop-title">
+                      
+                      Dicing & Sorting
+                    </span>
+                    <span class="ws-stop-date">Est. April 2027</span>
+                  </li>
+                
+                  
+                  
+                  
+                  
+                  <li class="ws-stop is-pending">
+                    
+                    <span class="ws-stop-dot"></span>
+                    <span class="ws-stop-title">
+                      
+                      Bare Dies Shipped
+                    </span>
+                    <span class="ws-stop-date">Est. 16 April 2027</span>
+                  </li>
+                
+                  
+                  
+                  
+                  
+                  <li class="ws-stop is-pending">
+                    
+                    <span class="ws-stop-dot"></span>
+                    <span class="ws-stop-title">
+                      
+                      Chip on Board Packaging
+                    </span>
+                    <span class="ws-stop-date">Est. May 2027</span>
+                  </li>
+                
+                  
+                  
+                  
+                  
+                  <li class="ws-stop is-pending">
+                    
+                    <span class="ws-stop-dot"></span>
+                    <span class="ws-stop-title">
+                      
+                      Chip on Board Packaged Shipped
+                    </span>
+                    <span class="ws-stop-date">Est. May 2027</span>
+                  </li>
+                
+
+                
+              </ol>
+            </div>
+          </div>
+
+        
+      
+    </div>
+
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 text-center">
+        <p class="text-muted ws-status-note">
+          Dates for future stops are estimates and may shift as manufacturing
+          progresses. For the latest news, see the
+          <a href="/pr-113/news">news page</a> or ask in our
+          <a href="/pr-113/discord/">Discord</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <!-- Site Scripts-->
+  <script src="/pr-113/assets/js/jquery.min.js"></script>
+<script src="/pr-113/assets/js/popper.min.js"></script>
+<script src="/pr-113/assets/js/bootstrap.min.js"></script>
+<script src="/pr-113/assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+<script src="/pr-113/assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+<script src="/pr-113/assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+<script src="/pr-113/assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+<script src="/pr-113/assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script src="/pr-113/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="/pr-113/assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+<script src="/pr-113/assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="/pr-113/assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="/pr-113/assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="/pr-113/assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+<script src="/pr-113/assets/js/plugins.js"></script>
+<script src="/pr-113/assets/js/simple-jekyll-search.min.js"></script>
+<script>
+  // Pass baseurl to JavaScript for search configuration
+  window.siteBaseurl = '/pr-113';
+</script>
+<script src="/pr-113/assets/js/scripts.js"></script>
+
+
+</body>
+<!-- Generated from git commit: 76de0595a0e9df2c08b71f0ed40a1b657bc07dbb (76de0595) -->
+</html>
