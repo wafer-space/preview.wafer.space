@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://wafer.space/pr-126/index.xml" rel="self" type="application/atom+xml" /><link href="https://wafer.space/pr-126/" rel="alternate" type="text/html" /><updated>2026-10-05T12:28:34+00:00</updated><id>https://wafer.space/pr-126/index.xml</id><entry><title type="html">A Need for Speed: Tholin’s Own Standard Cell Library</title><link href="https://wafer.space/pr-126/news/a-need-for-speed-tholins-own-standard-cell-library" rel="alternate" type="text/html" title="A Need for Speed: Tholin’s Own Standard Cell Library" /><published>2026-09-30T12:00:00+00:00</published><updated>2026-09-30T12:00:00+00:00</updated><id>https://wafer.space/pr-126/news/tholins-3v3-scl</id><content type="html" xml:base="https://wafer.space/pr-126/news/a-need-for-speed-tholins-own-standard-cell-library"><![CDATA[<p>Performance – an elusive metric that is influenced by everything the chip consists of, and more. The HDL that defines
+it, the way it is logically laid out, to the tiniest splattering of a chemical on the wafer, and the environment the
+chip lives in. How far can you go to chase speed?</p>
+
+<h2 id="pdk-scl-wth">PDK, SCL, WTH?</h2>
+
+<p>Current wafer.space shuttles target a 180 nm process provided by Global Foundries – they’re the people who turn your
+design into a real chip. A piece of the puzzle that allows this to happen is the “process development kit”, or PDK for
+short. A PDK contains everything you (and the tools) need to know in order to manufacture using their specific process.</p>
+
+<p>An important component of the PDK is the “standard cell library” (SCL) – this library provides a set of fundamental
+building blocks that allow your chip to come to life. They can be anything from simple NOT gates to clock buffers and
+multiplexers. These standard cells are used by tools such as <a href="https://fossi-foundation.org/librelane">LibreLane</a> to turn
+your circuit from a HDL of your choice, to something that can be etched and deposited onto a piece of silicon.</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+  
+  <p class="text-center text-muted mb-10"><small>Standard cells provided by Global Foundries, from left to right: inverter, clock buffer and multiplexer</small></p>
+  
+  <div class="tiles tiles-s">
+    <div class="items row">
+      
+      
+        
+          <div class="item col-md-4">
+        
+            <figure class="overlay overlay1 rounded">
+              <a href="/pr-126/assets/images/news/tholins-3v3-scl/gf180mcu_fd_sc_mcu7t5v0__inv_1.png" class="lightbox">
+                <span class="bg"></span>
+                <img src="/pr-126/assets/images/news/tholins-3v3-scl/gf180mcu_fd_sc_mcu7t5v0__inv_1.png" alt="Global Foundries' inverter cell" />
+              </a>
+              
+            </figure>
+          </div>
+      
+        
+          <div class="item col-md-4">
+        
+            <figure class="overlay overlay1 rounded">
+              <a href="/pr-126/assets/images/news/tholins-3v3-scl/gf180mcu_fd_sc_mcu7t5v0__clkbuf_3.png" class="lightbox">
+                <span class="bg"></span>
+                <img src="/pr-126/assets/images/news/tholins-3v3-scl/gf180mcu_fd_sc_mcu7t5v0__clkbuf_3.png" alt="Global Foundries' clock buffer cell" />
+              </a>
+              
+            </figure>
+          </div>
+      
+        
+          <div class="item col-md-4">
+        
+            <figure class="overlay overlay1 rounded">
+              <a href="/pr-126/assets/images/news/tholins-3v3-scl/gf180mcu_fd_sc_mcu7t5v0__mux2_2.png" class="lightbox">
+                <span class="bg"></span>
+                <img src="/pr-126/assets/images/news/tholins-3v3-scl/gf180mcu_fd_sc_mcu7t5v0__mux2_2.png" alt="Global Foundries' multiplexer cell" />
+              </a>
+              
+            </figure>
+          </div>
+      
+    </div>
+  </div>
+</div>
+
+<p>The PDK provided by Global Foundries (known affectionately as the <code class="language-plaintext highlighter-rouge">gf180mcu_fd_sc_mcu7t5v0</code>, or as GF180MCU) provides a
+large collection of these cells, along with useful timing and process information. For many, this would be enough - a
+simple, straight forward translation of a design into silicon using something provided by the creators of the process
+themselves. Except… there’s a small snag: it’s slow.  Their open source PDK targets 5 V, and therefore the standard
+cells are made with transistors that are thick enough to handle this. Whilst they still can be run at 3.3 V, you still
+suffer a performance penalty due to their size. This trade-off means you cannot squeeze as much performance out of your
+circuit as you might want to, thanks to higher current requirements and threshold voltages required for thicker
+transistors. So, what can you do if you’re after performance?</p>
+
+<h2 id="byoscl-bring-your-own-standard-cell-library">BYOSCL (Bring Your Own Standard Cell Library)</h2>
+
+<p>Tholin, of Avalon Semiconductors, posed this exact question. What was the answer? To create her own standard cell
+library that would deliver the performance she’d been after.</p>
+
+<p>You see, Tholin has been developing chips for a while now – starting off with submissions to Tiny Tapeout’s TT02, she
+has now taped out various designs onto our Run #1 and Run #2 shuttles. Throughout these years however, she needed
+speed – in fact, she felt that no one had pushed the limits of what was possible with SkyWater’s 130nm (SKY130) process
+and decided to tackle the problem head on. Unfortunately, this didn’t lead anywhere but with some experience gained and
+important lessons learnt, she would be better equipped for next time.</p>
+
+<p>After some turbulent events with eFabless shutting down and Google stopping their GFMPW programme, SKY130 was all that
+remained. That was until wafer.space entered the scene, and began to offer affordable GF180MCU shuttles, filling the void
+which had been left by the previous two. Tholin felt that GF180MCU had much more potential than SKY130, so she latched onto
+it pretty hard and dove right back into making her own cell library.</p>
+
+<h3 id="one-person-102-commits">One Person, 102 Commits</h3>
+<p>Work began on June 30th, 2025. Five days later, the commit log reads “First working version”. 13 months of intense work
+and 102 commits later, Tholin’s own <code class="language-plaintext highlighter-rouge">gf180mcu_as_sc_mcu7t3v3</code> contains 85 placeable cells built entirely for 3.3 V
+operation, along with characterization data.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>PDK</th>
+      <th>Cell</th>
+      <th>Voltage (V)</th>
+      <th>Delay (ps)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Foundry</td>
+      <td>inverter</td>
+      <td>3.3</td>
+      <td>247.6</td>
+    </tr>
+    <tr>
+      <td>Foundry</td>
+      <td>inverter</td>
+      <td>5.0</td>
+      <td>184.2</td>
+    </tr>
+    <tr>
+      <td>Tholin’s</td>
+      <td>inverter</td>
+      <td>3.3</td>
+      <td>89.1</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>(Derived from the liberty timing tables shipped with each library at the typical corner (25 °C). Library level comparison,
+no real measurements so numbers remain theoretical.)</p>
+
+<p>Despite the library not being 100% complete, it’s clear that there are solid performance gains to be had with a 3.3 V
+cell library. Tholin shares that in some metrics, it seems  outperform her previous attempt at a high-speed SCL.</p>
+
+<p>With the library taking up the taking up the exact same height as the default one, this can act as a drop-in replacement
+with a few simple tweaks to a config file.</p>
+
+<p>If you want to explore the library, be sure to head over to its <a href="https://github.com/AvalonSemiconductors/gf180mcu_as_sc_mcu7t3v3">GitHub repository</a>.</p>
+
+<h3 id="building-the-building-blocks">Building the Building Blocks</h3>
+<p>A lot of intense work goes into building a library of cells, even more so if you’re the only one working on it. Learning
+the practical knowledge, theory and best-practices takes hundreds of hours at best, but then you must also familiarise
+yourself with the various foundry-specific design rules and their nuances to ensure the cells can be manufactured in
+the first place.</p>
+
+<p>Tholin shared her approach on how she created the cell library with us: “There is an absolute minimum number of cells
+you need to create before LibreLane accepts it at all: NAND, NOT, DFF, buffer, filler, tap, tie, diode. Once you have
+those, you can just add more logic cells as you see fit, in whatever order you want. I took a RISC-approach,
+synthesizing a RISC-V core with the fab SCL and checking which cells end up being used the most, recreating those first.”</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>Global Foundries' own inverter, open in KLayout</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-126/assets/images/news/tholins-3v3-scl/klayout_overview.png" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-126/assets/images/news/tholins-3v3-scl/klayout_overview.png" alt="Global Foundries' own inverter, open in KLayout" />
+        </a>
+    </figure>
+</div>
+
+<p>For those who might be unaware, you can build any logic function (AND, OR, NOT, e.t.c) you could wish for out of just
+NAND gates alone. They’re considered to be “universal gates” and so it makes sense that LibreLane would require it
+before any others. The filler and tap cells are used for the manufacturing process only.</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>Tholin's own inverter, open in Klayout</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-126/assets/images/news/tholins-3v3-scl/klayout_tholin_overview.png" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-126/assets/images/news/tholins-3v3-scl/klayout_tholin_overview.png" alt="Tholin's own inverter, open in Klayout" />
+        </a>
+    </figure>
+</div>
+
+<p>Tholin goes on to say: “As silly as it sounds, I use <a href="https://www.falstad.com/circuit/circuitjs.html">circuitjs</a> for
+schematic capture and then go straight to layout. There is a lot of intuition, such as having memorized the relevant DRC
+minima until I got a “feel” for them. All cells must have the same height and a width that is a multiple of some unit
+width, and you have to be vigilant of potential DRC errors against adjacent cells, but its pretty free-form otherwise.”.</p>
+
+<p>When asked about the work required to characterize each standard cell, she explains that “[c]haracterization is the part
+that usually takes the longest. That is running a thousand SPICE sims of each cell to figure out its DC and AC
+characteristics. Things like slew times and propagation delays are needed for timing analysis and repair. This process
+can be automated, but getting it set up initially with the right simulation parameters for each cell can take forever sometimes.”.</p>
+
+<p>This library is important to Tholin, because not only does it provide something which the PDK was previously missing,
+but also because it pushes and legitimizes open source silicon as a real option for products, rather than being seen as
+a toy or an academic-only exercise.</p>
+
+<h3 id="what-does-the-future-hold">What Does the Future Hold?</h3>
+<p>The library is only a few parts away from having a minimum set which Tholin is happy with. She explains that she’ll be
+able to focus on more specialized circuits such as full-adders and clock gates, or even experiment with DFFs which use
+the charge in the gate capacitance to store a bit – all in the name of performance.</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>Render of Tholin's custom cell, courtesy of <a href="https://agentdavo.github.io/GDS3D/">agentdavo.github.io/GDS3D/</a></small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-126/assets/images/news/tholins-3v3-scl/tholin_ao221.jpg" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-126/assets/images/news/tholins-3v3-scl/tholin_ao221.jpg" alt="Render of Tholin's custom cell, courtesy of &lt;a href='https://agentdavo.github.io/GDS3D/'&gt;agentdavo.github.io/GDS3D/&lt;/a&gt;" />
+        </a>
+    </figure>
+</div>
+
+<p>A stretch goal, she mentions, is compatibility with a tool called <a href="https://github.com/antonblanchard/vlsiffra/">vlsiffra</a>.
+This tool claims to generate “fast and efficient standard cell based adders, multipliers and multiply-adders”, potentially
+an excellent addition to the library and for those aiming to build fast processors or other computation cores.</p>
+
+<p>The library is still very fresh, and not yet silicon-proven. What it means is that there is a non-zero chance that the
+chips might not be functional. We’ll only find out if all this hard work has paid off when Run #2 silicon returns from
+the foundry – if you’re considering using this library, you’ve been warned! Despite this though, people have already
+taped out designs which benefit from the extra speed such as <a href="https://github.com/AvalonSemiconductors/ws-submission-2026">Tholin’s own MPW</a>,
+<a href="https://github.com/dhgaddy/microTheia">µTheia</a>, <a href="https://github.com/mole99/wsrun2-fabulous-fpga">FABulous FPGA</a> and
+<a href="https://github.com/SlugTPU/gf180mcu-slugtpu">SlugTPU</a>.</p>
+
+<p>If you’re interested to hear about how all of this will turn out, consider joining the
+<a href="/discord">wafer.space Discord</a> or <a href="/matrix">Matrix</a>.</p>
+
+<h2 id="a-message-from-tholin">A Message from Tholin</h2>
+
+<blockquote>
+  <p>My background is over a decade of toying with electronic engineering as a hobby at a intermediate level with whatever
+parts I could get my hands on. I never made much headway in my professional career and I began doing chip stuff around
+November 2022, when I was 21 and getting bored of my web development job after 3 years. Never went to university,
+never formally learned anything about layout engineering, I just started doing chip dev projects during Tiny Tapeout 2
+and never stopped for all this time.</p>
+
+  <p>A lot of people who see what I do tend to ask me HOW I got this far in a more abstract sense, since I’m almost a
+picturebook success story having dragged myself from nothing, no formal education, to 8+ tapeouts and two custom SCLs.
+So, here is some general advice I tend to give to people:</p>
+  <blockquote>
+    <p>Just DO stuff. Like, that’s really it. I kept having ideas and kept doing them and now I’m here! The one rule is that
+you should always reach a bit higher than what you believe yourself capable off. I didn’t make an SCL because I had a
+precise plan of how to do it, I just found a starting point and began there, seeking out knowledge as I needed it. I
+actually ended up starting from scratch twice, but I learned a lot. Constantly stepping outside my comfort zone and
+falling on my face defined the whole journey, but you shouldn’t be afraid of that.
+Oh, and make sure your projects are things you care about. I never experienced a more painful burnout than the one
+time I took on a project just because “this would look good on my resume”.</p>
+  </blockquote>
+</blockquote>
+
+<p>You can find Tholin on Bluesky <a href="https://bsky.app/profile/tholin.bsky.social">@tholin.bsky.social</a>, read about her past
+projects on <a href="https://tholin.dev/">tholin.dev</a> or see what she’s taping out in the <a href="/discord">wafer.space Discord</a>.</p>
+
+<h2 id="get-started-today">Get Started Today</h2>
+<p>Run #3 is in full swing at the moment, so don’t miss your opportunity to tape out. You’ve got until <strong>9 December 2026</strong>
+to purchase a slot, and the submission deadline a week after on <strong>16 December 2026</strong>.</p>
+
+<p>Read more on our <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-3">Crowd Supply</a> page, jump in with our
+<a href="https://github.com/wafer-space/gf180mcu-project-template">project template</a> and join our
+<a href="https://wafer.space/discord">community Discord</a> to chat to other designers and get help.</p>]]></content><author><name>Kristaps Jurkans</name></author><category term="news" /><category term="gf180mcu" /><category term="tholin" /><category term="featured-project" /><summary type="html"><![CDATA[Performance -- an elusive metric that is influenced by everything the chip consists of, and more. The HDL that defines it, the way it is logically laid out, to the tiniest splattering of a chemical on the wafer, and the environment the chip lives in. How far can you go to chase speed?]]></summary></entry><entry><title type="html">Last 48 Hours for Run #3 Early Bird Pricing</title><link href="https://wafer.space/pr-126/news/run3-early-bird-48hrs" rel="alternate" type="text/html" title="Last 48 Hours for Run #3 Early Bird Pricing" /><published>2026-09-28T12:00:00+00:00</published><updated>2026-09-28T12:00:00+00:00</updated><id>https://wafer.space/pr-126/news/run3-early-bird-48hrs</id><content type="html" xml:base="https://wafer.space/pr-126/news/run3-early-bird-48hrs"><![CDATA[<p><strong>9 December 2026 @ 11:59 PM AoE</strong> is approaching fast, and slots on the shuttle are filling up just as quick! This is
+your <strong>final</strong> opportunity to join Run #3 and get your own design manufactured at an affordable price. Perfect for
+hobbyists, prototyping or building your next big product.</p>
+
+<p>Get 1,000 dies back, starting at just $3 per die.</p>
+
+<p><a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-3#products">Buy now on Crowd Supply</a>.</p>
+
+<p>Want inspiration? Check out designs submitted on our previous runs:</p>
+<ul>
+  <li><a href="https://github.com/wafer-space/ws-run1">Run #1</a></li>
+  <li><a href="https://github.com/wafer-space/ws-run2">Run #2</a></li>
+</ul>
+
+<h2 id="what-now">What Now?</h2>
+
+<p>After purchasing your slot, you have until <strong>16 December 2026 11:59 PM AoE</strong> to get your design finalised and submitted
+onto our platform. Hurry though, that’s right around the corner and your design must pass precheck before the deadline
+for it to be accepted!</p>
+
+<p>Any issues or questions? Come chat to us in the <a href="https://wafer.space/discord">official wafer.space Discord</a>, or reach
+out to us via <a href="https://wafer.space/matrix">Matrix</a>.</p>]]></content><author><name>Kristaps Jurkans</name></author><category term="news" /><category term="gf180mcu" /><category term="run3" /><category term="deadline" /><summary type="html"><![CDATA[In 48 hours, the early bird pricing will end for Run #3!]]></summary></entry><entry><title type="html">Testing Dies</title><link href="https://wafer.space/pr-126/news/testing-dies" rel="alternate" type="text/html" title="Testing Dies" /><published>2026-09-25T12:00:00+00:00</published><updated>2026-09-25T12:00:00+00:00</updated><id>https://wafer.space/pr-126/news/testing-dies</id><content type="html" xml:base="https://wafer.space/pr-126/news/testing-dies"><![CDATA[<p>With thousands of dies being produced in each run, and with every project being unique, how can we make sure that you
+get the best results and yield? There’s no single “does it work” check that fits everyone, so it turns testing into
+an interesting puzzle to solve. What do we test for? What’s common between them all?</p>
+
+<p>Our community brainstormed for a solution, and we eventually landed on leveraging the ESD protection diodes that exist
+on the pad ring. We have started to build them into our flow.</p>
+
+<h2 id="the-theory">The Theory</h2>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>An example protection circuit (from the GF180MCU PDK documentation)</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-126/assets/images/news/testing-dies/gf180-cdm-protection-network.jpg" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-126/assets/images/news/testing-dies/gf180-cdm-protection-network.jpg" alt="An example protection circuit (from the GF180MCU PDK documentation)" />
+        </a>
+    </figure>
+</div>
+
+<p>Each I/O pad has its own ESD protection, meaning that we can probe them to get a good idea whether the die is good or
+bad. Our approach is to inject a small constant current (~100µA) through the ground pad of the die, and measure
+the resulting voltage at each IO pad. A good bond produced a predictable forward-drop voltage, whereas missing or
+shorted bonds deviate from this expected behaviour.</p>
+
+<p>By using a simple bring-up jig, we reduce the first power-up sequence to a simple and easily reproducible step which
+we can perform to verify that a die is alive, before any deeper, design-specific testing begins. For now, this testing
+is left as an exercise to the submitter!</p>
+
+<p>We will share more of these approaches and their results in upcoming updates, so stay tuned in. (If that all sounds
+interesting, why not come join our <a href="https://wafer.space/discord">Discord community</a> to stay updated?)</p>
+
+<p>Okay, we have a target to test, but <em>how</em> do we test them?</p>
+
+<h2 id="prototyping-the-testing-jig">Prototyping the Testing Jig</h2>
+
+<p>We prototyped many methods to reliably seat and release the mezzanine connectors that we use for the COB PCBs. This is
+important because a subpar connection could lead to a good die being marked as a fail, resulting in a lower yield.</p>
+
+<p>Piggybacking off of the Tiny Tapeout demoboard, we were able to test and iterate until we felt confident that it would
+meet our needs.</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+  
+  <p class="text-center text-muted mb-10"><small>Prototyping the 3D printed lever</small></p>
+  
+  <div class="tiles tiles-s">
+    <div class="items row">
+      
+      
+        
+          <div class="item col-md-4">
+        
+            <figure class="overlay overlay1 rounded">
+              <a href="/pr-126/assets/images/news/testing-dies/tt-prototype-flush-no-chip.jpg" class="lightbox">
+                <span class="bg"></span>
+                <img src="/pr-126/assets/images/news/testing-dies/tt-prototype-flush-no-chip.jpg" alt="Lever mounted flush around the connector, with no chip mounted" />
+              </a>
+              
+            </figure>
+          </div>
+      
+        
+          <div class="item col-md-4">
+        
+            <figure class="overlay overlay1 rounded">
+              <a href="/pr-126/assets/images/news/testing-dies/tt-prototype-lifted-no-chip.jpg" class="lightbox">
+                <span class="bg"></span>
+                <img src="/pr-126/assets/images/news/testing-dies/tt-prototype-lifted-no-chip.jpg" alt="Lever slightly lifted, showcasing the unmounting mechanism" />
+              </a>
+              
+            </figure>
+          </div>
+      
+        
+          <div class="item col-md-4">
+        
+            <figure class="overlay overlay1 rounded">
+              <a href="/pr-126/assets/images/news/testing-dies/tt-prototype-chip-under-test.jpg" class="lightbox">
+                <span class="bg"></span>
+                <img src="/pr-126/assets/images/news/testing-dies/tt-prototype-chip-under-test.jpg" alt="Final assembly - the lever sits under the COB PCB" />
+              </a>
+              
+            </figure>
+          </div>
+      
+    </div>
+  </div>
+</div>
+
+<p>We finalised on the blue lever you see in the pictures above. With a mounting method now ready, all that remains
+is creating a bespoke testing jig which would suit our situation better. We started with a very simple setup - a
+breakout board which interfaces with the die under test, paired with a Raspberry Pi Pico 2.</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>A breakout board with a mounted COB alongside a Raspberry Pi Pico 2</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-126/assets/images/news/testing-dies/ws-prototype-breadboard.jpg" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-126/assets/images/news/testing-dies/ws-prototype-breadboard.jpg" alt="A breakout board with a mounted COB alongside a Raspberry Pi Pico 2" />
+        </a>
+    </figure>
+</div>
+
+<p>The goals for the jig are to:</p>
+<ul>
+  <li>be easy to use</li>
+  <li>capture images of the die under test</li>
+  <li>test each pin</li>
+</ul>
+
+<p>Keen-eyed readers may have noticed the microscope lens and lighting set up on which the Pico and COB are sitting upon.
+The goal of the microscope is to capture high quality images of failed wirebonds, allowing us and our wirebonding
+partner to improve upon the process in order to further increase the yield. We want these chips to be perfect when they
+get to you, so we’re pulling out all the stops!</p>
+
+<h2 id="version-1-of-the-testing-jig">Version 1 of the Testing Jig</h2>
+
+<p>Introducing the (aptly named) <strong>BondTest72</strong> - the latest in open source wirebond testing jig equipment for GF180 tapeouts!</p>
+
+<p>BondTest72 contains everything we need to check whether the die is properly wirebonded, including checking for neighbouring
+shorts. Thank you Lauri Mihkels for bringing this to life. PCB schematics are available on GitHub: <a href="https://github.com/szfate/BondTest72">github.com/szfate/BondTest72</a>.</p>
+
+<div>
+    
+        <p class="text-center text-muted mb-10">
+            <small>BondTest72 self-test</small>
+        </p>
+    
+    <iframe style="width:100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/3iKYlilKDs8?start=&amp;end=&amp;autoplay=1&amp;mute=1&amp;playsinline=1&amp;fs=1&amp;disablekb=1&amp;controls=1&amp;loop=0&amp;playlist=3iKYlilKDs8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+    </iframe>
+</div>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>BondTest72 and an adapter board (Mezzanine70) for COBs</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-126/assets/images/news/testing-dies/ws-jig-bare.jpg" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-126/assets/images/news/testing-dies/ws-jig-bare.jpg" alt="BondTest72 and an adapter board (Mezzanine70) for COBs" />
+        </a>
+    </figure>
+</div>
+
+<p>It is packed with the Raspberry Pi Pico 2 for the brains of the operation, three CH446X multiplexers to access
+all available pins, and three RGB LEDs for easy status readout - <code class="language-plaintext highlighter-rouge">READY</code>, <code class="language-plaintext highlighter-rouge">PASS</code> and <code class="language-plaintext highlighter-rouge">FAIL</code>. The adapter board contains
+an AT21CS01 EEPROM which stores manufacturing metadata such as hardware ID, padring info and total insertion count.</p>
+
+<h3 id="testing-sequence">Testing Sequence</h3>
+
+<p>Each pad is tested in two phases, which catches bond defects and inter-pad shorts.</p>
+
+<ol>
+  <li>
+    <p><strong>Neighbour phase</strong> - the pad under test is grounded and its immediate ring-neighbours are sensed via a resistor divider.
+A low reading indicates an inter-pad short.</p>
+  </li>
+  <li>
+    <p><strong>Injection phase</strong> - current is injected via the ground pad and the voltage is measured on an ADC bus. A good bond
+reads between 0.2 - 0.8 V, whereas an open bond is &gt;2.5 V and a short is &lt; 0.1 V.</p>
+  </li>
+</ol>
+
+<h3 id="reading-the-results">Reading the Results</h3>
+
+<p>The RGB LEDs indicate whether a die has passed or failed, but the <a href="https://github.com/szfate/BondTest72-Firmware">firmware</a>
+is far more capable. If the jig is connected to a PC, then you can access real-time information whilst a die is being tested.
+It provides readings per-pad, which can be used to build an image of passing or failing pads.</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>A GUI program indicating passing/failing pads, accompanied with voltage readings per pad</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-126/assets/images/news/testing-dies/tester-results-1.png" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-126/assets/images/news/testing-dies/tester-results-1.png" alt="A GUI program indicating passing/failing pads, accompanied with voltage readings per pad" />
+        </a>
+    </figure>
+</div>
+
+<p>Fantastic stuff! Incredible information to have access to should we ever need to diagnose a fault or a systemic issue.</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>Capturing a die image during pad tests to identify bad bonds</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-126/assets/images/news/testing-dies/tester-results-2.png" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-126/assets/images/news/testing-dies/tester-results-2.png" alt="Capturing a die image during pad tests to identify bad bonds" />
+        </a>
+    </figure>
+</div>
+
+<p>Pairing the jig with a microscope allows us to capture close up images automatically too, meaning we can visually
+inspect the die and confirm the results.</p>
+
+<h2 id="join-us">Join us!</h2>
+
+<p>We hoped you enjoyed reading this update, we’re so grateful to have a community that can come together and solve these
+tough engineering challenges.</p>
+
+<p>If you’d like to be a part of it, we’re active on the <a href="https://wafer.space/discord">wafer.space Discord</a> and on
+<a href="https://matrix.to/#/#gf180mcu:fossi-chat.org">Matrix at #gf180mcu</a>.</p>
+
+<h2 id="run-3-is-live">Run #3 is Live</h2>
+
+<p>Run #3 slots are available on Crowd Supply until <strong>9 December 2026</strong>, but early bird pricing ends <strong>30 September 2026</strong>!
+Slots start from just $2/die with early bird pricing, so get in early and have 1,000 of your very own chips made affordably.</p>
+
+<p>Chip-on-board packaging is available as an add-on for $1,500 ($1.50/die).</p>
+
+<p><a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-3">Join Run #3 now on Crowd Supply.</a></p>]]></content><author><name>Kristaps Jurkans</name></author><category term="news" /><category term="gf180mcu" /><category term="manufacturing" /><category term="chip-on-board" /><category term="testing" /><summary type="html"><![CDATA[With thousands of dies being produced in each run, and with every project being unique, how can we make sure that you get the best results and yield?]]></summary></entry><entry><title type="html">Run #3 Early Bird Pricing Leaves in a Week</title><link href="https://wafer.space/pr-126/news/run3-early-bird-1wk" rel="alternate" type="text/html" title="Run #3 Early Bird Pricing Leaves in a Week" /><published>2026-09-23T12:00:00+00:00</published><updated>2026-09-23T12:00:00+00:00</updated><id>https://wafer.space/pr-126/news/run3-early-bird-1wk</id><content type="html" xml:base="https://wafer.space/pr-126/news/run3-early-bird-1wk"><![CDATA[<p>We’re now entering the final week of the early bird promotion – don’t miss your chance to save on your tape out on
+Run #3. A slot starts from $2 per die, for 1,000 dies total. Perfect for prototyping, hobbyists or low volume
+manufacturing.</p>
+
+<p>Get started today for free with open source tools, <strong>buy a slot before 30 September 2026 11:59 PM AoE</strong> and receive real
+silicon back in 2027.</p>
+
+<h2 id="what-now">What Now?</h2>
+
+<p>After purchasing your slot, you have until <strong>16 December 2026 11:59 PM AoE</strong> to get your design finalised and submitted
+onto our platform.</p>
+
+<p>Any questions? Come chat to us in the <a href="https://wafer.space/discord">official wafer.space Discord</a>, or reach out to us
+via <a href="https://wafer.space/matrix">Matrix</a>.</p>]]></content><author><name>Kristaps Jurkans</name></author><category term="news" /><category term="gf180mcu" /><category term="run3" /><category term="deadline" /><summary type="html"><![CDATA[We're now entering the final week of the early bird promotion -- don't miss your chance to save on your tape out on Run #3.]]></summary></entry><entry><title type="html">Run #3 1x1 Slots Gone</title><link href="https://wafer.space/pr-126/news/run3-1x1-slots-gone" rel="alternate" type="text/html" title="Run #3 1x1 Slots Gone" /><published>2026-09-22T12:00:00+00:00</published><updated>2026-09-22T12:00:00+00:00</updated><id>https://wafer.space/pr-126/news/run3-1x1-slots-gone</id><content type="html" xml:base="https://wafer.space/pr-126/news/run3-1x1-slots-gone"><![CDATA[<p>All of our full-sized slots are gone for this run — thank you for supporting us :)</p>
+
+<p>We’re looking into additional capacity, but the next opportunity will most likely be a future run. Be the first to learn in our <a href="/discord">official wafer.space Discord</a>.</p>
+
+<p>Run 3 isn’t filled yet though! There are still plenty of half and quarter-sized slots, so if you don’t need the full 12.92 mm², then these will be the perfect fit for you.</p>
+
+<p>Check your options here: <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-3">crowdsupply.com/wafer-space/gf180mcu-run-3</a></p>]]></content><author><name>Kristaps Jurkans</name></author><category term="news" /><category term="gf180mcu" /><category term="run3" /><summary type="html"><![CDATA[All of our full-sized slots are gone for this run — thank you for supporting us :)]]></summary></entry><entry><title type="html">Run #3 1x1 Slots Running Low</title><link href="https://wafer.space/pr-126/news/run3-1x1-slots-running-low" rel="alternate" type="text/html" title="Run #3 1x1 Slots Running Low" /><published>2026-09-19T12:00:00+00:00</published><updated>2026-09-19T12:00:00+00:00</updated><id>https://wafer.space/pr-126/news/run3-1x1-slots-running-low</id><content type="html" xml:base="https://wafer.space/pr-126/news/run3-1x1-slots-running-low"><![CDATA[<p>We’re down to our last few full-sized slots, so this is the perfect opportunity to secure your slot before they’re all gone! We can’t add any more, so don’t hesitate otherwise you might be waiting for the next run.</p>
+
+<p>Buy now: <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-3">crowdsupply.com/wafer-space/gf180mcu-run-3</a></p>
+
+<p>Plenty of half and quarter-sized slots still available — just as capable, only a bit smaller.</p>]]></content><author><name>Kristaps Jurkans</name></author><category term="news" /><category term="gf180mcu" /><category term="run3" /><summary type="html"><![CDATA[We're down to our last few full-sized slots!]]></summary></entry><entry><title type="html">Wafers Delayed for Run #2</title><link href="https://wafer.space/pr-126/news/run2-wafer-delay" rel="alternate" type="text/html" title="Wafers Delayed for Run #2" /><published>2026-09-16T12:00:00+00:00</published><updated>2026-09-16T12:00:00+00:00</updated><id>https://wafer.space/pr-126/news/run2-wafer-delay</id><content type="html" xml:base="https://wafer.space/pr-126/news/run2-wafer-delay"><![CDATA[<p>Hi everybody, we have got some important news to share with you regarding the timeline for Run #2.</p>
+
+<p>We are expecting an initial set of wafers from Global Foundries very soon! These wafers will be diced, with bare die
+shipping and packaging happening soon after. We’ve made many improvements to our chip-on-board service too, which we will
+share in an upcoming update soon!</p>
+
+<p>Unfortunately, there are only enough wafers for everyone to get roughly 100-200 dies. The remaining wafers for Run #2
+have been delayed until sometime in 2027. We don’t have an exact date yet, but we will update you as soon as we know.
+We recommend that you join the <a href="https://wafer.space/discord">wafer.space Discord</a> to stay in the loop.</p>
+
+<p>Additionally, we do not expect this delay to affect any deadlines or the timeline for Run #3.</p>]]></content><author><name>Kristaps Jurkans</name></author><category term="news" /><category term="gf180mcu" /><category term="run2" /><summary type="html"><![CDATA[Important news regarding the timeline for Run #2.]]></summary></entry><entry><title type="html">GF180MCU Run 3 is Here!</title><link href="https://wafer.space/pr-126/news/run3-announcement" rel="alternate" type="text/html" title="GF180MCU Run 3 is Here!" /><published>2026-08-01T12:00:00+00:00</published><updated>2026-08-01T12:00:00+00:00</updated><id>https://wafer.space/pr-126/news/run3-announcement</id><content type="html" xml:base="https://wafer.space/pr-126/news/run3-announcement"><![CDATA[<p>Hey folks,</p>
+
+<p>It’s that time again – Run 3 is open for submission.</p>
+
+<h2 id="whats-new">What’s new?</h2>
+
+<p>We’re now able to offer 1,000 dies for as little as $2,000 – that’s $2/die. This is achievable thanks to our newest
+slot offering: the 0.5x0.5 quarter slot. This tiny slot packs a punch with 4.9 mm² of silicon allowing you to tapeout test structures, analog circuits, or compact digital designs without paying for silicon you do not need.</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>Quarter slot overlaid on a full
+slot die for size comparison</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-126/assets/images/slots/0p5x0p5_gelpack.jpg" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-126/assets/images/slots/0p5x0p5_gelpack.jpg" alt="Quarter slot overlaid on a full
+slot die for size comparison" />
+        </a>
+    </figure>
+</div>
+
+<p>Detailed comparisons between the different slot sizes can be seen at <a href="https://mithro.github.io/gf180mcu-project-template/">mithro.github.io/gf180mcu-project-template/</a>. If you’re not sure what size would suit you best, don’t hesitate to reach
+out to us or our community - see the <a href="#get-involved">Get Involved</a> section.</p>
+
+<p>Behind the scenes, there have been various toolchain improvements and bugfixes to make the processes a lot smoother. The
+submission platform now catches more issues, earlier and faster. Stricter DRCs allow you to be confident in your tapeout.</p>
+
+<p>With Run 2 closed, there’s another batch of open source designs available for you to study, adapt and build upon for your
+own tapeout. Projects vary from simple test structures to Linux-capable SoCs, covering digital, analog and mixed-signal
+approaches.</p>
+
+<h2 id="schedule">Schedule</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Milestone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1 August 2026</td>
+      <td>Campaign opens on Crowd Supply.</td>
+    </tr>
+    <tr>
+      <td>15 December 2026</td>
+      <td>Slot purchase deadline.</td>
+    </tr>
+    <tr>
+      <td>29 December 2026</td>
+      <td>Deadline to submit GDS files.</td>
+    </tr>
+    <tr>
+      <td>Q2 2027</td>
+      <td>Bare dies and packaged parts shipped to customers.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+
+<h2 id="get-involved">Get Involved</h2>
+
+<p>If you are interested in Run 3, or if you want to share it with someone who the previous runs, here is how to stay in the loop:</p>
+
+<ul>
+  <li><strong>Run 3 Launch Page</strong>: <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-3">Visit our Crowd Supply page</a> for more information about Run 3 and how you can get started</li>
+  <li><strong>Discord</strong>: <a href="https://wafer.space/discord">wafer.space/discord</a></li>
+  <li><strong>Matrix</strong>: <a href="https://wafer.space/matrix">wafer.space/matrix</a></li>
+</ul>
+
+<h2 id="thank-you">Thank You</h2>
+
+<p>To our community and the wider open source silicon ecosystem – thank you. Your help in backing these runs, testing your
+designs, contributing patches to the tools and providing feedback about anything and everything has been monumental in
+helping shape all of our runs, and Run 3 is no different. You help us make Run 3 the best it can be, and we hope to
+keep bringing opportunities for future tapeouts. Thank you for being a part of this - see you on the next tapeout.</p>]]></content><author><name>Tim &apos;mithro&apos; Ansell</name></author><category term="news" /><category term="gf180mcu" /><category term="run3" /><summary type="html"><![CDATA[Run 3 is finally here -- featuring improved tools and a new slot size.]]></summary></entry><entry><title type="html">GF180MCU Run 3 is Coming!</title><link href="https://wafer.space/pr-126/news/run3-coming-soon" rel="alternate" type="text/html" title="GF180MCU Run 3 is Coming!" /><published>2026-07-24T12:00:00+00:00</published><updated>2026-07-24T12:00:00+00:00</updated><id>https://wafer.space/pr-126/news/run3-coming-soon</id><content type="html" xml:base="https://wafer.space/pr-126/news/run3-coming-soon"><![CDATA[<p>Hey folks,</p>
+
+<p>We’re pleased to announce Run 3 is coming very soon! Following on the successes of Run 1 and Run 2, we’ve continued
+to iterate and improve all aspects of the flow to help you bring your idea to life with cheaper and easier-to-manufacture
+chips.</p>
+
+<h2 id="what-is-waferspace">What is wafer.space?</h2>
+
+<p><a href="https://wafer.space/">wafer.space</a> is pooled silicon fabrication. Think <a href="https://oshpark.com">OSH Park</a>, but for custom
+chips instead of PCBs. You design a chip using GlobalFoundries’ open <a href="https://gf180mcu-pdk.readthedocs.io/">GF180MCU</a>
+PDK, submit your layout, and we handle fabrication, dicing, and delivery. $7 per chip, 1,000 chips per slot.</p>
+
+<p>The tools are open source. The PDK is open source. Your design can be open or closed. No NDAs required to get started.</p>
+
+<h2 id="run-1-and-run-2">Run 1 and Run 2</h2>
+
+<p>Run 1 has been packaged and shipped to all of our customers – from hobbyists to academics, and from industry specialists
+to community groups, people have been able to get their hands on their very own custom silicon. Many are testing their
+designs right now, and our chip-on-board packaging solution has been popular and successful! Read more about it in
+our dedicated <a href="/news/chip-on-board-progress">chip-on-board progress update</a>.</p>
+
+<p>Run 2 has now been closed and will begin manufacturing shortly. It features several interesting projects such as:</p>
+
+<ul>
+  <li>
+    <p><strong><a href="https://github.com/mole99/wsrun2-fabulous-fpga">FABulous FPGA</a></strong>: Back for Run 2, now with four times as much SRAM
+and much faster thanks to a community created standard cell library.</p>
+  </li>
+  <li>
+    <p><strong><a href="https://github.com/RTimothyEdwards/gf180mcu_ocd_sram_test">SRAM Macro</a></strong>: A selection of SRAMs for design
+validation, removing the hurdle of designing your own.</p>
+  </li>
+  <li>
+    <p><strong><a href="https://github.com/AvalonSemiconductors/ws-submission-2026/">MPW by Avalon Semiconductors</a></strong>: Multi-project die
+containing various designs such as a replica 6502, a DRAM controller, NTSC test signal generator and more.</p>
+  </li>
+  <li>
+    <p><strong><a href="https://github.com/anfroholic/eurosynth">EuroSynth</a></strong>: A fully digital eurorack kitchen-sink synthesizer,
+containing a bank of isolated sound engines. Capable of streaming to an external DAC.</p>
+  </li>
+  <li>
+    <p><strong><a href="https://github.com/SlugTPU/gf180mcu-slugtpu">SlugTPU</a></strong>: An open-source tensor processing unit designed to
+accelerate quantized neural network inference. It features an 8x8 matrix multiply unit, a scalar post processing
+pipeline, 2 KiB SRAM data cache and a 256 byte instruction cache.</p>
+  </li>
+  <li>
+    <p><strong><a href="https://github.com/dhgaddy/microTheia">µTheia</a></strong>: An event-based machine vision ASIC for motion pattern
+classification. Uses EVT2 event streams, which are then decoded, compressed, sorted and computed. Detections can be
+reported through SPI or physical pins.</p>
+  </li>
+</ul>
+
+<h2 id="whats-new-in-run-3">What’s New in Run 3</h2>
+
+<p>Run 3 introduces several improvements based on what we learned from shipping Run 1 &amp; 2.</p>
+
+<ul>
+  <li>
+    <p><strong>Quarter-sized slot</strong>: We’re adding another size option for Run 3. This tiny slot packs a punch with 4.9 mm² of
+silicon starting from just $2,000! Tapeout test structures, analog circuits, or compact digital designs without paying
+for silicon you do not need.</p>
+  </li>
+  <li>
+    <p><strong>Further improvements to the toolchain</strong>: The submission platform has once again been updated to catch more issues,
+earlier, and faster. Bugfixes and stricter DRC mean you can be confident in your tapeout.</p>
+  </li>
+  <li>
+    <p><strong>More examples</strong>: Run 1 contains 29 public designs, and Run 2 adds many more. These are real tapeouts which you can 
+se to study and build upon. Projects vary from simple test structures to Linux-capable SoCs, covering digital, analog,
+and mixed-signal approaches.</p>
+  </li>
+</ul>
+
+<h2 id="schedule">Schedule</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Milestone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1 August 2026</td>
+      <td>Campaign opens on Crowd Supply.</td>
+    </tr>
+    <tr>
+      <td>15 December 2026</td>
+      <td>Slot purchase deadline.</td>
+    </tr>
+    <tr>
+      <td>29 December 2026</td>
+      <td>Deadline to submit GDS files.</td>
+    </tr>
+    <tr>
+      <td>Q2 2027</td>
+      <td>Bare dies and packaged parts shipped to customers.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+
+<h2 id="get-involved-now">Get Involved Now</h2>
+
+<p>You do not need to wait for the campaign to launch to start designing. The tools and PDK are available today:</p>
+
+<ul>
+  <li><strong>Start designing</strong>: Clone the <a href="https://github.com/wafer-space/gf180mcu-project-template">gf180mcu-project-template</a>
+and start experimenting. It includes a complete Nix environment with all the tools you need.</li>
+  <li><strong>Join the community</strong>: The <a href="https://wafer.space/discord">wafer.space Discord</a> is where designers help each other with
+pad rings, DRC issues, floorplanning, and everything in between. It is also the fastest way to get answers from the
+wafer.space team.</li>
+  <li><strong>Study previous designs</strong>: Browse the <a href="https://github.com/wafer-space/ws-run1">29 public designs from Run 1</a> to see what
+fits in the die area and how others approached their layouts. <em>(The Run 2 repository is still being finalised – we’ll
+let you know when it’s ready.)</em></li>
+</ul>
+
+<p>The earlier you start, the more time you have to iterate. The best designs were the ones that started early and took
+advantage of community feedback.</p>]]></content><author><name>Tim &apos;mithro&apos; Ansell</name></author><category term="news" /><category term="gf180mcu" /><category term="run3" /><category term="crowd-supply" /><summary type="html"><![CDATA[GF180MCU Run 3 is coming! Featuring a new slot size and $2/die prices.]]></summary></entry><entry><title type="html">Run 2 Deadline Update and Reminder</title><link href="https://wafer.space/pr-126/news/run2-deadline-update" rel="alternate" type="text/html" title="Run 2 Deadline Update and Reminder" /><published>2026-06-24T12:00:00+00:00</published><updated>2026-06-24T12:00:00+00:00</updated><id>https://wafer.space/pr-126/news/run2-deadline-update</id><content type="html" xml:base="https://wafer.space/pr-126/news/run2-deadline-update"><![CDATA[<p>Hi all, quick announcement about the Run 2 deadline.</p>
+
+<p>Due to delays in getting the submission platform up and running, the deadline for having a clean GDS submitted for Run 2
+has been extended by 2 weeks. Note: the <strong>purchase</strong> deadline has not changed. You have less than a week to purchase a
+slot, if you haven’t already.</p>
+
+<p>The new dates are:</p>
+<ul>
+  <li><strong>Purchasing</strong> on CrowdSupply: 30 June 2026 @ 11:59 PM AoE.</li>
+  <li><strong>GDS in</strong> for Run 2: 14 July 2026 @ 11:59 PM AoE.</li>
+</ul>
+
+<p>The submission platform is up and running right now, those who are submitting a design please confirm access and
+create your project on there as soon as possible.</p>
+
+<p><strong>GDS in</strong> means that the project has successfully passed the precheck on the platform. This is the same precheck
+which is found at <a href="https://github.com/wafer-space/gf180mcu-precheck">github.com/wafer-space/gf180mcu-precheck</a>.</p>
+
+<p>This is a one time extension and will <strong>not</strong> be happening on future runs. Do not expect any other deadline extensions
+this run.</p>
+
+<h2 id="after-you-purchase">After You Purchase</h2>
+
+<p>Once you’ve purchased your slot, you have until 14 July 2026 to create, verify and submit your design. Ensure
+you run the <a href="https://github.com/wafer-space/gf180mcu-precheck">gf180mcu-precheck</a> locally to verify your design before
+submitting. Verify early and often! If you find problems last minute, you may not have the time to fix them.</p>
+
+<p>If you do run into issues or just want to stay in the loop, join the <a href="https://wafer.space/discord">wafer.space Discord</a>
+or connect with us on <a href="https://matrix.to/#/#gf180mcu:fossi-chat.org">Matrix</a>. Many people are finalising their designs,
+and problems you encounter have likely been solved by others who could lend a hand.</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>wafer.space bringing open accessible custom silicon fabrication</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-126/assets/images/news/run2-deadline-update/waferspace-rainbow-open.png" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-126/assets/images/news/run2-deadline-update/waferspace-rainbow-open.png" alt="wafer.space bringing open accessible custom silicon fabrication" />
+        </a>
+    </figure>
+</div>]]></content><author><name>Tim &apos;mithro&apos; Ansell</name></author><category term="news" /><category term="gf180mcu" /><category term="run2" /><category term="announcement" /><category term="deadline" /><summary type="html"><![CDATA[Run 2 is finally here with major improvements and early-bird pricing.]]></summary></entry></feed>
