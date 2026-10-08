@@ -1,0 +1,749 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta Tags-->
+  <meta charset="utf-8" />
+  <meta name="git-commit" content="c9a4f1529f24655e5f8771c7e960dda9cca039fe">
+<!-- Primary Meta Tags -->
+<title> wafer.space x Tiny Tapeout - Hackaday 2026 Collaboration </title>
+<meta name="title" content=" wafer.space x Tiny Tapeout - Hackaday 2026 Collaboration ">
+<meta name="description" content="
+         Budget silicon manufacturing.">
+
+  <!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wafer.space/pr-128/news/ws-tt-hackaday-collab-2026">
+<meta property="og:title" content=" wafer.space x Tiny Tapeout - Hackaday 2026 Collaboration ">
+<meta property="og:description" content="
+    Budget silicon manufacturing.">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://wafer.space/pr-128/news/ws-tt-hackaday-collab-2026">
+<meta property="twitter:title" content=" wafer.space x Tiny Tapeout - Hackaday 2026 Collaboration ">
+<meta property="twitter:description" content="
+    Budget silicon manufacturing.">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Dark Mode Init (Prevent Flash) -->
+  <!-- Dark Mode Initialization - Prevent Flash -->
+<script>
+  // This runs immediately to prevent flash of light mode
+  (function() {
+    // Check for saved theme preference first
+    var savedTheme = localStorage.getItem('theme');
+    var theme;
+    
+    if (savedTheme) {
+      // User has explicitly chosen a theme
+      theme = savedTheme;
+    } else {
+      // No saved preference, check system preference
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        theme = 'dark';
+      } else {
+        theme = 'light';
+      }
+    }
+    
+    // Apply theme immediately to html element
+    document.documentElement.setAttribute('data-theme', theme);
+    
+    // Also add a class to body when it's available
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark-mode-init');
+    }
+  })();
+</script>
+<style>
+  /* Critical dark mode styles to prevent flash */
+  [data-theme="dark"] body,
+  .dark-mode-init body {
+    background-color: #1a1a1a !important;
+    color: #e0e0e0;
+  }
+  
+  [data-theme="dark"],
+  .dark-mode-init {
+    background-color: #1a1a1a !important;
+  }
+</style>
+  <!-- Stylesheets-->
+  <link rel="shortcut icon" href="/pr-128/favicon.png" />
+<link rel="stylesheet" type="text/css" href="/pr-128/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/pr-128/assets/css/plugins.css" />
+<link rel="stylesheet" type="text/css" href="/pr-128/assets/revolution/css/settings.css" />
+<link rel="stylesheet" type="text/css" href="/pr-128/assets/revolution/css/layers.css" />
+<link rel="stylesheet" type="text/css" href="/pr-128/assets/revolution/css/navigation.css" />
+<link rel="stylesheet" type="text/css" href="/pr-128/assets/type/type.css" />
+<link rel="stylesheet" type="text/css" href="/pr-128/assets/css/style.css" />
+<!-- Global Color Scheme for all Pages-->
+
+
+<link rel="stylesheet" type="text/css" href="/pr-128/assets/css/color/sky.css">
+
+
+<!-- Dark Mode Support -->
+<link rel="stylesheet" type="text/css" href="/pr-128/assets/css/color/dark.css">
+<!-- Global Font Scheme font-->
+
+<!-- Site-specific custom CSS (if exists) -->
+
+
+  
+
+  
+
+  
+
+  
+<link rel="stylesheet" type="text/css" href="/pr-128/assets/css/custom.css">
+    
+
+  <!-- Google Analytics-->
+  
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1JB9VZY864"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1JB9VZY864');
+</script>
+
+
+
+</head>
+<body >
+  <div class="content-wrapper">
+    <!--  Nav Name : Wide Header -->
+<nav
+  class="navbar wide  absolute transparent dark-wrapper inverse-text navbar-hover-opacity navbar-expand-lg nav-uppercase">
+  <div class="container-fluid flex-row justify-content-center">
+    <div class="navbar-brand" data-default-logo="black">
+      <!-- White Logo -->
+      <a href="/pr-128/"><img
+        src="/pr-128/assets/images/logo-light.webp"
+        srcset="/pr-128/assets/images/logo-light.webp 1x, /pr-128/assets/images/logo-light@2x.webp 2x"
+        class="logo-light d-none"
+        alt="wafer.space - Budget silicon manufacturing" /></a>
+
+      <!-- Black Logo -->
+      <a href="/pr-128/"><img
+        src="/pr-128/assets/images/logo.webp"
+        srcset="/pr-128/assets/images/logo.webp 1x, /pr-128/assets/images/logo@2x.webp 2x"
+        class="logo-dark "
+        alt="wafer.space - Budget silicon manufacturing" /></a>
+    </div>
+    <div class="navbar-other ms-auto order-lg-3">
+      <ul class="navbar-nav flex-row align-items-center" data-sm-skip="true">
+        <li class="nav-item">
+    <div class="navbar-hamburger d-lg-none d-xl-none ms-auto">
+        <button class="hamburger animate plain" data-bs-toggle="offcanvas-nav"><span></span></button>
+    </div>
+</li>
+
+      
+
+        
+
+      
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-other -->
+    <div class="navbar-collapse offcanvas-nav">
+      <div class="offcanvas-header d-lg-none d-xl-none">
+        <a href="/pr-128/">
+          <img src="/pr-128/assets/images/logo-light.webp"
+            srcset="/pr-128/assets/images/logo-light.webp 1x, /pr-128/assets/images/logo-light@2x.webp 2x"
+            alt="wafer.space - Budget silicon manufacturing" /></a>
+        <button class="plain offcanvas-close offcanvas-nav-close"><i class="jam jam-close"></i></button>
+      </div>
+      <ul
+        class="navbar-nav mx-auto" data-sm-skip-collapsible-behavior="true">
+        
+        
+        
+          <li class="nav-item">
+          <a class="nav-link" href="/pr-128/">Home</a>
+        </li>
+        
+        
+        
+        
+          <li class="nav-item">
+          <a class="nav-link" href="/pr-128/about.html">About</a>
+        </li>
+        
+        
+        
+        
+          <li class="nav-item">
+          <a class="nav-link" href="/pr-128/price.html">Pricing</a>
+        </li>
+        
+        
+        
+        
+          <li class="nav-item">
+          <a class="nav-link" href="/pr-128/technology.html">Technology</a>
+        </li>
+        
+        
+        
+        
+          <li class="nav-item">
+          <a class="nav-link" href="/pr-128/design-help.html">Design Help</a>
+        </li>
+        
+        
+        
+        
+          <li class="nav-item">
+          <a class="nav-link" href="/pr-128/news">News</a>
+        </li>
+        
+        
+        
+        
+          <li class="nav-item">
+          <a class="nav-link" href="/pr-128/faq.html">FAQ</a>
+        </li>
+        
+        
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+<!-- /.navbar -->
+<div class="offcanvas-info inverse-text">
+    <button class="plain offcanvas-close offcanvas-info-close"><i class="jam jam-close"></i></button>
+    <a href="/pr-128/">
+      <img src="/pr-128/assets/images/logo-light.webp"
+        srcset="/pr-128/assets/images/logo-light.webp 1x, /pr-128/assets/images/logo-light@2x.webp 2x"
+        class=" logo-light "
+        alt="wafer.space - Budget silicon manufacturing" />
+    </a>
+    <div class="space30"></div>
+    <p>Budget silicon manufacturing.</p>
+    <div class="space20"></div>
+    <div class="widget">
+      <h5 class="widget-title">Contact Info</h5>
+      <address> 143&nbsp;Cecil&nbsp;Street,<br />#17&#8209;04,&nbsp;GB&nbsp;Building,<br />Singapore 069542<div class="space20"></div>
+        <a href="mailto:info@wafer.space" class="nocolor"></a><br />
+        
+      </address>
+    </div>
+    <!-- /.widget -->
+    <div class="widget">
+      
+      <h3 class="widget-title">More</h3>
+      
+      <ul class="list-unstyled">
+        
+        <li><a href="/pr-128/" class="nocolor">Home</a></li>
+        
+        <li><a href="/pr-128/about.html" class="nocolor">About</a></li>
+        
+        <li><a href="/pr-128/price.html" class="nocolor">Pricing</a></li>
+        
+        <li><a href="/pr-128/technology.html" class="nocolor">Technology</a></li>
+        
+        <li><a href="/pr-128/design-help.html" class="nocolor">Design Help</a></li>
+        
+        <li><a href="/pr-128/news" class="nocolor">News</a></li>
+        
+        <li><a href="/pr-128/faq.html" class="nocolor">FAQ</a></li>
+        
+      </ul>
+    </div>
+    <!-- /.widget -->
+    <div class="widget">
+      
+      <ul class="social social-mute social-s ms-auto">
+        
+      </ul>
+    </div>
+    <!-- /.widget -->
+  </div>
+  <!-- /.offcanvas-info -->
+
+
+<div class="wrapper light-wrapper">
+  <div class="container inner pt-80">
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1 ">
+        <div class="blog classic-view boxed">
+          <div class="post mb-0">
+            <div class="box bg-white shadow">
+              
+              <figure class="rounded text-center">
+                <img src="/pr-128/assets/images/news/ws-tt-hackaday-collab-2026/epoxy-ready-tray.jpg" alt="wafer.space x Tiny Tapeout - Hackaday 2026 Collaboration" />
+              </figure>
+              
+              <div class="space40"></div>
+              <div class="post-content">
+                
+                <div class="category text-center">
+                  
+                  <a href="/pr-128/category/news" class="badge rounded-pill bg-purple">news</a>
+                  
+                </div>
+                
+                <h2 class="post-title text-center">wafer.space x Tiny Tapeout - Hackaday 2026 Collaboration</h2>
+                <div class="meta text-center">
+                  
+                  <span class="date"><i class="jam jam-clock"></i>14 Oct 2026</span>
+                  
+                  
+                  
+                  
+                  
+                  
+                </div>
+                <h1 id="waferspace-x-tiny-tapeout---hackaday-2026-collaboration">wafer.space x Tiny Tapeout - Hackaday 2026 Collaboration</h1>
+
+<p>Earlier this year the <a href="https://wafer.space">wafer.space</a> team attended Hackaday 2026, and if you did too, then your
+swag bag had a bit of open source silicon inside!</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>A close-up image of the TTGF0p2 chip breakout boards</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-128/assets/images/news/ws-tt-hackaday-collab-2026/closeup-multiple.jpg" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-128/assets/images/news/ws-tt-hackaday-collab-2026/closeup-multiple.jpg" alt="A close-up image of the TTGF0p2 chip breakout boards" />
+        </a>
+    </figure>
+</div>
+
+<p>Made in collaboration with <a href="https://tinytapeout.com">Tiny Tapeout</a>, these credit card sized breakout boards contain
+an exposed <a href="https://tinytapeout.com/chips/ttgf0p2/">TTGF0p2</a> die. This is an experimental shuttle run by Tiny Tapeout,
+containing 52 unique open source designs, including a <a href="https://tinytapeout.com/chips/ttgf0p2/tt_um_dlmiles_ringosc_5inv">ring oscillator</a>,
+<a href="https://tinytapeout.com/chips/ttgf0p2/tt_um_rejunity_z80">Zilog Z80 replica</a>, <a href="https://tinytapeout.com/chips/ttgf0p2/tt_um_MichaelBell_tinyQV">TinyQV (a RISC-V processor)</a>
+and many visual VGA demos.</p>
+
+<p>Have you tried any of these projects yet? Let us know in the <a href="https://wafer.space/discord">wafer.space Discord</a> and in
+the <a href="https://tinytapeout.com/discord">Tiny Tapeout Discord</a>!</p>
+
+<p>Let’s take a look at how they were made.</p>
+
+<h2 id="behind-the-scenes">Behind the Scenes</h2>
+
+<p>Tiny Tapeout opened the TTGF0p2 shuttle back in November 2026, where users could submit designs for free onto the shuttle
+due to its experimental nature. It was only available for 18 days, but it filled up quickly. Once the deadline arrived,
+TTGF0p2 was submitted onto Run #1 as <code class="language-plaintext highlighter-rouge">TTPG</code> and <code class="language-plaintext highlighter-rouge">TTP2</code>.</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>TTP2 dies ready for processing</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-128/assets/images/news/ws-tt-hackaday-collab-2026/ttp2-dies.jpg" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-128/assets/images/news/ws-tt-hackaday-collab-2026/ttp2-dies.jpg" alt="TTP2 dies ready for processing" />
+        </a>
+    </figure>
+</div>
+
+<p>Whilst Run #1 was being manufactured, the Tiny Tapeout team got to work on designing a colorful breakout board. Mounted
+front and center is the die itself, covered with a glob of transparent epoxy. With a good enough eye (or a decent
+microscope), you should be able to make out the tiny wire bonds that physically connect the die to the pins around
+the edge of the breakout board. Surrounding the die is a render of the physical chip layout, where you can make out
+each individual project (in green blocks) and the padring (in purple).</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>Blank breakout boards</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-128/assets/images/news/ws-tt-hackaday-collab-2026/blank-breakouts.jpg" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-128/assets/images/news/ws-tt-hackaday-collab-2026/blank-breakouts.jpg" alt="Blank breakout boards" />
+        </a>
+    </figure>
+</div>
+
+<p>The die is epoxied to the breakout board, and then mounted on a metal jig. This jig will help hold it in place while
+the wire bonds are performed.</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>A breakout board with a die, mounted in a metal jig</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-128/assets/images/news/ws-tt-hackaday-collab-2026/mounted-breakout.jpg" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-128/assets/images/news/ws-tt-hackaday-collab-2026/mounted-breakout.jpg" alt="A breakout board with a die, mounted in a metal jig" />
+        </a>
+    </figure>
+</div>
+
+<p>The wire bonds are then programmed into the machine by the operator following a specification.</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>The operator programming the wire bond locations, the Tiny Tapeout logo on the die is visible on the screen</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-128/assets/images/news/ws-tt-hackaday-collab-2026/wirebond-wide-tt.jpg" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-128/assets/images/news/ws-tt-hackaday-collab-2026/wirebond-wide-tt.jpg" alt="The operator programming the wire bond locations, the Tiny Tapeout logo on the die is visible on the screen" />
+        </a>
+    </figure>
+</div>
+
+<p><a href="https://wafer.space">wafer.space</a> dies contain some area in the corners where artwork can be placed – for this die,
+both the Tiny Tapeout and <a href="https://wafer.space">wafer.space</a> logos are visible.</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+  
+  <p class="text-center text-muted mb-10"><small>wafer.space and Tiny Tapeout logos visible on the die through a microscope</small></p>
+  
+  <div class="tiles tiles-s">
+    <div class="items row">
+      
+      
+        
+          <div class="item col-md-6">
+        
+            <figure class="overlay overlay1 rounded">
+              <a href="/pr-128/assets/images/news/ws-tt-hackaday-collab-2026/wirebond-close-ws.jpg" class="lightbox">
+                <span class="bg"></span>
+                <img src="/pr-128/assets/images/news/ws-tt-hackaday-collab-2026/wirebond-close-ws.jpg" alt="wafer.space logo" />
+              </a>
+              
+            </figure>
+          </div>
+      
+        
+          <div class="item col-md-6">
+        
+            <figure class="overlay overlay1 rounded">
+              <a href="/pr-128/assets/images/news/ws-tt-hackaday-collab-2026/wirebond-close-tt.jpg" class="lightbox">
+                <span class="bg"></span>
+                <img src="/pr-128/assets/images/news/ws-tt-hackaday-collab-2026/wirebond-close-tt.jpg" alt="Tiny Tapeout logo" />
+              </a>
+              
+            </figure>
+          </div>
+      
+    </div>
+  </div>
+</div>
+
+<p>After wire bonding, the breakout boards are carefully put aside for the next step – covering the die and wire bonds
+with a protective transparent epoxy. But not before some pictures!</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>Wide shot of the breakout board and its die</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-128/assets/images/news/ws-tt-hackaday-collab-2026/wirebond-done-wide.jpg" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-128/assets/images/news/ws-tt-hackaday-collab-2026/wirebond-done-wide.jpg" alt="Wide shot of the breakout board and its die" />
+        </a>
+    </figure>
+</div>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+  
+  <p class="text-center text-muted mb-10"><small>Close-up shots of the die -- note how delicate and thin the wire bonds are</small></p>
+  
+  <div class="tiles tiles-s">
+    <div class="items row">
+      
+      
+        
+          <div class="item col-md-6">
+        
+            <figure class="overlay overlay1 rounded">
+              <a href="/pr-128/assets/images/news/ws-tt-hackaday-collab-2026/wirebond-done-med.jpg" class="lightbox">
+                <span class="bg"></span>
+                <img src="/pr-128/assets/images/news/ws-tt-hackaday-collab-2026/wirebond-done-med.jpg" alt="Closeup shot of the bonded die on the PCB" />
+              </a>
+              
+            </figure>
+          </div>
+      
+        
+          <div class="item col-md-6">
+        
+            <figure class="overlay overlay1 rounded">
+              <a href="/pr-128/assets/images/news/ws-tt-hackaday-collab-2026/wirebond-done-close.jpg" class="lightbox">
+                <span class="bg"></span>
+                <img src="/pr-128/assets/images/news/ws-tt-hackaday-collab-2026/wirebond-done-close.jpg" alt="Even closer shot, note how delicate and thin the wire bonds are" />
+              </a>
+              
+            </figure>
+          </div>
+      
+    </div>
+  </div>
+</div>
+
+<p>Epoxy is mixed and then poured into a syringe. It will be manually applied for every board.</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>Breakout boards sitting on a tray ready for the epoxy treatment</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-128/assets/images/news/ws-tt-hackaday-collab-2026/epoxy-ready-tray.jpg" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-128/assets/images/news/ws-tt-hackaday-collab-2026/epoxy-ready-tray.jpg" alt="Breakout boards sitting on a tray ready for the epoxy treatment" />
+        </a>
+    </figure>
+</div>
+
+<!--
+TODO video, see CS
+-->
+
+<p>These are then moved into an oven for curing, and a vacuum is pulled to ensure that the epoxy is properly degassed.</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>A finished batch of breakout boards, destined for Hackaday 2026</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-128/assets/images/news/ws-tt-hackaday-collab-2026/finished-tray.jpg" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-128/assets/images/news/ws-tt-hackaday-collab-2026/finished-tray.jpg" alt="A finished batch of breakout boards, destined for Hackaday 2026" />
+        </a>
+    </figure>
+</div>
+
+<p>Rinse and repeat a few more times, and eventually you’ll have enough to give out one to each attendee of Hackaday 2026.</p>
+
+<p>The process here is quite similar to what we already do for our chip-on-board packaging option, but you should check
+out <a href="/pr-128/news/chip-on-board-progress">our update</a> on it for more close-ups!</p>
+
+<h2 id="get-started-today">Get Started Today</h2>
+<p>Run #3 is in full swing at the moment, so don’t miss your opportunity to tape out. You’ve got until <strong>9 December 2026</strong>
+to purchase a slot, and the submission deadline a week after on <strong>16 December 2026</strong>.</p>
+
+<p>Read more on our <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-3">Crowd Supply</a> page, jump in with our
+<a href="https://github.com/wafer-space/gf180mcu-project-template">project template</a> and join our
+<a href="https://wafer.space/discord">community Discord</a> to chat to other designers and get help.</p>
+
+                <div class="clearfix"></div>
+                <div class="space40"></div>
+                <div class="space10"></div>
+                <div class="d-lg-flex justify-content-between align-items-center meta-footer">
+                  <ul class="list-unstyled tag-list">
+                    
+                    
+                    
+                    </li>
+                    
+                    
+                    <li data-sort="0002">
+                      <a class="btn btn-s" href="/pr-128/tag/gf180mcu/">gf180mcu</a>
+                    </li>
+                    
+                    
+                    <li data-sort="0028">
+                      <a class="btn btn-s" href="/pr-128/tag/tiny-tapeout/">tiny-tapeout</a>
+                    
+                  </ul>
+                  <div class="space20 d-lg-none"></div>
+                  <div class="d-flex align-items-center">
+                    <p class="pr-20 mb-0"><strong>Share on:</strong></p>
+<ul class="social social-mute">
+    <!-- Removed Facebook and Twitter sharing due to verification issues -->
+    <li>
+    <a  href="http://pinterest.com/pin/create/button/?url=&media=https://wafer.space/assets/images/news/ws-tt-hackaday-collab-2026/epoxy-ready-tray.jpg&description=" onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" title="Share on Pinterest" >
+        <i class="jam jam-pinterest"></i>
+    </a>
+    </li>
+</ul>
+                  </div>
+                </div>
+              </div>
+              <!-- /.post-content -->
+            </div>
+          </div>
+          <!-- /.post -->
+          
+          
+
+
+
+
+          
+        </div>
+        <!-- /.blog -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /.wrapper -->
+
+
+
+<div class="wrapper gray-wrapper">
+  <div class="container inner">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div id="disqus_thread"></div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://wafer.space/pr-128/news/ws-tt-hackaday-collab-2026';  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = '/news/ws-tt-hackaday-collab-2026'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://https-snowlake-netlify-app.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script id="dsq-count-scr" src="//https-snowlake-netlify-app.disqus.com/count.js" async></script>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /.wrapper -->
+</div>
+<!-- footer with details v1 -->
+<footer class=" dark-wrapper inverse-text ">
+  <div class="container inner">
+    <div class="row">
+      <div class="col-md-12 col-lg-3 text-center text-lg-start">
+        <div class="widget">
+          <a href="https://wafer.space">
+            
+            
+              <img src="/pr-128/assets/images/logo-light.webp" srcset="/pr-128/assets/images/logo-light.webp 1x, /pr-128/assets/images/logo-light@2x.webp 2x" alt="wafer.space - Budget silicon manufacturing" />
+            
+          </a>
+          
+          <div class="space20"></div>
+          <p>Budget silicon manufacturing.</p>
+          
+        </div>
+        <!-- /.widget -->
+      </div>
+      <!-- /column -->
+      <div class="space30 d-lg-none d-xl-none"></div>
+      <div class="col-6 col-md-3 col-lg-2 offset-lg-1">
+        
+        <div class="widget">
+          
+          <ul class="list-unstyled mb-0">
+            
+          </ul>
+        </div>
+        <!-- /.widget -->
+      </div>
+      <!-- /column -->
+      <div class="col-6 col-md-3 col-lg-2">
+        
+        <div class="widget">
+          
+           <h5 class="widget-title">More</h5>
+          
+          <ul class="list-unstyled mb-0">
+            
+            <li><a href="/pr-128/">Home</a></li>
+            
+            <li><a href="/pr-128/about.html">About</a></li>
+            
+            <li><a href="/pr-128/price.html">Pricing</a></li>
+            
+            <li><a href="/pr-128/technology.html">Technology</a></li>
+            
+            <li><a href="/pr-128/design-help.html">Design Help</a></li>
+            
+            <li><a href="/pr-128/news">News</a></li>
+            
+            <li><a href="/pr-128/faq.html">FAQ</a></li>
+            
+          </ul>
+        </div>
+        <!-- /.widget -->
+      </div>
+      <!-- /column -->
+      <div class="col-6 col-md-3 col-lg-2">
+        
+        <div class="widget">
+          
+          <ul class="list-unstyled mb-0">
+            
+          </ul>
+        </div>
+        <!-- /.widget -->
+      </div>
+      <!-- /column -->
+      <div class="col-6 col-md-3 col-lg-2">
+        <div class="widget">
+          <h5 class="widget-title">Contact</h5>
+          
+          <address>143&nbsp;Cecil&nbsp;Street,<br />#17&#8209;04,&nbsp;GB&nbsp;Building,<br />Singapore 069542</address>
+          
+          <a href="mailto:info@wafer.space">info@wafer.space</a><br />
+           
+        </div>
+        <!-- /.widget -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+  <div class="container inner pt-0 pb-40 d-flex align-items-center">
+    <p class="mb-0 mr-auto">© 2025 Wafer Space PTE. LTD. All rights reserved.</p>
+    <ul class="social social-mute social-s ms-auto">
+      
+    </ul>
+  </div>
+</footer>
+
+
+  </div>
+  <!-- Site Scripts-->
+  <script src="/pr-128/assets/js/jquery.min.js"></script>
+<script src="/pr-128/assets/js/popper.min.js"></script>
+<script src="/pr-128/assets/js/bootstrap.min.js"></script>
+<script src="/pr-128/assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+<script src="/pr-128/assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+<script src="/pr-128/assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+<script src="/pr-128/assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+<script src="/pr-128/assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script src="/pr-128/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="/pr-128/assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+<script src="/pr-128/assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="/pr-128/assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="/pr-128/assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="/pr-128/assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+<script src="/pr-128/assets/js/plugins.js"></script>
+<script src="/pr-128/assets/js/simple-jekyll-search.min.js"></script>
+<script>
+  // Pass baseurl to JavaScript for search configuration
+  window.siteBaseurl = '/pr-128';
+</script>
+<script src="/pr-128/assets/js/scripts.js"></script>
+
+
+</body>
+<!-- Generated from git commit: c9a4f1529f24655e5f8771c7e960dda9cca039fe (c9a4f152) -->
+</html>

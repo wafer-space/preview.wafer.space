@@ -1,0 +1,762 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta Tags-->
+  <meta charset="utf-8" />
+  <meta name="git-commit" content="c9a4f1529f24655e5f8771c7e960dda9cca039fe">
+<!-- Primary Meta Tags -->
+<title> SRAMs on Open Source Silicon </title>
+<meta name="title" content=" SRAMs on Open Source Silicon ">
+<meta name="description" content="
+         Budget silicon manufacturing.">
+
+  <!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wafer.space/pr-128/news/srams-on-open-source-silicon">
+<meta property="og:title" content=" SRAMs on Open Source Silicon ">
+<meta property="og:description" content="
+    Budget silicon manufacturing.">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://wafer.space/pr-128/news/srams-on-open-source-silicon">
+<meta property="twitter:title" content=" SRAMs on Open Source Silicon ">
+<meta property="twitter:description" content="
+    Budget silicon manufacturing.">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Dark Mode Init (Prevent Flash) -->
+  <!-- Dark Mode Initialization - Prevent Flash -->
+<script>
+  // This runs immediately to prevent flash of light mode
+  (function() {
+    // Check for saved theme preference first
+    var savedTheme = localStorage.getItem('theme');
+    var theme;
+    
+    if (savedTheme) {
+      // User has explicitly chosen a theme
+      theme = savedTheme;
+    } else {
+      // No saved preference, check system preference
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        theme = 'dark';
+      } else {
+        theme = 'light';
+      }
+    }
+    
+    // Apply theme immediately to html element
+    document.documentElement.setAttribute('data-theme', theme);
+    
+    // Also add a class to body when it's available
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark-mode-init');
+    }
+  })();
+</script>
+<style>
+  /* Critical dark mode styles to prevent flash */
+  [data-theme="dark"] body,
+  .dark-mode-init body {
+    background-color: #1a1a1a !important;
+    color: #e0e0e0;
+  }
+  
+  [data-theme="dark"],
+  .dark-mode-init {
+    background-color: #1a1a1a !important;
+  }
+</style>
+  <!-- Stylesheets-->
+  <link rel="shortcut icon" href="/pr-128/favicon.png" />
+<link rel="stylesheet" type="text/css" href="/pr-128/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/pr-128/assets/css/plugins.css" />
+<link rel="stylesheet" type="text/css" href="/pr-128/assets/revolution/css/settings.css" />
+<link rel="stylesheet" type="text/css" href="/pr-128/assets/revolution/css/layers.css" />
+<link rel="stylesheet" type="text/css" href="/pr-128/assets/revolution/css/navigation.css" />
+<link rel="stylesheet" type="text/css" href="/pr-128/assets/type/type.css" />
+<link rel="stylesheet" type="text/css" href="/pr-128/assets/css/style.css" />
+<!-- Global Color Scheme for all Pages-->
+
+
+<link rel="stylesheet" type="text/css" href="/pr-128/assets/css/color/sky.css">
+
+
+<!-- Dark Mode Support -->
+<link rel="stylesheet" type="text/css" href="/pr-128/assets/css/color/dark.css">
+<!-- Global Font Scheme font-->
+
+<!-- Site-specific custom CSS (if exists) -->
+
+
+  
+
+  
+
+  
+
+  
+<link rel="stylesheet" type="text/css" href="/pr-128/assets/css/custom.css">
+    
+
+  <!-- Google Analytics-->
+  
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1JB9VZY864"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1JB9VZY864');
+</script>
+
+
+
+</head>
+<body >
+  <div class="content-wrapper">
+    <!--  Nav Name : Wide Header -->
+<nav
+  class="navbar wide  absolute transparent dark-wrapper inverse-text navbar-hover-opacity navbar-expand-lg nav-uppercase">
+  <div class="container-fluid flex-row justify-content-center">
+    <div class="navbar-brand" data-default-logo="black">
+      <!-- White Logo -->
+      <a href="/pr-128/"><img
+        src="/pr-128/assets/images/logo-light.webp"
+        srcset="/pr-128/assets/images/logo-light.webp 1x, /pr-128/assets/images/logo-light@2x.webp 2x"
+        class="logo-light d-none"
+        alt="wafer.space - Budget silicon manufacturing" /></a>
+
+      <!-- Black Logo -->
+      <a href="/pr-128/"><img
+        src="/pr-128/assets/images/logo.webp"
+        srcset="/pr-128/assets/images/logo.webp 1x, /pr-128/assets/images/logo@2x.webp 2x"
+        class="logo-dark "
+        alt="wafer.space - Budget silicon manufacturing" /></a>
+    </div>
+    <div class="navbar-other ms-auto order-lg-3">
+      <ul class="navbar-nav flex-row align-items-center" data-sm-skip="true">
+        <li class="nav-item">
+    <div class="navbar-hamburger d-lg-none d-xl-none ms-auto">
+        <button class="hamburger animate plain" data-bs-toggle="offcanvas-nav"><span></span></button>
+    </div>
+</li>
+
+      
+
+        
+
+      
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-other -->
+    <div class="navbar-collapse offcanvas-nav">
+      <div class="offcanvas-header d-lg-none d-xl-none">
+        <a href="/pr-128/">
+          <img src="/pr-128/assets/images/logo-light.webp"
+            srcset="/pr-128/assets/images/logo-light.webp 1x, /pr-128/assets/images/logo-light@2x.webp 2x"
+            alt="wafer.space - Budget silicon manufacturing" /></a>
+        <button class="plain offcanvas-close offcanvas-nav-close"><i class="jam jam-close"></i></button>
+      </div>
+      <ul
+        class="navbar-nav mx-auto" data-sm-skip-collapsible-behavior="true">
+        
+        
+        
+          <li class="nav-item">
+          <a class="nav-link" href="/pr-128/">Home</a>
+        </li>
+        
+        
+        
+        
+          <li class="nav-item">
+          <a class="nav-link" href="/pr-128/about.html">About</a>
+        </li>
+        
+        
+        
+        
+          <li class="nav-item">
+          <a class="nav-link" href="/pr-128/price.html">Pricing</a>
+        </li>
+        
+        
+        
+        
+          <li class="nav-item">
+          <a class="nav-link" href="/pr-128/technology.html">Technology</a>
+        </li>
+        
+        
+        
+        
+          <li class="nav-item">
+          <a class="nav-link" href="/pr-128/design-help.html">Design Help</a>
+        </li>
+        
+        
+        
+        
+          <li class="nav-item">
+          <a class="nav-link" href="/pr-128/news">News</a>
+        </li>
+        
+        
+        
+        
+          <li class="nav-item">
+          <a class="nav-link" href="/pr-128/faq.html">FAQ</a>
+        </li>
+        
+        
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+<!-- /.navbar -->
+<div class="offcanvas-info inverse-text">
+    <button class="plain offcanvas-close offcanvas-info-close"><i class="jam jam-close"></i></button>
+    <a href="/pr-128/">
+      <img src="/pr-128/assets/images/logo-light.webp"
+        srcset="/pr-128/assets/images/logo-light.webp 1x, /pr-128/assets/images/logo-light@2x.webp 2x"
+        class=" logo-light "
+        alt="wafer.space - Budget silicon manufacturing" />
+    </a>
+    <div class="space30"></div>
+    <p>Budget silicon manufacturing.</p>
+    <div class="space20"></div>
+    <div class="widget">
+      <h5 class="widget-title">Contact Info</h5>
+      <address> 143&nbsp;Cecil&nbsp;Street,<br />#17&#8209;04,&nbsp;GB&nbsp;Building,<br />Singapore 069542<div class="space20"></div>
+        <a href="mailto:info@wafer.space" class="nocolor"></a><br />
+        
+      </address>
+    </div>
+    <!-- /.widget -->
+    <div class="widget">
+      
+      <h3 class="widget-title">More</h3>
+      
+      <ul class="list-unstyled">
+        
+        <li><a href="/pr-128/" class="nocolor">Home</a></li>
+        
+        <li><a href="/pr-128/about.html" class="nocolor">About</a></li>
+        
+        <li><a href="/pr-128/price.html" class="nocolor">Pricing</a></li>
+        
+        <li><a href="/pr-128/technology.html" class="nocolor">Technology</a></li>
+        
+        <li><a href="/pr-128/design-help.html" class="nocolor">Design Help</a></li>
+        
+        <li><a href="/pr-128/news" class="nocolor">News</a></li>
+        
+        <li><a href="/pr-128/faq.html" class="nocolor">FAQ</a></li>
+        
+      </ul>
+    </div>
+    <!-- /.widget -->
+    <div class="widget">
+      
+      <ul class="social social-mute social-s ms-auto">
+        
+      </ul>
+    </div>
+    <!-- /.widget -->
+  </div>
+  <!-- /.offcanvas-info -->
+
+
+<div class="wrapper light-wrapper">
+  <div class="container inner pt-80">
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1 ">
+        <div class="blog classic-view boxed">
+          <div class="post mb-0">
+            <div class="box bg-white shadow">
+              
+              <figure class="rounded text-center">
+                <img src="/pr-128/assets/images/news/3v3-sram/sram-3v3-render.png" alt="SRAMs on Open Source Silicon" />
+              </figure>
+              
+              <div class="space40"></div>
+              <div class="post-content">
+                
+                <div class="category text-center">
+                  
+                  <a href="/pr-128/category/news" class="badge rounded-pill bg-purple">news</a>
+                  
+                </div>
+                
+                <h2 class="post-title text-center">SRAMs on Open Source Silicon</h2>
+                <div class="meta text-center">
+                  
+                  <span class="date"><i class="jam jam-clock"></i>07 Oct 2026</span>
+                  
+                  
+                  
+                  
+                  
+                  
+                </div>
+                <h1 id="srams-on-open-source-silicon">SRAMs on Open Source Silicon</h1>
+
+<p>In November 2022, three months after the GF180MCU PDK was made open source, someone on the
+<a href="https://web.open-source-silicon.dev/t/5096040/holy-cow-these-gf180-sram-are-huge-compared-to-the-sky130-on">open source silicon forum posted a complaint</a>:</p>
+
+<blockquote>
+  <p>Holy cow, these gf180 SRAM are huge compared to the sky130 ones.</p>
+</blockquote>
+
+<p>They weren’t kidding: GF180MCU’s 256x8 SRAM was ~4x bigger than SKY130’s 256x32 and manages to store less. It’s no good for
+people with limited silicon area to build in.</p>
+
+<p>Tim Edwards – the writer of Magic and Netgen, core components of the modern open source ASIC flow – replied:</p>
+
+<blockquote>
+  <p>Note that this is a 5V SRAM. All of our IP for GF180MCU is for 5V operation.</p>
+</blockquote>
+
+<p>And that was it… for a while at least. Luckily, there’s been some advancements recently. So let’s skip a few years
+(and a defunct company) ahead to present day and see what has changed.</p>
+
+<h2 id="existing-options">Existing Options</h2>
+<p>The only SRAMs available for the GF180MCU process were Global Foundries’ own 5 V macros - they were large and severely
+impeded the space you had left for your project, but what else could you do? After the shutting down of eFabless and
+with Google stopping their GFMPW runs, there was no incentive to improve them - why bother if they wouldn’t get taped
+out? Now with <a href="https://wafer.space">wafer.space</a>, that changes – GF180MCU is back on the table.</p>
+
+<p>Edwards knew that the GF180MCU PDK desperately needed a 3.3 V library, but with <a href="/pr-128/news/a-need-for-speed-tholins-own-standard-cell-library">Tholin already working on a cell library</a>,
+he turned his attention back to the very thing diagnosed back in 2022.</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>Render of Tim's 1 KiB SRAM Macro (via <a href="https://agentdavo.github.io/GDS3D/">agentdavo.github.io/GDS3D/</a>)</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-128/assets/images/news/3v3-sram/sram-3v3-render.png" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-128/assets/images/news/3v3-sram/sram-3v3-render.png" alt="Render of Tim's 1 KiB SRAM Macro (via &lt;a href='https://agentdavo.github.io/GDS3D/'&gt;agentdavo.github.io/GDS3D/&lt;/a&gt;)" />
+        </a>
+    </figure>
+</div>
+
+<h2 id="shrinking-it-down">Shrinking It Down</h2>
+<p>Set on creating a 3.3 V capable SRAM, Edwards began by looking at the 2 KiB (256 word) macro for arbitrary reasons. He describes his
+approach as a “hack”, but it’s a pretty clever approach to reusing components that were available:</p>
+
+<ol>
+  <li>Design a core cell for the 3.3 V devices based on the GF-provided SRAM rules (that are publicly available)</li>
+  <li>Determine the size difference between a 3.3 V core cell to the existing 5 V core cell</li>
+  <li>Import the 5 V SRAM with the scaling determined by the previous step - the X and Y scales were different, making it slightly tricky</li>
+  <li>Re-import the individual devices scaled by the width/length difference between minimum-length 5 V devices and minimum-length 3.3 V devices</li>
+  <li>Clean up the resulting mess</li>
+</ol>
+
+<p>After a week of hard work, he had his first layout ready, and the process nailed down for porting the rest of the macros.
+For the others, he manipulated the height of the block and added in extra rows where necessary. Original netlists were
+converted using a quick Python script and cleaned up by hand. He even created XSchem schematics which had been missing
+in the PDK, making it a very valuable addition to the library.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Provider</th>
+      <th style="text-align: left">Macro</th>
+      <th style="text-align: left">Voltage</th>
+      <th style="text-align: left">Capacity (KiB)</th>
+      <th style="text-align: left">Area (µm²)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">GlobalFoundries</td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">gf180mcu_fd_ip_sram__sram128x8m8wm1</code></td>
+      <td style="text-align: left">5 V</td>
+      <td style="text-align: left">1</td>
+      <td style="text-align: left">116118.5168</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">GlobalFoundries</td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">gf180mcu_fd_ip_sram__sram256x8m8wm1</code></td>
+      <td style="text-align: left">5 V</td>
+      <td style="text-align: left">2</td>
+      <td style="text-align: left">147212.4368</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">GlobalFoundries</td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">gf180mcu_fd_ip_sram__sram512x8m8wm1</code></td>
+      <td style="text-align: left">5 V</td>
+      <td style="text-align: left">4</td>
+      <td style="text-align: left">209400.2768</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Tim Edwards</td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">gf180mcu_ocd_ip_sram__sram64x8m8wm1</code></td>
+      <td style="text-align: left">3 V</td>
+      <td style="text-align: left">0.5</td>
+      <td style="text-align: left">45860.873</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Tim Edwards</td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">gf180mcu_ocd_ip_sram__sram256x8m8wm1</code></td>
+      <td style="text-align: left">3 V</td>
+      <td style="text-align: left">2</td>
+      <td style="text-align: left">67771.406</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Tim Edwards</td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">gf180mcu_ocd_ip_sram__sram512x8m8wm1</code></td>
+      <td style="text-align: left">3 V</td>
+      <td style="text-align: left">4</td>
+      <td style="text-align: left">96985.461</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Tim Edwards</td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">gf180mcu_ocd_ip_sram__sram1024x8m8wm1</code></td>
+      <td style="text-align: left">3 V</td>
+      <td style="text-align: left">8</td>
+      <td style="text-align: left">155413.547</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Edwards compared the two devices together, saying that his 3.3 V SRAM takes up half the area of the 5 V SRAM –
+wonderful news to anyone who was wanting to include an SRAM block in their design. He goes further to say that “it [the
+5 V SRAM] makes the process more like a 0.5µm process than a 0.18µm process. The 3.3 V devices are also large but makes
+it more like a 0.25µm process.”.</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>256x8 SRAMs side by side (GlobalFoundries' on the left, Tim Edwards' on the right)</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-128/assets/images/news/3v3-sram/klayout-256x8-comparison.png" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-128/assets/images/news/3v3-sram/klayout-256x8-comparison.png" alt="256x8 SRAMs side by side (GlobalFoundries' on the left, Tim Edwards' on the right)" />
+        </a>
+    </figure>
+</div>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>Some visible layers disabled to show off the internal circuitry</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-128/assets/images/news/3v3-sram/klayout-256x8-comparison-layers-disabled.png" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-128/assets/images/news/3v3-sram/klayout-256x8-comparison-layers-disabled.png" alt="Some visible layers disabled to show off the internal circuitry" />
+        </a>
+    </figure>
+</div>
+
+<h3 id="an-extra-bit">An Extra Bit?</h3>
+<p>During his exploration of the foundry-provided SRAM, he noticed that the decoder circuitry went up to 10 bits, yet
+Global Foundries only ever utilized 9 bits – their largest macro maxed out at a depth of 512 words, or 4 KiB.</p>
+
+<p>There isn’t a clear reason as to why they didn’t provide a 8 KiB macro – perhaps it didn’t meet their requirements, or
+maybe they just put in the extra bit because they could? It’s all speculation, but the most important part is that
+Edwards took the liberty of creating the 8 KiB macro that had originally been missing.</p>
+
+<p>Unfortunately, for any larger sizes, considerable work would have to be done on the decoder circuitry as his “hack”
+method would no longer work.</p>
+
+<h3 id="testing--results">Testing &amp; Results</h3>
+<p>These shrunk down SRAMs are expected to be faster because they’re using thinner oxide devices, despite the fact that
+it’s using the same SRAM core cells as the 5 V macros.</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>Photo of the die containing test SRAMs</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-128/assets/images/news/3v3-sram/chip_photo.jpg" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-128/assets/images/news/3v3-sram/chip_photo.jpg" alt="Photo of the die containing test SRAMs" />
+        </a>
+    </figure>
+</div>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>GDS view of the test die</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-128/assets/images/news/3v3-sram/gf180mcu_ocd_sram_test.png" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-128/assets/images/news/3v3-sram/gf180mcu_ocd_sram_test.png" alt="GDS view of the test die" />
+        </a>
+    </figure>
+</div>
+
+<p>An initial version was taped out on Run #1, and some preliminary testing was done just in time to tell everyone that his
+work was functional and operating to at least 100 MHz before Run #2 closed.</p>
+
+<p>Unfortunately due to some delivery snags, Edwards wasn’t able to get his hands on the extra logic analyzer he would’ve
+needed to complete an exhaustive test of the SRAMs, but his testing was good enough to call the part functional.</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>Testing the SRAMs</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-128/assets/images/news/3v3-sram/sram_testbench.png" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-128/assets/images/news/3v3-sram/sram_testbench.png" alt="Testing the SRAMs" />
+        </a>
+    </figure>
+</div>
+
+<p>Characterization still remains to be done, but his work has advanced the GF180MCU PDK and provided the community with
+memory that they can use to build their projects with.</p>
+
+<div class="post-gallery light-gallery-wrapper mb-30">
+    
+    <p class="text-center text-muted mb-10"><small>Logic analyzer waveforms showcasing successful read and write operations</small></p>
+    
+    <figure class="overlay overlay1 rounded">
+        <a href="/pr-128/assets/images/news/3v3-sram/4bit_count_bench_test.png" class="lightbox">
+            <span class="bg"></span>
+            <img src="/pr-128/assets/images/news/3v3-sram/4bit_count_bench_test.png" alt="Logic analyzer waveforms showcasing successful read and write operations" />
+        </a>
+    </figure>
+</div>
+
+<h2 id="memory-generators">Memory Generators</h2>
+<p>A different approach to getting memory on silicon is by using a generator. Thanks to the regular structure of a memory
+component, macros can be built algorithmically and without tedious hours of manual work.</p>
+
+<p>A benefit of having a memory generator available is that you, as the user, can decide precisely how large you want the
+memory block to be. This allows you to optimize your area usage without wasting precious silicon on memory that sits
+unused.</p>
+
+<p>Staf Verhaegen, of Chips4Makers, ported his <a href="https://gitlab.com/Chips4Makers/c4m-flexmem">flexmem SRAM generator</a> to use
+the GF180MCU PDK and has taped out a handful of test chips on Run #2. They’re still in production, so there’s no test data
+or characterization yet.</p>
+
+<p>If you’d like to stay up to date, consider joining the <a href="https://wafer.space/discord">wafer.space Discord</a> or chatting to
+us on <a href="https://wafer.space/matrix">Matrix</a>.</p>
+
+<h2 id="get-started-today">Get Started Today</h2>
+<p>Run #3 is in full swing at the moment, so don’t miss your opportunity to tape out. You’ve got until <strong>9 December 2026</strong>
+to purchase a slot, and the submission deadline a week after on <strong>16 December 2026</strong>.</p>
+
+<p>Read more on our <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-3">Crowd Supply</a> page, jump in with our
+<a href="https://github.com/wafer-space/gf180mcu-project-template">project template</a> and join our
+<a href="https://wafer.space/discord">community Discord</a> to chat to other designers and get help.</p>
+
+                <div class="clearfix"></div>
+                <div class="space40"></div>
+                <div class="space10"></div>
+                <div class="d-lg-flex justify-content-between align-items-center meta-footer">
+                  <ul class="list-unstyled tag-list">
+                    
+                    
+                    
+                    </li>
+                    
+                    
+                    <li data-sort="0002">
+                      <a class="btn btn-s" href="/pr-128/tag/gf180mcu/">gf180mcu</a>
+                    
+                  </ul>
+                  <div class="space20 d-lg-none"></div>
+                  <div class="d-flex align-items-center">
+                    <p class="pr-20 mb-0"><strong>Share on:</strong></p>
+<ul class="social social-mute">
+    <!-- Removed Facebook and Twitter sharing due to verification issues -->
+    <li>
+    <a  href="http://pinterest.com/pin/create/button/?url=&media=https://wafer.space/assets/images/news/3v3-sram/sram-3v3-render.png&description=" onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" title="Share on Pinterest" >
+        <i class="jam jam-pinterest"></i>
+    </a>
+    </li>
+</ul>
+                  </div>
+                </div>
+              </div>
+              <!-- /.post-content -->
+            </div>
+          </div>
+          <!-- /.post -->
+          
+          
+
+
+
+
+          
+        </div>
+        <!-- /.blog -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /.wrapper -->
+
+
+
+<div class="wrapper gray-wrapper">
+  <div class="container inner">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div id="disqus_thread"></div>
+<script>
+
+var disqus_config = function () {
+this.page.url = 'https://wafer.space/pr-128/news/srams-on-open-source-silicon';  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = '/news/srams-on-open-source-silicon'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://https-snowlake-netlify-app.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script id="dsq-count-scr" src="//https-snowlake-netlify-app.disqus.com/count.js" async></script>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /.wrapper -->
+</div>
+<!-- footer with details v1 -->
+<footer class=" dark-wrapper inverse-text ">
+  <div class="container inner">
+    <div class="row">
+      <div class="col-md-12 col-lg-3 text-center text-lg-start">
+        <div class="widget">
+          <a href="https://wafer.space">
+            
+            
+              <img src="/pr-128/assets/images/logo-light.webp" srcset="/pr-128/assets/images/logo-light.webp 1x, /pr-128/assets/images/logo-light@2x.webp 2x" alt="wafer.space - Budget silicon manufacturing" />
+            
+          </a>
+          
+          <div class="space20"></div>
+          <p>Budget silicon manufacturing.</p>
+          
+        </div>
+        <!-- /.widget -->
+      </div>
+      <!-- /column -->
+      <div class="space30 d-lg-none d-xl-none"></div>
+      <div class="col-6 col-md-3 col-lg-2 offset-lg-1">
+        
+        <div class="widget">
+          
+          <ul class="list-unstyled mb-0">
+            
+          </ul>
+        </div>
+        <!-- /.widget -->
+      </div>
+      <!-- /column -->
+      <div class="col-6 col-md-3 col-lg-2">
+        
+        <div class="widget">
+          
+           <h5 class="widget-title">More</h5>
+          
+          <ul class="list-unstyled mb-0">
+            
+            <li><a href="/pr-128/">Home</a></li>
+            
+            <li><a href="/pr-128/about.html">About</a></li>
+            
+            <li><a href="/pr-128/price.html">Pricing</a></li>
+            
+            <li><a href="/pr-128/technology.html">Technology</a></li>
+            
+            <li><a href="/pr-128/design-help.html">Design Help</a></li>
+            
+            <li><a href="/pr-128/news">News</a></li>
+            
+            <li><a href="/pr-128/faq.html">FAQ</a></li>
+            
+          </ul>
+        </div>
+        <!-- /.widget -->
+      </div>
+      <!-- /column -->
+      <div class="col-6 col-md-3 col-lg-2">
+        
+        <div class="widget">
+          
+          <ul class="list-unstyled mb-0">
+            
+          </ul>
+        </div>
+        <!-- /.widget -->
+      </div>
+      <!-- /column -->
+      <div class="col-6 col-md-3 col-lg-2">
+        <div class="widget">
+          <h5 class="widget-title">Contact</h5>
+          
+          <address>143&nbsp;Cecil&nbsp;Street,<br />#17&#8209;04,&nbsp;GB&nbsp;Building,<br />Singapore 069542</address>
+          
+          <a href="mailto:info@wafer.space">info@wafer.space</a><br />
+           
+        </div>
+        <!-- /.widget -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+  <div class="container inner pt-0 pb-40 d-flex align-items-center">
+    <p class="mb-0 mr-auto">© 2025 Wafer Space PTE. LTD. All rights reserved.</p>
+    <ul class="social social-mute social-s ms-auto">
+      
+    </ul>
+  </div>
+</footer>
+
+
+  </div>
+  <!-- Site Scripts-->
+  <script src="/pr-128/assets/js/jquery.min.js"></script>
+<script src="/pr-128/assets/js/popper.min.js"></script>
+<script src="/pr-128/assets/js/bootstrap.min.js"></script>
+<script src="/pr-128/assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+<script src="/pr-128/assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+<script src="/pr-128/assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+<script src="/pr-128/assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+<script src="/pr-128/assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script src="/pr-128/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="/pr-128/assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+<script src="/pr-128/assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="/pr-128/assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="/pr-128/assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="/pr-128/assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+<script src="/pr-128/assets/js/plugins.js"></script>
+<script src="/pr-128/assets/js/simple-jekyll-search.min.js"></script>
+<script>
+  // Pass baseurl to JavaScript for search configuration
+  window.siteBaseurl = '/pr-128';
+</script>
+<script src="/pr-128/assets/js/scripts.js"></script>
+
+
+</body>
+<!-- Generated from git commit: c9a4f1529f24655e5f8771c7e960dda9cca039fe (c9a4f152) -->
+</html>
