@@ -4,7 +4,7 @@
 <head>
   <!-- Meta Tags-->
   <meta charset="utf-8" />
-  <meta name="git-commit" content="c9a4f1529f24655e5f8771c7e960dda9cca039fe">
+  <meta name="git-commit" content="9c88e13b667cfd45b83e40e83a9bf9372040490b">
 <!-- Primary Meta Tags -->
 <title> SRAMs on Open Source Silicon </title>
 <meta name="title" content=" SRAMs on Open Source Silicon ">
@@ -351,7 +351,7 @@ he turned his attention back to the very thing diagnosed back in 2022.</p>
 </div>
 
 <h2 id="shrinking-it-down">Shrinking It Down</h2>
-<p>Set on creating a 3.3 V capable SRAM, Edwards began by looking at the 2 KiB (256 word) macro for arbitrary reasons. He describes his
+<p>Set on creating a 3.3 V capable SRAM, Edwards began by looking at the 256 B macro for arbitrary reasons. He describes his
 approach as a “hack”, but it’s a pretty clever approach to reusing components that were available:</p>
 
 <ol>
@@ -373,7 +373,7 @@ in the PDK, making it a very valuable addition to the library.</p>
       <th style="text-align: left">Provider</th>
       <th style="text-align: left">Macro</th>
       <th style="text-align: left">Voltage</th>
-      <th style="text-align: left">Capacity (KiB)</th>
+      <th style="text-align: left">Capacity (B)</th>
       <th style="text-align: left">Area (µm²)</th>
     </tr>
   </thead>
@@ -382,49 +382,49 @@ in the PDK, making it a very valuable addition to the library.</p>
       <td style="text-align: left">GlobalFoundries</td>
       <td style="text-align: left"><code class="language-plaintext highlighter-rouge">gf180mcu_fd_ip_sram__sram128x8m8wm1</code></td>
       <td style="text-align: left">5 V</td>
-      <td style="text-align: left">1</td>
+      <td style="text-align: left">128</td>
       <td style="text-align: left">116118.5168</td>
     </tr>
     <tr>
       <td style="text-align: left">GlobalFoundries</td>
       <td style="text-align: left"><code class="language-plaintext highlighter-rouge">gf180mcu_fd_ip_sram__sram256x8m8wm1</code></td>
       <td style="text-align: left">5 V</td>
-      <td style="text-align: left">2</td>
+      <td style="text-align: left">256</td>
       <td style="text-align: left">147212.4368</td>
     </tr>
     <tr>
       <td style="text-align: left">GlobalFoundries</td>
       <td style="text-align: left"><code class="language-plaintext highlighter-rouge">gf180mcu_fd_ip_sram__sram512x8m8wm1</code></td>
       <td style="text-align: left">5 V</td>
-      <td style="text-align: left">4</td>
+      <td style="text-align: left">512</td>
       <td style="text-align: left">209400.2768</td>
     </tr>
     <tr>
       <td style="text-align: left">Tim Edwards</td>
       <td style="text-align: left"><code class="language-plaintext highlighter-rouge">gf180mcu_ocd_ip_sram__sram64x8m8wm1</code></td>
       <td style="text-align: left">3 V</td>
-      <td style="text-align: left">0.5</td>
+      <td style="text-align: left">64</td>
       <td style="text-align: left">45860.873</td>
     </tr>
     <tr>
       <td style="text-align: left">Tim Edwards</td>
       <td style="text-align: left"><code class="language-plaintext highlighter-rouge">gf180mcu_ocd_ip_sram__sram256x8m8wm1</code></td>
       <td style="text-align: left">3 V</td>
-      <td style="text-align: left">2</td>
+      <td style="text-align: left">256</td>
       <td style="text-align: left">67771.406</td>
     </tr>
     <tr>
       <td style="text-align: left">Tim Edwards</td>
       <td style="text-align: left"><code class="language-plaintext highlighter-rouge">gf180mcu_ocd_ip_sram__sram512x8m8wm1</code></td>
       <td style="text-align: left">3 V</td>
-      <td style="text-align: left">4</td>
+      <td style="text-align: left">512</td>
       <td style="text-align: left">96985.461</td>
     </tr>
     <tr>
       <td style="text-align: left">Tim Edwards</td>
       <td style="text-align: left"><code class="language-plaintext highlighter-rouge">gf180mcu_ocd_ip_sram__sram1024x8m8wm1</code></td>
       <td style="text-align: left">3 V</td>
-      <td style="text-align: left">8</td>
+      <td style="text-align: left">1024</td>
       <td style="text-align: left">155413.547</td>
     </tr>
   </tbody>
@@ -461,11 +461,11 @@ it more like a 0.25µm process.”.</p>
 
 <h3 id="an-extra-bit">An Extra Bit?</h3>
 <p>During his exploration of the foundry-provided SRAM, he noticed that the decoder circuitry went up to 10 bits, yet
-Global Foundries only ever utilized 9 bits – their largest macro maxed out at a depth of 512 words, or 4 KiB.</p>
+Global Foundries only ever utilized 9 bits – their largest macro maxed out at a depth of 512 B.</p>
 
-<p>There isn’t a clear reason as to why they didn’t provide a 8 KiB macro – perhaps it didn’t meet their requirements, or
+<p>There isn’t a clear reason as to why they didn’t provide a 1 KiB macro – perhaps it didn’t meet their requirements, or
 maybe they just put in the extra bit because they could? It’s all speculation, but the most important part is that
-Edwards took the liberty of creating the 8 KiB macro that had originally been missing.</p>
+Edwards took the liberty of creating the 1 KiB macro that had originally been missing.</p>
 
 <p>Unfortunately, for any larger sizes, considerable work would have to be done on the decoder circuitry as his “hack”
 method would no longer work.</p>
@@ -758,5 +758,5 @@ s.setAttribute('data-timestamp', +new Date());
 
 
 </body>
-<!-- Generated from git commit: c9a4f1529f24655e5f8771c7e960dda9cca039fe (c9a4f152) -->
+<!-- Generated from git commit: 9c88e13b667cfd45b83e40e83a9bf9372040490b (9c88e13b) -->
 </html>
