@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://wafer.space/pr-127/index.xml" rel="self" type="application/atom+xml" /><link href="https://wafer.space/pr-127/" rel="alternate" type="text/html" /><updated>2026-10-19T06:33:05+00:00</updated><id>https://wafer.space/pr-127/index.xml</id><entry><title type="html">A Need for Speed: Tholin’s Own Standard Cell Library</title><link href="https://wafer.space/pr-127/news/a-need-for-speed-tholins-own-standard-cell-library" rel="alternate" type="text/html" title="A Need for Speed: Tholin’s Own Standard Cell Library" /><published>2026-09-30T12:00:00+00:00</published><updated>2026-09-30T12:00:00+00:00</updated><id>https://wafer.space/pr-127/news/tholins-3v3-scl</id><content type="html" xml:base="https://wafer.space/pr-127/news/a-need-for-speed-tholins-own-standard-cell-library"><![CDATA[<p>Performance – an elusive metric that is influenced by everything the chip consists of, and more. The HDL that defines
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://wafer.space/pr-127/index.xml" rel="self" type="application/atom+xml" /><link href="https://wafer.space/pr-127/" rel="alternate" type="text/html" /><updated>2026-10-20T02:18:58+00:00</updated><id>https://wafer.space/pr-127/index.xml</id><entry><title type="html">A Need for Speed: Tholin’s Own Standard Cell Library</title><link href="https://wafer.space/pr-127/news/a-need-for-speed-tholins-own-standard-cell-library" rel="alternate" type="text/html" title="A Need for Speed: Tholin’s Own Standard Cell Library" /><published>2026-09-30T12:00:00+00:00</published><updated>2026-09-30T12:00:00+00:00</updated><id>https://wafer.space/pr-127/news/tholins-3v3-scl</id><content type="html" xml:base="https://wafer.space/pr-127/news/a-need-for-speed-tholins-own-standard-cell-library"><![CDATA[<p>Performance – an elusive metric that is influenced by everything the chip consists of, and more. The HDL that defines
 it, the way it is logically laid out, to the tiniest splattering of a chemical on the wafer, and the environment the
 chip lives in. How far can you go to chase speed?</p>
 
@@ -215,7 +215,7 @@ taped out designs which benefit from the extra speed such as <a href="https://gi
 <a href="https://github.com/SlugTPU/gf180mcu-slugtpu">SlugTPU</a>.</p>
 
 <p>If you’re interested to hear about how all of this will turn out, consider joining the
-<a href="/discord">wafer.space Discord</a> or <a href="/matrix">Matrix</a>.</p>
+<a href="/pr-127/discord">wafer.space Discord</a> or <a href="/pr-127/matrix">Matrix</a>.</p>
 
 <h2 id="a-message-from-tholin">A Message from Tholin</h2>
 
@@ -241,7 +241,7 @@ time I took on a project just because “this would look good on my resume”.</
 </blockquote>
 
 <p>You can find Tholin on Bluesky <a href="https://bsky.app/profile/tholin.bsky.social">@tholin.bsky.social</a>, read about her past
-projects on <a href="https://tholin.dev/">tholin.dev</a> or see what she’s taping out in the <a href="/discord">wafer.space Discord</a>.</p>
+projects on <a href="https://tholin.dev/">tholin.dev</a> or see what she’s taping out in the <a href="/pr-127/discord">wafer.space Discord</a>.</p>
 
 <h2 id="get-started-today">Get Started Today</h2>
 <p>Run #3 is in full swing at the moment, so don’t miss your opportunity to tape out. You’ve got until <strong>9 December 2026</strong>
@@ -502,7 +502,7 @@ onto our platform.</p>
 <p>Any questions? Come chat to us in the <a href="https://wafer.space/discord">official wafer.space Discord</a>, or reach out to us
 via <a href="https://wafer.space/matrix">Matrix</a>.</p>]]></content><author><name>Kristaps Jurkans</name></author><category term="news" /><category term="gf180mcu" /><category term="run3" /><category term="deadline" /><summary type="html"><![CDATA[We're now entering the final week of the early bird promotion -- don't miss your chance to save on your tape out on Run #3.]]></summary></entry><entry><title type="html">Run #3 1x1 Slots Gone</title><link href="https://wafer.space/pr-127/news/run3-1x1-slots-gone" rel="alternate" type="text/html" title="Run #3 1x1 Slots Gone" /><published>2026-09-22T12:00:00+00:00</published><updated>2026-09-22T12:00:00+00:00</updated><id>https://wafer.space/pr-127/news/run3-1x1-slots-gone</id><content type="html" xml:base="https://wafer.space/pr-127/news/run3-1x1-slots-gone"><![CDATA[<p>All of our full-sized slots are gone for this run — thank you for supporting us :)</p>
 
-<p>We’re looking into additional capacity, but the next opportunity will most likely be a future run. Be the first to learn in our <a href="/discord">official wafer.space Discord</a>.</p>
+<p>We’re looking into additional capacity, but the next opportunity will most likely be a future run. Be the first to learn in our <a href="/pr-127/discord">official wafer.space Discord</a>.</p>
 
 <p>Run 3 isn’t filled yet though! There are still plenty of half and quarter-sized slots, so if you don’t need the full 12.92 mm², then these will be the perfect fit for you.</p>
 
@@ -618,7 +618,7 @@ PDK, submit your layout, and we handle fabrication, dicing, and delivery. $7 per
 <p>Run 1 has been packaged and shipped to all of our customers – from hobbyists to academics, and from industry specialists
 to community groups, people have been able to get their hands on their very own custom silicon. Many are testing their
 designs right now, and our chip-on-board packaging solution has been popular and successful! Read more about it in
-our dedicated <a href="/news/chip-on-board-progress">chip-on-board progress update</a>.</p>
+our dedicated <a href="/pr-127/news/chip-on-board-progress">chip-on-board progress update</a>.</p>
 
 <p>Run 2 has now been closed and will begin manufacturing shortly. It features several interesting projects such as:</p>
 
