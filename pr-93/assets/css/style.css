@@ -7357,6 +7357,14 @@ h6:hover > .heading-anchor,
     opacity: 1 !important;
 }
 
+/* An accordion header's toggle button is full width, which would push a "#"
+   after it onto a line of its own; lay the heading out as a row instead so
+   the button shrinks to leave room for the link at its end. */
+.accordion-wrapper .card-header > * {
+    display: flex;
+    align-items: baseline;
+}
+
 /* When a visitor jumps to a heading via its #fragment, keep it clear of the
    sticky site header instead of hiding it underneath. */
 :target {
