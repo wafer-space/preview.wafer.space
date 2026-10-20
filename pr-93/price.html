@@ -4,7 +4,7 @@
 <head>
   <!-- Meta Tags-->
   <meta charset="utf-8" />
-  <meta name="git-commit" content="f4b77e3b4070e5f2a1467852f471e7ec8d77580f">
+  <meta name="git-commit" content="9b72932797371fd9aab2e099fff44fd562881a06">
 <!-- Primary Meta Tags -->
 <title> Pricing </title>
 <meta name="title" content=" Pricing ">
@@ -314,16 +314,19 @@
                 
                   <th scope="col" class="font-weight-bold">
                     
-                      <span class="slot-badge mb-5">New!</span><br>
-                    
                     0.5×1&nbsp;Slot
+                  </th>
+                
+                  <th scope="col" class="font-weight-bold">
+                    
+                    1×0.5&nbsp;Slot
                   </th>
                 
                   <th scope="col" class="font-weight-bold">
                     
                       <span class="slot-badge mb-5">New!</span><br>
                     
-                    1×0.5&nbsp;Slot
+                    0.5×0.5&nbsp;Slot
                   </th>
                 
               </tr>
@@ -338,9 +341,11 @@
                 
                   <td>3.93&nbsp;&times;&nbsp;2.53&nbsp;mm</td>
                 
+                  <td>1.94&nbsp;&times;&nbsp;2.53&nbsp;mm</td>
+                
               </tr>
               <tr>
-                <td class="text-left font-weight-600">Die Area</td>
+                <td class="text-left font-weight-600">Die Area*</td>
                 
                   <td>20.12&nbsp;mm&sup2;</td>
                 
@@ -348,19 +353,11 @@
                 
                   <td>9.94&nbsp;mm&sup2;</td>
                 
-              </tr>
-              <tr>
-                <td class="text-left font-weight-600">Usable Silicon&dagger;</td>
-                
-                  <td>19.65&nbsp;mm&sup2;</td>
-                
-                  <td>9.57&nbsp;mm&sup2;</td>
-                
-                  <td>9.61&nbsp;mm&sup2;</td>
+                  <td>4.9&nbsp;mm&sup2;</td>
                 
               </tr>
               <tr>
-                <td class="text-left font-weight-600">Core Area*</td>
+                <td class="text-left font-weight-600">Core Area&dagger;</td>
                 
                   <td>12.92&nbsp;mm&sup2;</td>
                 
@@ -368,25 +365,31 @@
                 
                   <td>5.02&nbsp;mm&sup2;</td>
                 
-              </tr>
-              <tr>
-                <td class="text-left font-weight-600">Default I/O&nbsp;Pads&dagger;</td>
-                
-                  <td>56</td>
-                
-                  <td>56</td>
-                
-                  <td>56</td>
+                  <td>1.73&nbsp;mm&sup2;</td>
                 
               </tr>
               <tr>
-                <td class="text-left font-weight-600">Max I/O&nbsp;Pads&Dagger;</td>
+                <td class="text-left font-weight-600">Default I/O&nbsp;Pads&Dagger;</td>
+                
+                  <td>56</td>
+                
+                  <td>56</td>
+                
+                  <td>56</td>
+                
+                  <td>48</td>
+                
+              </tr>
+              <tr>
+                <td class="text-left font-weight-600">Max I/O&nbsp;Pads&sect;</td>
                 
                   <td>168</td>
                 
                   <td>122</td>
                 
                   <td>108</td>
+                
+                  <td>48</td>
                 
               </tr>
               <tr>
@@ -398,15 +401,19 @@
                 
                   <td><strong>$4,000</strong></td>
                 
+                  <td><strong>$2,000</strong></td>
+                
               </tr>
               <tr>
                 <td class="text-left font-weight-600">Standard Price</td>
                 
-                  <td>$7,500</td>
+                  <td>$8,000</td>
                 
-                  <td>$4,500</td>
+                  <td>$5,000</td>
                 
-                  <td>$4,500</td>
+                  <td>$5,000</td>
+                
+                  <td>$3,000</td>
                 
               </tr>
               <tr>
@@ -418,6 +425,8 @@
                 
                   <td>$4.00</td>
                 
+                  <td>$2.00</td>
+                
               </tr>
             </tbody>
           </table>
@@ -425,10 +434,10 @@
 
         <div class="space20"></div>
         <div class="text-left table-footnote">
-          <p class="mb-5">&dagger;Default pad ring I/O count. The default pad ring is only required if you purchase the <a href="#addons">Chip&nbsp;on&nbsp;Board packaging</a> add-on.</p>
-          <p class="mb-5">&Dagger;Maximum I/O with a custom pad ring from the <a href="https://mithro.github.io/gf180mcu-project-template/" target="_blank" rel="noopener">LibreLane pad ring generator</a>. You are free to use any pad ring configuration &mdash; or no pad ring at all.</p>
-          <p class="mb-5">*Usable silicon = die area minus seal ring (~26&micro;m each side). Available with a custom pad ring or no pad ring.</p>
-          <p class="mb-0">*Core area = area inside the default pad ring.</p>
+          <p class="mb-5">*Usable die area is smaller due to the seal ring (~26&micro;m each side). Available with a custom pad ring or no pad ring.</p>
+          <p class="mb-0">&dagger;Core area = area inside the default pad ring.</p>
+          <p class="mb-5">&Dagger;Default pad ring I/O count. The default pad ring is only required if you purchase the <a href="#addons">Chip&nbsp;on&nbsp;Board packaging</a> add-on.</p>
+          <p class="mb-5">&sect;Maximum I/O with a custom pad ring from the <a href="https://mithro.github.io/gf180mcu-project-template/" target="_blank" rel="noopener">LibreLane pad ring generator</a>. You are free to use any pad ring configuration &mdash; or no pad ring at all.</p>
         </div>
       </div>
     </div>
@@ -443,7 +452,8 @@
 
 
 
-<!-- Pricing Section for Slot: 0.5×1&nbsp;Slot (Half&nbsp;Width) -->
+
+<!-- Pricing Section for Slot: 0.5×0.5&nbsp;Slot (Quarter) -->
 
 
 
@@ -454,7 +464,7 @@
 
 
 
-<div id="slot-0p5x1" class="wrapper dark-wrapper inverse-text">
+<div id="slot-0p5x0p5" class="wrapper dark-wrapper inverse-text">
   <div class="container inner">
     <div class="row align-items-center">
 
@@ -469,16 +479,16 @@
                 <div class="panel-heading">
                   
                   <div class="slot-image-wrapper">
-                    <img src="/pr-93/assets/images/slots/0p5x1_gelpack.jpg" class="img-fluid slot-image" alt="0.5×1&nbsp;Slot (Half&nbsp;Width)"/>
+                    <img src="/pr-93/assets/images/slots/0p5x0p5_gelpack.jpg" class="img-fluid slot-image" alt="0.5×0.5&nbsp;Slot (Quarter)"/>
                   </div>
                   
                   <div class="price-hero color-dark">
-                    <span class="price-hero-currency">$</span>4.00<span class="price-hero-unit">&nbsp;/&nbsp;die</span>
+                    <span class="price-hero-currency">$</span>2.00<span class="price-hero-unit">&nbsp;/&nbsp;die</span>
                   </div>
-                  <p class="price-total"><small class="text-muted">USD</small>&nbsp;$4,000</p>
-                  <h4 id="early-bird-slot-0p5x1" class="panel-title">Early&nbsp;Bird<a class="heading-anchor" href="#early-bird-slot-0p5x1" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h4>
+                  <p class="price-total"><small class="text-muted">USD</small>&nbsp;$2,000</p>
+                  <h4 id="early-bird-slot-0p5x0p5" class="panel-title">Early&nbsp;Bird<a class="heading-anchor" href="#early-bird-slot-0p5x0p5" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h4>
                   
-                  <p class="pricing-deadline" data-deadline="2026-05-01T11:59:00Z" data-label="Ends">
+                  <p class="pricing-deadline" data-deadline="2026-10-01T11:59:00Z" data-label="Ends">
                     <span class="countdown-inline"></span>
                   </p>
                   
@@ -497,16 +507,16 @@
                 <div class="panel-heading">
                   
                   <div class="slot-image-wrapper">
-                    <img src="/pr-93/assets/images/slots/0p5x1_gelpack.jpg" class="img-fluid slot-image" alt="0.5×1&nbsp;Slot (Half&nbsp;Width)"/>
+                    <img src="/pr-93/assets/images/slots/0p5x0p5_gelpack.jpg" class="img-fluid slot-image" alt="0.5×0.5&nbsp;Slot (Quarter)"/>
                   </div>
                   
                   <div class="price-hero color-dark">
-                    <span class="price-hero-currency">$</span>4.50<span class="price-hero-unit">&nbsp;/&nbsp;die</span>
+                    <span class="price-hero-currency">$</span>3.00<span class="price-hero-unit">&nbsp;/&nbsp;die</span>
                   </div>
-                  <p class="price-total"><small class="text-muted">USD</small>&nbsp;$4,500</p>
-                  <h4 id="standard-slot-0p5x1" class="panel-title">Standard<a class="heading-anchor" href="#standard-slot-0p5x1" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h4>
+                  <p class="price-total"><small class="text-muted">USD</small>&nbsp;$3,000</p>
+                  <h4 id="standard-slot-0p5x0p5" class="panel-title">Standard<a class="heading-anchor" href="#standard-slot-0p5x0p5" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h4>
                   
-                  <p class="pricing-deadline" data-deadline="2026-07-01T11:59:00Z" data-label="Closes">
+                  <p class="pricing-deadline" data-deadline="2026-12-10T11:59:00Z" data-label="Closes">
                     <span class="countdown-inline"></span>
                   </p>
                   
@@ -531,18 +541,137 @@
 
       <!-- Right: Slot description and specs -->
       <div class="col-lg-6 pl-60 pl-md-15">
-        <h2 id="0-5-1-nbsp-slot-half-nbsp-width" class="title-color color-white">
-          0.5×1&nbsp;Slot (Half&nbsp;Width)
+        <h2 id="0-5-0-5-nbsp-slot-quarter" class="title-color color-white">
+          0.5×0.5&nbsp;Slot (Quarter)
           
             <span class="slot-badge">New!</span>
+          <a class="heading-anchor" href="#0-5-0-5-nbsp-slot-quarter" aria-label="Permalink to this heading" title="Copy link to this heading">#</a>
+        </h2>
+        <h3 class="display-3">0.5×0.5&nbsp;Slot &mdash;&nbsp;1000&nbsp;dies&nbsp;per&nbsp;slot</h3>
+        <div class="space20"></div>
+        <p>
+          The quarter-size (0.5×0.5) slot is the smallest out of the bunch, but offers an unbeatable price point for prototyping designs without paying for silicon you do not need.
+
+        </p>
+        <ul class="icon-list bullet-default">
+          <li><i class="icofont-verification-check"></i> <strong><a href="https://gf180mcu-pdk.readthedocs.io/">GF180MCU</a></strong> process &mdash; 180nm mixed-signal</li>
+          <li><i class="icofont-verification-check"></i> Die size: <strong>1.94mm &times; 2.53mm</strong> (4.9 mm&sup2;)</li>
+          <li><i class="icofont-verification-check"></i> Usable silicon: <strong>4.67&nbsp;mm&sup2;</strong> <small>(custom pad ring or none)</small></li>
+          <li><i class="icofont-verification-check"></i> Core area: <strong>1.73&nbsp;mm&sup2;</strong> <small>(default pad ring, required for COB)</small></li>
+          <li><i class="icofont-verification-check"></i> Default: 48&nbsp;I/O pads &mdash; max: up to 48&nbsp;I/O with <a href="https://mithro.github.io/gf180mcu-project-template/" target="_blank" rel="noopener">custom pad ring</a></li>
+          <li><i class="icofont-verification-check"></i> 5 metal layers, MIM capacitors, poly &amp; high-res resistors</li>
+        </ul>
+        <div class="space10"></div>
+        <a href="https://mithro.github.io/gf180mcu-project-template/" target="_blank" rel="noopener" class="btn btn-default btn-sm">
+          <i class="jam jam-document"></i> Slot Documentation
+        </a>
+      </div>
+      <!--/column -->
+
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /.wrapper -->
+
+<!-- Pricing Section for Slot: 0.5×1&nbsp;Slot (Half&nbsp;Width) -->
+
+
+
+
+
+
+
+
+
+
+<div id="slot-0p5x1" class="wrapper light-wrapper">
+  <div class="container inner">
+    <div class="row align-items-center">
+
+      <!-- Left: Two image-focused pricing boxes -->
+      <div class="col-lg-6">
+        <div class="pricing-wrapper">
+          <div class="row g-0 align-items-center">
+
+            <!-- Early Bird Box (popular by default; JS swaps if deadline passed) -->
+            <div class="col-12 col-sm-6 early-bird-panel popular">
+              <div class="pricing panel box bg-white shadow text-center">
+                <div class="panel-heading">
+                  
+                  <div class="slot-image-wrapper">
+                    <img src="/pr-93/assets/images/slots/0p5x1_gelpack.jpg" class="img-fluid slot-image" alt="0.5×1&nbsp;Slot (Half&nbsp;Width)"/>
+                  </div>
+                  
+                  <div class="price-hero color-dark">
+                    <span class="price-hero-currency">$</span>4.00<span class="price-hero-unit">&nbsp;/&nbsp;die</span>
+                  </div>
+                  <p class="price-total"><small class="text-muted">USD</small>&nbsp;$4,000</p>
+                  <h4 id="early-bird-slot-0p5x1" class="panel-title">Early&nbsp;Bird<a class="heading-anchor" href="#early-bird-slot-0p5x1" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h4>
+                  
+                  <p class="pricing-deadline" data-deadline="2026-10-01T11:59:00Z" data-label="Ends">
+                    <span class="countdown-inline"></span>
+                  </p>
+                  
+                </div>
+                <!--/.panel-heading -->
+                <div class="panel-footer">
+                  <a href="https://buy.wafer.space/#products" class="btn" role="button"><i class="icofont-shopping-cart"></i> Buy</a>
+                </div>
+              </div>
+              <!--/.pricing -->
+            </div>
+
+            <!-- Standard Price Box -->
+            <div class="col-12 col-sm-6 normal-panel">
+              <div class="pricing panel box bg-white shadow text-center">
+                <div class="panel-heading">
+                  
+                  <div class="slot-image-wrapper">
+                    <img src="/pr-93/assets/images/slots/0p5x1_gelpack.jpg" class="img-fluid slot-image" alt="0.5×1&nbsp;Slot (Half&nbsp;Width)"/>
+                  </div>
+                  
+                  <div class="price-hero color-dark">
+                    <span class="price-hero-currency">$</span>5.00<span class="price-hero-unit">&nbsp;/&nbsp;die</span>
+                  </div>
+                  <p class="price-total"><small class="text-muted">USD</small>&nbsp;$5,000</p>
+                  <h4 id="standard-slot-0p5x1" class="panel-title">Standard<a class="heading-anchor" href="#standard-slot-0p5x1" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h4>
+                  
+                  <p class="pricing-deadline" data-deadline="2026-12-10T11:59:00Z" data-label="Closes">
+                    <span class="countdown-inline"></span>
+                  </p>
+                  
+                </div>
+                <!--/.panel-heading -->
+                <div class="panel-footer">
+                  <a href="https://buy.wafer.space/#products" class="btn" role="button"><i class="icofont-shopping-cart"></i> Buy</a>
+                </div>
+              </div>
+              <!--/.pricing -->
+            </div>
+
+          </div>
+          <!--/.row -->
+        </div>
+        <!--/.pricing-wrapper -->
+      </div>
+
+      <!-- Spacers for tablet/mobile stacking -->
+      <div class="space20 d-md-none"></div>
+      <div class="space50 d-none d-md-block d-lg-none"></div>
+
+      <!-- Right: Slot description and specs -->
+      <div class="col-lg-6 pl-60 pl-md-15">
+        <h2 id="0-5-1-nbsp-slot-half-nbsp-width" class="title-color color-gray">
+          0.5×1&nbsp;Slot (Half&nbsp;Width)
           <a class="heading-anchor" href="#0-5-1-nbsp-slot-half-nbsp-width" aria-label="Permalink to this heading" title="Copy link to this heading">#</a>
         </h2>
         <h3 class="display-3">0.5×1&nbsp;Slot &mdash;&nbsp;1000&nbsp;dies&nbsp;per&nbsp;slot</h3>
         <div class="space20"></div>
         <p>
-          
-            The half-width (0.5×1) slot delivers a tall, narrow die &mdash; ideal for I/O-heavy designs where signals concentrate along the long edges. Perfect for medium-complexity digital or mixed-signal projects, at just over half the cost of a full slot.
-          
+          The half-width (0.5×1) slot delivers a tall, narrow die &mdash; ideal for I/O-heavy designs where signals concentrate along the long edges. Perfect for medium-complexity digital or mixed-signal projects, at just over half the cost of a full slot.
+
         </p>
         <ul class="icon-list bullet-default">
           <li><i class="icofont-verification-check"></i> <strong><a href="https://gf180mcu-pdk.readthedocs.io/">GF180MCU</a></strong> process &mdash; 180nm mixed-signal</li>
@@ -551,7 +680,6 @@
           <li><i class="icofont-verification-check"></i> Core area: <strong>4.46&nbsp;mm&sup2;</strong> <small>(default pad ring, required for COB)</small></li>
           <li><i class="icofont-verification-check"></i> Default: 56&nbsp;I/O pads &mdash; max: up to 122&nbsp;I/O with <a href="https://mithro.github.io/gf180mcu-project-template/" target="_blank" rel="noopener">custom pad ring</a></li>
           <li><i class="icofont-verification-check"></i> 5 metal layers, MIM capacitors, poly &amp; high-res resistors</li>
-          <li><i class="icofont-verification-check"></i> Early Bird pricing available through <strong>30 April 2026</strong></li>
         </ul>
         <div class="space10"></div>
         <a href="https://mithro.github.io/gf180mcu-project-template/" target="_blank" rel="noopener" class="btn btn-default btn-sm">
@@ -578,7 +706,7 @@
 
 
 
-<div id="slot-1x0p5" class="wrapper light-wrapper">
+<div id="slot-1x0p5" class="wrapper dark-wrapper inverse-text">
   <div class="container inner">
     <div class="row align-items-center">
 
@@ -602,7 +730,7 @@
                   <p class="price-total"><small class="text-muted">USD</small>&nbsp;$4,000</p>
                   <h4 id="early-bird-slot-1x0p5" class="panel-title">Early&nbsp;Bird<a class="heading-anchor" href="#early-bird-slot-1x0p5" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h4>
                   
-                  <p class="pricing-deadline" data-deadline="2026-05-01T11:59:00Z" data-label="Ends">
+                  <p class="pricing-deadline" data-deadline="2026-10-01T11:59:00Z" data-label="Ends">
                     <span class="countdown-inline"></span>
                   </p>
                   
@@ -625,12 +753,12 @@
                   </div>
                   
                   <div class="price-hero color-dark">
-                    <span class="price-hero-currency">$</span>4.50<span class="price-hero-unit">&nbsp;/&nbsp;die</span>
+                    <span class="price-hero-currency">$</span>5.00<span class="price-hero-unit">&nbsp;/&nbsp;die</span>
                   </div>
-                  <p class="price-total"><small class="text-muted">USD</small>&nbsp;$4,500</p>
+                  <p class="price-total"><small class="text-muted">USD</small>&nbsp;$5,000</p>
                   <h4 id="standard-slot-1x0p5" class="panel-title">Standard<a class="heading-anchor" href="#standard-slot-1x0p5" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h4>
                   
-                  <p class="pricing-deadline" data-deadline="2026-07-01T11:59:00Z" data-label="Closes">
+                  <p class="pricing-deadline" data-deadline="2026-12-10T11:59:00Z" data-label="Closes">
                     <span class="countdown-inline"></span>
                   </p>
                   
@@ -655,18 +783,15 @@
 
       <!-- Right: Slot description and specs -->
       <div class="col-lg-6 pl-60 pl-md-15">
-        <h2 id="1-0-5-nbsp-slot-half-nbsp-height" class="title-color color-gray">
+        <h2 id="1-0-5-nbsp-slot-half-nbsp-height" class="title-color color-white">
           1×0.5&nbsp;Slot (Half&nbsp;Height)
-          
-            <span class="slot-badge">New!</span>
           <a class="heading-anchor" href="#1-0-5-nbsp-slot-half-nbsp-height" aria-label="Permalink to this heading" title="Copy link to this heading">#</a>
         </h2>
         <h3 class="display-3">1×0.5&nbsp;Slot &mdash;&nbsp;1000&nbsp;dies&nbsp;per&nbsp;slot</h3>
         <div class="space20"></div>
         <p>
-          
-            The half-height (1×0.5) slot gives you a wide, short die &mdash; ideal for designs that benefit from a wider core. Offers slightly more core area than the half-width slot at the same price.
-          
+          The half-height (1×0.5) slot gives you a wide, short die &mdash; ideal for designs that benefit from a wider core. Offers slightly more core area than the half-width slot at the same price.
+
         </p>
         <ul class="icon-list bullet-default">
           <li><i class="icofont-verification-check"></i> <strong><a href="https://gf180mcu-pdk.readthedocs.io/">GF180MCU</a></strong> process &mdash; 180nm mixed-signal</li>
@@ -675,7 +800,6 @@
           <li><i class="icofont-verification-check"></i> Core area: <strong>5.02&nbsp;mm&sup2;</strong> <small>(default pad ring, required for COB)</small></li>
           <li><i class="icofont-verification-check"></i> Default: 56&nbsp;I/O pads &mdash; max: up to 108&nbsp;I/O with <a href="https://mithro.github.io/gf180mcu-project-template/" target="_blank" rel="noopener">custom pad ring</a></li>
           <li><i class="icofont-verification-check"></i> 5 metal layers, MIM capacitors, poly &amp; high-res resistors</li>
-          <li><i class="icofont-verification-check"></i> Early Bird pricing available through <strong>30 April 2026</strong></li>
         </ul>
         <div class="space10"></div>
         <a href="https://mithro.github.io/gf180mcu-project-template/" target="_blank" rel="noopener" class="btn btn-default btn-sm">
@@ -702,7 +826,7 @@
 
 
 
-<div id="slot-1x1" class="wrapper dark-wrapper inverse-text">
+<div id="slot-1x1" class="wrapper light-wrapper">
   <div class="container inner">
     <div class="row align-items-center">
 
@@ -726,7 +850,7 @@
                   <p class="price-total"><small class="text-muted">USD</small>&nbsp;$7,000</p>
                   <h4 id="early-bird-slot-1x1" class="panel-title">Early&nbsp;Bird<a class="heading-anchor" href="#early-bird-slot-1x1" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h4>
                   
-                  <p class="pricing-deadline" data-deadline="2026-05-01T11:59:00Z" data-label="Ends">
+                  <p class="pricing-deadline" data-deadline="2026-10-01T11:59:00Z" data-label="Ends">
                     <span class="countdown-inline"></span>
                   </p>
                   
@@ -749,12 +873,12 @@
                   </div>
                   
                   <div class="price-hero color-dark">
-                    <span class="price-hero-currency">$</span>7.50<span class="price-hero-unit">&nbsp;/&nbsp;die</span>
+                    <span class="price-hero-currency">$</span>8.00<span class="price-hero-unit">&nbsp;/&nbsp;die</span>
                   </div>
-                  <p class="price-total"><small class="text-muted">USD</small>&nbsp;$7,500</p>
+                  <p class="price-total"><small class="text-muted">USD</small>&nbsp;$8,000</p>
                   <h4 id="standard-slot-1x1" class="panel-title">Standard<a class="heading-anchor" href="#standard-slot-1x1" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h4>
                   
-                  <p class="pricing-deadline" data-deadline="2026-07-01T11:59:00Z" data-label="Closes">
+                  <p class="pricing-deadline" data-deadline="2026-12-10T11:59:00Z" data-label="Closes">
                     <span class="countdown-inline"></span>
                   </p>
                   
@@ -779,16 +903,15 @@
 
       <!-- Right: Slot description and specs -->
       <div class="col-lg-6 pl-60 pl-md-15">
-        <h2 id="1-1-nbsp-slot-full" class="title-color color-white">
+        <h2 id="1-1-nbsp-slot-full" class="title-color color-gray">
           1×1&nbsp;Slot (Full)
           <a class="heading-anchor" href="#1-1-nbsp-slot-full" aria-label="Permalink to this heading" title="Copy link to this heading">#</a>
         </h2>
         <h3 class="display-3">1×1&nbsp;Slot &mdash;&nbsp;1000&nbsp;dies&nbsp;per&nbsp;slot</h3>
         <div class="space20"></div>
         <p>
-          
-            The full-size slot gives you the largest die area and maximum I/O count. Ideal for complex SoCs, full mixed-signal designs, or projects that need the most routing and core area.
-          
+          The full-size slot gives you the largest die area and maximum I/O count. Ideal for complex SoCs, full mixed-signal designs, or projects that need the most routing and core area.
+
         </p>
         <ul class="icon-list bullet-default">
           <li><i class="icofont-verification-check"></i> <strong><a href="https://gf180mcu-pdk.readthedocs.io/">GF180MCU</a></strong> process &mdash; 180nm mixed-signal</li>
@@ -797,7 +920,6 @@
           <li><i class="icofont-verification-check"></i> Core area: <strong>12.92&nbsp;mm&sup2;</strong> <small>(default pad ring, required for COB)</small></li>
           <li><i class="icofont-verification-check"></i> Default: 56&nbsp;I/O pads &mdash; max: up to 168&nbsp;I/O with <a href="https://mithro.github.io/gf180mcu-project-template/" target="_blank" rel="noopener">custom pad ring</a></li>
           <li><i class="icofont-verification-check"></i> 5 metal layers, MIM capacitors, poly &amp; high-res resistors</li>
-          <li><i class="icofont-verification-check"></i> Early Bird pricing available through <strong>30 April 2026</strong></li>
         </ul>
         <div class="space10"></div>
         <a href="https://mithro.github.io/gf180mcu-project-template/" target="_blank" rel="noopener" class="btn btn-default btn-sm">
@@ -816,7 +938,7 @@
 
 <!-- Add-ons -->
 <!-- Add-ons Section -->
-<div id="addons" class="wrapper light-wrapper">
+<div id="addons" class="wrapper dark-wrapper inverse-text">
   <div class="container inner">
     <div class="row">
       <div class="col-md-8 mx-auto text-center">
@@ -944,6 +1066,9 @@
 
   
   
+
+  
+  
     
       <!-- Combined Countdown Section -->
       <div id="deadlines" class="wrapper white-wrapper">
@@ -953,7 +1078,7 @@
               
               <h2 class="title-color color-gray text-center">Deadlines<a class="heading-anchor" href="#deadlines" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h2>
               <h3 class="display-3 text-center">
-                <a href="https://buy.wafer.space" class="text-decoration-none">wafer.space GF180MCU Run 2</a>
+                <a href="https://buy.wafer.space" class="text-decoration-none">wafer.space GF180MCU Run 3</a>
               </h3>
               <div class="space40"></div>
             </div>
@@ -966,10 +1091,10 @@
               <div class="col-xl-10 offset-xl-1">
                 
                 <h4 id="early-bird-early-bird-deadline" class="mb-20"><i class="jam jam-shopping-cart mr-10"></i>Early Bird Deadline<a class="heading-anchor" href="#early-bird-early-bird-deadline" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h4>
-                <p class="text-muted mb-20">Lock in early bird pricing for GF180MCU Run 2</p>
+                <p class="text-muted mb-20">Lock in early bird pricing for GF180MCU Run 3</p>
                 <div class="countdown-section" data-expired-message="Early bird pricing has ended — normal pricing now applies">
                   <div class="countdown-wrapper d-flex align-items-center justify-content-center">
-                    <div class="countdown" data-date="2026-05-01T11:59:00Z">
+                    <div class="countdown" data-date="2026-10-01T11:59:00Z">
                       <div class="row text-center">
                         <div class="col-3">
                           <div class="box bg-white shadow">
@@ -1005,12 +1130,12 @@
                             <span class="btn-text">BUY</span>
                           </a>
                           <p class="text-muted text-center mt-3 mb-0 button-label">
-                            30 April 2026 @ 11:59 PM
+                            30 September 2026 @ 11:59 PM
                             
                               <a href="https://en.wikipedia.org/wiki/Anywhere_on_Earth" target="_blank" rel="noopener" class="text-decoration-none">AoE</a>
                             
                             
-                              (<a href="https://www.timeanddate.com/worldclock/fixedtime.html?iso=20260430T2359&p1=3399" target="_blank" rel="noopener" class="text-decoration-none">see in your timezone</a>)
+                              (<a href="https://www.timeanddate.com/worldclock/fixedtime.html?iso=20261001T2359&p1=3399" target="_blank" rel="noopener" class="text-decoration-none">see in your timezone</a>)
                             
                           </p>
                         </div>
@@ -1039,11 +1164,11 @@
             <div class="row">
               <div class="col-xl-10 offset-xl-1">
                 
-                <h4 id="campaign-purchase-submission-deadline" class="mb-20"><i class="jam jam-rocket mr-10"></i>Purchase & Submission Deadline<a class="heading-anchor" href="#campaign-purchase-submission-deadline" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h4>
-                <p class="text-muted mb-20">Final deadline to purchase a slot and submit your GDS</p>
+                <h4 id="campaign-purchase-deadline" class="mb-20"><i class="jam jam-rocket mr-10"></i>Purchase Deadline<a class="heading-anchor" href="#campaign-purchase-deadline" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h4>
+                <p class="text-muted mb-20">Final deadline to purchase a slot</p>
                 <div class="countdown-section" data-expired-message="Too late, catch the next shuttle!">
                   <div class="countdown-wrapper d-flex align-items-center justify-content-center">
-                    <div class="countdown" data-date="2026-07-01T11:59:00Z">
+                    <div class="countdown" data-date="2026-12-10T11:59:00Z">
                       <div class="row text-center">
                         <div class="col-3">
                           <div class="box bg-white shadow">
@@ -1081,12 +1206,12 @@
                             
                           </a>
                           <p class="text-muted text-center mt-3 mb-0 button-label">
-                            30 June 2026 @ 11:59 PM
+                            9 December 2026 @ 11:59 PM
                             
                               <a href="https://en.wikipedia.org/wiki/Anywhere_on_Earth" target="_blank" rel="noopener" class="text-decoration-none">AoE</a>
                             
                             
-                              (<a href="https://www.timeanddate.com/worldclock/fixedtime.html?iso=20260630T2359&p1=3399" target="_blank" rel="noopener" class="text-decoration-none">see in your timezone</a>)
+                              (<a href="https://www.timeanddate.com/worldclock/fixedtime.html?iso=20261209T2359&p1=3399" target="_blank" rel="noopener" class="text-decoration-none">see in your timezone</a>)
                             
                           </p>
                         </div>
@@ -1106,8 +1231,78 @@
 
           <!-- Spacer between countdowns -->
           
+            <div class="space40"></div>
+          
 
           <!-- Submission Countdown -->
+          
+            
+            <div class="row">
+              <div class="col-xl-10 offset-xl-1">
+                
+                <h4 id="submission-submission-deadline" class="mb-20"><i class="jam jam-upload mr-10"></i>Submission Deadline<a class="heading-anchor" href="#submission-submission-deadline" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h4>
+                <p class="text-muted mb-20">Final deadline to submit a clean GDS</p>
+                <div class="countdown-section" data-expired-message="See you in the next shuttle!">
+                  <div class="countdown-wrapper d-flex align-items-center justify-content-center">
+                    <div class="countdown" data-date="2026-12-17T11:59:00Z">
+                      <div class="row text-center">
+                        <div class="col-3">
+                          <div class="box bg-white shadow">
+                            <h3 data-days>0</h3>
+                            <p>days</p>
+                          </div>
+                        </div>
+                        <div class="col-3">
+                          <div class="box bg-white shadow">
+                            <h3 data-hours>0</h3>
+                            <p>hours</p>
+                          </div>
+                        </div>
+                        <div class="col-3">
+                          <div class="box bg-white shadow">
+                            <h3 data-minutes>0</h3>
+                            <p>minutes</p>
+                          </div>
+                        </div>
+                        <div class="col-3">
+                          <div class="box bg-white shadow">
+                            <h3 data-seconds>0</h3>
+                            <p>seconds</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                      <div class="countdown-button ml-4">
+                        <div class="countdown-button-wrapper">
+                          <a href="https://platform.wafer.space" class="countdown-box-btn box shadow">
+                            
+                              <i class="jam jam-rocket btn-icon"></i>
+                              <span class="btn-text">SUBMIT</span>
+                            
+                          </a>
+                          <p class="text-muted text-center mt-3 mb-0 button-label">
+                            16 December 2026 @ 11:59 PM
+                            
+                              <a href="https://en.wikipedia.org/wiki/Anywhere_on_Earth" target="_blank" rel="noopener" class="text-decoration-none">AoE</a>
+                            
+                            
+                              (<a href="https://www.timeanddate.com/worldclock/fixedtime.html?iso=20261216T2359&p1=3399" target="_blank" rel="noopener" class="text-decoration-none">see in your timezone</a>)
+                            
+                          </p>
+                        </div>
+                      </div>
+                    
+                  </div>
+                  <!-- Expired message - shown when countdown reaches zero -->
+                  <div class="countdown-expired text-center" style="display: none;">
+                    <div class="box bg-white shadow p-4">
+                      <h3 class="mb-0 text-warning">See you in the next shuttle!</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           
 
           <!-- Timeline Table -->
@@ -1129,25 +1324,31 @@
                       
                         <tr class="text-center timeline-row timeline-milestone">
                           <td class="font-weight-600">Campaign Opens</td>
-                          <td class="text-muted">1 March 2026</td>
-                          <td class="text-muted">Run 2 slots available for purchase on Crowd Supply</td>
+                          <td class="text-muted">1 August 2026</td>
+                          <td class="text-muted">Run 3 slots available for purchase on Crowd Supply</td>
                         </tr>
                       
                         <tr class="text-center timeline-row timeline-critical">
                           <td class="font-weight-600">Early Bird Deadline</td>
-                          <td class="text-muted">30 April 2026 @ 11:59 PM AoE</td>
+                          <td class="text-muted">30 September 2026 @ 11:59 PM AoE</td>
                           <td class="text-muted">Last day to purchase at early bird pricing</td>
                         </tr>
                       
                         <tr class="text-center timeline-row timeline-critical">
-                          <td class="font-weight-600">Purchase & Submission Deadline</td>
-                          <td class="text-muted">30 June 2026 @ 11:59 PM AoE</td>
-                          <td class="text-muted">Final deadline to purchase slots and submit GDS files</td>
+                          <td class="font-weight-600">Purchase Deadline</td>
+                          <td class="text-muted">9 December 2026 @ 11:59 PM AoE</td>
+                          <td class="text-muted">Final deadline to purchase slots</td>
+                        </tr>
+                      
+                        <tr class="text-center timeline-row timeline-critical">
+                          <td class="font-weight-600">Submission Deadline</td>
+                          <td class="text-muted">16 December 2026 @ 11:59 PM AoE</td>
+                          <td class="text-muted">Final deadline to submit clean GDS</td>
                         </tr>
                       
                         <tr class="text-center timeline-row timeline-delivery">
                           <td class="font-weight-600">Parts Shipped</td>
-                          <td class="text-muted">Early Q4 2026</td>
+                          <td class="text-muted">Q2 2027</td>
                           <td class="text-muted">Bare dies and packaged parts shipped to customers</td>
                         </tr>
                       
@@ -1219,7 +1420,7 @@
     <div class="row">
       <div class="col-lg-8 offset-lg-2 text-center">
         <h2 id="ready-to-design-your-chip" class="title-color color-gray">Ready to design your chip?<a class="heading-anchor" href="#ready-to-design-your-chip" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h2>
-        <h3 class="display-3">Your&nbsp;design. Your&nbsp;silicon. From&nbsp;$4&nbsp;per&nbsp;die.</h3>
+        <h3 class="display-3">Your&nbsp;design. Your&nbsp;silicon. From&nbsp;$2&nbsp;per&nbsp;die.</h3>
         <div class="space40"></div>
       </div>
     </div>
@@ -1306,7 +1507,7 @@
 <script>
 (function() {
   'use strict';
-  var deadlineStr = '2026-05-01T11:59:00Z';
+  var deadlineStr = '2026-10-01T11:59:00Z';
   if (!deadlineStr) return;
   var deadline = new Date(deadlineStr);
   var now = new Date();
@@ -1482,5 +1683,5 @@
 
 
 </body>
-<!-- Generated from git commit: f4b77e3b4070e5f2a1467852f471e7ec8d77580f (f4b77e3b) -->
+<!-- Generated from git commit: 9b72932797371fd9aab2e099fff44fd562881a06 (9b729327) -->
 </html>

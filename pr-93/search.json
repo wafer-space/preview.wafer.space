@@ -1,6 +1,96 @@
 [
   
     {
+      "title"    : "A Need for Speed: Tholin&#39;s Own Standard Cell Library",
+      "category" : "",
+      "tags"     : "gf180mcu, tholin, featured-project",
+      "url"      : "/pr-93/news/a-need-for-speed-tholins-own-standard-cell-library",
+      "date"     : "2026-09-30 12:00:00 +0000",
+      "desc"     : "A Need for Speed: Tholin's Own Standard Cell Library"
+    } ,
+  
+    {
+      "title"    : "Last 48 Hours for Run #3 Early Bird Pricing",
+      "category" : "",
+      "tags"     : "gf180mcu, run3, deadline",
+      "url"      : "/pr-93/news/run3-early-bird-48hrs",
+      "date"     : "2026-09-28 12:00:00 +0000",
+      "desc"     : "Last 48 Hours for Run #3 Early Bird Pricing"
+    } ,
+  
+    {
+      "title"    : "Testing Dies",
+      "category" : "",
+      "tags"     : "gf180mcu, manufacturing, chip-on-board, testing",
+      "url"      : "/pr-93/news/testing-dies",
+      "date"     : "2026-09-25 12:00:00 +0000",
+      "desc"     : "Testing Dies"
+    } ,
+  
+    {
+      "title"    : "Run #3 Early Bird Pricing Leaves in a Week",
+      "category" : "",
+      "tags"     : "gf180mcu, run3, deadline",
+      "url"      : "/pr-93/news/run3-early-bird-1wk",
+      "date"     : "2026-09-23 12:00:00 +0000",
+      "desc"     : "Run #3 Early Bird Pricing Leaves in a Week"
+    } ,
+  
+    {
+      "title"    : "Run #3 1x1 Slots Gone",
+      "category" : "",
+      "tags"     : "gf180mcu, run3",
+      "url"      : "/pr-93/news/run3-1x1-slots-gone",
+      "date"     : "2026-09-22 12:00:00 +0000",
+      "desc"     : "Run #3 1x1 Slots Gone"
+    } ,
+  
+    {
+      "title"    : "Run #3 1x1 Slots Running Low",
+      "category" : "",
+      "tags"     : "gf180mcu, run3",
+      "url"      : "/pr-93/news/run3-1x1-slots-running-low",
+      "date"     : "2026-09-19 12:00:00 +0000",
+      "desc"     : "Run #3 1x1 Slots Running Low"
+    } ,
+  
+    {
+      "title"    : "Wafers Delayed for Run #2",
+      "category" : "",
+      "tags"     : "gf180mcu, run2",
+      "url"      : "/pr-93/news/run2-wafer-delay",
+      "date"     : "2026-09-16 12:00:00 +0000",
+      "desc"     : "Wafers Delayed for Run #2"
+    } ,
+  
+    {
+      "title"    : "GF180MCU Run 3 is Here!",
+      "category" : "",
+      "tags"     : "gf180mcu, run3",
+      "url"      : "/pr-93/news/run3-announcement",
+      "date"     : "2026-08-01 12:00:00 +0000",
+      "desc"     : "GF180MCU Run 3 is Here!"
+    } ,
+  
+    {
+      "title"    : "GF180MCU Run 3 is Coming!",
+      "category" : "",
+      "tags"     : "gf180mcu, run3, crowd-supply",
+      "url"      : "/pr-93/news/run3-coming-soon",
+      "date"     : "2026-07-24 12:00:00 +0000",
+      "desc"     : "GF180MCU Run 3 is Coming!"
+    } ,
+  
+    {
+      "title"    : "Run 2 Deadline Update and Reminder",
+      "category" : "",
+      "tags"     : "gf180mcu, run2, announcement, deadline",
+      "url"      : "/pr-93/news/run2-deadline-update",
+      "date"     : "2026-06-24 12:00:00 +0000",
+      "desc"     : "Run 2 Deadline Update and Reminder"
+    } ,
+  
+    {
       "title"    : "Taping Out KianV - a Linux/XV6-capable RISC-V SoC",
       "category" : "",
       "tags"     : "gf180mcu, run1, featured-project, risc-v, kianv",
