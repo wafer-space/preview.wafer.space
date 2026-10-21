@@ -4,7 +4,7 @@
 <head>
   <!-- Meta Tags-->
   <meta charset="utf-8" />
-  <meta name="git-commit" content="f47f8510cfad4f8582f35a72141f6f9d9c1112bd">
+  <meta name="git-commit" content="6ed5bb725811734ac9a97cef43b34a30b0d68650">
 <!-- Primary Meta Tags -->
 <title> wafer.space - Budget silicon manufacturing. </title>
 <meta name="title" content=" wafer.space - Budget silicon manufacturing. ">
@@ -2255,9 +2255,9 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="col-lg-8 offset-lg-2 text-center">
         <h2 id="what-fits-on-1-mm-of-gf180mcu-silicon" class="title-color color-white">What fits on 1&nbsp;mm&sup2; of GF180MCU silicon?<a class="heading-anchor" href="#what-fits-on-1-mm-of-gf180mcu-silicon" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h2>
         <h3 class="display-3">The theoretical maximum, then what designers achieved</h3>
-        <p class="lead">The maximum packs one kind of cell edge to edge, with no room for wiring. No real design gets
-          close, because the cells must be wired together. Every figure below is measured from the layouts of
-          349 designs made on GF180MCU.</p>
+        <p class="lead">The maximum packs one kind of cell edge to edge, with no room for wiring, using the
+          densest library for that cell. No real design gets close, because the cells must be wired together. What
+          designers achieved is measured from the layouts of 349 designs made on GF180MCU.</p>
         <div class="space20"></div>
       </div>
     </div>
@@ -2269,8 +2269,9 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="box bg-white shadow p-30 h-100">
           <h3 class="mb-5 color-dark">~114k</h3>
           <p class="mb-0 font-weight-600 color-dark">Inverters per mm&sup2;</p>
-          <p class="mb-0 small text-muted">Flips a signal: <code>inv_2</code>, 2.24&nbsp;&times;&nbsp;3.92&nbsp;&micro;m,
-            from the AS 7t-3.3V library</p>
+          <p class="mb-0 small text-muted">Flips a signal: <a href="https://github.com/AvalonSemiconductors/gf180mcu_as_sc_mcu7t3v3"><code>inv_2</code></a>,
+            2.24&nbsp;&times;&nbsp;3.92&nbsp;&micro;m, from the
+            <a href="https://github.com/AvalonSemiconductors/gf180mcu_as_sc_mcu7t3v3">AS 7t-3.3V</a> library</p>
         </div>
       </div>
       
@@ -2279,8 +2280,9 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="box bg-white shadow p-30 h-100">
           <h3 class="mb-5 color-dark">~91k</h3>
           <p class="mb-0 font-weight-600 color-dark">NAND gates per mm&sup2;</p>
-          <p class="mb-0 small text-muted">Basic logic gate: <code>nand2_1</code>, 2.8&nbsp;&times;&nbsp;3.92&nbsp;&micro;m,
-            from the 7t-5V library</p>
+          <p class="mb-0 small text-muted">Basic logic gate: <a href="https://gf180mcu-pdk.readthedocs.io/en/latest/digital/standard_cells/gf180mcu_fd_sc_mcu7t5v0/cells/nand2/gf180mcu_fd_sc_mcu7t5v0__nand2_1.html"><code>nand2_1</code></a>,
+            2.8&nbsp;&times;&nbsp;3.92&nbsp;&micro;m, from the
+            <a href="https://gf180mcu-pdk.readthedocs.io/en/latest/digital/standard_cells/gf180mcu_fd_sc_mcu7t5v0/index.html">7t-5V</a> library</p>
         </div>
       </div>
       
@@ -2289,8 +2291,9 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="box bg-white shadow p-30 h-100">
           <h3 class="mb-5 color-dark">~76k</h3>
           <p class="mb-0 font-weight-600 color-dark">Buffers per mm&sup2;</p>
-          <p class="mb-0 small text-muted">Strengthens a signal: <code>buff_2</code>, 3.36&nbsp;&times;&nbsp;3.92&nbsp;&micro;m,
-            from the AS 7t-3.3V library</p>
+          <p class="mb-0 small text-muted">Strengthens a signal: <a href="https://github.com/AvalonSemiconductors/gf180mcu_as_sc_mcu7t3v3"><code>buff_2</code></a>,
+            3.36&nbsp;&times;&nbsp;3.92&nbsp;&micro;m, from the
+            <a href="https://github.com/AvalonSemiconductors/gf180mcu_as_sc_mcu7t3v3">AS 7t-3.3V</a> library</p>
         </div>
       </div>
       
@@ -2299,15 +2302,19 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="box bg-white shadow p-30 h-100">
           <h3 class="mb-5 color-dark">~17k</h3>
           <p class="mb-0 font-weight-600 color-dark">Flip-flops per mm&sup2;</p>
-          <p class="mb-0 small text-muted">Stores one bit: <code>dfxtp_2</code>, 15.12&nbsp;&times;&nbsp;3.92&nbsp;&micro;m,
-            from the AS 7t-3.3V library</p>
+          <p class="mb-0 small text-muted">Stores one bit: <a href="https://github.com/AvalonSemiconductors/gf180mcu_as_sc_mcu7t3v3"><code>dfxtp_2</code></a>,
+            15.12&nbsp;&times;&nbsp;3.92&nbsp;&micro;m, from the
+            <a href="https://github.com/AvalonSemiconductors/gf180mcu_as_sc_mcu7t3v3">AS 7t-3.3V</a> library</p>
         </div>
       </div>
       
     </div>
     <p class="table-footnote text-center">At most
       521k transistors fit on a
-      square millimetre (AS 7t-3.3V <code>nand2_2</code>).</p>
+      square millimetre (AS 7t-3.3V <code>nand2_2</code>,
+      the cell with the most transistors for its size). A library's name gives its cell height in tracks and its
+      supply voltage: <em>7t-5V</em> is the foundry's 7-track 5&nbsp;V library, and <em>AS 7t-3.3V</em> is Avalon
+      Semiconductors' 7-track 3.3&nbsp;V library.</p>
 
     <div class="space60"></div>
 
@@ -2392,247 +2399,307 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="ws-strip-name">wafer.space<br><small>60 designs</small></div>
             <div class="ws-strip-track">
               <i class="ws-strip-max" style="left: 94.90416666666667%"></i><i class="ws-strip-max" style="left: 75.92333333333333%"></i><i class="ws-strip-max" style="left: 63.26916666666666%"></i><i class="ws-strip-max" style="left: 14.06%"></i>
-              <i class="ws-strip-median" style="left: 5.8975%" title="Typical: 7077 per mm²"></i>
+              <i class="ws-strip-median" style="left: 5.8975%" title="Typical: 7.1k per mm²"></i>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run2/projects/CLON.html"
                  style="left: 20.900833333333335%; top: 8%"
-                 title="Cloneless2 (wafer.space Run 2, 1 × 1 slot): 25081 per mm²"></a>
+                 
+                 title="Cloneless2 (wafer.space Run 2, 1 × 1 slot): 25k logic cells per mm²" aria-label="Cloneless2 (wafer.space Run 2, 1 × 1 slot): 25k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run1/projects/2975.html"
                  style="left: 20.4375%; top: 48%"
-                 title="Cloneless1 (wafer.space Run 1, 1 × 1 slot): 24525 per mm²"></a>
+                 
+                 title="Cloneless1 (wafer.space Run 1, 1 × 1 slot): 25k logic cells per mm²" aria-label="Cloneless1 (wafer.space Run 1, 1 × 1 slot): 25k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run1/projects/TQVA.html"
                  style="left: 17.175833333333333%; top: 88%"
-                 title="TinyQV - Crowdsourced RISC-V SoC (wafer.space Run 1, ½ × ½ slot): 20611 per mm²"></a>
+                 
+                 title="TinyQV - Crowdsourced RISC-V SoC (wafer.space Run 1, ½ × ½ slot): 21k logic cells per mm²" aria-label="TinyQV - Crowdsourced RISC-V SoC (wafer.space Run 1, ½ × ½ slot): 21k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run2/projects/TQVA.html"
                  style="left: 17.175833333333333%; top: 38%"
-                 title="TinyQV - Crowdsourced RISC-V SoC (wafer.space Run 2, ½ × ½ slot): 20611 per mm²"></a>
+                 
+                 title="TinyQV - Crowdsourced RISC-V SoC (wafer.space Run 2, ½ × ½ slot): 21k logic cells per mm²" aria-label="TinyQV - Crowdsourced RISC-V SoC (wafer.space Run 2, ½ × ½ slot): 21k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run2/projects/BTX1.html"
                  style="left: 16.315833333333334%; top: 78%"
-                 title="BTX (wafer.space Run 2, 1 × 1 slot): 19579 per mm²"></a>
+                 
+                 title="BTX (wafer.space Run 2, 1 × 1 slot): 20k logic cells per mm²" aria-label="BTX (wafer.space Run 2, 1 × 1 slot): 20k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run2/projects/DPK2.html"
                  style="left: 16.095%; top: 28%"
-                 title="cordic-romless-x8 (wafer.space Run 2, ½ × ½ slot): 19314 per mm²"></a>
+                 
+                 title="cordic-romless-x8 (wafer.space Run 2, ½ × ½ slot): 19k logic cells per mm²" aria-label="cordic-romless-x8 (wafer.space Run 2, ½ × ½ slot): 19k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run2/projects/SCUP.html"
                  style="left: 15.426666666666666%; top: 68%"
-                 title="GF180MCU Peripherals (wafer.space Run 2, 1 × 1 slot): 18512 per mm²"></a>
+                 
+                 title="GF180MCU Peripherals (wafer.space Run 2, 1 × 1 slot): 19k logic cells per mm²" aria-label="GF180MCU Peripherals (wafer.space Run 2, 1 × 1 slot): 19k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run2/projects/MOLE.html"
                  style="left: 13.664166666666667%; top: 18%"
-                 title="FABulous FPGA (wafer.space Run 2, 1 × 1 slot): 16397 per mm²"></a>
+                 
+                 title="FABulous FPGA (wafer.space Run 2, 1 × 1 slot): 16k logic cells per mm²" aria-label="FABulous FPGA (wafer.space Run 2, 1 × 1 slot): 16k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run1/projects/TTP2.html"
                  style="left: 13.160833333333333%; top: 58%"
-                 title="Tiny Tapeout GF 0.2, standard (wafer.space Run 1, 1 × 1 slot): 15793 per mm²"></a>
+                 
+                 title="Tiny Tapeout GF 0.2, standard (wafer.space Run 1, 1 × 1 slot): 16k logic cells per mm²" aria-label="Tiny Tapeout GF 0.2, standard (wafer.space Run 1, 1 × 1 slot): 16k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run1/projects/TTPG.html"
                  style="left: 13.160833333333333%; top: 8%"
-                 title="Tiny Tapeout GF 0.2, power-gated (wafer.space Run 1, 1 × 1 slot): 15793 per mm²"></a>
+                 
+                 title="Tiny Tapeout GF 0.2, power-gated (wafer.space Run 1, 1 × 1 slot): 16k logic cells per mm²" aria-label="Tiny Tapeout GF 0.2, power-gated (wafer.space Run 1, 1 × 1 slot): 16k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run1/projects/MOLE.html"
                  style="left: 13.145%; top: 48%"
-                 title="FABulous FPGA (wafer.space Run 1, 1 × 1 slot): 15774 per mm²"></a>
+                 
+                 title="FABulous FPGA (wafer.space Run 1, 1 × 1 slot): 16k logic cells per mm²" aria-label="FABulous FPGA (wafer.space Run 1, 1 × 1 slot): 16k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run2/projects/DPK1.html"
                  style="left: 12.38%; top: 88%"
-                 title="bio180 (wafer.space Run 2, ½ × 1 slot): 14856 per mm²"></a>
+                 
+                 title="bio180 (wafer.space Run 2, ½ × 1 slot): 15k logic cells per mm²" aria-label="bio180 (wafer.space Run 2, ½ × 1 slot): 15k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run2/projects/TQVE.html"
                  style="left: 11.608333333333333%; top: 38%"
-                 title="TinyQV - RISC-V SoC with experimental pad setup (wafer.space Run 2, ½ × ½ slot): 13930 per mm²"></a>
+                 
+                 title="TinyQV - RISC-V SoC with experimental pad setup (wafer.space Run 2, ½ × ½ slot): 14k logic cells per mm²" aria-label="TinyQV - RISC-V SoC with experimental pad setup (wafer.space Run 2, ½ × ½ slot): 14k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run2/projects/TQVD.html"
                  style="left: 11.393333333333333%; top: 78%"
-                 title="TinyQV - RISC-V SoC with HDMI output (wafer.space Run 2, ½ × ½ slot): 13672 per mm²"></a>
+                 
+                 title="TinyQV - RISC-V SoC with HDMI output (wafer.space Run 2, ½ × ½ slot): 14k logic cells per mm²" aria-label="TinyQV - RISC-V SoC with HDMI output (wafer.space Run 2, ½ × ½ slot): 14k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run2/projects/EURO.html"
                  style="left: 11.300833333333333%; top: 28%"
-                 title="EuroSynth (wafer.space Run 2, 1 × ½ slot): 13561 per mm²"></a>
+                 
+                 title="EuroSynth (wafer.space Run 2, 1 × ½ slot): 14k logic cells per mm²" aria-label="EuroSynth (wafer.space Run 2, 1 × ½ slot): 14k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run1/projects/JKU1.html"
                  style="left: 11.255%; top: 68%"
-                 title="gf180mcu-jku-projects (wafer.space Run 1, 1 × 1 slot): 13506 per mm²"></a>
+                 
+                 title="gf180mcu-jku-projects (wafer.space Run 1, 1 × 1 slot): 14k logic cells per mm²" aria-label="gf180mcu-jku-projects (wafer.space Run 1, 1 × 1 slot): 14k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run2/projects/T26B.html"
                  style="left: 10.0725%; top: 18%"
-                 title="Tiny Tapeout GF 26b (wafer.space Run 2, 1 × 1 slot): 12087 per mm²"></a>
+                 
+                 title="Tiny Tapeout GF 26b (wafer.space Run 2, 1 × 1 slot): 12k logic cells per mm²" aria-label="Tiny Tapeout GF 26b (wafer.space Run 2, 1 × 1 slot): 12k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run1/projects/CHES.html"
                  style="left: 9.359166666666667%; top: 58%"
-                 title="chess-move-generator (wafer.space Run 1, 1 × 1 slot): 11231 per mm²"></a>
+                 
+                 title="chess-move-generator (wafer.space Run 1, 1 × 1 slot): 11k logic cells per mm²" aria-label="chess-move-generator (wafer.space Run 1, 1 × 1 slot): 11k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run2/projects/T26A.html"
                  style="left: 9.3275%; top: 8%"
-                 title="Tiny Tapeout GF 26a (wafer.space Run 2, 1 × 1 slot): 11193 per mm²"></a>
+                 
+                 title="Tiny Tapeout GF 26a (wafer.space Run 2, 1 × 1 slot): 11k logic cells per mm²" aria-label="Tiny Tapeout GF 26a (wafer.space Run 2, 1 × 1 slot): 11k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run2/projects/CAB1.html"
                  style="left: 8.665%; top: 48%"
-                 title="Cabrera CoB (wafer.space Run 2, 1 × ½ slot): 10398 per mm²"></a>
+                 
+                 title="Cabrera CoB (wafer.space Run 2, 1 × ½ slot): 10k logic cells per mm²" aria-label="Cabrera CoB (wafer.space Run 2, 1 × ½ slot): 10k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run2/projects/NAX1.html"
                  style="left: 8.286666666666667%; top: 88%"
-                 title="Naxos CoB (wafer.space Run 2, 1 × ½ slot): 9944 per mm²"></a>
+                 
+                 title="Naxos CoB (wafer.space Run 2, 1 × ½ slot): 9.9k logic cells per mm²" aria-label="Naxos CoB (wafer.space Run 2, 1 × ½ slot): 9.9k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run2/projects/SCTP.html"
                  style="left: 8.04%; top: 38%"
-                 title="SlugTPU (wafer.space Run 2, 1 × 1 slot): 9648 per mm²"></a>
+                 
+                 title="SlugTPU (wafer.space Run 2, 1 × 1 slot): 9.6k logic cells per mm²" aria-label="SlugTPU (wafer.space Run 2, 1 × 1 slot): 9.6k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run2/projects/T0P3.html"
                  style="left: 7.68%; top: 78%"
-                 title="Tiny Tapeout GF 0.3 (wafer.space Run 2, 1 × 1 slot): 9216 per mm²"></a>
+                 
+                 title="Tiny Tapeout GF 0.3 (wafer.space Run 2, 1 × 1 slot): 9.2k logic cells per mm²" aria-label="Tiny Tapeout GF 0.3 (wafer.space Run 2, 1 × 1 slot): 9.2k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run2/projects/SCML.html"
                  style="left: 7.1925%; top: 28%"
-                 title="ML-Audio SC (wafer.space Run 2, 1 × 1 slot): 8631 per mm²"></a>
+                 
+                 title="ML-Audio SC (wafer.space Run 2, 1 × 1 slot): 8.6k logic cells per mm²" aria-label="ML-Audio SC (wafer.space Run 2, 1 × 1 slot): 8.6k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run1/projects/TQVB.html"
                  style="left: 6.62%; top: 68%"
-                 title="TinyQV - Crowdsourced RISC-V SoC (0.5x1) (wafer.space Run 1, ½ × 1 slot): 7944 per mm²"></a>
+                 
+                 title="TinyQV - Crowdsourced RISC-V SoC (0.5x1) (wafer.space Run 1, ½ × 1 slot): 7.9k logic cells per mm²" aria-label="TinyQV - Crowdsourced RISC-V SoC (0.5x1) (wafer.space Run 1, ½ × 1 slot): 7.9k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run1/projects/CAFE.html"
                  style="left: 6.486666666666666%; top: 18%"
-                 title="FazyRV Hachure (wafer.space Run 1, 1 × 1 slot): 7784 per mm²"></a>
+                 
+                 title="FazyRV Hachure (wafer.space Run 1, 1 × 1 slot): 7.8k logic cells per mm²" aria-label="FazyRV Hachure (wafer.space Run 1, 1 × 1 slot): 7.8k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run1/projects/GD02.html"
                  style="left: 6.460833333333333%; top: 58%"
-                 title="Racquet Half r1p0 (1/2 slot) (wafer.space Run 1, ½ × 1 slot): 7753 per mm²"></a>
+                 
+                 title="Racquet Half r1p0 (1/2 slot) (wafer.space Run 1, ½ × 1 slot): 7.8k logic cells per mm²" aria-label="Racquet Half r1p0 (1/2 slot) (wafer.space Run 1, ½ × 1 slot): 7.8k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run1/projects/TQVC.html"
                  style="left: 5.995%; top: 8%"
-                 title="TinyQV - Crowdsourced RISC-V SoC (1x0.5) (wafer.space Run 1, 1 × ½ slot): 7194 per mm²"></a>
+                 
+                 title="TinyQV - Crowdsourced RISC-V SoC (1x0.5) (wafer.space Run 1, 1 × ½ slot): 7.2k logic cells per mm²" aria-label="TinyQV - Crowdsourced RISC-V SoC (1x0.5) (wafer.space Run 1, 1 × ½ slot): 7.2k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run2/projects/TQVC.html"
                  style="left: 5.995%; top: 48%"
-                 title="TinyQV - Crowdsourced RISC-V SoC (1x0.5) (wafer.space Run 2, 1 × ½ slot): 7194 per mm²"></a>
+                 
+                 title="TinyQV - Crowdsourced RISC-V SoC (1x0.5) (wafer.space Run 2, 1 × ½ slot): 7.2k logic cells per mm²" aria-label="TinyQV - Crowdsourced RISC-V SoC (1x0.5) (wafer.space Run 2, 1 × ½ slot): 7.2k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run1/projects/GD04.html"
                  style="left: 5.8975%; top: 88%"
-                 title="Racquet Wide 1x0.5 (wafer.space Run 1, 1 × ½ slot): 7077 per mm²"></a>
+                 
+                 title="Racquet Wide 1x0.5 (wafer.space Run 1, 1 × ½ slot): 7.1k logic cells per mm²" aria-label="Racquet Wide 1x0.5 (wafer.space Run 1, 1 × ½ slot): 7.1k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run2/projects/GD04.html"
                  style="left: 5.8975%; top: 38%"
-                 title="Racquet Wide 1x0.5 (wafer.space Run 2, 1 × ½ slot): 7077 per mm²"></a>
+                 
+                 title="Racquet Wide 1x0.5 (wafer.space Run 2, 1 × ½ slot): 7.1k logic cells per mm²" aria-label="Racquet Wide 1x0.5 (wafer.space Run 2, 1 × ½ slot): 7.1k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run1/projects/KIAN.html"
                  style="left: 5.7375%; top: 78%"
-                 title="KianV: A 32-bit RISC-V Linux SoC taped out on GF180MCU (wafer.space Run 1, 1 × 1 slot): 6885 per mm²"></a>
+                 
+                 title="KianV: A 32-bit RISC-V Linux SoC taped out on GF180MCU (wafer.space Run 1, 1 × 1 slot): 6.9k logic cells per mm²" aria-label="KianV: A 32-bit RISC-V Linux SoC taped out on GF180MCU (wafer.space Run 1, 1 × 1 slot): 6.9k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run1/projects/RZML.html"
                  style="left: 5.71%; top: 28%"
-                 title="LGN FashionMNIST - Logic Gate Network trained on FashionMNIST (wafer.space Run 1, 1 × 1 slot): 6852 per mm²"></a>
+                 
+                 title="LGN FashionMNIST - Logic Gate Network trained on FashionMNIST (wafer.space Run 1, 1 × 1 slot): 6.9k logic cells per mm²" aria-label="LGN FashionMNIST - Logic Gate Network trained on FashionMNIST (wafer.space Run 1, 1 × 1 slot): 6.9k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run2/projects/AS04.html"
                  style="left: 5.633333333333334%; top: 68%"
-                 title="Multi-Project die using 3.3V SCL (wafer.space Run 2, 1 × 1 slot): 6760 per mm²"></a>
+                 
+                 title="Multi-Project die using 3.3V SCL (wafer.space Run 2, 1 × 1 slot): 6.8k logic cells per mm²" aria-label="Multi-Project die using 3.3V SCL (wafer.space Run 2, 1 × 1 slot): 6.8k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run1/projects/AS03.html"
                  style="left: 5.588333333333333%; top: 18%"
-                 title="WS-Multi (wafer.space Run 1, 1 × 1 slot): 6706 per mm²"></a>
+                 
+                 title="WS-Multi (wafer.space Run 1, 1 × 1 slot): 6.7k logic cells per mm²" aria-label="WS-Multi (wafer.space Run 1, 1 × 1 slot): 6.7k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run2/projects/AMM1.html"
                  style="left: 5.246666666666667%; top: 58%"
-                 title="raybox-zero wafer.space run 2 half height (wafer.space Run 2, 1 × ½ slot): 6296 per mm²"></a>
+                 
+                 title="raybox-zero wafer.space run 2 half height (wafer.space Run 2, 1 × ½ slot): 6.3k logic cells per mm²" aria-label="raybox-zero wafer.space run 2 half height (wafer.space Run 2, 1 × ½ slot): 6.3k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run1/projects/GD03.html"
                  style="left: 5.045%; top: 8%"
-                 title="Racquet r2p0 - 23 core SoC (wafer.space Run 1, 1 × 1 slot): 6054 per mm²"></a>
+                 
+                 title="Racquet r2p0 - 23 core SoC (wafer.space Run 1, 1 × 1 slot): 6.1k logic cells per mm²" aria-label="Racquet r2p0 - 23 core SoC (wafer.space Run 1, 1 × 1 slot): 6.1k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run2/projects/KIAN.html"
                  style="left: 4.9575%; top: 48%"
-                 title="KianV: A 32-bit RISC-V Linux SoC taped out on GF180MCU Run 2 (wafer.space Run 2, 1 × 1 slot): 5949 per mm²"></a>
+                 
+                 title="KianV: A 32-bit RISC-V Linux SoC taped out on GF180MCU Run 2 (wafer.space Run 2, 1 × 1 slot): 5.9k logic cells per mm²" aria-label="KianV: A 32-bit RISC-V Linux SoC taped out on GF180MCU Run 2 (wafer.space Run 2, 1 × 1 slot): 5.9k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run1/projects/RBOY.html"
                  style="left: 4.5125%; top: 88%"
-                 title="RISCBoy-180 (wafer.space Run 1, 1 × 1 slot): 5415 per mm²"></a>
+                 
+                 title="RISCBoy-180 (wafer.space Run 1, 1 × 1 slot): 5.4k logic cells per mm²" aria-label="RISCBoy-180 (wafer.space Run 1, 1 × 1 slot): 5.4k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run2/projects/CAFE.html"
                  style="left: 4.206666666666667%; top: 38%"
-                 title="Expresso Ethernet Chip: 100Mbps Ethernet switch + Heat death of the Universe Beacon - 0.5x0.5 version - Preferred version (wafer.space Run 2, ½ × ½ slot): 5048 per mm²"></a>
+                 
+                 title="Expresso Ethernet Chip: 100Mbps Ethernet switch + Heat death of the Universe Beacon - 0.5x0.5 version - Preferred version (wafer.space Run 2, ½ × ½ slot): 5.0k logic cells per mm²" aria-label="Expresso Ethernet Chip: 100Mbps Ethernet switch + Heat death of the Universe Beacon - 0.5x0.5 version - Preferred version (wafer.space Run 2, ½ × ½ slot): 5.0k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run1/projects/TZ01.html"
                  style="left: 3.7425%; top: 78%"
-                 title="TillitisZedulo-testchip2025 (wafer.space Run 1, 1 × 1 slot): 4491 per mm²"></a>
+                 
+                 title="TillitisZedulo-testchip2025 (wafer.space Run 1, 1 × 1 slot): 4.5k logic cells per mm²" aria-label="TillitisZedulo-testchip2025 (wafer.space Run 1, 1 × 1 slot): 4.5k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run1/projects/JKU2.html"
                  style="left: 3.7308333333333334%; top: 28%"
-                 title="gf180mcu-jku-atbs-adc (wafer.space Run 1, 1 × ½ slot): 4477 per mm²"></a>
+                 
+                 title="gf180mcu-jku-atbs-adc (wafer.space Run 1, 1 × ½ slot): 4.5k logic cells per mm²" aria-label="gf180mcu-jku-atbs-adc (wafer.space Run 1, 1 × ½ slot): 4.5k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run2/projects/SCMT.html"
                  style="left: 3.0658333333333334%; top: 68%"
-                 title="microTheia (wafer.space Run 2, 1 × 1 slot): 3679 per mm²"></a>
+                 
+                 title="microTheia (wafer.space Run 2, 1 × 1 slot): 3.7k logic cells per mm²" aria-label="microTheia (wafer.space Run 2, 1 × 1 slot): 3.7k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run2/projects/PSOC.html"
                  style="left: 3.05%; top: 18%"
-                 title="Simplest possible PicoSoC implementation using wafer.space flow (wafer.space Run 2, 1 × ½ slot): 3660 per mm²"></a>
+                 
+                 title="Simplest possible PicoSoC implementation using wafer.space flow (wafer.space Run 2, 1 × ½ slot): 3.7k logic cells per mm²" aria-label="Simplest possible PicoSoC implementation using wafer.space flow (wafer.space Run 2, 1 × ½ slot): 3.7k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run1/projects/BTAP.html"
                  style="left: 2.7883333333333336%; top: 58%"
-                 title="BreakingTTAPs (wafer.space Run 1, 1 × 1 slot): 3346 per mm²"></a>
+                 
+                 title="BreakingTTAPs (wafer.space Run 1, 1 × 1 slot): 3.3k logic cells per mm²" aria-label="BreakingTTAPs (wafer.space Run 1, 1 × 1 slot): 3.3k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run2/projects/QZ80.html"
                  style="left: 2.450833333333333%; top: 8%"
-                 title="FOSSi open-source replacement for Z80 classic 8-bit CPU (0.5 x 0.5 slot) (wafer.space Run 2, ½ × ½ slot): 2941 per mm²"></a>
+                 
+                 title="FOSSi open-source replacement for Z80 classic 8-bit CPU (0.5 x 0.5 slot) (wafer.space Run 2, ½ × ½ slot): 2.9k logic cells per mm²" aria-label="FOSSi open-source replacement for Z80 classic 8-bit CPU (0.5 x 0.5 slot) (wafer.space Run 2, ½ × ½ slot): 2.9k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run1/projects/OCD1.html"
                  style="left: 2.223333333333333%; top: 48%"
-                 title="openframe_caravel_picorv32 (wafer.space Run 1, 1 × 1 slot): 2668 per mm²"></a>
+                 
+                 title="openframe_caravel_picorv32 (wafer.space Run 1, 1 × 1 slot): 2.7k logic cells per mm²" aria-label="openframe_caravel_picorv32 (wafer.space Run 1, 1 × 1 slot): 2.7k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run2/projects/DCO0.html"
                  style="left: 1.185%; top: 88%"
-                 title="Standard Cell DCO+TDC (wafer.space Run 2, 1 × ½ slot): 1422 per mm²"></a>
+                 
+                 title="Standard Cell DCO+TDC (wafer.space Run 2, 1 × ½ slot): 1.4k logic cells per mm²" aria-label="Standard Cell DCO+TDC (wafer.space Run 2, 1 × ½ slot): 1.4k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run1/projects/MOSB.html"
                  style="left: 1.155%; top: 38%"
-                 title="MOSbiusV3 (wafer.space Run 1, 1 × 1 slot): 1386 per mm²"></a>
+                 
+                 title="MOSbiusV3 (wafer.space Run 1, 1 × 1 slot): 1.4k logic cells per mm²" aria-label="MOSbiusV3 (wafer.space Run 1, 1 × 1 slot): 1.4k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run1/projects/HZ80.html"
                  style="left: 0.9616666666666667%; top: 78%"
-                 title="FOSSi open-source replacement for Z80 classic 8-bit CPU (0.5 x 1 slot) (wafer.space Run 1, ½ × 1 slot): 1154 per mm²"></a>
+                 
+                 title="FOSSi open-source replacement for Z80 classic 8-bit CPU (0.5 x 1 slot) (wafer.space Run 1, ½ × 1 slot): 1.2k logic cells per mm²" aria-label="FOSSi open-source replacement for Z80 classic 8-bit CPU (0.5 x 1 slot) (wafer.space Run 1, ½ × 1 slot): 1.2k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run2/projects/HZ80.html"
                  style="left: 0.9616666666666667%; top: 28%"
-                 title="FOSSi open-source replacement for Z80 classic 8-bit CPU (0.5 x 1 slot) (wafer.space Run 2, ½ × 1 slot): 1154 per mm²"></a>
+                 
+                 title="FOSSi open-source replacement for Z80 classic 8-bit CPU (0.5 x 1 slot) (wafer.space Run 2, ½ × 1 slot): 1.2k logic cells per mm²" aria-label="FOSSi open-source replacement for Z80 classic 8-bit CPU (0.5 x 1 slot) (wafer.space Run 2, ½ × 1 slot): 1.2k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run1/projects/WSLG.html"
                  style="left: 0.9216666666666666%; top: 68%"
-                 title="wafer.space Logo (wafer.space Run 1, 1 × 1 slot): 1106 per mm²"></a>
+                 
+                 title="wafer.space Logo (wafer.space Run 1, 1 × 1 slot): 1.1k logic cells per mm²" aria-label="wafer.space Logo (wafer.space Run 1, 1 × 1 slot): 1.1k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run2/projects/WSLG.html"
                  style="left: 0.9216666666666666%; top: 18%"
-                 title="wafer.space Logo (wafer.space Run 2, 1 × 1 slot): 1106 per mm²"></a>
+                 
+                 title="wafer.space Logo (wafer.space Run 2, 1 × 1 slot): 1.1k logic cells per mm²" aria-label="wafer.space Logo (wafer.space Run 2, 1 × 1 slot): 1.1k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run2/projects/AS16.html"
                  style="left: 0.9141666666666667%; top: 58%"
-                 title="16-bit RISC CPU (wafer.space Run 2, 1 × ½ slot): 1097 per mm²"></a>
+                 
+                 title="16-bit RISC CPU (wafer.space Run 2, 1 × ½ slot): 1.1k logic cells per mm²" aria-label="16-bit RISC CPU (wafer.space Run 2, 1 × ½ slot): 1.1k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run2/projects/SALU.html"
                  style="left: 0.7733333333333333%; top: 8%"
-                 title="Simple ALU (wafer.space Run 2, ½ × ½ slot): 928 per mm²"></a>
+                 
+                 title="Simple ALU (wafer.space Run 2, ½ × ½ slot): 928 logic cells per mm²" aria-label="Simple ALU (wafer.space Run 2, ½ × ½ slot): 928 logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run2/projects/FS03.html"
                  style="left: 0.7058333333333333%; top: 48%"
-                 title="Test chip with 5V SRAM blocks (wafer.space Run 2, ½ × 1 slot): 847 per mm²"></a>
+                 
+                 title="Test chip with 5V SRAM blocks (wafer.space Run 2, ½ × 1 slot): 847 logic cells per mm²" aria-label="Test chip with 5V SRAM blocks (wafer.space Run 2, ½ × 1 slot): 847 logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run2/projects/FS01.html"
                  style="left: 0.6591666666666667%; top: 88%"
-                 title="Test chip with 3.3V SRAM blocks using regular design rules (wafer.space Run 2, ½ × 1 slot): 791 per mm²"></a>
+                 
+                 title="Test chip with 3.3V SRAM blocks using regular design rules (wafer.space Run 2, ½ × 1 slot): 791 logic cells per mm²" aria-label="Test chip with 3.3V SRAM blocks using regular design rules (wafer.space Run 2, ½ × 1 slot): 791 logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run2/projects/FS02.html"
                  style="left: 0.6508333333333334%; top: 38%"
-                 title="Test chip with 3.3V SRAM blocks using SRAM design rules (wafer.space Run 2, ½ × 1 slot): 781 per mm²"></a>
+                 
+                 title="Test chip with 3.3V SRAM blocks using SRAM design rules (wafer.space Run 2, ½ × 1 slot): 781 logic cells per mm²" aria-label="Test chip with 3.3V SRAM blocks using SRAM design rules (wafer.space Run 2, ½ × 1 slot): 781 logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run1/projects/RZ80.html"
                  style="left: 0.3358333333333333%; top: 78%"
-                 title="FOSSi open-source replacement for Z80 classic 8-bit CPU (wafer.space Run 1, 1 × 1 slot): 403 per mm²"></a>
+                 
+                 title="FOSSi open-source replacement for Z80 classic 8-bit CPU (wafer.space Run 1, 1 × 1 slot): 403 logic cells per mm²" aria-label="FOSSi open-source replacement for Z80 classic 8-bit CPU (wafer.space Run 1, 1 × 1 slot): 403 logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-1" href="https://wafer.space/ws-run1/projects/BRWN.html"
                  style="left: 0.2825%; top: 28%"
-                 title="FA25_Engn2912e_Saligane_Brown (wafer.space Run 1, 1 × 1 slot): 339 per mm²"></a>
+                 
+                 title="FA25_Engn2912e_Saligane_Brown (wafer.space Run 1, 1 × 1 slot): 339 logic cells per mm²" aria-label="FA25_Engn2912e_Saligane_Brown (wafer.space Run 1, 1 × 1 slot): 339 logic cells per mm²"></a>
               
             </div>
           </div>
@@ -2643,483 +2710,602 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="ws-strip-name">Tiny Tapeout<br><small>119 designs</small></div>
             <div class="ws-strip-track">
               <i class="ws-strip-max" style="left: 94.90416666666667%"></i><i class="ws-strip-max" style="left: 75.92333333333333%"></i><i class="ws-strip-max" style="left: 63.26916666666666%"></i><i class="ws-strip-max" style="left: 14.06%"></i>
-              <i class="ws-strip-median" style="left: 18.274166666666666%" title="Typical: 21929 per mm²"></i>
+              <i class="ws-strip-median" style="left: 18.274166666666666%" title="Typical: 22k per mm²"></i>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/353.html"
                  style="left: 28.55666666666667%; top: 8%"
-                 title="DOTTEE VGA demo (TTGF26a) (Tiny Tapeout GF 26a, 1 × 1 tile): 34268 per mm²"></a>
+                 
+                 title="DOTTEE VGA demo (TTGF26a) (Tiny Tapeout GF 26a, 1 × 1 tile): 34k logic cells per mm²" aria-label="DOTTEE VGA demo (TTGF26a) (Tiny Tapeout GF 26a, 1 × 1 tile): 34k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26b/ws-run2-t26b/projects/067.html"
                  style="left: 28.288333333333334%; top: 48%"
-                 title="Car Trip (Tiny Tapeout GF 26b, 1 × 1 tile): 33946 per mm²"></a>
+                 
+                 title="Car Trip (Tiny Tapeout GF 26b, 1 × 1 tile): 34k logic cells per mm²" aria-label="Car Trip (Tiny Tapeout GF 26b, 1 × 1 tile): 34k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/486.html"
                  style="left: 27.113333333333333%; top: 88%"
-                 title="BioPulse Tile (Tiny Tapeout GF 26a, 1 × 1 tile): 32536 per mm²"></a>
+                 
+                 title="BioPulse Tile (Tiny Tapeout GF 26a, 1 × 1 tile): 33k logic cells per mm²" aria-label="BioPulse Tile (Tiny Tapeout GF 26a, 1 × 1 tile): 33k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/390.html"
                  style="left: 24.9425%; top: 38%"
-                 title="GPS_Accelerator (Tiny Tapeout GF 26a, 1 × 2 tiles): 29931 per mm²"></a>
+                 
+                 title="GPS_Accelerator (Tiny Tapeout GF 26a, 1 × 2 tiles): 30k logic cells per mm²" aria-label="GPS_Accelerator (Tiny Tapeout GF 26a, 1 × 2 tiles): 30k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/129.html"
                  style="left: 24.451666666666668%; top: 78%"
-                 title="7-Segment Neural Predictor (Tiny Tapeout GF 26a, 1 × 2 tiles): 29342 per mm²"></a>
+                 
+                 title="7-Segment Neural Predictor (Tiny Tapeout GF 26a, 1 × 2 tiles): 29k logic cells per mm²" aria-label="7-Segment Neural Predictor (Tiny Tapeout GF 26a, 1 × 2 tiles): 29k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26b/ws-run2-t26b/projects/195.html"
                  style="left: 24.363333333333333%; top: 28%"
-                 title="LEA-128 (Tiny Tapeout GF 26b, 2 × 2 tiles): 29236 per mm²"></a>
+                 
+                 title="LEA-128 (Tiny Tapeout GF 26b, 2 × 2 tiles): 29k logic cells per mm²" aria-label="LEA-128 (Tiny Tapeout GF 26b, 2 × 2 tiles): 29k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/551.html"
                  style="left: 23.809166666666666%; top: 68%"
-                 title="Tiny Quantum Circuit Simulator (Tiny Tapeout GF 26a, 1 × 1 tile): 28571 per mm²"></a>
+                 
+                 title="Tiny Quantum Circuit Simulator (Tiny Tapeout GF 26a, 1 × 1 tile): 29k logic cells per mm²" aria-label="Tiny Quantum Circuit Simulator (Tiny Tapeout GF 26a, 1 × 1 tile): 29k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26b/ws-run2-t26b/projects/036.html"
                  style="left: 23.780833333333334%; top: 18%"
-                 title="Neural Spike Detector (Tiny Tapeout GF 26b, 1 × 2 tiles): 28537 per mm²"></a>
+                 
+                 title="Neural Spike Detector (Tiny Tapeout GF 26b, 1 × 2 tiles): 29k logic cells per mm²" aria-label="Neural Spike Detector (Tiny Tapeout GF 26b, 1 × 2 tiles): 29k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/101.html"
                  style="left: 23.679166666666667%; top: 58%"
-                 title="SCµM-BLE-RX (Tiny Tapeout GF 0.2, 3 × 4 tiles): 28415 per mm²"></a>
+                 
+                 title="SCµM-BLE-RX (Tiny Tapeout GF 0.2, 3 × 4 tiles): 28k logic cells per mm²" aria-label="SCµM-BLE-RX (Tiny Tapeout GF 0.2, 3 × 4 tiles): 28k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26b/ws-run2-t26b/projects/386.html"
                  style="left: 23.673333333333332%; top: 8%"
-                 title="Elemental Harmony Game (Tiny Tapeout GF 26b, 2 × 2 tiles): 28408 per mm²"></a>
+                 
+                 title="Elemental Harmony Game (Tiny Tapeout GF 26b, 2 × 2 tiles): 28k logic cells per mm²" aria-label="Elemental Harmony Game (Tiny Tapeout GF 26b, 2 × 2 tiles): 28k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p3/ws-run2-t0p3/projects/038.html"
                  style="left: 23.6725%; top: 48%"
-                 title="Hardware Entropy Explorer: UART/SPI TRNG and PUF (Tiny Tapeout GF 0.3, 1 × 2 tiles): 28407 per mm²"></a>
+                 
+                 title="Hardware Entropy Explorer: UART/SPI TRNG and PUF (Tiny Tapeout GF 0.3, 1 × 2 tiles): 28k logic cells per mm²" aria-label="Hardware Entropy Explorer: UART/SPI TRNG and PUF (Tiny Tapeout GF 0.3, 1 × 2 tiles): 28k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/352.html"
                  style="left: 23.6075%; top: 88%"
-                 title="Hardware Entropy Explorer: UART/SPI TRNG and PUF (Tiny Tapeout GF 26a, 1 × 2 tiles): 28329 per mm²"></a>
+                 
+                 title="Hardware Entropy Explorer: UART/SPI TRNG and PUF (Tiny Tapeout GF 26a, 1 × 2 tiles): 28k logic cells per mm²" aria-label="Hardware Entropy Explorer: UART/SPI TRNG and PUF (Tiny Tapeout GF 26a, 1 × 2 tiles): 28k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26b/ws-run2-t26b/projects/295.html"
                  style="left: 23.605%; top: 38%"
-                 title="ASCON Integrated Crypto Processor (Tiny Tapeout GF 26b, 4 × 4 tiles): 28326 per mm²"></a>
+                 
+                 title="ASCON Integrated Crypto Processor (Tiny Tapeout GF 26b, 4 × 4 tiles): 28k logic cells per mm²" aria-label="ASCON Integrated Crypto Processor (Tiny Tapeout GF 26b, 4 × 4 tiles): 28k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/036.html"
                  style="left: 23.398333333333333%; top: 78%"
-                 title="FSK Modem (Tiny Tapeout GF 26a, 1 × 2 tiles): 28078 per mm²"></a>
+                 
+                 title="FSK Modem (Tiny Tapeout GF 26a, 1 × 2 tiles): 28k logic cells per mm²" aria-label="FSK Modem (Tiny Tapeout GF 26a, 1 × 2 tiles): 28k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/135.html"
                  style="left: 23.351666666666667%; top: 28%"
-                 title="serv_soc_wb (Tiny Tapeout GF 26a, 3 × 2 tiles): 28022 per mm²"></a>
+                 
+                 title="serv_soc_wb (Tiny Tapeout GF 26a, 3 × 2 tiles): 28k logic cells per mm²" aria-label="serv_soc_wb (Tiny Tapeout GF 26a, 3 × 2 tiles): 28k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26b/ws-run2-t26b/projects/551.html"
                  style="left: 23.14%; top: 68%"
-                 title="BRISQ (Tiny Tapeout GF 26b, 1 × 1 tile): 27768 per mm²"></a>
+                 
+                 title="BRISQ (Tiny Tapeout GF 26b, 1 × 1 tile): 28k logic cells per mm²" aria-label="BRISQ (Tiny Tapeout GF 26b, 1 × 1 tile): 28k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/005.html"
                  style="left: 22.8575%; top: 18%"
-                 title="2x2 CNN Accelerator PE Grid with UART (Tiny Tapeout GF 26a, 1 × 1 tile): 27429 per mm²"></a>
+                 
+                 title="2x2 CNN Accelerator PE Grid with UART (Tiny Tapeout GF 26a, 1 × 1 tile): 27k logic cells per mm²" aria-label="2x2 CNN Accelerator PE Grid with UART (Tiny Tapeout GF 26a, 1 × 1 tile): 27k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p3/ws-run2-t0p3/projects/450.html"
                  style="left: 22.763333333333332%; top: 58%"
-                 title="USB CDC (Serial) Device (Tiny Tapeout GF 0.3, 1 × 2 tiles): 27316 per mm²"></a>
+                 
+                 title="USB CDC (Serial) Device (Tiny Tapeout GF 0.3, 1 × 2 tiles): 27k logic cells per mm²" aria-label="USB CDC (Serial) Device (Tiny Tapeout GF 0.3, 1 × 2 tiles): 27k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26b/ws-run2-t26b/projects/356.html"
                  style="left: 22.741666666666667%; top: 8%"
-                 title="Arctic0 16-bit CPU (Tiny Tapeout GF 26b, 1 × 2 tiles): 27290 per mm²"></a>
+                 
+                 title="Arctic0 16-bit CPU (Tiny Tapeout GF 26b, 1 × 2 tiles): 27k logic cells per mm²" aria-label="Arctic0 16-bit CPU (Tiny Tapeout GF 26b, 1 × 2 tiles): 27k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/545.html"
                  style="left: 22.634166666666665%; top: 48%"
-                 title="BF (Tiny Tapeout GF 26a, 1 × 1 tile): 27161 per mm²"></a>
+                 
+                 title="BF (Tiny Tapeout GF 26a, 1 × 1 tile): 27k logic cells per mm²" aria-label="BF (Tiny Tapeout GF 26a, 1 × 1 tile): 27k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/519.html"
                  style="left: 22.425833333333333%; top: 88%"
-                 title="Simon Says memory game (Tiny Tapeout GF 0.2, 1 × 1 tile): 26911 per mm²"></a>
+                 
+                 title="Simon Says memory game (Tiny Tapeout GF 0.2, 1 × 1 tile): 27k logic cells per mm²" aria-label="Simon Says memory game (Tiny Tapeout GF 0.2, 1 × 1 tile): 27k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/547.html"
                  style="left: 22.038333333333334%; top: 38%"
-                 title="WokwiPWM (Tiny Tapeout GF 0.2, 1 × 1 tile): 26446 per mm²"></a>
+                 
+                 title="WokwiPWM (Tiny Tapeout GF 0.2, 1 × 1 tile): 26k logic cells per mm²" aria-label="WokwiPWM (Tiny Tapeout GF 0.2, 1 × 1 tile): 26k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p3/ws-run2-t0p3/projects/358.html"
                  style="left: 21.991666666666667%; top: 78%"
-                 title="Hardware Entropy Explorer: UART/SPI TRNG and PUF (Analog) (Tiny Tapeout GF 0.3, 1 × 2 tiles): 26390 per mm²"></a>
+                 
+                 title="Hardware Entropy Explorer: UART/SPI TRNG and PUF (Analog) (Tiny Tapeout GF 0.3, 1 × 2 tiles): 26k logic cells per mm²" aria-label="Hardware Entropy Explorer: UART/SPI TRNG and PUF (Analog) (Tiny Tapeout GF 0.3, 1 × 2 tiles): 26k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p3/ws-run2-t0p3/projects/199.html"
                  style="left: 21.94333333333333%; top: 28%"
-                 title="TinyQV RISC-V SoC (Tiny Tapeout GF 0.3, 4 × 2 tiles): 26332 per mm²"></a>
+                 
+                 title="TinyQV RISC-V SoC (Tiny Tapeout GF 0.3, 4 × 2 tiles): 26k logic cells per mm²" aria-label="TinyQV RISC-V SoC (Tiny Tapeout GF 0.3, 4 × 2 tiles): 26k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26b/ws-run2-t26b/projects/071.html"
                  style="left: 21.711666666666666%; top: 68%"
-                 title="4-Neuron LIF Spiking Neural Network (Tiny Tapeout GF 26b, 1 × 1 tile): 26054 per mm²"></a>
+                 
+                 title="4-Neuron LIF Spiking Neural Network (Tiny Tapeout GF 26b, 1 × 1 tile): 26k logic cells per mm²" aria-label="4-Neuron LIF Spiking Neural Network (Tiny Tapeout GF 26b, 1 × 1 tile): 26k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/578.html"
                  style="left: 21.6075%; top: 18%"
-                 title="Balanced Ternary Multiplier (Tiny Tapeout GF 26a, 1 × 1 tile): 25929 per mm²"></a>
+                 
+                 title="Balanced Ternary Multiplier (Tiny Tapeout GF 26a, 1 × 1 tile): 26k logic cells per mm²" aria-label="Balanced Ternary Multiplier (Tiny Tapeout GF 26a, 1 × 1 tile): 26k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26b/ws-run2-t26b/projects/354.html"
                  style="left: 21.356666666666666%; top: 58%"
-                 title="PWM-Analyser (Tiny Tapeout GF 26b, 1 × 2 tiles): 25628 per mm²"></a>
+                 
+                 title="PWM-Analyser (Tiny Tapeout GF 26b, 1 × 2 tiles): 26k logic cells per mm²" aria-label="PWM-Analyser (Tiny Tapeout GF 26b, 1 × 2 tiles): 26k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26b/ws-run2-t26b/projects/390.html"
                  style="left: 21.258333333333333%; top: 8%"
-                 title="Smerity-Mandelbrot (Tiny Tapeout GF 26b, 2 × 2 tiles): 25510 per mm²"></a>
+                 
+                 title="Smerity-Mandelbrot (Tiny Tapeout GF 26b, 2 × 2 tiles): 26k logic cells per mm²" aria-label="Smerity-Mandelbrot (Tiny Tapeout GF 26b, 2 × 2 tiles): 26k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26b/ws-run2-t26b/projects/612.html"
                  style="left: 21.235%; top: 48%"
-                 title="Detronyx Arithmetic Lab Tile (Tiny Tapeout GF 26b, 1 × 1 tile): 25482 per mm²"></a>
+                 
+                 title="Detronyx Arithmetic Lab Tile (Tiny Tapeout GF 26b, 1 × 1 tile): 25k logic cells per mm²" aria-label="Detronyx Arithmetic Lab Tile (Tiny Tapeout GF 26b, 1 × 1 tile): 25k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/130.html"
                  style="left: 21.234166666666667%; top: 88%"
-                 title="USB CDC (Serial) Device (Tiny Tapeout GF 0.2, 1 × 2 tiles): 25481 per mm²"></a>
+                 
+                 title="USB CDC (Serial) Device (Tiny Tapeout GF 0.2, 1 × 2 tiles): 25k logic cells per mm²" aria-label="USB CDC (Serial) Device (Tiny Tapeout GF 0.2, 1 × 2 tiles): 25k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/454.html"
                  style="left: 21.219166666666666%; top: 38%"
-                 title="Tensor Processing Unit For GF (Tiny Tapeout GF 26a, 1 × 2 tiles): 25463 per mm²"></a>
+                 
+                 title="Tensor Processing Unit For GF (Tiny Tapeout GF 26a, 1 × 2 tiles): 25k logic cells per mm²" aria-label="Tensor Processing Unit For GF (Tiny Tapeout GF 26a, 1 × 2 tiles): 25k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26b/ws-run2-t26b/projects/033.html"
                  style="left: 21.183333333333334%; top: 78%"
-                 title="60 Hz Grid-Forming ASIC with Dump-Load Control (Tiny Tapeout GF 26b, 1 × 2 tiles): 25420 per mm²"></a>
+                 
+                 title="60 Hz Grid-Forming ASIC with Dump-Load Control (Tiny Tapeout GF 26b, 1 × 2 tiles): 25k logic cells per mm²" aria-label="60 Hz Grid-Forming ASIC with Dump-Load Control (Tiny Tapeout GF 26b, 1 × 2 tiles): 25k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/039.html"
                  style="left: 20.941666666666666%; top: 28%"
-                 title="TinyQV RISC-V SoC (Tiny Tapeout GF 0.2, 3 × 4 tiles): 25130 per mm²"></a>
+                 
+                 title="TinyQV RISC-V SoC (Tiny Tapeout GF 0.2, 3 × 4 tiles): 25k logic cells per mm²" aria-label="TinyQV RISC-V SoC (Tiny Tapeout GF 0.2, 3 × 4 tiles): 25k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/579.html"
                  style="left: 20.848333333333333%; top: 68%"
-                 title="PRISM 8 with TinySnake (Tiny Tapeout GF 0.2, 1 × 1 tile): 25018 per mm²"></a>
+                 
+                 title="PRISM 8 with TinySnake (Tiny Tapeout GF 0.2, 1 × 1 tile): 25k logic cells per mm²" aria-label="PRISM 8 with TinySnake (Tiny Tapeout GF 0.2, 1 × 1 tile): 25k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/391.html"
                  style="left: 20.54083333333333%; top: 18%"
-                 title="megabytebeat (Tiny Tapeout GF 0.2, 3 × 2 tiles): 24649 per mm²"></a>
+                 
+                 title="megabytebeat (Tiny Tapeout GF 0.2, 3 × 2 tiles): 25k logic cells per mm²" aria-label="megabytebeat (Tiny Tapeout GF 0.2, 3 × 2 tiles): 25k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/513.html"
                  style="left: 20.535833333333333%; top: 58%"
-                 title="Classic 8-bit era Programmable Sound Generator SN76489 (Tiny Tapeout GF 0.2, 1 × 1 tile): 24643 per mm²"></a>
+                 
+                 title="Classic 8-bit era Programmable Sound Generator SN76489 (Tiny Tapeout GF 0.2, 1 × 1 tile): 25k logic cells per mm²" aria-label="Classic 8-bit era Programmable Sound Generator SN76489 (Tiny Tapeout GF 0.2, 1 × 1 tile): 25k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/038.html"
                  style="left: 20.2525%; top: 8%"
-                 title="RRAM Characterization Platform (DC sweep + endurance + retention + histogram, GF180) (Tiny Tapeout GF 26a, 1 × 2 tiles): 24303 per mm²"></a>
+                 
+                 title="RRAM Characterization Platform (DC sweep + endurance + retention + histogram, GF180) (Tiny Tapeout GF 26a, 1 × 2 tiles): 24k logic cells per mm²" aria-label="RRAM Characterization Platform (DC sweep + endurance + retention + histogram, GF180) (Tiny Tapeout GF 26a, 1 × 2 tiles): 24k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26b/ws-run2-t26b/projects/610.html"
                  style="left: 20.19333333333333%; top: 48%"
-                 title="PDM Voice Activity Detector (Tiny Tapeout GF 26b, 1 × 1 tile): 24232 per mm²"></a>
+                 
+                 title="PDM Voice Activity Detector (Tiny Tapeout GF 26b, 1 × 1 tile): 24k logic cells per mm²" aria-label="PDM Voice Activity Detector (Tiny Tapeout GF 26b, 1 × 1 tile): 24k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26b/ws-run2-t26b/projects/038.html"
                  style="left: 20.173333333333332%; top: 88%"
-                 title="Lightscan (Tiny Tapeout GF 26b, 1 × 2 tiles): 24208 per mm²"></a>
+                 
+                 title="Lightscan (Tiny Tapeout GF 26b, 1 × 2 tiles): 24k logic cells per mm²" aria-label="Lightscan (Tiny Tapeout GF 26b, 1 × 2 tiles): 24k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/356.html"
                  style="left: 20.151666666666667%; top: 38%"
-                 title="RHD2164-MCU-SPI Bridge (Tiny Tapeout GF 26a, 1 × 2 tiles): 24182 per mm²"></a>
+                 
+                 title="RHD2164-MCU-SPI Bridge (Tiny Tapeout GF 26a, 1 × 2 tiles): 24k logic cells per mm²" aria-label="RHD2164-MCU-SPI Bridge (Tiny Tapeout GF 26a, 1 × 2 tiles): 24k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/611.html"
                  style="left: 19.850833333333334%; top: 78%"
-                 title="UNIZG-FER VGA project (Tiny Tapeout GF 26a, 1 × 1 tile): 23821 per mm²"></a>
+                 
+                 title="UNIZG-FER VGA project (Tiny Tapeout GF 26a, 1 × 1 tile): 24k logic cells per mm²" aria-label="UNIZG-FER VGA project (Tiny Tapeout GF 26a, 1 × 1 tile): 24k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p3/ws-run2-t0p3/projects/359.html"
                  style="left: 19.695%; top: 28%"
-                 title="Tiny FABulous FPGA (3.3V version) (Tiny Tapeout GF 0.3, 4 × 4 tiles): 23634 per mm²"></a>
+                 
+                 title="Tiny FABulous FPGA (3.3V version) (Tiny Tapeout GF 0.3, 4 × 4 tiles): 24k logic cells per mm²" aria-label="Tiny FABulous FPGA (3.3V version) (Tiny Tapeout GF 0.3, 4 × 4 tiles): 24k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/288.html"
                  style="left: 19.639166666666668%; top: 68%"
-                 title="Notre Dame - Lockpick Game TT Example (Tiny Tapeout GF 0.2, 1 × 2 tiles): 23567 per mm²"></a>
+                 
+                 title="Notre Dame - Lockpick Game TT Example (Tiny Tapeout GF 0.2, 1 × 2 tiles): 24k logic cells per mm²" aria-label="Notre Dame - Lockpick Game TT Example (Tiny Tapeout GF 0.2, 1 × 2 tiles): 24k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/129.html"
                  style="left: 19.56%; top: 18%"
-                 title="2x2 MAC Systolic array with DFT (Tiny Tapeout GF 0.2, 1 × 2 tiles): 23472 per mm²"></a>
+                 
+                 title="2x2 MAC Systolic array with DFT (Tiny Tapeout GF 0.2, 1 × 2 tiles): 23k logic cells per mm²" aria-label="2x2 MAC Systolic array with DFT (Tiny Tapeout GF 0.2, 1 × 2 tiles): 23k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/384.html"
                  style="left: 19.386666666666667%; top: 58%"
-                 title="teenytpu (Tiny Tapeout GF 26a, 1 × 2 tiles): 23264 per mm²"></a>
+                 
+                 title="teenytpu (Tiny Tapeout GF 26a, 1 × 2 tiles): 23k logic cells per mm²" aria-label="teenytpu (Tiny Tapeout GF 26a, 1 × 2 tiles): 23k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p3/ws-run2-t0p3/projects/519.html"
                  style="left: 19.36%; top: 8%"
-                 title="Simon Says memory game (Tiny Tapeout GF 0.3, 1 × 1 tile): 23232 per mm²"></a>
+                 
+                 title="Simon Says memory game (Tiny Tapeout GF 0.3, 1 × 1 tile): 23k logic cells per mm²" aria-label="Simon Says memory game (Tiny Tapeout GF 0.3, 1 × 1 tile): 23k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/355.html"
                  style="left: 19.36%; top: 48%"
-                 title="Simon Says memory game (Tiny Tapeout GF 26a, 1 × 1 tile): 23232 per mm²"></a>
+                 
+                 title="Simon Says memory game (Tiny Tapeout GF 26a, 1 × 1 tile): 23k logic cells per mm²" aria-label="Simon Says memory game (Tiny Tapeout GF 26a, 1 × 1 tile): 23k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26b/ws-run2-t26b/projects/358.html"
                  style="left: 19.335833333333333%; top: 88%"
-                 title="Pong (Tiny Tapeout GF 26b, 1 × 2 tiles): 23203 per mm²"></a>
+                 
+                 title="Pong (Tiny Tapeout GF 26b, 1 × 2 tiles): 23k logic cells per mm²" aria-label="Pong (Tiny Tapeout GF 26b, 1 × 2 tiles): 23k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/359.html"
                  style="left: 19.29%; top: 38%"
-                 title="Simple RISC-V (Tiny Tapeout GF 0.2, 4 × 2 tiles): 23148 per mm²"></a>
+                 
+                 title="Simple RISC-V (Tiny Tapeout GF 0.2, 4 × 2 tiles): 23k logic cells per mm²" aria-label="Simple RISC-V (Tiny Tapeout GF 0.2, 4 × 2 tiles): 23k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/199.html"
                  style="left: 19.206666666666667%; top: 78%"
-                 title="VGA Nyan Cat (Tiny Tapeout GF 0.2, 1 × 2 tiles): 23048 per mm²"></a>
+                 
+                 title="VGA Nyan Cat (Tiny Tapeout GF 0.2, 1 × 2 tiles): 23k logic cells per mm²" aria-label="VGA Nyan Cat (Tiny Tapeout GF 0.2, 1 × 2 tiles): 23k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p3/ws-run2-t0p3/projects/003.html"
                  style="left: 19.206666666666667%; top: 28%"
-                 title="VGA Nyan Cat (Tiny Tapeout GF 0.3, 1 × 2 tiles): 23048 per mm²"></a>
+                 
+                 title="VGA Nyan Cat (Tiny Tapeout GF 0.3, 1 × 2 tiles): 23k logic cells per mm²" aria-label="VGA Nyan Cat (Tiny Tapeout GF 0.3, 1 × 2 tiles): 23k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/615.html"
                  style="left: 19.151666666666667%; top: 68%"
-                 title="Video mode tester (Tiny Tapeout GF 26a, 1 × 1 tile): 22982 per mm²"></a>
+                 
+                 title="Video mode tester (Tiny Tapeout GF 26a, 1 × 1 tile): 23k logic cells per mm²" aria-label="Video mode tester (Tiny Tapeout GF 26a, 1 × 1 tile): 23k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26b/ws-run2-t26b/projects/101.html"
                  style="left: 19.089166666666667%; top: 18%"
-                 title="AER Reflex Chip - MCP2515 CAN gateway (Tiny Tapeout GF 26b, 3 × 2 tiles): 22907 per mm²"></a>
+                 
+                 title="AER Reflex Chip - MCP2515 CAN gateway (Tiny Tapeout GF 26b, 3 × 2 tiles): 23k logic cells per mm²" aria-label="AER Reflex Chip - MCP2515 CAN gateway (Tiny Tapeout GF 26b, 3 × 2 tiles): 23k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/549.html"
                  style="left: 18.839166666666667%; top: 58%"
-                 title="Ring Oscillator PVT Sensor & TRNG (GF180) (Tiny Tapeout GF 26a, 1 × 1 tile): 22607 per mm²"></a>
+                 
+                 title="Ring Oscillator PVT Sensor & TRNG (GF180) (Tiny Tapeout GF 26a, 1 × 1 tile): 23k logic cells per mm²" aria-label="Ring Oscillator PVT Sensor & TRNG (GF180) (Tiny Tapeout GF 26a, 1 × 1 tile): 23k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/034.html"
                  style="left: 18.838333333333335%; top: 8%"
-                 title="2x2 MAC Systolic array with DFT (Tiny Tapeout GF 26a, 1 × 2 tiles): 22606 per mm²"></a>
+                 
+                 title="2x2 MAC Systolic array with DFT (Tiny Tapeout GF 26a, 1 × 2 tiles): 23k logic cells per mm²" aria-label="2x2 MAC Systolic array with DFT (Tiny Tapeout GF 26a, 1 × 2 tiles): 23k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/450.html"
                  style="left: 18.765833333333333%; top: 48%"
-                 title="Simple MAC Engine w/ Postproc (Tiny Tapeout GF 26a, 1 × 2 tiles): 22519 per mm²"></a>
+                 
+                 title="Simple MAC Engine w/ Postproc (Tiny Tapeout GF 26a, 1 × 2 tiles): 23k logic cells per mm²" aria-label="Simple MAC Engine w/ Postproc (Tiny Tapeout GF 26a, 1 × 2 tiles): 23k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/032.html"
                  style="left: 18.4825%; top: 88%"
-                 title="Zedulo TestChip1 (Tiny Tapeout GF 0.2, 1 × 1 tile): 22179 per mm²"></a>
+                 
+                 title="Zedulo TestChip1 (Tiny Tapeout GF 0.2, 1 × 1 tile): 22k logic cells per mm²" aria-label="Zedulo TestChip1 (Tiny Tapeout GF 0.2, 1 × 1 tile): 22k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/611.html"
                  style="left: 18.363333333333333%; top: 38%"
-                 title="Video mode tester (Tiny Tapeout GF 0.2, 1 × 1 tile): 22036 per mm²"></a>
+                 
+                 title="Video mode tester (Tiny Tapeout GF 0.2, 1 × 1 tile): 22k logic cells per mm²" aria-label="Video mode tester (Tiny Tapeout GF 0.2, 1 × 1 tile): 22k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/545.html"
                  style="left: 18.303333333333335%; top: 78%"
-                 title="Flame demo (Tiny Tapeout GF 0.2, 1 × 1 tile): 21964 per mm²"></a>
+                 
+                 title="Flame demo (Tiny Tapeout GF 0.2, 1 × 1 tile): 22k logic cells per mm²" aria-label="Flame demo (Tiny Tapeout GF 0.2, 1 × 1 tile): 22k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/547.html"
                  style="left: 18.274166666666666%; top: 28%"
-                 title="Memristive Crossbar Peripheral Controller (GF180) (Tiny Tapeout GF 26a, 1 × 1 tile): 21929 per mm²"></a>
+                 
+                 title="Memristive Crossbar Peripheral Controller (GF180) (Tiny Tapeout GF 26a, 1 × 1 tile): 22k logic cells per mm²" aria-label="Memristive Crossbar Peripheral Controller (GF180) (Tiny Tapeout GF 26a, 1 × 1 tile): 22k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/032.html"
                  style="left: 18.155%; top: 68%"
-                 title="Hardware UTF Encoder/Decoder (Tiny Tapeout GF 26a, 1 × 1 tile): 21786 per mm²"></a>
+                 
+                 title="Hardware UTF Encoder/Decoder (Tiny Tapeout GF 26a, 1 × 1 tile): 22k logic cells per mm²" aria-label="Hardware UTF Encoder/Decoder (Tiny Tapeout GF 26a, 1 × 1 tile): 22k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/039.html"
                  style="left: 18.14%; top: 18%"
-                 title="Programmable_Pipeline-RISC-V (Tiny Tapeout GF 26a, 4 × 4 tiles): 21768 per mm²"></a>
+                 
+                 title="Programmable_Pipeline-RISC-V (Tiny Tapeout GF 26a, 4 × 4 tiles): 22k logic cells per mm²" aria-label="Programmable_Pipeline-RISC-V (Tiny Tapeout GF 26a, 4 × 4 tiles): 22k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/482.html"
                  style="left: 18.065833333333334%; top: 58%"
-                 title="SAP 8 Bit Computer (Tiny Tapeout GF 26a, 1 × 1 tile): 21679 per mm²"></a>
+                 
+                 title="SAP 8 Bit Computer (Tiny Tapeout GF 26a, 1 × 1 tile): 22k logic cells per mm²" aria-label="SAP 8 Bit Computer (Tiny Tapeout GF 26a, 1 × 1 tile): 22k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/197.html"
                  style="left: 17.966666666666665%; top: 8%"
-                 title="LISA 8-Bit Microcontroller (Tiny Tapeout GF 0.2, 3 × 4 tiles): 21560 per mm²"></a>
+                 
+                 title="LISA 8-Bit Microcontroller (Tiny Tapeout GF 0.2, 3 × 4 tiles): 22k logic cells per mm²" aria-label="LISA 8-Bit Microcontroller (Tiny Tapeout GF 0.2, 3 × 4 tiles): 22k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/103.html"
                  style="left: 17.936666666666667%; top: 48%"
-                 title="Simon's Caterpillar (Tiny Tapeout GF 0.2, 1 × 2 tiles): 21524 per mm²"></a>
+                 
+                 title="Simon's Caterpillar (Tiny Tapeout GF 0.2, 1 × 2 tiles): 22k logic cells per mm²" aria-label="Simon's Caterpillar (Tiny Tapeout GF 0.2, 1 × 2 tiles): 22k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/577.html"
                  style="left: 17.916666666666668%; top: 88%"
-                 title="Custom DVD Screensaver for VGA (Tiny Tapeout GF 26a, 1 × 1 tile): 21500 per mm²"></a>
+                 
+                 title="Custom DVD Screensaver for VGA (Tiny Tapeout GF 26a, 1 × 1 tile): 22k logic cells per mm²" aria-label="Custom DVD Screensaver for VGA (Tiny Tapeout GF 26a, 1 × 1 tile): 22k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p3/ws-run2-t0p3/projects/258.html"
                  style="left: 17.690833333333334%; top: 38%"
-                 title="Abad2048 (Tiny Tapeout GF 0.3, 1 × 2 tiles): 21229 per mm²"></a>
+                 
+                 title="Abad2048 (Tiny Tapeout GF 0.3, 1 × 2 tiles): 21k logic cells per mm²" aria-label="Abad2048 (Tiny Tapeout GF 0.3, 1 × 2 tiles): 21k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/358.html"
                  style="left: 17.56833333333333%; top: 78%"
-                 title="Stochastic neuron + STDP controller (merged, GF180) (Tiny Tapeout GF 26a, 1 × 2 tiles): 21082 per mm²"></a>
+                 
+                 title="Stochastic neuron + STDP controller (merged, GF180) (Tiny Tapeout GF 26a, 1 × 2 tiles): 21k logic cells per mm²" aria-label="Stochastic neuron + STDP controller (merged, GF180) (Tiny Tapeout GF 26a, 1 × 2 tiles): 21k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/455.html"
                  style="left: 17.491666666666667%; top: 28%"
-                 title="Zilog Z80 (Tiny Tapeout GF 0.2, 2 × 2 tiles): 20990 per mm²"></a>
+                 
+                 title="Zilog Z80 (Tiny Tapeout GF 0.2, 2 × 2 tiles): 21k logic cells per mm²" aria-label="Zilog Z80 (Tiny Tapeout GF 0.2, 2 × 2 tiles): 21k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/070.html"
                  style="left: 17.47%; top: 68%"
-                 title="xoroshiro64 (Tiny Tapeout GF 26a, 1 × 1 tile): 20964 per mm²"></a>
+                 
+                 title="xoroshiro64 (Tiny Tapeout GF 26a, 1 × 1 tile): 21k logic cells per mm²" aria-label="xoroshiro64 (Tiny Tapeout GF 26a, 1 × 1 tile): 21k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/195.html"
                  style="left: 17.374166666666667%; top: 18%"
-                 title="Tiny Pixel Processor (Tiny Tapeout GF 26a, 2 × 2 tiles): 20849 per mm²"></a>
+                 
+                 title="Tiny Pixel Processor (Tiny Tapeout GF 26a, 2 × 2 tiles): 21k logic cells per mm²" aria-label="Tiny Pixel Processor (Tiny Tapeout GF 26a, 2 × 2 tiles): 21k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26b/ws-run2-t26b/projects/288.html"
                  style="left: 17.359166666666667%; top: 58%"
-                 title="100Mbps Ethernet Accelerator Wrapper (Tiny Tapeout GF 26b, 1 × 2 tiles): 20831 per mm²"></a>
+                 
+                 title="100Mbps Ethernet Accelerator Wrapper (Tiny Tapeout GF 26b, 1 × 2 tiles): 21k logic cells per mm²" aria-label="100Mbps Ethernet Accelerator Wrapper (Tiny Tapeout GF 26b, 1 × 2 tiles): 21k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/102.html"
                  style="left: 17.21%; top: 8%"
-                 title="Silly-Faust (Tiny Tapeout GF 0.2, 4 × 2 tiles): 20652 per mm²"></a>
+                 
+                 title="Silly-Faust (Tiny Tapeout GF 0.2, 4 × 2 tiles): 21k logic cells per mm²" aria-label="Silly-Faust (Tiny Tapeout GF 0.2, 4 × 2 tiles): 21k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/135.html"
                  style="left: 17.205%; top: 48%"
-                 title="raybox-zero TTGF0p2 edition (Tiny Tapeout GF 0.2, 3 × 4 tiles): 20646 per mm²"></a>
+                 
+                 title="raybox-zero TTGF0p2 edition (Tiny Tapeout GF 0.2, 3 × 4 tiles): 21k logic cells per mm²" aria-label="raybox-zero TTGF0p2 edition (Tiny Tapeout GF 0.2, 3 × 4 tiles): 21k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26b/ws-run2-t26b/projects/581.html"
                  style="left: 17.053333333333335%; top: 88%"
-                 title="Aswarby INT8 MAC (Tiny Tapeout GF 26b, 1 × 1 tile): 20464 per mm²"></a>
+                 
+                 title="Aswarby INT8 MAC (Tiny Tapeout GF 26b, 1 × 1 tile): 20k logic cells per mm²" aria-label="Aswarby INT8 MAC (Tiny Tapeout GF 26b, 1 × 1 tile): 20k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26b/ws-run2-t26b/projects/103.html"
                  style="left: 17.0275%; top: 38%"
-                 title="Music for ASICs (Tiny Tapeout GF 26b, 1 × 2 tiles): 20433 per mm²"></a>
+                 
+                 title="Music for ASICs (Tiny Tapeout GF 26b, 1 × 2 tiles): 20k logic cells per mm²" aria-label="Music for ASICs (Tiny Tapeout GF 26b, 1 × 2 tiles): 20k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/551.html"
                  style="left: 16.711666666666666%; top: 78%"
-                 title="PVTMonitorSuite (Tiny Tapeout GF 0.2, 1 × 1 tile): 20054 per mm²"></a>
+                 
+                 title="PVTMonitorSuite (Tiny Tapeout GF 0.2, 1 × 1 tile): 20k logic cells per mm²" aria-label="PVTMonitorSuite (Tiny Tapeout GF 0.2, 1 × 1 tile): 20k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/194.html"
                  style="left: 16.645%; top: 28%"
-                 title="2048 sliding tile puzzle game (VGA) (Tiny Tapeout GF 0.2, 2 × 2 tiles): 19974 per mm²"></a>
+                 
+                 title="2048 sliding tile puzzle game (VGA) (Tiny Tapeout GF 0.2, 2 × 2 tiles): 20k logic cells per mm²" aria-label="2048 sliding tile puzzle game (VGA) (Tiny Tapeout GF 0.2, 2 × 2 tiles): 20k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/481.html"
                  style="left: 16.370833333333334%; top: 68%"
-                 title="ROTFPGA v2 (Tiny Tapeout GF 0.2, 1 × 2 tiles): 19645 per mm²"></a>
+                 
+                 title="ROTFPGA v2 (Tiny Tapeout GF 0.2, 1 × 2 tiles): 20k logic cells per mm²" aria-label="ROTFPGA v2 (Tiny Tapeout GF 0.2, 1 × 2 tiles): 20k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/515.html"
                  style="left: 16.295%; top: 18%"
-                 title="VGA Tiny Logo (Tiny Tapeout GF 0.2, 1 × 1 tile): 19554 per mm²"></a>
+                 
+                 title="VGA Tiny Logo (Tiny Tapeout GF 0.2, 1 × 1 tile): 20k logic cells per mm²" aria-label="VGA Tiny Logo (Tiny Tapeout GF 0.2, 1 × 1 tile): 20k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/033.html"
                  style="left: 16.075%; top: 58%"
-                 title="wafer.space Logo VGA Screensaver (Tiny Tapeout GF 0.2, 1 × 2 tiles): 19290 per mm²"></a>
+                 
+                 title="wafer.space Logo VGA Screensaver (Tiny Tapeout GF 0.2, 1 × 2 tiles): 19k logic cells per mm²" aria-label="wafer.space Logo VGA Screensaver (Tiny Tapeout GF 0.2, 1 × 2 tiles): 19k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/295.html"
                  style="left: 15.848333333333333%; top: 8%"
-                 title="KianV uLinux SoC (Tiny Tapeout GF 0.2, 4 × 4 tiles): 19018 per mm²"></a>
+                 
+                 title="KianV uLinux SoC (Tiny Tapeout GF 0.2, 4 × 4 tiles): 19k logic cells per mm²" aria-label="KianV uLinux SoC (Tiny Tapeout GF 0.2, 4 × 4 tiles): 19k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p3/ws-run2-t0p3/projects/356.html"
                  style="left: 15.75%; top: 48%"
-                 title="2048 sliding tile puzzle game (VGA) (Tiny Tapeout GF 0.3, 3 × 2 tiles): 18900 per mm²"></a>
+                 
+                 title="2048 sliding tile puzzle game (VGA) (Tiny Tapeout GF 0.3, 3 × 2 tiles): 19k logic cells per mm²" aria-label="2048 sliding tile puzzle game (VGA) (Tiny Tapeout GF 0.3, 3 × 2 tiles): 19k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26b/ws-run2-t26b/projects/517.html"
                  style="left: 15.64%; top: 88%"
-                 title="I2C Slave Template with Emulated Sensor (Tiny Tapeout GF 26b, 1 × 1 tile): 18768 per mm²"></a>
+                 
+                 title="I2C Slave Template with Emulated Sensor (Tiny Tapeout GF 26b, 1 × 1 tile): 19k logic cells per mm²" aria-label="I2C Slave Template with Emulated Sensor (Tiny Tapeout GF 26b, 1 × 1 tile): 19k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/549.html"
                  style="left: 15.58%; top: 38%"
-                 title="Dog Battle Game (Tiny Tapeout GF 0.2, 1 × 1 tile): 18696 per mm²"></a>
+                 
+                 title="Dog Battle Game (Tiny Tapeout GF 0.2, 1 × 1 tile): 19k logic cells per mm²" aria-label="Dog Battle Game (Tiny Tapeout GF 0.2, 1 × 1 tile): 19k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26b/ws-run2-t26b/projects/454.html"
                  style="left: 15.531666666666666%; top: 78%"
-                 title="Spiking Neural Network WTA Inference Engine (GF180) (Tiny Tapeout GF 26b, 2 × 2 tiles): 18638 per mm²"></a>
+                 
+                 title="Spiking Neural Network WTA Inference Engine (GF180) (Tiny Tapeout GF 26b, 2 × 2 tiles): 19k logic cells per mm²" aria-label="Spiking Neural Network WTA Inference Engine (GF180) (Tiny Tapeout GF 26b, 2 × 2 tiles): 19k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/102.html"
                  style="left: 15.461666666666666%; top: 28%"
-                 title="Custom DVD Screensaver for VGA (Tiny Tapeout GF 26a, 1 × 1 tile): 18554 per mm²"></a>
+                 
+                 title="Custom DVD Screensaver for VGA (Tiny Tapeout GF 26a, 1 × 1 tile): 19k logic cells per mm²" aria-label="Custom DVD Screensaver for VGA (Tiny Tapeout GF 26a, 1 × 1 tile): 19k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26b/ws-run2-t26b/projects/547.html"
                  style="left: 15.461666666666666%; top: 68%"
-                 title="Tiny RIng Oscillator PUF (Tiny Tapeout GF 26b, 1 × 1 tile): 18554 per mm²"></a>
+                 
+                 title="Tiny RIng Oscillator PUF (Tiny Tapeout GF 26b, 1 × 1 tile): 19k logic cells per mm²" aria-label="Tiny RIng Oscillator PUF (Tiny Tapeout GF 26b, 1 × 1 tile): 19k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p3/ws-run2-t0p3/projects/452.html"
                  style="left: 15.19%; top: 18%"
-                 title="PolyWave (Tiny Tapeout GF 0.3, 1 × 2 tiles): 18228 per mm²"></a>
+                 
+                 title="PolyWave (Tiny Tapeout GF 0.3, 1 × 2 tiles): 18k logic cells per mm²" aria-label="PolyWave (Tiny Tapeout GF 0.3, 1 × 2 tiles): 18k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26b/ws-run2-t26b/projects/545.html"
                  style="left: 15.134166666666667%; top: 58%"
-                 title="Quadrature sine generator (Tiny Tapeout GF 26b, 1 × 1 tile): 18161 per mm²"></a>
+                 
+                 title="Quadrature sine generator (Tiny Tapeout GF 26b, 1 × 1 tile): 18k logic cells per mm²" aria-label="Quadrature sine generator (Tiny Tapeout GF 26b, 1 × 1 tile): 18k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p3/ws-run2-t0p3/projects/102.html"
                  style="left: 15.04%; top: 8%"
-                 title="Tiny FABulous FPGA (Tiny Tapeout GF 0.3, 4 × 4 tiles): 18048 per mm²"></a>
+                 
+                 title="Tiny FABulous FPGA (Tiny Tapeout GF 0.3, 4 × 4 tiles): 18k logic cells per mm²" aria-label="Tiny FABulous FPGA (Tiny Tapeout GF 0.3, 4 × 4 tiles): 18k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/358.html"
                  style="left: 14.7475%; top: 48%"
-                 title="Notre Dame - CSE 30342 - DIC - Advanced FSM Final Project Example (Tiny Tapeout GF 0.2, 1 × 2 tiles): 17697 per mm²"></a>
+                 
+                 title="Notre Dame - CSE 30342 - DIC - Advanced FSM Final Project Example (Tiny Tapeout GF 0.2, 1 × 2 tiles): 18k logic cells per mm²" aria-label="Notre Dame - CSE 30342 - DIC - Advanced FSM Final Project Example (Tiny Tapeout GF 0.2, 1 × 2 tiles): 18k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p3/ws-run2-t0p3/projects/288.html"
                  style="left: 14.631666666666666%; top: 88%"
-                 title="Philippine flag waving (Tiny Tapeout GF 0.3, 1 × 2 tiles): 17558 per mm²"></a>
+                 
+                 title="Philippine flag waving (Tiny Tapeout GF 0.3, 1 × 2 tiles): 18k logic cells per mm²" aria-label="Philippine flag waving (Tiny Tapeout GF 0.3, 1 × 2 tiles): 18k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/451.html"
                  style="left: 14.290833333333333%; top: 38%"
-                 title="Asicle v2 (Tiny Tapeout GF 0.2, 2 × 2 tiles): 17149 per mm²"></a>
+                 
+                 title="Asicle v2 (Tiny Tapeout GF 0.2, 2 × 2 tiles): 17k logic cells per mm²" aria-label="Asicle v2 (Tiny Tapeout GF 0.2, 2 × 2 tiles): 17k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26b/ws-run2-t26b/projects/100.html"
                  style="left: 14.220833333333333%; top: 78%"
-                 title="Neuromorphic PUF (distinct-tap LFSR arbiter + memristor XOR, GF180) (Tiny Tapeout GF 26b, 1 × 2 tiles): 17065 per mm²"></a>
+                 
+                 title="Neuromorphic PUF (distinct-tap LFSR arbiter + memristor XOR, GF180) (Tiny Tapeout GF 26b, 1 × 2 tiles): 17k logic cells per mm²" aria-label="Neuromorphic PUF (distinct-tap LFSR arbiter + memristor XOR, GF180) (Tiny Tapeout GF 26b, 1 × 2 tiles): 17k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p3/ws-run2-t0p3/projects/099.html"
                  style="left: 14.088333333333333%; top: 28%"
-                 title="Until heat death do us part (Tiny Tapeout GF 0.3, 2 × 2 tiles): 16906 per mm²"></a>
+                 
+                 title="Until heat death do us part (Tiny Tapeout GF 0.3, 2 × 2 tiles): 17k logic cells per mm²" aria-label="Until heat death do us part (Tiny Tapeout GF 0.3, 2 × 2 tiles): 17k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/038.html"
                  style="left: 13.718333333333334%; top: 68%"
-                 title="Wildcat RISC-V (Tiny Tapeout GF 0.2, 3 × 2 tiles): 16462 per mm²"></a>
+                 
+                 title="Wildcat RISC-V (Tiny Tapeout GF 0.2, 3 × 2 tiles): 16k logic cells per mm²" aria-label="Wildcat RISC-V (Tiny Tapeout GF 0.2, 3 × 2 tiles): 16k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/448.html"
                  style="left: 13.701666666666666%; top: 18%"
-                 title="APA102 to WS2812 Translator (Tiny Tapeout GF 26a, 1 × 2 tiles): 16442 per mm²"></a>
+                 
+                 title="APA102 to WS2812 Translator (Tiny Tapeout GF 26a, 1 × 2 tiles): 16k logic cells per mm²" aria-label="APA102 to WS2812 Translator (Tiny Tapeout GF 26a, 1 × 2 tiles): 16k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26b/ws-run2-t26b/projects/034.html"
                  style="left: 13.701666666666666%; top: 58%"
-                 title="Neuromorphic Spike Codec (GF180) (Tiny Tapeout GF 26b, 1 × 2 tiles): 16442 per mm²"></a>
+                 
+                 title="Neuromorphic Spike Codec (GF180) (Tiny Tapeout GF 26b, 1 × 2 tiles): 16k logic cells per mm²" aria-label="Neuromorphic Spike Codec (GF180) (Tiny Tapeout GF 26b, 1 × 2 tiles): 16k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/198.html"
                  style="left: 13.636666666666667%; top: 8%"
-                 title="easy PAL (Tiny Tapeout GF 0.2, 1 × 2 tiles): 16364 per mm²"></a>
+                 
+                 title="easy PAL (Tiny Tapeout GF 0.2, 1 × 2 tiles): 16k logic cells per mm²" aria-label="easy PAL (Tiny Tapeout GF 0.2, 1 × 2 tiles): 16k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/134.html"
                  style="left: 12.893333333333333%; top: 48%"
-                 title="VGA Drop (audio/visual demo) (Tiny Tapeout GF 0.2, 2 × 2 tiles): 15472 per mm²"></a>
+                 
+                 title="VGA Drop (audio/visual demo) (Tiny Tapeout GF 0.2, 2 × 2 tiles): 15k logic cells per mm²" aria-label="VGA Drop (audio/visual demo) (Tiny Tapeout GF 0.2, 2 × 2 tiles): 15k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26b/ws-run2-t26b/projects/098.html"
                  style="left: 12.690833333333334%; top: 88%"
-                 title="CIM Controller with BIST and Fault Map (GF180) (Tiny Tapeout GF 26b, 1 × 2 tiles): 15229 per mm²"></a>
+                 
+                 title="CIM Controller with BIST and Fault Map (GF180) (Tiny Tapeout GF 26b, 1 × 2 tiles): 15k logic cells per mm²" aria-label="CIM Controller with BIST and Fault Map (GF180) (Tiny Tapeout GF 26b, 1 × 2 tiles): 15k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26b/ws-run2-t26b/projects/450.html"
                  style="left: 12.661666666666667%; top: 38%"
-                 title="Programmable Waveform and PWM Generator (Tiny Tapeout GF 26b, 2 × 2 tiles): 15194 per mm²"></a>
+                 
+                 title="Programmable Waveform and PWM Generator (Tiny Tapeout GF 26b, 2 × 2 tiles): 15k logic cells per mm²" aria-label="Programmable Waveform and PWM Generator (Tiny Tapeout GF 26b, 2 × 2 tiles): 15k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/354.html"
                  style="left: 12.4675%; top: 78%"
-                 title="8-bit RISC CPU (Tiny Tapeout GF 26a, 1 × 2 tiles): 14961 per mm²"></a>
+                 
+                 title="8-bit RISC CPU (Tiny Tapeout GF 26a, 1 × 2 tiles): 15k logic cells per mm²" aria-label="8-bit RISC CPU (Tiny Tapeout GF 26a, 1 × 2 tiles): 15k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/196.html"
                  style="left: 12.395%; top: 28%"
-                 title="Quickscope (Tiny Tapeout GF 0.2, 1 × 2 tiles): 14874 per mm²"></a>
+                 
+                 title="Quickscope (Tiny Tapeout GF 0.2, 1 × 2 tiles): 15k logic cells per mm²" aria-label="Quickscope (Tiny Tapeout GF 0.2, 1 × 2 tiles): 15k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p3/ws-run2-t0p3/projects/033.html"
                  style="left: 12.294166666666667%; top: 68%"
-                 title="Simple Signal Generator (Tiny Tapeout GF 0.3, 1 × 2 tiles): 14753 per mm²"></a>
+                 
+                 title="Simple Signal Generator (Tiny Tapeout GF 0.3, 1 × 2 tiles): 15k logic cells per mm²" aria-label="Simple Signal Generator (Tiny Tapeout GF 0.3, 1 × 2 tiles): 15k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26b/ws-run2-t26b/projects/039.html"
                  style="left: 12.2175%; top: 18%"
-                 title="ChaCha20 (Tiny Tapeout GF 26b, 3 × 4 tiles): 14661 per mm²"></a>
+                 
+                 title="ChaCha20 (Tiny Tapeout GF 26b, 3 × 4 tiles): 15k logic cells per mm²" aria-label="ChaCha20 (Tiny Tapeout GF 26b, 3 × 4 tiles): 15k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/295.html"
                  style="left: 11.8275%; top: 58%"
-                 title="UTOSS RISC-V core (Tiny Tapeout GF 26a, 4 × 4 tiles): 14193 per mm²"></a>
+                 
+                 title="UTOSS RISC-V core (Tiny Tapeout GF 26a, 4 × 4 tiles): 14k logic cells per mm²" aria-label="UTOSS RISC-V core (Tiny Tapeout GF 26a, 4 × 4 tiles): 14k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26b/ws-run2-t26b/projects/199.html"
                  style="left: 11.726666666666667%; top: 8%"
-                 title="100Mbps 3 port Ethernet switch (Tiny Tapeout GF 26b, 2 × 2 tiles): 14072 per mm²"></a>
+                 
+                 title="100Mbps 3 port Ethernet switch (Tiny Tapeout GF 26b, 2 × 2 tiles): 14k logic cells per mm²" aria-label="100Mbps 3 port Ethernet switch (Tiny Tapeout GF 26b, 2 × 2 tiles): 14k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26b/ws-run2-t26b/projects/096.html"
                  style="left: 11.500833333333333%; top: 48%"
-                 title="Asynchronous-AER Spike Router (4-phase REQ/ACK, 16-entry routing table, GF180) (Tiny Tapeout GF 26b, 1 × 2 tiles): 13801 per mm²"></a>
+                 
+                 title="Asynchronous-AER Spike Router (4-phase REQ/ACK, 16-entry routing table, GF180) (Tiny Tapeout GF 26b, 1 × 2 tiles): 14k logic cells per mm²" aria-label="Asynchronous-AER Spike Router (4-phase REQ/ACK, 16-entry routing table, GF180) (Tiny Tapeout GF 26b, 1 × 2 tiles): 14k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26b/ws-run2-t26b/projects/352.html"
                  style="left: 11.406666666666666%; top: 88%"
-                 title="Procedural ASIC (Tiny Tapeout GF 26b, 1 × 2 tiles): 13688 per mm²"></a>
+                 
+                 title="Procedural ASIC (Tiny Tapeout GF 26b, 1 × 2 tiles): 14k logic cells per mm²" aria-label="Procedural ASIC (Tiny Tapeout GF 26b, 1 × 2 tiles): 14k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/388.html"
                  style="left: 11.031666666666666%; top: 38%"
-                 title="Tiny TPU Systolic Array (Tiny Tapeout GF 26a, 1 × 2 tiles): 13238 per mm²"></a>
+                 
+                 title="Tiny TPU Systolic Array (Tiny Tapeout GF 26a, 1 × 2 tiles): 13k logic cells per mm²" aria-label="Tiny TPU Systolic Array (Tiny Tapeout GF 26a, 1 × 2 tiles): 13k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26b/ws-run2-t26b/projects/129.html"
                  style="left: 10.664166666666667%; top: 78%"
-                 title="CWRU CHIPS Simple Counter with 7-segment Display (Tiny Tapeout GF 26b, 1 × 2 tiles): 12797 per mm²"></a>
+                 
+                 title="CWRU CHIPS Simple Counter with 7-segment Display (Tiny Tapeout GF 26b, 1 × 2 tiles): 13k logic cells per mm²" aria-label="CWRU CHIPS Simple Counter with 7-segment Display (Tiny Tapeout GF 26b, 1 × 2 tiles): 13k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/199.html"
                  style="left: 10.0475%; top: 28%"
-                 title="Very Low Resource Digital Implementation of Bioimpedance Analysis (Tiny Tapeout GF 26a, 2 × 2 tiles): 12057 per mm²"></a>
+                 
+                 title="Very Low Resource Digital Implementation of Bioimpedance Analysis (Tiny Tapeout GF 26a, 2 × 2 tiles): 12k logic cells per mm²" aria-label="Very Low Resource Digital Implementation of Bioimpedance Analysis (Tiny Tapeout GF 26a, 2 × 2 tiles): 12k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/384.html"
                  style="left: 9.4875%; top: 68%"
-                 title="LEDs Racer (Tiny Tapeout GF 0.2, 1 × 2 tiles): 11385 per mm²"></a>
+                 
+                 title="LEDs Racer (Tiny Tapeout GF 0.2, 1 × 2 tiles): 11k logic cells per mm²" aria-label="LEDs Racer (Tiny Tapeout GF 0.2, 1 × 2 tiles): 11k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/454.html"
                  style="left: 8.7875%; top: 18%"
-                 title="CAN Controller for Rocket (Tiny Tapeout GF 0.2, 1 × 2 tiles): 10545 per mm²"></a>
+                 
+                 title="CAN Controller for Rocket (Tiny Tapeout GF 0.2, 1 × 2 tiles): 11k logic cells per mm²" aria-label="CAN Controller for Rocket (Tiny Tapeout GF 0.2, 1 × 2 tiles): 11k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/385.html"
                  style="left: 8.3475%; top: 58%"
-                 title="Frequency Counter SSD1306 OLED (Tiny Tapeout GF 0.2, 1 × 2 tiles): 10017 per mm²"></a>
+                 
+                 title="Frequency Counter SSD1306 OLED (Tiny Tapeout GF 0.2, 1 × 2 tiles): 10k logic cells per mm²" aria-label="Frequency Counter SSD1306 OLED (Tiny Tapeout GF 0.2, 1 × 2 tiles): 10k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/386.html"
                  style="left: 8.195833333333333%; top: 8%"
-                 title="Pong in Verilog (Tiny Tapeout GF 26a, 1 × 2 tiles): 9835 per mm²"></a>
+                 
+                 title="Pong in Verilog (Tiny Tapeout GF 26a, 1 × 2 tiles): 9.8k logic cells per mm²" aria-label="Pong in Verilog (Tiny Tapeout GF 26a, 1 × 2 tiles): 9.8k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-2" href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/103.html"
                  style="left: 7.819166666666667%; top: 48%"
-                 title="Minimal RV32E SoC with UART Loader (Tiny Tapeout GF 26a, 4 × 2 tiles): 9383 per mm²"></a>
+                 
+                 title="Minimal RV32E SoC with UART Loader (Tiny Tapeout GF 26a, 4 × 2 tiles): 9.4k logic cells per mm²" aria-label="Minimal RV32E SoC with UART Loader (Tiny Tapeout GF 26a, 4 × 2 tiles): 9.4k logic cells per mm²"></a>
               
             </div>
           </div>
@@ -3134,71 +3320,88 @@ document.addEventListener('DOMContentLoaded', function() {
               
               <a class="ws-strip-dot ws-strip-3" href="https://wafer.space/google-gf180mcu-mpw0/projects/45D6.html"
                  style="left: 5.9975%; top: 8%"
-                 title="Ophelia eFPGA (Google GFMPW-0, Caravel user area): 7197 per mm²"></a>
+                 
+                 title="Ophelia eFPGA (Google GFMPW-0, Caravel user area): 7.2k logic cells per mm²" aria-label="Ophelia eFPGA (Google GFMPW-0, Caravel user area): 7.2k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-3" href="https://wafer.space/google-gf180mcu-mpw0/projects/56C6.html"
                  style="left: 2.9675%; top: 48%"
-                 title="One-hot FABulous FPGA (Google GFMPW-0, Caravel user area): 3561 per mm²"></a>
+                 
+                 title="One-hot FABulous FPGA (Google GFMPW-0, Caravel user area): 3.6k logic cells per mm²" aria-label="One-hot FABulous FPGA (Google GFMPW-0, Caravel user area): 3.6k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-3" href="https://wafer.space/google-gf180mcu-mpw0/projects/C979.html"
                  style="left: 2.51%; top: 88%"
-                 title="VerilogBoy (Google GFMPW-0, Caravel user area): 3012 per mm²"></a>
+                 
+                 title="VerilogBoy (Google GFMPW-0, Caravel user area): 3.0k logic cells per mm²" aria-label="VerilogBoy (Google GFMPW-0, Caravel user area): 3.0k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-3" href="https://wafer.space/google-gf180mcu-mpw0/projects/6079.html"
                  style="left: 1.6066666666666667%; top: 38%"
-                 title="Serv tri-core (GF180 MPW0 Serv) (Google GFMPW-0, Caravel user area): 1928 per mm²"></a>
+                 
+                 title="Serv tri-core (GF180 MPW0 Serv) (Google GFMPW-0, Caravel user area): 1.9k logic cells per mm²" aria-label="Serv tri-core (GF180 MPW0 Serv) (Google GFMPW-0, Caravel user area): 1.9k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-3" href="https://wafer.space/google-gf180mcu-mpw0/projects/FF8E.html"
                  style="left: 1.2008333333333334%; top: 78%"
-                 title="Hash accelerator with clock multiplexing (Google GFMPW-0, Caravel user area): 1441 per mm²"></a>
+                 
+                 title="Hash accelerator with clock multiplexing (Google GFMPW-0, Caravel user area): 1.4k logic cells per mm²" aria-label="Hash accelerator with clock multiplexing (Google GFMPW-0, Caravel user area): 1.4k logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-3" href="https://wafer.space/google-gf180mcu-mpw18h1/projects/0002.html"
                  style="left: 0.68%; top: 28%"
-                 title="OSU 3.3V standard cell test (vlsiffra adder) (Google MPW-18H1, Caravel user area): 816 per mm²"></a>
+                 
+                 title="OSU 3.3V standard cell test (vlsiffra adder) (Google MPW-18H1, Caravel user area): 816 logic cells per mm²" aria-label="OSU 3.3V standard cell test (vlsiffra adder) (Google MPW-18H1, Caravel user area): 816 logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-3" href="https://wafer.space/google-gf180mcu-mpw0/projects/B676.html"
                  style="left: 0.5983333333333334%; top: 68%"
-                 title="SPELL for GF180 (Google GFMPW-0, Caravel user area): 718 per mm²"></a>
+                 
+                 title="SPELL for GF180 (Google GFMPW-0, Caravel user area): 718 logic cells per mm²" aria-label="SPELL for GF180 (Google GFMPW-0, Caravel user area): 718 logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-3" href="https://wafer.space/google-gf180mcu-mpw0/projects/66AD.html"
                  style="left: 0.5516666666666666%; top: 18%"
-                 title="ALU (paper) (Google GFMPW-0, Caravel user area): 662 per mm²"></a>
+                 
+                 title="ALU (paper) (Google GFMPW-0, Caravel user area): 662 logic cells per mm²" aria-label="ALU (paper) (Google GFMPW-0, Caravel user area): 662 logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-3" href="https://wafer.space/google-gf180mcu-mpw0/projects/105A.html"
                  style="left: 0.44916666666666666%; top: 58%"
-                 title="AS2650 (Google GFMPW-0, Caravel user area): 539 per mm²"></a>
+                 
+                 title="AS2650 (Google GFMPW-0, Caravel user area): 539 logic cells per mm²" aria-label="AS2650 (Google GFMPW-0, Caravel user area): 539 logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-3" href="https://wafer.space/google-gf180mcu-mpw0/projects/F0DD.html"
                  style="left: 0.3591666666666667%; top: 8%"
-                 title="Pyramiden Core (RV16U) (Google GFMPW-0, Caravel user area): 431 per mm²"></a>
+                 
+                 title="Pyramiden Core (RV16U) (Google GFMPW-0, Caravel user area): 431 logic cells per mm²" aria-label="Pyramiden Core (RV16U) (Google GFMPW-0, Caravel user area): 431 logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-3" href="https://wafer.space/google-gf180mcu-mpw0/projects/8BB5.html"
                  style="left: 0.22916666666666666%; top: 48%"
-                 title="PWM / Wishbone core (Google GFMPW-0, Caravel user area): 275 per mm²"></a>
+                 
+                 title="PWM / Wishbone core (Google GFMPW-0, Caravel user area): 275 logic cells per mm²" aria-label="PWM / Wishbone core (Google GFMPW-0, Caravel user area): 275 logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-3" href="https://wafer.space/google-gf180mcu-mpw0/projects/E91D.html"
                  style="left: 0.18833333333333332%; top: 88%"
-                 title="EduRISC16 (Google GFMPW-0, Caravel user area): 226 per mm²"></a>
+                 
+                 title="EduRISC16 (Google GFMPW-0, Caravel user area): 226 logic cells per mm²" aria-label="EduRISC16 (Google GFMPW-0, Caravel user area): 226 logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-3" href="https://wafer.space/google-gf180mcu-mpw0/projects/6E0D.html"
                  style="left: 0.14416666666666667%; top: 38%"
-                 title="Synchronous modulator (Google GFMPW-0, Caravel user area): 173 per mm²"></a>
+                 
+                 title="Synchronous modulator (Google GFMPW-0, Caravel user area): 173 logic cells per mm²" aria-label="Synchronous modulator (Google GFMPW-0, Caravel user area): 173 logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-3" href="https://wafer.space/google-gf180mcu-mpw0/projects/9DDB.html"
                  style="left: 0.13583333333333333%; top: 78%"
-                 title="Asynchronous modulator (Google GFMPW-0, Caravel user area): 163 per mm²"></a>
+                 
+                 title="Asynchronous modulator (Google GFMPW-0, Caravel user area): 163 logic cells per mm²" aria-label="Asynchronous modulator (Google GFMPW-0, Caravel user area): 163 logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-3" href="https://wafer.space/google-gf180mcu-mpw0/projects/0ABD.html"
                  style="left: 0.1225%; top: 28%"
-                 title="VGA Clock for GF180 (Google GFMPW-0, Caravel user area): 147 per mm²"></a>
+                 
+                 title="VGA Clock for GF180 (Google GFMPW-0, Caravel user area): 147 logic cells per mm²" aria-label="VGA Clock for GF180 (Google GFMPW-0, Caravel user area): 147 logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-3" href="https://wafer.space/google-gf180mcu-mpw0/projects/9C7C.html"
                  style="left: 0.1225%; top: 68%"
-                 title="GreenRio (GF version) (Google GFMPW-0, Caravel user area): 147 per mm²"></a>
+                 
+                 title="GreenRio (GF version) (Google GFMPW-0, Caravel user area): 147 logic cells per mm²" aria-label="GreenRio (GF version) (Google GFMPW-0, Caravel user area): 147 logic cells per mm²"></a>
               
               <a class="ws-strip-dot ws-strip-3" href="https://wafer.space/google-gf180mcu-mpw0/projects/1E9A.html"
                  style="left: 0.10666666666666667%; top: 18%"
-                 title="HyperRAM controller (Google GFMPW-0, Caravel user area): 128 per mm²"></a>
+                 
+                 title="HyperRAM controller (Google GFMPW-0, Caravel user area): 128 logic cells per mm²" aria-label="HyperRAM controller (Google GFMPW-0, Caravel user area): 128 logic cells per mm²"></a>
               
             </div>
           </div>
@@ -3206,13 +3409,16 @@ document.addEventListener('DOMContentLoaded', function() {
           <div class="ws-strip-row ws-strip-axis ws-strip-labels" aria-hidden="true">
             <div class="ws-strip-name"></div>
             <div class="ws-strip-track">
-              <span style="left: 94.90416666666667%">Inverter</span><span style="left: 75.92333333333333%">NAND gate</span><span style="left: 63.26916666666666%">Buffer</span><span style="left: 14.06%">Flip-flop</span>
+              <span style="left: 94.90416666666667%">All inverters</span><span style="left: 75.92333333333333%">All nand gates</span><span style="left: 63.26916666666666%">All buffers</span><span style="left: 14.06%">All flip-flops</span>
             </div>
           </div>
         </div>
-        <p class="table-footnote text-center">The short bar in each row is its typical (median) design. Tiny Tapeout tiles
-          run denser than whole dies: a tile is small and nearly all core, while a die's core also holds its wiring to
-          the pads, its memory and any empty space.</p>
+        <p class="table-footnote text-center">The white line in each row is its typical (median) design. Each dashed
+          line is a core packed with one kind of cell; a real design mixes small cells with large ones, so it can pass
+          the flip-flop line, but none comes near the others. Tiny Tapeout tiles run denser than whole dies: a tile is
+          small and nearly all core, while a die's core also holds its wiring to the pads, its memory and any empty
+          space. Most Google shuttle designs left much of the 9&nbsp;mm&sup2;
+          <a href="https://caravel-harness.readthedocs.io/">Caravel</a> user area empty.</p>
       </div>
     </div>
 
@@ -3230,66 +3436,73 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="row">
       <div class="col-lg-10 offset-lg-1">
         <h4 id="wafer-space-slots" class="text-center mb-20">wafer.space slots<a class="heading-anchor" href="#wafer-space-slots" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h4>
+        <p class="table-footnote text-center d-md-none">Swipe the tables sideways for more columns.</p>
         <div class="table-responsive">
           <table class="table table-striped text-center ws-table-dark">
             <thead>
               <tr>
                 <th scope="col" class="text-left font-weight-bold">Slot</th>
-                <th scope="col" class="font-weight-bold">Core / whole slot</th>
-                <th scope="col" class="font-weight-bold">Designs</th>
                 <th scope="col" class="font-weight-bold">Typical logic cells</th>
                 <th scope="col" class="font-weight-bold">Most logic cells</th>
-                <th scope="col" class="font-weight-bold">Typical per mm&sup2;<br><small>core / whole slot</small></th>
-                <th scope="col" class="font-weight-bold">Maximum buffers<br><small>in the core</small></th>
+                <th scope="col" class="font-weight-bold">Theoretical maximum<br><small>all buffers, in the core</small></th>
+                <th scope="col" class="font-weight-bold">Typical per mm&sup2;<br><small>of core</small></th>
+                <th scope="col" class="font-weight-bold">Typical per mm&sup2;<br><small>of whole slot</small></th>
+                <th scope="col" class="font-weight-bold">Core / whole slot</th>
+                <th scope="col" class="font-weight-bold d-none d-md-table-cell">Designs</th>
               </tr>
             </thead>
             <tbody>
               
               <tr>
-                <td class="text-left font-weight-600">1 × 1</td>
-                <td>12.92 / 19.65&nbsp;mm&sup2;</td>
-                <td>32</td>
+                <td class="text-left font-weight-600 text-nowrap">1×1&nbsp;Slot</td>
                 <td>95k</td>
                 <td>324k<br><small><a href="https://wafer.space/ws-run2/projects/CLON.html">Cloneless2</a></small></td>
-                <td>7.3k / 4.8k</td>
                 <td>981k</td>
+                <td>7.3k</td>
+                <td>4.8k</td>
+                <td class="text-nowrap">12.92 / 19.65&nbsp;mm&sup2;</td>
+                <td class="d-none d-md-table-cell">32</td>
               </tr>
               
               <tr>
-                <td class="text-left font-weight-600">1 × ½</td>
-                <td>5.02 / 9.61&nbsp;mm&sup2;</td>
-                <td>16</td>
-                <td>36k</td>
-                <td>68k<br><small><a href="https://wafer.space/ws-run2/projects/EURO.html">EuroSynth</a></small></td>
-                <td>7.1k / 3.7k</td>
-                <td>381k</td>
-              </tr>
-              
-              <tr>
-                <td class="text-left font-weight-600">½ × 1</td>
-                <td>4.46 / 9.57&nbsp;mm&sup2;</td>
-                <td>8</td>
+                <td class="text-left font-weight-600 text-nowrap">0.5×1&nbsp;Slot</td>
                 <td>5.1k</td>
                 <td>66k<br><small><a href="https://wafer.space/ws-run2/projects/DPK1.html">bio180</a></small></td>
-                <td>1.2k / 537</td>
                 <td>338k</td>
+                <td>1.2k</td>
+                <td>537</td>
+                <td class="text-nowrap">4.46 / 9.57&nbsp;mm&sup2;</td>
+                <td class="d-none d-md-table-cell">8</td>
               </tr>
               
               <tr>
-                <td class="text-left font-weight-600">½ × ½</td>
-                <td>1.73 / 4.68&nbsp;mm&sup2;</td>
-                <td>8</td>
+                <td class="text-left font-weight-600 text-nowrap">1×0.5&nbsp;Slot</td>
+                <td>36k</td>
+                <td>68k<br><small><a href="https://wafer.space/ws-run2/projects/EURO.html">EuroSynth</a></small></td>
+                <td>381k</td>
+                <td>7.1k</td>
+                <td>3.7k</td>
+                <td class="text-nowrap">5.02 / 9.61&nbsp;mm&sup2;</td>
+                <td class="d-none d-md-table-cell">16</td>
+              </tr>
+              
+              <tr>
+                <td class="text-left font-weight-600 text-nowrap">0.5×0.5&nbsp;Slot</td>
                 <td>24k</td>
                 <td>36k<br><small><a href="https://wafer.space/ws-run1/projects/TQVA.html">TinyQV - Crowdsourced RISC-V SoC</a></small></td>
-                <td>14k / 5.1k</td>
                 <td>132k</td>
+                <td>14k</td>
+                <td>5.1k</td>
+                <td class="text-nowrap">1.73 / 4.68&nbsp;mm&sup2;</td>
+                <td class="d-none d-md-table-cell">8</td>
               </tr>
               
             </tbody>
           </table>
         </div>
-        <p class="table-footnote text-center">Typical is the median design of that size. Designs that are mostly
-          memory or analog circuits count too, so typical logic is well below what a slot can hold.</p>
+        <p class="table-footnote text-center">Slots are width &times; height. Typical is the median design of that
+          size, counting every design, digital or not: those that are mostly memory or analog circuits pull it down.
+          The whole slot is everything inside its seal ring, pad ring included.</p>
 
         <div class="space30"></div>
         <h4 id="tiny-tapeout-tiles-on-gf180mcu" class="text-center mb-20">Tiny Tapeout tiles on GF180MCU<a class="heading-anchor" href="#tiny-tapeout-tiles-on-gf180mcu" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h4>
@@ -3299,7 +3512,7 @@ document.addEventListener('DOMContentLoaded', function() {
               <tr>
                 <th scope="col" class="text-left font-weight-bold">Tiles</th>
                 <th scope="col" class="font-weight-bold">Area</th>
-                <th scope="col" class="font-weight-bold">Projects</th>
+                <th scope="col" class="font-weight-bold d-none d-md-table-cell">Projects</th>
                 <th scope="col" class="font-weight-bold">Typical logic cells</th>
                 <th scope="col" class="font-weight-bold">Most logic cells</th>
                 <th scope="col" class="font-weight-bold">Typical per mm&sup2;</th>
@@ -3308,63 +3521,63 @@ document.addEventListener('DOMContentLoaded', function() {
             <tbody>
               
               <tr>
-                <td class="text-left font-weight-600">4 × 4</td>
-                <td>1.066&nbsp;mm&sup2;</td>
-                <td>6</td>
+                <td class="text-left font-weight-600 text-nowrap">4 × 4</td>
+                <td class="text-nowrap">1.066&nbsp;mm&sup2;</td>
+                <td class="d-none d-md-table-cell">6</td>
                 <td>22k</td>
                 <td>30k<br><small><a href="https://wafer.space/tinytapeouts/ttgf26b/ws-run2-t26b/projects/295.html">ASCON Integrated Crypto Processor</a></small></td>
                 <td>20k</td>
               </tr>
               
               <tr>
-                <td class="text-left font-weight-600">3 × 4</td>
-                <td>0.799&nbsp;mm&sup2;</td>
-                <td>5</td>
+                <td class="text-left font-weight-600 text-nowrap">3 × 4</td>
+                <td class="text-nowrap">0.799&nbsp;mm&sup2;</td>
+                <td class="d-none d-md-table-cell">5</td>
                 <td>17k</td>
                 <td>23k<br><small><a href="https://wafer.space/tinytapeouts/ttgf0p2/ws-run1-ttp2/projects/101.html">SCµM-BLE-RX</a></small></td>
                 <td>22k</td>
               </tr>
               
               <tr>
-                <td class="text-left font-weight-600">4 × 2</td>
-                <td>0.475&nbsp;mm&sup2;</td>
-                <td>4</td>
+                <td class="text-left font-weight-600 text-nowrap">4 × 2</td>
+                <td class="text-nowrap">0.475&nbsp;mm&sup2;</td>
+                <td class="d-none d-md-table-cell">4</td>
                 <td>10k</td>
                 <td>13k<br><small><a href="https://wafer.space/tinytapeouts/ttgf0p3/ws-run2-t0p3/projects/199.html">TinyQV RISC-V SoC</a></small></td>
                 <td>22k</td>
               </tr>
               
               <tr>
-                <td class="text-left font-weight-600">3 × 2</td>
-                <td>0.356&nbsp;mm&sup2;</td>
-                <td>5</td>
+                <td class="text-left font-weight-600 text-nowrap">3 × 2</td>
+                <td class="text-nowrap">0.356&nbsp;mm&sup2;</td>
+                <td class="d-none d-md-table-cell">5</td>
                 <td>8.2k</td>
                 <td>10.0k<br><small><a href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/135.html">serv_soc_wb</a></small></td>
                 <td>23k</td>
               </tr>
               
               <tr>
-                <td class="text-left font-weight-600">2 × 2</td>
-                <td>0.234&nbsp;mm&sup2;</td>
-                <td>13</td>
+                <td class="text-left font-weight-600 text-nowrap">2 × 2</td>
+                <td class="text-nowrap">0.234&nbsp;mm&sup2;</td>
+                <td class="d-none d-md-table-cell">13</td>
                 <td>4.4k</td>
                 <td>6.9k<br><small><a href="https://wafer.space/tinytapeouts/ttgf26b/ws-run2-t26b/projects/195.html">LEA-128</a></small></td>
                 <td>19k</td>
               </tr>
               
               <tr>
-                <td class="text-left font-weight-600">1 × 2</td>
-                <td>0.116&nbsp;mm&sup2;</td>
-                <td>54</td>
+                <td class="text-left font-weight-600 text-nowrap">1 × 2</td>
+                <td class="text-nowrap">0.116&nbsp;mm&sup2;</td>
+                <td class="d-none d-md-table-cell">54</td>
                 <td>2.5k</td>
                 <td>3.5k<br><small><a href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/390.html">GPS_Accelerator</a></small></td>
                 <td>21k</td>
               </tr>
               
               <tr>
-                <td class="text-left font-weight-600">1 × 1</td>
-                <td>0.056&nbsp;mm&sup2;</td>
-                <td>157</td>
+                <td class="text-left font-weight-600 text-nowrap">1 × 1</td>
+                <td class="text-nowrap">0.056&nbsp;mm&sup2;</td>
+                <td class="d-none d-md-table-cell">157</td>
                 <td>1.3k</td>
                 <td>1.9k<br><small><a href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/353.html">DOTTEE VGA demo (TTGF26a)</a></small></td>
                 <td>23k</td>
@@ -3373,7 +3586,8 @@ document.addEventListener('DOMContentLoaded', function() {
             </tbody>
           </table>
         </div>
-        <p class="table-footnote text-center">A project made on two chips from the same source counts once.</p>
+        <p class="table-footnote text-center">Every project counts, digital or not; a project made on two chips
+          from the same source counts once.</p>
 
         <div class="space30"></div>
         <h4 id="the-densest-designs" class="text-center mb-20">The densest designs<a class="heading-anchor" href="#the-densest-designs" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h4>
@@ -3392,26 +3606,27 @@ document.addEventListener('DOMContentLoaded', function() {
               
               <tr>
                 <td class="text-left"><a href="https://wafer.space/ws-run2/projects/CLON.html">Cloneless2</a></td>
-                <td>wafer.space Run 2</td><td>1 × 1 slot</td><td>7t-5V</td>
+                <td><a href="https://wafer.space/ws-run2/">wafer.space Run 2</a></td><td class="text-nowrap">1 × 1 slot</td><td class="text-nowrap">7t-5V</td>
                 <td><strong>25k</strong></td>
               </tr>
               
               <tr>
                 <td class="text-left"><a href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/projects/353.html">DOTTEE VGA demo (TTGF26a)</a></td>
-                <td>Tiny Tapeout GF 26a</td><td>1 × 1 tile</td><td>7t-5V</td>
+                <td><a href="https://wafer.space/tinytapeouts/ttgf26a/ws-run2-t26a/">Tiny Tapeout GF 26a</a></td><td class="text-nowrap">1 × 1 tile</td><td class="text-nowrap">7t-5V</td>
                 <td><strong>34k</strong></td>
               </tr>
               
               <tr>
                 <td class="text-left"><a href="https://wafer.space/google-gf180mcu-mpw0/projects/45D6.html">Ophelia eFPGA</a></td>
-                <td>Google GFMPW-0</td><td>Caravel user area</td><td>7t-5V</td>
+                <td><a href="https://wafer.space/google-gf180mcu-mpw0/">Google GFMPW-0</a></td><td class="text-nowrap">Caravel user area</td><td class="text-nowrap">7t-5V</td>
                 <td><strong>7.2k</strong></td>
               </tr>
               
             </tbody>
           </table>
         </div>
-        <p class="table-footnote text-center">The densest design made in each way. By library, typical designs reach
+        <p class="table-footnote text-center">The densest design made in each way. Across all
+          196 digital designs, Tiny Tapeout projects included, the typical design reaches
           19k with 7t-5V, 4.5k with 9t-5V, 12k with AS 7t-3.3V
           logic cells per mm&sup2; of core.</p>
       </div>
@@ -3422,12 +3637,12 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- SRAM Capacity Table -->
     <div class="row">
       <div class="col-lg-10 offset-lg-1">
-        <h4 id="sram-capacity" class="text-center mb-30">SRAM Capacity<a class="heading-anchor" href="#sram-capacity" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h4>
+        <h4 id="sram-capacity" class="text-center mb-30">SRAM capacity<a class="heading-anchor" href="#sram-capacity" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h4>
         <div class="table-responsive">
           <table class="table table-striped text-center ws-table-dark">
             <thead>
               <tr>
-                <th scope="col" class="text-left font-weight-bold">SRAM Type</th>
+                <th scope="col" class="text-left font-weight-bold">SRAM type</th>
                 <th scope="col" class="font-weight-bold">Voltage</th>
                 
                   <th scope="col" class="font-weight-bold">1×1&nbsp;Slot</th>
@@ -3536,8 +3751,9 @@ document.addEventListener('DOMContentLoaded', function() {
           </table>
         </div>
         <p class="table-footnote text-center">
-          Block counts use die area minus seal ring (26&micro;m each side). Run 1&rsquo;s most SRAM-heavy design
-          (<a href="https://github.com/wren6991/riscboy-180" target="_blank" rel="noopener">RISCBoy-180</a>) used 60 blocks in a full slot.
+          Block counts fill the whole slot inside its seal ring (26&nbsp;&micro;m each side), so they assume a
+          design without the default pad ring. Run 1&rsquo;s most SRAM-heavy design
+          (<a href="https://wafer.space/ws-run1/projects/RBOY.html">RISCBoy-180</a>) used 60 blocks in a full slot.
         </p>
       </div>
     </div>
@@ -3761,5 +3977,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 </body>
-<!-- Generated from git commit: f47f8510cfad4f8582f35a72141f6f9d9c1112bd (f47f8510) -->
+<!-- Generated from git commit: 6ed5bb725811734ac9a97cef43b34a30b0d68650 (6ed5bb72) -->
 </html>
