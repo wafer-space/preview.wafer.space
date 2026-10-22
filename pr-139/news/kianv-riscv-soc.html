@@ -4,7 +4,7 @@
 <head>
   <!-- Meta Tags-->
   <meta charset="utf-8" />
-  <meta name="git-commit" content="5ff1573877d2457722b10caf9951c4f92eacf41f">
+  <meta name="git-commit" content="6cb698c9dabc46b991928b74e0bcd83a54ce2a7f">
 <!-- Primary Meta Tags -->
 <title> Taping Out KianV - a Linux/XV6-capable RISC-V SoC </title>
 <meta name="title" content=" Taping Out KianV - a Linux/XV6-capable RISC-V SoC ">
@@ -15,15 +15,17 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://wafer.space/pr-139/news/kianv-riscv-soc">
 <meta property="og:title" content=" Taping Out KianV - a Linux/XV6-capable RISC-V SoC ">
-<meta property="og:description" content="
-    Budget silicon manufacturing.">
+<meta property="og:description" content=" KianV is a RISC-V SoC capable of running µLinux, Linux, and XV6. Taped out using a fully open-source ASIC flow. ">
+
+<meta property="og:image" content="/pr-139/assets/images/news/kianv-riscv-soc/thumbnail.jpg" />
 
 <!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://wafer.space/pr-139/news/kianv-riscv-soc">
-<meta property="twitter:title" content=" Taping Out KianV - a Linux/XV6-capable RISC-V SoC ">
-<meta property="twitter:description" content="
-    Budget silicon manufacturing.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://wafer.space/pr-139/news/kianv-riscv-soc">
+<meta name="twitter:title" content=" Taping Out KianV - a Linux/XV6-capable RISC-V SoC ">
+<meta name="twitter:description" content=" KianV is a RISC-V SoC capable of running µLinux, Linux, and XV6. Taped out using a fully open-source ASIC flow. ">
+
+<meta name="twitter:image" content="/pr-139/assets/images/news/kianv-riscv-soc/thumbnail.jpg" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Dark Mode Init (Prevent Flash) -->
@@ -297,7 +299,7 @@
                   
                 </div>
                 
-                <h2 class="post-title text-center">Taping Out KianV - a Linux/XV6-capable RISC-V SoC</h2>
+                <h2 id="taping-out-kianv-a-linux-xv6-capable-risc-v-soc" class="post-title text-center">Taping Out KianV - a Linux/XV6-capable RISC-V SoC<a class="heading-anchor" href="#taping-out-kianv-a-linux-xv6-capable-risc-v-soc" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h2>
                 <div class="meta text-center">
                   
                   <span class="date"><i class="jam jam-clock"></i>05 Jun 2026</span>
@@ -320,12 +322,12 @@ implements the RISC-V RV32IMA ISA alongside additional extensions for more funct
 
 <p>In addition to the ASIC, a compact bring-up PCB was designed to enable hardware validation and early software development.</p>
 
-<h2 id="soc-overview">SoC Overview</h2>
+<h2 id="soc-overview">SoC Overview<a class="heading-anchor" href="#soc-overview" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h2>
 
 <p>The KianV SoC is built around an RV32IMA core - that’s a 32-bit base with integer multiplication &amp; division (<code class="language-plaintext highlighter-rouge">M</code>) and
-atomic instructions (<code class="language-plaintext highlighter-rouge">A</code>) extensions. In addition to those, it has support for <a href="https://docs.riscv.org/reference/isa/unpriv/counters.html#7-1-1-zicntr-extension-for-base-counters-and-timers">Zicntr</a>, <a href="https://docs.riscv.org/reference/isa/unpriv/zicsr.html#csrinsts">Zicsr</a>,
-<a href="https://docs.riscv.org/reference/isa/unpriv/zifencei.html#zifencei">Zifencei</a>, <a href="https://docs.riscv.org/reference/isa/priv/sstc.html#Sstc">SSTC</a> and
-<a href="https://docs.riscv.org/reference/isa/priv/supervisor.html#sv32">Sv32</a>.</p>
+atomic instructions (<code class="language-plaintext highlighter-rouge">A</code>) extensions. In addition to those, it has support for <a href="https://docs.riscv.org/reference/isa/v20260120/unpriv/counters.html#6-1-1-zicntr-extension-for-base-counters-and-timers">Zicntr</a>, <a href="https://docs.riscv.org/reference/isa/v20260120/unpriv/zicsr.html#csrinsts">Zicsr</a>,
+<a href="https://docs.riscv.org/reference/isa/v20260120/unpriv/zifencei.html#zifencei">Zifencei</a>, <a href="https://docs.riscv.org/reference/isa/v20260120/priv/sstc.html#Sstc">SSTC</a> and
+<a href="https://docs.riscv.org/reference/isa/v20260120/priv/supervisor.html#sv32">Sv32</a>.</p>
 
 <p>The Sv32 extension allows KianV to access memory - this is done using a page-based 32-bit virtual memory system,
 which then interacts with 32MiB of external memory through an on-board SDRAM controller.</p>
@@ -358,7 +360,7 @@ an SPI-based Ethernet connection. A system like this may find uses in a variety 
     </figure>
 </div>
 
-<h2 id="pinout">Pinout</h2>
+<h2 id="pinout">Pinout<a class="heading-anchor" href="#pinout" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h2>
 
 <p>The pinout is designed around a strict 58 external IO signal limit, all divided between the peripherals mentioned
 beforehand. The <a href="https://github.com/wafer-space/gf180mcu-project-template">wafer.space template</a> provides access to 74
@@ -459,7 +461,7 @@ pads, however these also include power and ground connections.</p>
 
 <hr />
 
-<h2 id="design-philosophy">Design Philosophy</h2>
+<h2 id="design-philosophy">Design Philosophy<a class="heading-anchor" href="#design-philosophy" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h2>
 
 <p>The RISC-V processor in this SoC is a multi-cycle RV32 core, optimized for area. The architecture was validated
 prior to taping out on FPGA platforms, where SV32-capable mainline Linux and network connectivity were demonstrated.</p>
@@ -484,7 +486,7 @@ referenced in an <a href="https://ieeexplore.ieee.org/document/10584359">IEEE So
     </figure>
 </div>
 
-<h2 id="design-flow">Design Flow</h2>
+<h2 id="design-flow">Design Flow<a class="heading-anchor" href="#design-flow" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h2>
 
 <p>KianV was brought to life using <strong>LibreLane</strong> and the <strong><a href="https://github.com/wafer-space/gf180mcu-project-template">wafer.space GF180MCU project template</a></strong>,
 which was then submitted to Run 1, and manufactured using the GlobalFoundries 180 nm PDK.</p>
@@ -493,7 +495,7 @@ which was then submitted to Run 1, and manufactured using the GlobalFoundries 18
 contains software for RTL synthesis, floorplanning, place-and-route, clock tree synthesis and physical verification
 using known open-source tools.</p>
 
-<h2 id="implementation-results">Implementation Results</h2>
+<h2 id="implementation-results">Implementation Results<a class="heading-anchor" href="#implementation-results" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h2>
 
 <p>Linux was booted in a gate-level simulation which painstakingly ran for an entire month before reaching the login prompt.
 This was using the mainline 6.19 version of the Linux kernel, and was validated against a Micron SDRAM simulation model
@@ -517,7 +519,7 @@ channels to see some silicon validation?</p>
     </figure>
 </div>
 
-<h2 id="design-validation-pcb">Design Validation PCB</h2>
+<h2 id="design-validation-pcb">Design Validation PCB<a class="heading-anchor" href="#design-validation-pcb" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h2>
 
 <p>As mentioned in the introduction, a small bring-up PCB was designed to support validation and software bring-up.</p>
 
@@ -562,7 +564,7 @@ SPI flash, SPI SD card interface, UART access and a power supply.</p>
   </div>
 </div>
 
-<h2 id="software-status">Software Status</h2>
+<h2 id="software-status">Software Status<a class="heading-anchor" href="#software-status" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h2>
 
 <p>KianV uses a custom bootloader, followed by <a href="https://github.com/riscv-software-src/opensbi">OpenSBI</a>, and then boots
 the Linux kernel. Only minimal driver adaptations were required to boot mainline Linux with Sv32 MMU support on the SoC.</p>
@@ -581,7 +583,7 @@ the Linux kernel. Only minimal driver adaptations were required to boot mainline
     </figure>
 </div>
 
-<h2 id="acknowledgments">Acknowledgments</h2>
+<h2 id="acknowledgments">Acknowledgments<a class="heading-anchor" href="#acknowledgments" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h2>
 
 <ul>
   <li><strong>Andrew Wingate</strong> - Board design review (wafer.space)</li>
@@ -595,7 +597,7 @@ the Linux kernel. Only minimal driver adaptations were required to boot mainline
   <li><strong>Uri Shaked</strong> - Tiny Tapeout</li>
 </ul>
 
-<h2 id="additional-resources">Additional Resources</h2>
+<h2 id="additional-resources">Additional Resources<a class="heading-anchor" href="#additional-resources" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h2>
 
 <ul>
   <li>KianV SoC Design: <a href="https://github.com/splinedrive/gf180mcu-kianv-rv32ima-sv32">github.com/splinedrive/gf180mcu-kianv-rv32ima-sv32</a></li>
@@ -642,18 +644,6 @@ the Linux kernel. Only minimal driver adaptations were required to boot mainline
                       <a class="btn btn-s" href="/pr-139/tag/risc-v/">risc-v</a>
                     
                   </ul>
-                  <div class="space20 d-lg-none"></div>
-                  <div class="d-flex align-items-center">
-                    <p class="pr-20 mb-0"><strong>Share on:</strong></p>
-<ul class="social social-mute">
-    <!-- Removed Facebook and Twitter sharing due to verification issues -->
-    <li>
-    <a  href="http://pinterest.com/pin/create/button/?url=&media=https://wafer.space/assets/images/news/kianv-riscv-soc/thumbnail.jpg&description=" onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" title="Share on Pinterest" >
-        <i class="jam jam-pinterest"></i>
-    </a>
-    </li>
-</ul>
-                  </div>
                 </div>
               </div>
               <!-- /.post-content -->
@@ -677,7 +667,7 @@ the Linux kernel. Only minimal driver adaptations were required to boot mainline
           <!--/column -->
           
           <div class="col-md-8">
-            <h3>Hirosh Dabui</h3>
+            <h3 id="hirosh-dabui">Hirosh Dabui<a class="heading-anchor" href="#hirosh-dabui" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h3>
             <h4>Guest Author</h4>
             
 	    <p class="mb-10"><p><strong>Hirosh Dabui</strong> is the creator of <a href="https://github.com/splinedrive/kianRiscV">KianV</a>, a custom RISC-V SoC capable of running Linux on open-source silicon. His work on the GF180MCU Run 1 demonstrates what is possible with fully open ASIC design flows, from RTL to packaged chips.</p>
@@ -869,5 +859,5 @@ s.setAttribute('data-timestamp', +new Date());
 
 
 </body>
-<!-- Generated from git commit: 5ff1573877d2457722b10caf9951c4f92eacf41f (5ff15738) -->
+<!-- Generated from git commit: 6cb698c9dabc46b991928b74e0bcd83a54ce2a7f (6cb698c9) -->
 </html>
