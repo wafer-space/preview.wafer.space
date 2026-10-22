@@ -4,7 +4,7 @@
 <head>
   <!-- Meta Tags-->
   <meta charset="utf-8" />
-  <meta name="git-commit" content="41ecddc123c647415b645c1811cef93e59c170f1">
+  <meta name="git-commit" content="a5f63de63f94a42623e84e3b7ae5a6e48951c499">
 <!-- Primary Meta Tags -->
 <title> Community Progress on Chip-on-Board Packaging Strategy </title>
 <meta name="title" content=" Community Progress on Chip-on-Board Packaging Strategy ">
@@ -15,15 +15,17 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://wafer.space/pr-125/news/chip-on-board-strategy">
 <meta property="og:title" content=" Community Progress on Chip-on-Board Packaging Strategy ">
-<meta property="og:description" content="
-    Budget silicon manufacturing.">
+<meta property="og:description" content=" The wafer.space community is developing a flexible chip-on-board packaging strategy, so you won&#39;t need specialised equipment or expensive packaging services to use your chips. ">
+
+<meta property="og:image" content="/pr-125/assets/images/news/chip-on-board-strategy/padframes-cob-die-padring.png" />
 
 <!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://wafer.space/pr-125/news/chip-on-board-strategy">
-<meta property="twitter:title" content=" Community Progress on Chip-on-Board Packaging Strategy ">
-<meta property="twitter:description" content="
-    Budget silicon manufacturing.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://wafer.space/pr-125/news/chip-on-board-strategy">
+<meta name="twitter:title" content=" Community Progress on Chip-on-Board Packaging Strategy ">
+<meta name="twitter:description" content=" The wafer.space community is developing a flexible chip-on-board packaging strategy, so you won&#39;t need specialised equipment or expensive packaging services to use your chips. ">
+
+<meta name="twitter:image" content="/pr-125/assets/images/news/chip-on-board-strategy/padframes-cob-die-padring.png" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Dark Mode Init (Prevent Flash) -->
@@ -297,7 +299,7 @@
                   
                 </div>
                 
-                <h2 class="post-title text-center">Community Progress on Chip-on-Board Packaging Strategy</h2>
+                <h2 id="community-progress-on-chip-on-board-packaging-strategy" class="post-title text-center">Community Progress on Chip-on-Board Packaging Strategy<a class="heading-anchor" href="#community-progress-on-chip-on-board-packaging-strategy" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h2>
                 <div class="meta text-center">
                   
                   <span class="date"><i class="jam jam-clock"></i>11 Nov 2025</span>
@@ -329,7 +331,7 @@
 
 <hr />
 
-<h3 id="the-community-developed-standard-padframe-and-cob-design">The Community-Developed Standard Padframe and COB Design</h3>
+<h3 id="the-community-developed-standard-padframe-and-cob-design">The Community-Developed Standard Padframe and COB Design<a class="heading-anchor" href="#the-community-developed-standard-padframe-and-cob-design" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h3>
 
 <p>While you’re free to use any pad configuration you wish, adhering to the <strong>community-developed standard</strong> ensures compatibility with wirebonding partners and simplifies the fabrication process.</p>
 
@@ -361,11 +363,11 @@
 
 <p>Find most current designs on the <a href="https://github.com/wafer-space/chip-on-board-wire-bonded-pcbs">chip-on-board-wire-bonded-pcbs repo</a></p>
 
-<h2 id="why-standardize">Why Standardize?</h2>
+<h2 id="why-standardize">Why Standardize?<a class="heading-anchor" href="#why-standardize" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h2>
 
 <p>With the technical details established, it’s worth stepping back to consider why standardization matters for the open silicon ecosystem.</p>
 
-<h3 id="a-standard-for-the-broader-community">A Standard for the Broader Community</h3>
+<h3 id="a-standard-for-the-broader-community">A Standard for the Broader Community<a class="heading-anchor" href="#a-standard-for-the-broader-community" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h3>
 
 <p>While this standard emerged from the wafer.space community’s needs, the goal is to create something that could benefit the broader open silicon ecosystem. By documenting the design openly and making the <a href="https://www.kicad.org/">KiCad</a> symbols, PCB layouts, and specifications freely available, other projects and communities could adopt or adapt this approach for their own chip-on-board needs.</p>
 
@@ -383,11 +385,11 @@
 
 <p>This design hopefully meets the needs of a majority of projects on wafer.space. If your project needs something different, other open source packaging options are available to explore, such as the University of Washington’s <strong><a href="https://bjump.org/">BaseJump project</a></strong>, which offers <strong><a href="https://github.com/bespoke-silicon-group/bsg_packaging">BGA packaging standards</a></strong> including their 352-pin BaseJump Socket for designs requiring hundreds of I/O pins or more complex integration.</p>
 
-<h2 id="the-implementation-from-concept-to-physical-boards">The Implementation: From Concept to Physical Boards</h2>
+<h2 id="the-implementation-from-concept-to-physical-boards">The Implementation: From Concept to Physical Boards<a class="heading-anchor" href="#the-implementation-from-concept-to-physical-boards" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h2>
 
 <p>So what does this standard look like in practice? Let’s walk through the actual hardware, tools, and resources the community has developed.</p>
 
-<h3 id="70-pin-mezzanine-cob">70-Pin Mezzanine COB</h3>
+<h3 id="70-pin-mezzanine-cob">70-Pin Mezzanine COB<a class="heading-anchor" href="#70-pin-mezzanine-cob" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h3>
 
 <p>The centerpiece of the standard is a 70-pin mezzanine COB board that connects your wirebonded die to a standard connector.</p>
 
@@ -465,7 +467,7 @@
   </div>
 </div>
 
-<p>The standard configuration can be found in the <a href="https://github.com/wafer-space/gf180mcu-project-template/blob/main/librelane/config.yaml">GitHub repository</a>. For easier viewing, it’s also available as a <a href="https://docs.google.com/spreadsheets/d/1pI2BAEWEexXcXN3vah3SR85zPIV6eAXPGXc2bcvoSGU/edit?gid=0#gid=0">Google Sheet</a> that shows the complete pad mapping.</p>
+<p>The standard configuration can be found in the <a href="https://github.com/wafer-space/gf180mcu-project-template/blob/main/librelane/config.yaml">GitHub repository</a>. For easier viewing, it’s also available as a <a href="https://docs.google.com/spreadsheets/d/1pI2BAEWEexXcXN3vah3SR85zPIV6eAXPGXc2bcvoSGU/edit?gid=0">Google Sheet</a> that shows the complete pad mapping.</p>
 
 <div class="post-gallery light-gallery-wrapper mb-30">
     
@@ -483,11 +485,11 @@
 
 <hr />
 
-<h2 id="design-tools-and-ecosystem">Design Tools and Ecosystem</h2>
+<h2 id="design-tools-and-ecosystem">Design Tools and Ecosystem<a class="heading-anchor" href="#design-tools-and-ecosystem" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h2>
 
 <p>Having the physical COB boards is only part of the picture. To actually use them, designers need schematic symbols, footprints, and integration tools. Here’s what the community has built to support the full design workflow.</p>
 
-<h3 id="default-kicad-symbols">Default KiCad Symbols</h3>
+<h3 id="default-kicad-symbols">Default KiCad Symbols<a class="heading-anchor" href="#default-kicad-symbols" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h3>
 
 <p>The community has developed several <strong><a href="https://www.kicad.org/">KiCad</a> symbols</strong> to support design and integration with COB layouts.</p>
 
@@ -512,7 +514,7 @@ Join the discussion on our <a href="https://discord.gg/43y2t53jpE"><strong>Disco
 
 <hr />
 
-<h3 id="70-pin-mezzanine-connector-symbol">70-Pin Mezzanine Connector Symbol</h3>
+<h3 id="70-pin-mezzanine-connector-symbol">70-Pin Mezzanine Connector Symbol<a class="heading-anchor" href="#70-pin-mezzanine-connector-symbol" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h3>
 
 <p>The <strong>mezzanine connector symbol</strong> provides a 1:1 pin mapping to the 70-pin default layout.
 All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a> naming conventions, useful for those familiar with the TT ecosystem who are designing custom chips for this wafer.space run.</p>
@@ -543,7 +545,7 @@ All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a
     </figure>
 </div>
 
-<h3 id="kicad-resources-for-cob-design">KiCad Resources for COB Design</h3>
+<h3 id="kicad-resources-for-cob-design">KiCad Resources for COB Design<a class="heading-anchor" href="#kicad-resources-for-cob-design" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h3>
 
 <p>While the initial symbols are in KiCad, the community welcomes contributions of symbols and libraries for other PCB design tools. If you use Altium, Eagle, or another tool, please submit a pull request to the <a href="https://github.com/wafer-space/chip-on-board-wire-bonded-pcbs">chip-on-board-wire-bonded-pcbs repo</a>!</p>
 
@@ -553,11 +555,11 @@ All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a
 
 <hr />
 
-<h3 id="beyond-the-standard-expanding-options">Beyond the Standard: Expanding Options</h3>
+<h3 id="beyond-the-standard-expanding-options">Beyond the Standard: Expanding Options<a class="heading-anchor" href="#beyond-the-standard-expanding-options" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h3>
 
 <p>While the 70-pin mezzanine connector serves as the standard, the community recognizes that different projects have different needs.</p>
 
-<h4 id="castellated-and-breadboardable-breakouts">Castellated and Breadboardable Breakouts</h4>
+<h4 id="castellated-and-breadboardable-breakouts">Castellated and Breadboardable Breakouts<a class="heading-anchor" href="#castellated-and-breadboardable-breakouts" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h4>
 
 <p>The community is developing a series of breakout boards designed to make it easier to prototype, experiment, and integrate your dies into existing systems.</p>
 
@@ -575,11 +577,11 @@ All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a
 
 <hr />
 
-<h2 id="real-world-adoption">Real-World Adoption</h2>
+<h2 id="real-world-adoption">Real-World Adoption<a class="heading-anchor" href="#real-world-adoption" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h2>
 
 <p>The real test of any standard is whether people actually use it. Here’s how the community is already building on this work.</p>
 
-<h3 id="derivative-designs">Derivative Designs</h3>
+<h3 id="derivative-designs">Derivative Designs<a class="heading-anchor" href="#derivative-designs" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h3>
 
 <p>It’s exciting to see others building on the <a href="https://wafer.space/">wafer.space</a> platform!
 <strong><a href="https://peterkinget.github.io/">Professor Peter Kinget</a></strong> and his students at <strong><a href="https://peterkinget.github.io/">Columbia University</a></strong> are developing educational chips using <a href="https://wafer.space/">wafer.space</a> for their <a href="https://mosbius.org/0_front_matter/intro.html"><strong>MosBius Project</strong></a>.</p>
@@ -602,11 +604,11 @@ All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a
 
 <hr />
 
-<h3 id="the-path-not-yet-taken">The Path Not (Yet) Taken</h3>
+<h3 id="the-path-not-yet-taken">The Path Not (Yet) Taken<a class="heading-anchor" href="#the-path-not-yet-taken" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h3>
 
 <p>Before settling on the mezzanine connector as the standard, the community explored several alternative packaging approaches. While these didn’t become the primary standard, they represent valuable experiments that informed the final design and may still serve specialized use cases.</p>
 
-<h4 id="lga-land-grid-array">LGA (Land Grid Array)</h4>
+<h4 id="lga-land-grid-array">LGA (Land Grid Array)<a class="heading-anchor" href="#lga-land-grid-array" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h4>
 
 <div class="post-gallery light-gallery-wrapper mb-30">
     
@@ -620,7 +622,7 @@ All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a
     </figure>
 </div>
 
-<h4 id="dip">DIP</h4>
+<h4 id="dip">DIP<a class="heading-anchor" href="#dip" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h4>
 
 <div class="post-gallery light-gallery-wrapper mb-30">
   
@@ -658,7 +660,7 @@ All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a
   </div>
 </div>
 
-<h4 id="castellated">Castellated</h4>
+<h4 id="castellated">Castellated<a class="heading-anchor" href="#castellated" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h4>
 
 <div class="post-gallery light-gallery-wrapper mb-30">
     
@@ -674,7 +676,7 @@ All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a
 
 <hr />
 
-<h2 id="learning-from-pioneers">Learning from Pioneers</h2>
+<h2 id="learning-from-pioneers">Learning from Pioneers<a class="heading-anchor" href="#learning-from-pioneers" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h2>
 
 <p>The wafer.space COB work doesn’t exist in isolation. Other projects have tackled similar challenges, and their experiences directly inform this effort.</p>
 
@@ -720,7 +722,7 @@ All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a
 
 <hr />
 
-<h2 id="join-the-effort">Join the Effort</h2>
+<h2 id="join-the-effort">Join the Effort<a class="heading-anchor" href="#join-the-effort" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h2>
 
 <p>This community-developed standard is exactly that: community-developed. The designs, symbols, and approaches documented here represent months of collaborative work, but they’re far from finished.</p>
 
@@ -799,18 +801,6 @@ All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a
                       <a class="btn btn-s" href="/pr-125/tag/packaging/">packaging</a>
                     
                   </ul>
-                  <div class="space20 d-lg-none"></div>
-                  <div class="d-flex align-items-center">
-                    <p class="pr-20 mb-0"><strong>Share on:</strong></p>
-<ul class="social social-mute">
-    <!-- Removed Facebook and Twitter sharing due to verification issues -->
-    <li>
-    <a  href="http://pinterest.com/pin/create/button/?url=&media=https://wafer.space/assets/images/news/chip-on-board-strategy/padframes-cob-die-padring.png&description=" onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" title="Share on Pinterest" >
-        <i class="jam jam-pinterest"></i>
-    </a>
-    </li>
-</ul>
-                  </div>
                 </div>
               </div>
               <!-- /.post-content -->
@@ -827,7 +817,7 @@ All pins are aliased to match <a href="https://tinytapeout.com/">Tiny Tapeout</a
     <div class="row">
           
           <div class="col-md-8">
-            <h3>Andrew Wingate</h3>
+            <h3 id="andrew-wingate">Andrew Wingate<a class="heading-anchor" href="#andrew-wingate" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h3>
             <h4>Guest Author</h4>
             
 	    <p class="mb-10"><p><strong>Andrew Wingate</strong> is the founder of <a href="https://www.crowdsupply.com/evezor-inc">Evezor Inc</a> and an active contributor to the <a href="https://wafer.space">wafer.space</a> community. He has been instrumental in developing the chip-on-board (COB) packaging strategy that makes working with custom silicon accessible without specialised equipment.</p>
@@ -1019,5 +1009,5 @@ s.setAttribute('data-timestamp', +new Date());
 
 
 </body>
-<!-- Generated from git commit: 41ecddc123c647415b645c1811cef93e59c170f1 (41ecddc1) -->
+<!-- Generated from git commit: a5f63de63f94a42623e84e3b7ae5a6e48951c499 (a5f63de6) -->
 </html>
