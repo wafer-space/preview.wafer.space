@@ -1,16 +1,24 @@
 [
   {
     "redirect": {
-      "source_url": "wafer.space/about",
-      "target_url": "https://wafer.space/about/",
+      "source_url": "wafer.space/about.html",
+      "target_url": "https://wafer.space/about",
       "status_code": 301,
       "preserve_query_string": true
     }
   },
   {
     "redirect": {
-      "source_url": "wafer.space/about.html",
-      "target_url": "https://wafer.space/about/",
+      "source_url": "wafer.space/about/",
+      "target_url": "https://wafer.space/about",
+      "status_code": 301,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "wafer.space/about/index.html",
+      "target_url": "https://wafer.space/about",
       "status_code": 301,
       "preserve_query_string": true
     }
@@ -107,16 +115,24 @@
   },
   {
     "redirect": {
-      "source_url": "wafer.space/design-help",
-      "target_url": "https://wafer.space/design-help/",
+      "source_url": "wafer.space/design-help.html",
+      "target_url": "https://wafer.space/design-help",
       "status_code": 301,
       "preserve_query_string": true
     }
   },
   {
     "redirect": {
-      "source_url": "wafer.space/design-help.html",
-      "target_url": "https://wafer.space/design-help/",
+      "source_url": "wafer.space/design-help/",
+      "target_url": "https://wafer.space/design-help",
+      "status_code": 301,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "wafer.space/design-help/index.html",
+      "target_url": "https://wafer.space/design-help",
       "status_code": 301,
       "preserve_query_string": true
     }
@@ -168,24 +184,24 @@
   },
   {
     "redirect": {
-      "source_url": "wafer.space/faq",
-      "target_url": "https://wafer.space/faq/",
-      "status_code": 301,
-      "preserve_query_string": true
-    }
-  },
-  {
-    "redirect": {
       "source_url": "wafer.space/faq.html",
-      "target_url": "https://wafer.space/faq/",
+      "target_url": "https://wafer.space/faq",
       "status_code": 301,
       "preserve_query_string": true
     }
   },
   {
     "redirect": {
-      "source_url": "wafer.space/free",
-      "target_url": "https://wafer.space/free/",
+      "source_url": "wafer.space/faq/",
+      "target_url": "https://wafer.space/faq",
+      "status_code": 301,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "wafer.space/faq/index.html",
+      "target_url": "https://wafer.space/faq",
       "status_code": 301,
       "preserve_query_string": true
     }
@@ -193,7 +209,23 @@
   {
     "redirect": {
       "source_url": "wafer.space/free.html",
-      "target_url": "https://wafer.space/free/",
+      "target_url": "https://wafer.space/free",
+      "status_code": 301,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "wafer.space/free/",
+      "target_url": "https://wafer.space/free",
+      "status_code": 301,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "wafer.space/free/index.html",
+      "target_url": "https://wafer.space/free",
       "status_code": 301,
       "preserve_query_string": true
     }
@@ -416,16 +448,24 @@
   },
   {
     "redirect": {
-      "source_url": "wafer.space/help",
-      "target_url": "https://wafer.space/help/",
+      "source_url": "wafer.space/help.html",
+      "target_url": "https://wafer.space/help",
       "status_code": 301,
       "preserve_query_string": true
     }
   },
   {
     "redirect": {
-      "source_url": "wafer.space/help.html",
-      "target_url": "https://wafer.space/help/",
+      "source_url": "wafer.space/help/",
+      "target_url": "https://wafer.space/help",
+      "status_code": 301,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "wafer.space/help/index.html",
+      "target_url": "https://wafer.space/help",
       "status_code": 301,
       "preserve_query_string": true
     }
@@ -433,7 +473,7 @@
   {
     "redirect": {
       "source_url": "wafer.space/how",
-      "target_url": "https://wafer.space/technology/",
+      "target_url": "https://wafer.space/technology",
       "status_code": 301,
       "preserve_query_string": true
     }
@@ -441,7 +481,7 @@
   {
     "redirect": {
       "source_url": "wafer.space/how.html",
-      "target_url": "https://wafer.space/technology/",
+      "target_url": "https://wafer.space/technology",
       "status_code": 301,
       "preserve_query_string": true
     }
@@ -724,16 +764,24 @@
   },
   {
     "redirect": {
-      "source_url": "wafer.space/price",
-      "target_url": "https://wafer.space/price/",
+      "source_url": "wafer.space/price.html",
+      "target_url": "https://wafer.space/price",
       "status_code": 301,
       "preserve_query_string": true
     }
   },
   {
     "redirect": {
-      "source_url": "wafer.space/price.html",
-      "target_url": "https://wafer.space/price/",
+      "source_url": "wafer.space/price/",
+      "target_url": "https://wafer.space/price",
+      "status_code": 301,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "wafer.space/price/index.html",
+      "target_url": "https://wafer.space/price",
       "status_code": 301,
       "preserve_query_string": true
     }
@@ -761,16 +809,24 @@
   },
   {
     "redirect": {
-      "source_url": "wafer.space/technology",
-      "target_url": "https://wafer.space/technology/",
+      "source_url": "wafer.space/technology.html",
+      "target_url": "https://wafer.space/technology",
       "status_code": 301,
       "preserve_query_string": true
     }
   },
   {
     "redirect": {
-      "source_url": "wafer.space/technology.html",
-      "target_url": "https://wafer.space/technology/",
+      "source_url": "wafer.space/technology/",
+      "target_url": "https://wafer.space/technology",
+      "status_code": 301,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "wafer.space/technology/index.html",
+      "target_url": "https://wafer.space/technology",
       "status_code": 301,
       "preserve_query_string": true
     }
