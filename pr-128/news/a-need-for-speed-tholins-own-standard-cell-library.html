@@ -4,7 +4,7 @@
 <head>
   <!-- Meta Tags-->
   <meta charset="utf-8" />
-  <meta name="git-commit" content="9c88e13b667cfd45b83e40e83a9bf9372040490b">
+  <meta name="git-commit" content="ca08aeb0f971d31038d6bd235e13e1951a04c896">
 <!-- Primary Meta Tags -->
 <title> A Need for Speed: Tholin's Own Standard Cell Library </title>
 <meta name="title" content=" A Need for Speed: Tholin's Own Standard Cell Library ">
@@ -15,15 +15,17 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://wafer.space/pr-128/news/a-need-for-speed-tholins-own-standard-cell-library">
 <meta property="og:title" content=" A Need for Speed: Tholin's Own Standard Cell Library ">
-<meta property="og:description" content="
-    Budget silicon manufacturing.">
+<meta property="og:description" content=" Performance -- an elusive metric that is influenced by everything the chip consists of, and more. The HDL that defines it, the way it is logically laid out, to the tiniest splattering of a chemical on the wafer, and the environment the chip lives in. How far can you go to chase speed? ">
+
+<meta property="og:image" content="/pr-128/assets/images/news/tholins-3v3-scl/tholin-3v3-scl-nand3_2-exploded.png" />
 
 <!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://wafer.space/pr-128/news/a-need-for-speed-tholins-own-standard-cell-library">
-<meta property="twitter:title" content=" A Need for Speed: Tholin's Own Standard Cell Library ">
-<meta property="twitter:description" content="
-    Budget silicon manufacturing.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://wafer.space/pr-128/news/a-need-for-speed-tholins-own-standard-cell-library">
+<meta name="twitter:title" content=" A Need for Speed: Tholin's Own Standard Cell Library ">
+<meta name="twitter:description" content=" Performance -- an elusive metric that is influenced by everything the chip consists of, and more. The HDL that defines it, the way it is logically laid out, to the tiniest splattering of a chemical on the wafer, and the environment the chip lives in. How far can you go to chase speed? ">
+
+<meta name="twitter:image" content="/pr-128/assets/images/news/tholins-3v3-scl/tholin-3v3-scl-nand3_2-exploded.png" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Dark Mode Init (Prevent Flash) -->
@@ -297,7 +299,7 @@
                   
                 </div>
                 
-                <h2 class="post-title text-center">A Need for Speed: Tholin's Own Standard Cell Library</h2>
+                <h2 id="a-need-for-speed-tholin-s-own-standard-cell-library" class="post-title text-center">A Need for Speed: Tholin's Own Standard Cell Library<a class="heading-anchor" href="#a-need-for-speed-tholin-s-own-standard-cell-library" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h2>
                 <div class="meta text-center">
                   
                   <span class="date"><i class="jam jam-clock"></i>30 Sep 2026</span>
@@ -312,7 +314,7 @@
 it, the way it is logically laid out, to the tiniest splattering of a chemical on the wafer, and the environment the
 chip lives in. How far can you go to chase speed?</p>
 
-<h2 id="pdk-scl-wth">PDK, SCL, WTH?</h2>
+<h2 id="pdk-scl-wth">PDK, SCL, WTH?<a class="heading-anchor" href="#pdk-scl-wth" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h2>
 
 <p>Current wafer.space shuttles target a 180 nm process provided by Global Foundries – they’re the people who turn your
 design into a real chip. A piece of the puzzle that allows this to happen is the “process development kit”, or PDK for
@@ -380,7 +382,7 @@ suffer a performance penalty due to their size. This trade-off means you cannot 
 circuit as you might want to, thanks to higher current requirements and threshold voltages required for thicker
 transistors. So, what can you do if you’re after performance?</p>
 
-<h2 id="byoscl-bring-your-own-standard-cell-library">BYOSCL (Bring Your Own Standard Cell Library)</h2>
+<h2 id="byoscl-bring-your-own-standard-cell-library">BYOSCL (Bring Your Own Standard Cell Library)<a class="heading-anchor" href="#byoscl-bring-your-own-standard-cell-library" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h2>
 
 <p>Tholin, of Avalon Semiconductors, posed this exact question. What was the answer? To create her own standard cell
 library that would deliver the performance she’d been after.</p>
@@ -396,7 +398,7 @@ remained. That was until wafer.space entered the scene, and began to offer affor
 which had been left by the previous two. Tholin felt that GF180MCU had much more potential than SKY130, so she latched onto
 it pretty hard and dove right back into making her own cell library.</p>
 
-<h3 id="one-person-102-commits">One Person, 102 Commits</h3>
+<h3 id="one-person-102-commits">One Person, 102 Commits<a class="heading-anchor" href="#one-person-102-commits" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h3>
 <p>Work began on June 30th, 2025. Five days later, the commit log reads “First working version”. 13 months of intense work
 and 102 commits later, Tholin’s own <code class="language-plaintext highlighter-rouge">gf180mcu_as_sc_mcu7t3v3</code> contains 85 placeable cells built entirely for 3.3 V
 operation, along with characterization data.</p>
@@ -443,7 +445,7 @@ with a few simple tweaks to a config file.</p>
 
 <p>If you want to explore the library, be sure to head over to its <a href="https://github.com/AvalonSemiconductors/gf180mcu_as_sc_mcu7t3v3">GitHub repository</a>.</p>
 
-<h3 id="building-the-building-blocks">Building the Building Blocks</h3>
+<h3 id="building-the-building-blocks">Building the Building Blocks<a class="heading-anchor" href="#building-the-building-blocks" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h3>
 <p>A lot of intense work goes into building a library of cells, even more so if you’re the only one working on it. Learning
 the practical knowledge, theory and best-practices takes hundreds of hours at best, but then you must also familiarise
 yourself with the various foundry-specific design rules and their nuances to ensure the cells can be manufactured in
@@ -496,7 +498,7 @@ can be automated, but getting it set up initially with the right simulation para
 but also because it pushes and legitimizes open source silicon as a real option for products, rather than being seen as
 a toy or an academic-only exercise.</p>
 
-<h3 id="what-does-the-future-hold">What Does the Future Hold?</h3>
+<h3 id="what-does-the-future-hold">What Does the Future Hold?<a class="heading-anchor" href="#what-does-the-future-hold" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h3>
 <p>The library is only a few parts away from having a minimum set which Tholin is happy with. She explains that she’ll be
 able to focus on more specialized circuits such as full-adders and clock gates, or even experiment with DFFs which use
 the charge in the gate capacitance to store a bit – all in the name of performance.</p>
@@ -525,9 +527,9 @@ taped out designs which benefit from the extra speed such as <a href="https://gi
 <a href="https://github.com/SlugTPU/gf180mcu-slugtpu">SlugTPU</a>.</p>
 
 <p>If you’re interested to hear about how all of this will turn out, consider joining the
-<a href="/discord">wafer.space Discord</a> or <a href="/matrix">Matrix</a>.</p>
+<a href="/pr-128/discord">wafer.space Discord</a> or <a href="/pr-128/matrix">Matrix</a>.</p>
 
-<h2 id="a-message-from-tholin">A Message from Tholin</h2>
+<h2 id="a-message-from-tholin">A Message from Tholin<a class="heading-anchor" href="#a-message-from-tholin" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h2>
 
 <blockquote>
   <p>My background is over a decade of toying with electronic engineering as a hobby at a intermediate level with whatever
@@ -551,9 +553,9 @@ time I took on a project just because “this would look good on my resume”.</
 </blockquote>
 
 <p>You can find Tholin on Bluesky <a href="https://bsky.app/profile/tholin.bsky.social">@tholin.bsky.social</a>, read about her past
-projects on <a href="https://tholin.dev/">tholin.dev</a> or see what she’s taping out in the <a href="/discord">wafer.space Discord</a>.</p>
+projects on <a href="https://tholin.dev/">tholin.dev</a> or see what she’s taping out in the <a href="/pr-128/discord">wafer.space Discord</a>.</p>
 
-<h2 id="get-started-today">Get Started Today</h2>
+<h2 id="get-started-today">Get Started Today<a class="heading-anchor" href="#get-started-today" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h2>
 <p>Run #3 is in full swing at the moment, so don’t miss your opportunity to tape out. You’ve got until <strong>9 December 2026</strong>
 to purchase a slot, and the submission deadline a week after on <strong>16 December 2026</strong>.</p>
 
@@ -586,18 +588,6 @@ to purchase a slot, and the submission deadline a week after on <strong>16 Decem
                       <a class="btn btn-s" href="/pr-128/tag/tholin/">tholin</a>
                     
                   </ul>
-                  <div class="space20 d-lg-none"></div>
-                  <div class="d-flex align-items-center">
-                    <p class="pr-20 mb-0"><strong>Share on:</strong></p>
-<ul class="social social-mute">
-    <!-- Removed Facebook and Twitter sharing due to verification issues -->
-    <li>
-    <a  href="http://pinterest.com/pin/create/button/?url=&media=https://wafer.space/assets/images/news/tholins-3v3-scl/tholin-3v3-scl-nand3_2-exploded.png&description=" onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" title="Share on Pinterest" >
-        <i class="jam jam-pinterest"></i>
-    </a>
-    </li>
-</ul>
-                  </div>
                 </div>
               </div>
               <!-- /.post-content -->
@@ -775,5 +765,5 @@ s.setAttribute('data-timestamp', +new Date());
 
 
 </body>
-<!-- Generated from git commit: 9c88e13b667cfd45b83e40e83a9bf9372040490b (9c88e13b) -->
+<!-- Generated from git commit: ca08aeb0f971d31038d6bd235e13e1951a04c896 (ca08aeb0) -->
 </html>

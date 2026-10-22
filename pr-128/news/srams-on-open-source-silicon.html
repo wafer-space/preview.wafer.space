@@ -4,7 +4,7 @@
 <head>
   <!-- Meta Tags-->
   <meta charset="utf-8" />
-  <meta name="git-commit" content="9c88e13b667cfd45b83e40e83a9bf9372040490b">
+  <meta name="git-commit" content="ca08aeb0f971d31038d6bd235e13e1951a04c896">
 <!-- Primary Meta Tags -->
 <title> SRAMs on Open Source Silicon </title>
 <meta name="title" content=" SRAMs on Open Source Silicon ">
@@ -15,15 +15,17 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://wafer.space/pr-128/news/srams-on-open-source-silicon">
 <meta property="og:title" content=" SRAMs on Open Source Silicon ">
-<meta property="og:description" content="
-    Budget silicon manufacturing.">
+<meta property="og:description" content=" In November 2022, three months after the GF180MCU PDK was made open source, someone on the open source silicon forum posted a complaint: &#39;Holy cow, these gf180 SRAM are huge compared to the sky130 ones.&#39; ">
+
+<meta property="og:image" content="/pr-128/assets/images/news/3v3-sram/sram-3v3-render.png" />
 
 <!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://wafer.space/pr-128/news/srams-on-open-source-silicon">
-<meta property="twitter:title" content=" SRAMs on Open Source Silicon ">
-<meta property="twitter:description" content="
-    Budget silicon manufacturing.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://wafer.space/pr-128/news/srams-on-open-source-silicon">
+<meta name="twitter:title" content=" SRAMs on Open Source Silicon ">
+<meta name="twitter:description" content=" In November 2022, three months after the GF180MCU PDK was made open source, someone on the open source silicon forum posted a complaint: &#39;Holy cow, these gf180 SRAM are huge compared to the sky130 ones.&#39; ">
+
+<meta name="twitter:image" content="/pr-128/assets/images/news/3v3-sram/sram-3v3-render.png" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Dark Mode Init (Prevent Flash) -->
@@ -297,7 +299,7 @@
                   
                 </div>
                 
-                <h2 class="post-title text-center">SRAMs on Open Source Silicon</h2>
+                <h2 id="srams-on-open-source-silicon-2" class="post-title text-center">SRAMs on Open Source Silicon<a class="heading-anchor" href="#srams-on-open-source-silicon-2" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h2>
                 <div class="meta text-center">
                   
                   <span class="date"><i class="jam jam-clock"></i>07 Oct 2026</span>
@@ -308,7 +310,7 @@
                   
                   
                 </div>
-                <h1 id="srams-on-open-source-silicon">SRAMs on Open Source Silicon</h1>
+                <h1 id="srams-on-open-source-silicon">SRAMs on Open Source Silicon<a class="heading-anchor" href="#srams-on-open-source-silicon" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h1>
 
 <p>In November 2022, three months after the GF180MCU PDK was made open source, someone on the
 <a href="https://web.open-source-silicon.dev/t/5096040/holy-cow-these-gf180-sram-are-huge-compared-to-the-sky130-on">open source silicon forum posted a complaint</a>:</p>
@@ -329,7 +331,7 @@ people with limited silicon area to build in.</p>
 <p>And that was it… for a while at least. Luckily, there’s been some advancements recently. So let’s skip a few years
 (and a defunct company) ahead to present day and see what has changed.</p>
 
-<h2 id="existing-options">Existing Options</h2>
+<h2 id="existing-options">Existing Options<a class="heading-anchor" href="#existing-options" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h2>
 <p>The only SRAMs available for the GF180MCU process were Global Foundries’ own 5 V macros - they were large and severely
 impeded the space you had left for your project, but what else could you do? After the shutting down of eFabless and
 with Google stopping their GFMPW runs, there was no incentive to improve them - why bother if they wouldn’t get taped
@@ -350,7 +352,7 @@ he turned his attention back to the very thing diagnosed back in 2022.</p>
     </figure>
 </div>
 
-<h2 id="shrinking-it-down">Shrinking It Down</h2>
+<h2 id="shrinking-it-down">Shrinking It Down<a class="heading-anchor" href="#shrinking-it-down" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h2>
 <p>Set on creating a 3.3 V capable SRAM, Edwards began by looking at the 256 B macro for arbitrary reasons. He describes his
 approach as a “hack”, but it’s a pretty clever approach to reusing components that were available:</p>
 
@@ -459,7 +461,7 @@ it more like a 0.25µm process.”.</p>
     </figure>
 </div>
 
-<h3 id="an-extra-bit">An Extra Bit?</h3>
+<h3 id="an-extra-bit">An Extra Bit?<a class="heading-anchor" href="#an-extra-bit" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h3>
 <p>During his exploration of the foundry-provided SRAM, he noticed that the decoder circuitry went up to 10 bits, yet
 Global Foundries only ever utilized 9 bits – their largest macro maxed out at a depth of 512 B.</p>
 
@@ -470,7 +472,7 @@ Edwards took the liberty of creating the 1 KiB macro that had originally been mi
 <p>Unfortunately, for any larger sizes, considerable work would have to be done on the decoder circuitry as his “hack”
 method would no longer work.</p>
 
-<h3 id="testing--results">Testing &amp; Results</h3>
+<h3 id="testing--results">Testing &amp; Results<a class="heading-anchor" href="#testing--results" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h3>
 <p>These shrunk down SRAMs are expected to be faster because they’re using thinner oxide devices, despite the fact that
 it’s using the same SRAM core cells as the 5 V macros.</p>
 
@@ -531,7 +533,7 @@ memory that they can use to build their projects with.</p>
     </figure>
 </div>
 
-<h2 id="memory-generators">Memory Generators</h2>
+<h2 id="memory-generators">Memory Generators<a class="heading-anchor" href="#memory-generators" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h2>
 <p>A different approach to getting memory on silicon is by using a generator. Thanks to the regular structure of a memory
 component, macros can be built algorithmically and without tedious hours of manual work.</p>
 
@@ -546,7 +548,7 @@ or characterization yet.</p>
 <p>If you’d like to stay up to date, consider joining the <a href="https://wafer.space/discord">wafer.space Discord</a> or chatting to
 us on <a href="https://wafer.space/matrix">Matrix</a>.</p>
 
-<h2 id="get-started-today">Get Started Today</h2>
+<h2 id="get-started-today">Get Started Today<a class="heading-anchor" href="#get-started-today" aria-label="Permalink to this heading" title="Copy link to this heading">#</a></h2>
 <p>Run #3 is in full swing at the moment, so don’t miss your opportunity to tape out. You’ve got until <strong>9 December 2026</strong>
 to purchase a slot, and the submission deadline a week after on <strong>16 December 2026</strong>.</p>
 
@@ -569,18 +571,6 @@ to purchase a slot, and the submission deadline a week after on <strong>16 Decem
                       <a class="btn btn-s" href="/pr-128/tag/gf180mcu/">gf180mcu</a>
                     
                   </ul>
-                  <div class="space20 d-lg-none"></div>
-                  <div class="d-flex align-items-center">
-                    <p class="pr-20 mb-0"><strong>Share on:</strong></p>
-<ul class="social social-mute">
-    <!-- Removed Facebook and Twitter sharing due to verification issues -->
-    <li>
-    <a  href="http://pinterest.com/pin/create/button/?url=&media=https://wafer.space/assets/images/news/3v3-sram/sram-3v3-render.png&description=" onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;" title="Share on Pinterest" >
-        <i class="jam jam-pinterest"></i>
-    </a>
-    </li>
-</ul>
-                  </div>
                 </div>
               </div>
               <!-- /.post-content -->
@@ -758,5 +748,5 @@ s.setAttribute('data-timestamp', +new Date());
 
 
 </body>
-<!-- Generated from git commit: 9c88e13b667cfd45b83e40e83a9bf9372040490b (9c88e13b) -->
+<!-- Generated from git commit: ca08aeb0f971d31038d6bd235e13e1951a04c896 (ca08aeb0) -->
 </html>
