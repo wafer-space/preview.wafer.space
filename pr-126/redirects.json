@@ -1,5 +1,13 @@
 [
   {
+    "comment": "v0.0-510-g192638bb2f83bcb6708505c199ecd6f41c676c70",
+    "redirect": {
+      "source_url": "wafer.space/revision",
+      "target_url": "https://github.com/wafer-space/wafer-space.github.io/commit/192638bb2f83bcb6708505c199ecd6f41c676c70",
+      "status_code": 302
+    }
+  },
+  {
     "redirect": {
       "source_url": "wafer.space/about.html",
       "target_url": "https://wafer.space/about",

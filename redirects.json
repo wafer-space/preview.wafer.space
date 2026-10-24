@@ -1,9 +1,9 @@
 [
   {
-    "comment": "v0.0-500 b2c6ab4",
+    "comment": "v0.0-501 192638b",
     "redirect": {
       "source_url": "preview.wafer.space/revision",
-      "target_url": "https://github.com/wafer-space/wafer-space.github.io/commit/b2c6ab43c439a177ac2f49b11b6534e5368e102d",
+      "target_url": "https://github.com/wafer-space/wafer-space.github.io/commit/192638bb2f83bcb6708505c199ecd6f41c676c70",
       "status_code": 302
     }
   },
