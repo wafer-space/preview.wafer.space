@@ -1,9 +1,9 @@
 [
   {
-    "comment": "v0.0-490 5373485",
+    "comment": "v0.0-491 dd4db08",
     "redirect": {
       "source_url": "preview.wafer.space/revision",
-      "target_url": "https://github.com/wafer-space/wafer-space.github.io/commit/5373485eec179e64173f022c977c63f61ab27bbd",
+      "target_url": "https://github.com/wafer-space/wafer-space.github.io/commit/dd4db082ba1cb72d074a67701514f73b3f9961c7",
       "status_code": 302
     }
   },
@@ -1598,14 +1598,6 @@
     "redirect": {
       "source_url": "preview.wafer.space/pr-157/racquet26/index.html",
       "target_url": "https://docs.google.com/presentation/d/1oHlVgYfc4DIex-FJgZ7V_o6JmpdAFVFnXjwY9eIfhAE/edit?slide=id.gc6f73a04f_0_0#slide=id.gc6f73a04f_0_0",
-      "status_code": 302
-    }
-  },
-  {
-    "comment": "v0.0-478-ga842b367951a343e29566f85fe1fa4cf73b1b508",
-    "redirect": {
-      "source_url": "preview.wafer.space/pr-157/revision",
-      "target_url": "https://github.com/wafer-space/wafer-space.github.io/commit/a842b367951a343e29566f85fe1fa4cf73b1b508",
       "status_code": 302
     }
   },
