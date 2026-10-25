@@ -1,9 +1,9 @@
 [
   {
-    "comment": "v0.0-529 9da4ebe",
+    "comment": "v0.0-530 e66d9ad",
     "redirect": {
       "source_url": "preview.wafer.space/revision",
-      "target_url": "https://github.com/wafer-space/wafer-space.github.io/commit/9da4ebed43015062e0f4a09d437313b950c343c6",
+      "target_url": "https://github.com/wafer-space/wafer-space.github.io/commit/e66d9ada9055042315733b4132bfe392e4508e65",
       "status_code": 302
     }
   },
@@ -2679,6 +2679,22 @@
   },
   {
     "redirect": {
+      "source_url": "preview.wafer.space/pr-139/about/",
+      "target_url": "https://preview.wafer.space/pr-139/about",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-139/about/index.html",
+      "target_url": "https://preview.wafer.space/pr-139/about",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
       "source_url": "preview.wafer.space/pr-139/amphour25",
       "target_url": "https://theamphour.com/703-building-wafer-space-with-tim-ansell/",
       "status_code": 302,
@@ -2777,6 +2793,22 @@
   },
   {
     "redirect": {
+      "source_url": "preview.wafer.space/pr-139/design-help/",
+      "target_url": "https://preview.wafer.space/pr-139/design-help",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-139/design-help/index.html",
+      "target_url": "https://preview.wafer.space/pr-139/design-help",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
       "source_url": "preview.wafer.space/pr-139/discord",
       "target_url": "https://discord.gg/43y2t53jpE",
       "status_code": 302,
@@ -2830,7 +2862,39 @@
   },
   {
     "redirect": {
+      "source_url": "preview.wafer.space/pr-139/faq/",
+      "target_url": "https://preview.wafer.space/pr-139/faq",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-139/faq/index.html",
+      "target_url": "https://preview.wafer.space/pr-139/faq",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
       "source_url": "preview.wafer.space/pr-139/free.html",
+      "target_url": "https://preview.wafer.space/pr-139/free",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-139/free/",
+      "target_url": "https://preview.wafer.space/pr-139/free",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-139/free/index.html",
       "target_url": "https://preview.wafer.space/pr-139/free",
       "status_code": 302,
       "preserve_query_string": true
@@ -3056,6 +3120,38 @@
     "redirect": {
       "source_url": "preview.wafer.space/pr-139/help.html",
       "target_url": "https://preview.wafer.space/pr-139/help",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-139/help/",
+      "target_url": "https://preview.wafer.space/pr-139/help",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-139/help/index.html",
+      "target_url": "https://preview.wafer.space/pr-139/help",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-139/how",
+      "target_url": "https://preview.wafer.space/pr-139/technology",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-139/how.html",
+      "target_url": "https://preview.wafer.space/pr-139/technology",
       "status_code": 302,
       "preserve_query_string": true
     }
@@ -3346,6 +3442,22 @@
   },
   {
     "redirect": {
+      "source_url": "preview.wafer.space/pr-139/price/",
+      "target_url": "https://preview.wafer.space/pr-139/price",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-139/price/index.html",
+      "target_url": "https://preview.wafer.space/pr-139/price",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
       "source_url": "preview.wafer.space/pr-139/racquet26",
       "target_url": "https://docs.google.com/presentation/d/1oHlVgYfc4DIex-FJgZ7V_o6JmpdAFVFnXjwY9eIfhAE/edit?slide=id.gc6f73a04f_0_0#slide=id.gc6f73a04f_0_0",
       "status_code": 302
@@ -3392,6 +3504,22 @@
   {
     "redirect": {
       "source_url": "preview.wafer.space/pr-139/technology.html",
+      "target_url": "https://preview.wafer.space/pr-139/technology",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-139/technology/",
+      "target_url": "https://preview.wafer.space/pr-139/technology",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-139/technology/index.html",
       "target_url": "https://preview.wafer.space/pr-139/technology",
       "status_code": 302,
       "preserve_query_string": true
