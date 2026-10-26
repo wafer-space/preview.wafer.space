@@ -1,9 +1,9 @@
 [
   {
-    "comment": "v0.0-546 2009cd7",
+    "comment": "v0.0-547 88ce0c3",
     "redirect": {
       "source_url": "preview.wafer.space/revision",
-      "target_url": "https://github.com/wafer-space/wafer-space.github.io/commit/2009cd7d30f9028320a61477b27b0a826e921bee",
+      "target_url": "https://github.com/wafer-space/wafer-space.github.io/commit/88ce0c3902f14393e952ed70034f6692e3850df5",
       "status_code": 302
     }
   },
@@ -3849,6 +3849,22 @@
   },
   {
     "redirect": {
+      "source_url": "preview.wafer.space/pr-158/about/",
+      "target_url": "https://preview.wafer.space/pr-158/about",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-158/about/index.html",
+      "target_url": "https://preview.wafer.space/pr-158/about",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
       "source_url": "preview.wafer.space/pr-158/amphour25",
       "target_url": "https://theamphour.com/703-building-wafer-space-with-tim-ansell/",
       "status_code": 302,
@@ -3947,6 +3963,22 @@
   },
   {
     "redirect": {
+      "source_url": "preview.wafer.space/pr-158/design-help/",
+      "target_url": "https://preview.wafer.space/pr-158/design-help",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-158/design-help/index.html",
+      "target_url": "https://preview.wafer.space/pr-158/design-help",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
       "source_url": "preview.wafer.space/pr-158/discord",
       "target_url": "https://discord.gg/43y2t53jpE",
       "status_code": 302,
@@ -4000,7 +4032,39 @@
   },
   {
     "redirect": {
+      "source_url": "preview.wafer.space/pr-158/faq/",
+      "target_url": "https://preview.wafer.space/pr-158/faq",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-158/faq/index.html",
+      "target_url": "https://preview.wafer.space/pr-158/faq",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
       "source_url": "preview.wafer.space/pr-158/free.html",
+      "target_url": "https://preview.wafer.space/pr-158/free",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-158/free/",
+      "target_url": "https://preview.wafer.space/pr-158/free",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-158/free/index.html",
       "target_url": "https://preview.wafer.space/pr-158/free",
       "status_code": 302,
       "preserve_query_string": true
@@ -4226,6 +4290,38 @@
     "redirect": {
       "source_url": "preview.wafer.space/pr-158/help.html",
       "target_url": "https://preview.wafer.space/pr-158/help",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-158/help/",
+      "target_url": "https://preview.wafer.space/pr-158/help",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-158/help/index.html",
+      "target_url": "https://preview.wafer.space/pr-158/help",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-158/how",
+      "target_url": "https://preview.wafer.space/pr-158/technology",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-158/how.html",
+      "target_url": "https://preview.wafer.space/pr-158/technology",
       "status_code": 302,
       "preserve_query_string": true
     }
@@ -4516,6 +4612,22 @@
   },
   {
     "redirect": {
+      "source_url": "preview.wafer.space/pr-158/price/",
+      "target_url": "https://preview.wafer.space/pr-158/price",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-158/price/index.html",
+      "target_url": "https://preview.wafer.space/pr-158/price",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
       "source_url": "preview.wafer.space/pr-158/racquet26",
       "target_url": "https://docs.google.com/presentation/d/1oHlVgYfc4DIex-FJgZ7V_o6JmpdAFVFnXjwY9eIfhAE/edit?slide=id.gc6f73a04f_0_0#slide=id.gc6f73a04f_0_0",
       "status_code": 302
@@ -4537,7 +4649,143 @@
   },
   {
     "redirect": {
+      "source_url": "preview.wafer.space/pr-158/research/papers/180nm",
+      "target_url": "https://docs.google.com/spreadsheets/d/1iPfSN9yspyovaxq8oBqSr12wQNFDHGDdvTnJ6tjuwDA/edit",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-158/research/papers/180nm/",
+      "target_url": "https://docs.google.com/spreadsheets/d/1iPfSN9yspyovaxq8oBqSr12wQNFDHGDdvTnJ6tjuwDA/edit",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-158/research/papers/180nm/index.html",
+      "target_url": "https://docs.google.com/spreadsheets/d/1iPfSN9yspyovaxq8oBqSr12wQNFDHGDdvTnJ6tjuwDA/edit",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-158/research/papers/fpga-ip",
+      "target_url": "https://docs.google.com/spreadsheets/d/1CzRUJP1NMW-9xAxQxuSkH3x-9rHghaS2U0Y48i-caf0/edit",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-158/research/papers/fpga-ip/",
+      "target_url": "https://docs.google.com/spreadsheets/d/1CzRUJP1NMW-9xAxQxuSkH3x-9rHghaS2U0Y48i-caf0/edit",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-158/research/papers/fpga-ip/index.html",
+      "target_url": "https://docs.google.com/spreadsheets/d/1CzRUJP1NMW-9xAxQxuSkH3x-9rHghaS2U0Y48i-caf0/edit",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-158/research/papers/fpga-tooling",
+      "target_url": "https://docs.google.com/spreadsheets/d/1ThPCW9OZb2JUCvlGX5JSllCsdFSzMNoY9lmKKBI2nYQ/edit",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-158/research/papers/fpga-tooling/",
+      "target_url": "https://docs.google.com/spreadsheets/d/1ThPCW9OZb2JUCvlGX5JSllCsdFSzMNoY9lmKKBI2nYQ/edit",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-158/research/papers/fpga-tooling/index.html",
+      "target_url": "https://docs.google.com/spreadsheets/d/1ThPCW9OZb2JUCvlGX5JSllCsdFSzMNoY9lmKKBI2nYQ/edit",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-158/research/papers/open-pdks",
+      "target_url": "https://docs.google.com/spreadsheets/d/1rnYLgN1HiMaoYCYaylvfCamYu_8skDzefw1K_RzycYw/edit",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-158/research/papers/open-pdks/",
+      "target_url": "https://docs.google.com/spreadsheets/d/1rnYLgN1HiMaoYCYaylvfCamYu_8skDzefw1K_RzycYw/edit",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-158/research/papers/open-pdks/index.html",
+      "target_url": "https://docs.google.com/spreadsheets/d/1rnYLgN1HiMaoYCYaylvfCamYu_8skDzefw1K_RzycYw/edit",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-158/research/papers/open-tapeouts",
+      "target_url": "https://docs.google.com/spreadsheets/d/1FnvCsk6R_SQZfqlJ2hrF43pzV0cVuwTJ28z773s_1fI/edit",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-158/research/papers/open-tapeouts/",
+      "target_url": "https://docs.google.com/spreadsheets/d/1FnvCsk6R_SQZfqlJ2hrF43pzV0cVuwTJ28z773s_1fI/edit",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-158/research/papers/open-tapeouts/index.html",
+      "target_url": "https://docs.google.com/spreadsheets/d/1FnvCsk6R_SQZfqlJ2hrF43pzV0cVuwTJ28z773s_1fI/edit",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
       "source_url": "preview.wafer.space/pr-158/technology.html",
+      "target_url": "https://preview.wafer.space/pr-158/technology",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-158/technology/",
+      "target_url": "https://preview.wafer.space/pr-158/technology",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-158/technology/index.html",
       "target_url": "https://preview.wafer.space/pr-158/technology",
       "status_code": 302,
       "preserve_query_string": true
