@@ -155,13 +155,37 @@ $(document).ready(function() {
 	/*	ONEPAGE SMOOTH SCROLL
 	/*-----------------------------------------------------------------------------------*/
 	$(function() {
-		setTimeout(function() {
-			if (location.hash) {
-				window.scrollTo(0, 0);
-				var target = location.hash.split('#');
-				smoothScrollTo($('#' + target[1]));
+		// Opening a page at a #fragment: the browser jumps to the target before
+		// the images above it have a size, so they push it down as they load.
+		// Re-align with each image load until the visitor scrolls for themselves.
+		// scrollIntoView honours the target's scroll-margin-top.
+		var hashTarget = null;
+		try {
+			hashTarget = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+		} catch (e) {
+			// Malformed %-escape in the fragment: nothing to align to
+		}
+		if (hashTarget) {
+			var visitorScrolled = false;
+			$(window).one('wheel touchstart keydown mousedown', function() {
+				visitorScrolled = true;
+			});
+			var realign = function() {
+				if (!visitorScrolled) {
+					hashTarget.scrollIntoView({ block: 'start', behavior: 'instant' });
+				}
+			};
+			$('img').each(function() {
+				if (!this.complete) {
+					$(this).one('load error', realign);
+				}
+			});
+			if (document.readyState === 'complete') {
+				realign();
+			} else {
+				$(window).one('load', realign);
 			}
-		}, 1);
+		}
 		$('a.scroll[href*="#"]:not([href="#"])').on('click', function() {
 			if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
 				smoothScrollTo($(this.hash));
