@@ -1,9 +1,9 @@
 [
   {
-    "comment": "v0.0-561 3c62422",
+    "comment": "v0.0-562 11c4d34",
     "redirect": {
       "source_url": "preview.wafer.space/revision",
-      "target_url": "https://github.com/wafer-space/wafer-space.github.io/commit/3c624221fb387467a7b15902027ab55db60c5010",
+      "target_url": "https://github.com/wafer-space/wafer-space.github.io/commit/11c4d3448e9986915da11a0d2433593c9754d438",
       "status_code": 302
     }
   },
@@ -4853,6 +4853,1024 @@
   {
     "redirect": {
       "source_url": "preview.wafer.space/pr-139/tsri26/index.html",
+      "target_url": "https://docs.google.com/presentation/d/e/2PACX-1vSq7LHYVNLKqVNTeTo2HjW1YTte4D013nCKtIm_KcPNQrQ-xpJtGbTAtxL3Z-83VDDBLU9549V3OTY8/pub?start=false&loop=false&delayms=3000",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/about.html",
+      "target_url": "https://preview.wafer.space/pr-145/about",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/about/",
+      "target_url": "https://preview.wafer.space/pr-145/about",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/about/index.html",
+      "target_url": "https://preview.wafer.space/pr-145/about",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/amphour25",
+      "target_url": "https://theamphour.com/703-building-wafer-space-with-tim-ansell/",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/amphour25/",
+      "target_url": "https://theamphour.com/703-building-wafer-space-with-tim-ansell/",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/amphour25/index.html",
+      "target_url": "https://theamphour.com/703-building-wafer-space-with-tim-ansell/",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/and-td26",
+      "target_url": "https://anfroholic.github.io/teardown2026_talk",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/and-td26/",
+      "target_url": "https://anfroholic.github.io/teardown2026_talk",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/and-td26/index.html",
+      "target_url": "https://anfroholic.github.io/teardown2026_talk",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/auc26",
+      "target_url": "https://docs.google.com/presentation/d/e/2PACX-1vT01LbUFhJ4z637gCMlcujCXkiJ0YgOBS_I4cfeSnpiu5y9B_g2XS0MvlmHd6CTxiVI5XqAFCUm79Du/pub?start=false&loop=false&delayms=3000",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/auc26/",
+      "target_url": "https://docs.google.com/presentation/d/e/2PACX-1vT01LbUFhJ4z637gCMlcujCXkiJ0YgOBS_I4cfeSnpiu5y9B_g2XS0MvlmHd6CTxiVI5XqAFCUm79Du/pub?start=false&loop=false&delayms=3000",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/auc26/index.html",
+      "target_url": "https://docs.google.com/presentation/d/e/2PACX-1vT01LbUFhJ4z637gCMlcujCXkiJ0YgOBS_I4cfeSnpiu5y9B_g2XS0MvlmHd6CTxiVI5XqAFCUm79Du/pub?start=false&loop=false&delayms=3000",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/coscup26",
+      "target_url": "https://docs.google.com/presentation/d/e/2PACX-1vT9J5AxZSaVUPbv3xGf3o4g-tJy-yXEvDwXGfWB_1aSncY_XAflzJ8H5KoesU8UgJZ-Qz3J4BsYde2h/pub?start=true&loop=true&delayms=3000",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/coscup26/",
+      "target_url": "https://docs.google.com/presentation/d/e/2PACX-1vT9J5AxZSaVUPbv3xGf3o4g-tJy-yXEvDwXGfWB_1aSncY_XAflzJ8H5KoesU8UgJZ-Qz3J4BsYde2h/pub?start=true&loop=true&delayms=3000",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/coscup26/index.html",
+      "target_url": "https://docs.google.com/presentation/d/e/2PACX-1vT9J5AxZSaVUPbv3xGf3o4g-tJy-yXEvDwXGfWB_1aSncY_XAflzJ8H5KoesU8UgJZ-Qz3J4BsYde2h/pub?start=true&loop=true&delayms=3000",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/design-help.html",
+      "target_url": "https://preview.wafer.space/pr-145/design-help",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/design-help/",
+      "target_url": "https://preview.wafer.space/pr-145/design-help",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/design-help/index.html",
+      "target_url": "https://preview.wafer.space/pr-145/design-help",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/discord",
+      "target_url": "https://discord.gg/43y2t53jpE",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/discord/",
+      "target_url": "https://discord.gg/43y2t53jpE",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/discord/index.html",
+      "target_url": "https://discord.gg/43y2t53jpE",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/du26",
+      "target_url": "https://docs.google.com/presentation/d/e/2PACX-1vTS0lbAE_MwKedYGZtOuDhNeqGTjyusWtNFIHEtxZDRfiyJ3_dYpuWihOazWapcCcLUS-qa6VhKWHD5/pub?start=true&loop=false&delayms=3000",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/du26/",
+      "target_url": "https://docs.google.com/presentation/d/e/2PACX-1vTS0lbAE_MwKedYGZtOuDhNeqGTjyusWtNFIHEtxZDRfiyJ3_dYpuWihOazWapcCcLUS-qa6VhKWHD5/pub?start=true&loop=false&delayms=3000",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/du26/index.html",
+      "target_url": "https://docs.google.com/presentation/d/e/2PACX-1vTS0lbAE_MwKedYGZtOuDhNeqGTjyusWtNFIHEtxZDRfiyJ3_dYpuWihOazWapcCcLUS-qa6VhKWHD5/pub?start=true&loop=false&delayms=3000",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/faq.html",
+      "target_url": "https://preview.wafer.space/pr-145/faq",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/faq/",
+      "target_url": "https://preview.wafer.space/pr-145/faq",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/faq/index.html",
+      "target_url": "https://preview.wafer.space/pr-145/faq",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/free.html",
+      "target_url": "https://preview.wafer.space/pr-145/free",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/free/",
+      "target_url": "https://preview.wafer.space/pr-145/free",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/free/index.html",
+      "target_url": "https://preview.wafer.space/pr-145/free",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/gatearray-v1",
+      "target_url": "https://docs.google.com/document/d/1fs6V-7rEOaixsN88ZM_rbp1WFtheEz0K0Ui6tlUtnBk/edit?tab=t.0",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/gatearray-v1/",
+      "target_url": "https://docs.google.com/document/d/1fs6V-7rEOaixsN88ZM_rbp1WFtheEz0K0Ui6tlUtnBk/edit?tab=t.0",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/gatearray-v1/index.html",
+      "target_url": "https://docs.google.com/document/d/1fs6V-7rEOaixsN88ZM_rbp1WFtheEz0K0Ui6tlUtnBk/edit?tab=t.0",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/gf180",
+      "target_url": "https://docs.google.com/document/d/1lrMhid2jS-c8bI_PZVREyryfDxO88WH4Us-1_qfQWWI/edit?tab=t.0",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/gf180/",
+      "target_url": "https://docs.google.com/document/d/1lrMhid2jS-c8bI_PZVREyryfDxO88WH4Us-1_qfQWWI/edit?tab=t.0",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/gf180/index.html",
+      "target_url": "https://docs.google.com/document/d/1lrMhid2jS-c8bI_PZVREyryfDxO88WH4Us-1_qfQWWI/edit?tab=t.0",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/gf180mcu-dd",
+      "target_url": "https://docs.google.com/document/d/1kyo9Qcsu0RMXwUS2woMCOvf14YvA0IqpgDkZmIRFZpc/edit?tab=t.0#heading=h.q5ve6uqua6eq",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/gf180mcu-dd/",
+      "target_url": "https://docs.google.com/document/d/1kyo9Qcsu0RMXwUS2woMCOvf14YvA0IqpgDkZmIRFZpc/edit?tab=t.0#heading=h.q5ve6uqua6eq",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/gf180mcu-dd/index.html",
+      "target_url": "https://docs.google.com/document/d/1kyo9Qcsu0RMXwUS2woMCOvf14YvA0IqpgDkZmIRFZpc/edit?tab=t.0#heading=h.q5ve6uqua6eq",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/gf180mcu-efuses",
+      "target_url": "https://docs.google.com/document/d/1bGF8TQp7na2P_vwIFdlb45zyc3E4EtNohZP59maRQ4g/edit?tab=t.0",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/gf180mcu-efuses/",
+      "target_url": "https://docs.google.com/document/d/1bGF8TQp7na2P_vwIFdlb45zyc3E4EtNohZP59maRQ4g/edit?tab=t.0",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/gf180mcu-efuses/index.html",
+      "target_url": "https://docs.google.com/document/d/1bGF8TQp7na2P_vwIFdlb45zyc3E4EtNohZP59maRQ4g/edit?tab=t.0",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/gf180mcu-projects",
+      "target_url": "https://docs.google.com/document/d/1kyo9Qcsu0RMXwUS2woMCOvf14YvA0IqpgDkZmIRFZpc/edit?tab=t.0#heading=h.q5ve6uqua6eq",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/gf180mcu-projects/",
+      "target_url": "https://docs.google.com/document/d/1kyo9Qcsu0RMXwUS2woMCOvf14YvA0IqpgDkZmIRFZpc/edit?tab=t.0#heading=h.q5ve6uqua6eq",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/gf180mcu-projects/index.html",
+      "target_url": "https://docs.google.com/document/d/1kyo9Qcsu0RMXwUS2woMCOvf14YvA0IqpgDkZmIRFZpc/edit?tab=t.0#heading=h.q5ve6uqua6eq",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/gf180mcu-run-1",
+      "target_url": "https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/gf180mcu-run-1/",
+      "target_url": "https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/gf180mcu-run-1/index.html",
+      "target_url": "https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/gf180mcu-run-2",
+      "target_url": "https://www.crowdsupply.com/wafer-space/gf180mcu-run-2/",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/gf180mcu-run-2/",
+      "target_url": "https://www.crowdsupply.com/wafer-space/gf180mcu-run-2/",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/gf180mcu-run-2/index.html",
+      "target_url": "https://www.crowdsupply.com/wafer-space/gf180mcu-run-2/",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/gf180mcu-sram",
+      "target_url": "https://docs.google.com/spreadsheets/d/1fW5ecBsLSec4hXBMaOjMUHQGslm4y-QUILgrxqS8MpA/edit?gid=0#gid=0",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/gf180mcu-sram/",
+      "target_url": "https://docs.google.com/spreadsheets/d/1fW5ecBsLSec4hXBMaOjMUHQGslm4y-QUILgrxqS8MpA/edit?gid=0#gid=0",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/gf180mcu-sram/index.html",
+      "target_url": "https://docs.google.com/spreadsheets/d/1fW5ecBsLSec4hXBMaOjMUHQGslm4y-QUILgrxqS8MpA/edit?gid=0#gid=0",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/gf180mcu-stdcells",
+      "target_url": "https://docs.google.com/document/d/1vQCrkIvE0MdizFUSRD8Sxo-BBnwj0SztJd-1aU5nRRs/edit?tab=t.0",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/gf180mcu-stdcells/",
+      "target_url": "https://docs.google.com/document/d/1vQCrkIvE0MdizFUSRD8Sxo-BBnwj0SztJd-1aU5nRRs/edit?tab=t.0",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/gf180mcu-stdcells/index.html",
+      "target_url": "https://docs.google.com/document/d/1vQCrkIvE0MdizFUSRD8Sxo-BBnwj0SztJd-1aU5nRRs/edit?tab=t.0",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/had26",
+      "target_url": "https://docs.google.com/presentation/d/e/2PACX-1vSIp-nl26lQNG4wBcBrugfK5kufXaklUahN7SuZD1FF2x4t_OhzhsFNubzjEifljcrYyV_2I-wBbDLQ/pub?start=false&loop=false&delayms=3000",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/had26/",
+      "target_url": "https://docs.google.com/presentation/d/e/2PACX-1vSIp-nl26lQNG4wBcBrugfK5kufXaklUahN7SuZD1FF2x4t_OhzhsFNubzjEifljcrYyV_2I-wBbDLQ/pub?start=false&loop=false&delayms=3000",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/had26/index.html",
+      "target_url": "https://docs.google.com/presentation/d/e/2PACX-1vSIp-nl26lQNG4wBcBrugfK5kufXaklUahN7SuZD1FF2x4t_OhzhsFNubzjEifljcrYyV_2I-wBbDLQ/pub?start=false&loop=false&delayms=3000",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/help.html",
+      "target_url": "https://preview.wafer.space/pr-145/help",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/help/",
+      "target_url": "https://preview.wafer.space/pr-145/help",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/help/index.html",
+      "target_url": "https://preview.wafer.space/pr-145/help",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/how",
+      "target_url": "https://preview.wafer.space/pr-145/technology",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/how.html",
+      "target_url": "https://preview.wafer.space/pr-145/technology",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/hw25",
+      "target_url": "https://docs.google.com/presentation/d/e/2PACX-1vSq8qtKm6voBDKO27uuLvoTJr0m7SLP5KEmbZUDTmpDa-1DJNEUNaNDqHxivJKDJTVpffqHtc_LAZoZ/pub?start=false&loop=false&delayms=3000",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/hw25/",
+      "target_url": "https://docs.google.com/presentation/d/e/2PACX-1vSq8qtKm6voBDKO27uuLvoTJr0m7SLP5KEmbZUDTmpDa-1DJNEUNaNDqHxivJKDJTVpffqHtc_LAZoZ/pub?start=false&loop=false&delayms=3000",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/hw25/index.html",
+      "target_url": "https://docs.google.com/presentation/d/e/2PACX-1vSq8qtKm6voBDKO27uuLvoTJr0m7SLP5KEmbZUDTmpDa-1DJNEUNaNDqHxivJKDJTVpffqHtc_LAZoZ/pub?start=false&loop=false&delayms=3000",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/hw26",
+      "target_url": "https://docs.google.com/presentation/d/e/2PACX-1vTxg2AKWBO8AtXJ8W0ZIVHcHbcL_nsOZp-Yu2oOwilfjrGG2jNafn_SvngVmGArcDI0NQQNj9Yxr8IZ/pub?start=false&loop=false&delayms=3000",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/hw26/",
+      "target_url": "https://docs.google.com/presentation/d/e/2PACX-1vTxg2AKWBO8AtXJ8W0ZIVHcHbcL_nsOZp-Yu2oOwilfjrGG2jNafn_SvngVmGArcDI0NQQNj9Yxr8IZ/pub?start=false&loop=false&delayms=3000",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/hw26/index.html",
+      "target_url": "https://docs.google.com/presentation/d/e/2PACX-1vTxg2AKWBO8AtXJ8W0ZIVHcHbcL_nsOZp-Yu2oOwilfjrGG2jNafn_SvngVmGArcDI0NQQNj9Yxr8IZ/pub?start=false&loop=false&delayms=3000",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/latchup25",
+      "target_url": "https://docs.google.com/presentation/d/e/2PACX-1vR3n4AlTw3b6LRgNY82UZ63RM29jdp2DoLwhI-b7m2XkAuLZlWIPBg1BxnaIJQesk6seqtbBJCke1am/pub?start=true&loop=true&delayms=3000",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/latchup25/",
+      "target_url": "https://docs.google.com/presentation/d/e/2PACX-1vR3n4AlTw3b6LRgNY82UZ63RM29jdp2DoLwhI-b7m2XkAuLZlWIPBg1BxnaIJQesk6seqtbBJCke1am/pub?start=true&loop=true&delayms=3000",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/latchup25/index.html",
+      "target_url": "https://docs.google.com/presentation/d/e/2PACX-1vR3n4AlTw3b6LRgNY82UZ63RM29jdp2DoLwhI-b7m2XkAuLZlWIPBg1BxnaIJQesk6seqtbBJCke1am/pub?start=true&loop=true&delayms=3000",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/matrix",
+      "target_url": "https://matrix.to/#/#gf180mcu:fossi-chat.org",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/matrix/",
+      "target_url": "https://matrix.to/#/#gf180mcu:fossi-chat.org",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/matrix/index.html",
+      "target_url": "https://matrix.to/#/#gf180mcu:fossi-chat.org",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/news/page/2",
+      "target_url": "https://preview.wafer.space/pr-145/news",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/news/page/2/",
+      "target_url": "https://preview.wafer.space/pr-145/news",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/news/page/2/index.html",
+      "target_url": "https://preview.wafer.space/pr-145/news",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/news/page/3",
+      "target_url": "https://preview.wafer.space/pr-145/news",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/news/page/3/",
+      "target_url": "https://preview.wafer.space/pr-145/news",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/news/page/3/index.html",
+      "target_url": "https://preview.wafer.space/pr-145/news",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/news/page/4",
+      "target_url": "https://preview.wafer.space/pr-145/news",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/news/page/4/",
+      "target_url": "https://preview.wafer.space/pr-145/news",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/news/page/4/index.html",
+      "target_url": "https://preview.wafer.space/pr-145/news",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/news/page/5",
+      "target_url": "https://preview.wafer.space/pr-145/news",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/news/page/5/",
+      "target_url": "https://preview.wafer.space/pr-145/news",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/news/page/5/index.html",
+      "target_url": "https://preview.wafer.space/pr-145/news",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/news/page/6",
+      "target_url": "https://preview.wafer.space/pr-145/news",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/news/page/6/",
+      "target_url": "https://preview.wafer.space/pr-145/news",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/news/page/6/index.html",
+      "target_url": "https://preview.wafer.space/pr-145/news",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/news/page/7",
+      "target_url": "https://preview.wafer.space/pr-145/news",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/news/page/7/",
+      "target_url": "https://preview.wafer.space/pr-145/news",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/news/page/7/index.html",
+      "target_url": "https://preview.wafer.space/pr-145/news",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/news/page/8",
+      "target_url": "https://preview.wafer.space/pr-145/news",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/news/page/8/",
+      "target_url": "https://preview.wafer.space/pr-145/news",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/news/page/8/index.html",
+      "target_url": "https://preview.wafer.space/pr-145/news",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/openfasoc25",
+      "target_url": "https://siliconpr0n.org/archive/doku.php?id=mcmaster:efabless:gf180mcu-mpw18h1-18100004",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/openfasoc25/",
+      "target_url": "https://siliconpr0n.org/archive/doku.php?id=mcmaster:efabless:gf180mcu-mpw18h1-18100004",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/openfasoc25/index.html",
+      "target_url": "https://siliconpr0n.org/archive/doku.php?id=mcmaster:efabless:gf180mcu-mpw18h1-18100004",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/price.html",
+      "target_url": "https://preview.wafer.space/pr-145/price",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/price/",
+      "target_url": "https://preview.wafer.space/pr-145/price",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/price/index.html",
+      "target_url": "https://preview.wafer.space/pr-145/price",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/racquet26",
+      "target_url": "https://docs.google.com/presentation/d/1oHlVgYfc4DIex-FJgZ7V_o6JmpdAFVFnXjwY9eIfhAE/edit?slide=id.gc6f73a04f_0_0#slide=id.gc6f73a04f_0_0",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/racquet26/",
+      "target_url": "https://docs.google.com/presentation/d/1oHlVgYfc4DIex-FJgZ7V_o6JmpdAFVFnXjwY9eIfhAE/edit?slide=id.gc6f73a04f_0_0#slide=id.gc6f73a04f_0_0",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/racquet26/index.html",
+      "target_url": "https://docs.google.com/presentation/d/1oHlVgYfc4DIex-FJgZ7V_o6JmpdAFVFnXjwY9eIfhAE/edit?slide=id.gc6f73a04f_0_0#slide=id.gc6f73a04f_0_0",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/research/papers/180nm",
+      "target_url": "https://docs.google.com/spreadsheets/d/1iPfSN9yspyovaxq8oBqSr12wQNFDHGDdvTnJ6tjuwDA/edit",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/research/papers/180nm/",
+      "target_url": "https://docs.google.com/spreadsheets/d/1iPfSN9yspyovaxq8oBqSr12wQNFDHGDdvTnJ6tjuwDA/edit",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/research/papers/180nm/index.html",
+      "target_url": "https://docs.google.com/spreadsheets/d/1iPfSN9yspyovaxq8oBqSr12wQNFDHGDdvTnJ6tjuwDA/edit",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/research/papers/fpga-ip",
+      "target_url": "https://docs.google.com/spreadsheets/d/1CzRUJP1NMW-9xAxQxuSkH3x-9rHghaS2U0Y48i-caf0/edit",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/research/papers/fpga-ip/",
+      "target_url": "https://docs.google.com/spreadsheets/d/1CzRUJP1NMW-9xAxQxuSkH3x-9rHghaS2U0Y48i-caf0/edit",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/research/papers/fpga-ip/index.html",
+      "target_url": "https://docs.google.com/spreadsheets/d/1CzRUJP1NMW-9xAxQxuSkH3x-9rHghaS2U0Y48i-caf0/edit",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/research/papers/fpga-tooling",
+      "target_url": "https://docs.google.com/spreadsheets/d/1ThPCW9OZb2JUCvlGX5JSllCsdFSzMNoY9lmKKBI2nYQ/edit",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/research/papers/fpga-tooling/",
+      "target_url": "https://docs.google.com/spreadsheets/d/1ThPCW9OZb2JUCvlGX5JSllCsdFSzMNoY9lmKKBI2nYQ/edit",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/research/papers/fpga-tooling/index.html",
+      "target_url": "https://docs.google.com/spreadsheets/d/1ThPCW9OZb2JUCvlGX5JSllCsdFSzMNoY9lmKKBI2nYQ/edit",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/research/papers/open-pdks",
+      "target_url": "https://docs.google.com/spreadsheets/d/1rnYLgN1HiMaoYCYaylvfCamYu_8skDzefw1K_RzycYw/edit",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/research/papers/open-pdks/",
+      "target_url": "https://docs.google.com/spreadsheets/d/1rnYLgN1HiMaoYCYaylvfCamYu_8skDzefw1K_RzycYw/edit",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/research/papers/open-pdks/index.html",
+      "target_url": "https://docs.google.com/spreadsheets/d/1rnYLgN1HiMaoYCYaylvfCamYu_8skDzefw1K_RzycYw/edit",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/research/papers/open-tapeouts",
+      "target_url": "https://docs.google.com/spreadsheets/d/1FnvCsk6R_SQZfqlJ2hrF43pzV0cVuwTJ28z773s_1fI/edit",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/research/papers/open-tapeouts/",
+      "target_url": "https://docs.google.com/spreadsheets/d/1FnvCsk6R_SQZfqlJ2hrF43pzV0cVuwTJ28z773s_1fI/edit",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/research/papers/open-tapeouts/index.html",
+      "target_url": "https://docs.google.com/spreadsheets/d/1FnvCsk6R_SQZfqlJ2hrF43pzV0cVuwTJ28z773s_1fI/edit",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/technology.html",
+      "target_url": "https://preview.wafer.space/pr-145/technology",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/technology/",
+      "target_url": "https://preview.wafer.space/pr-145/technology",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/technology/index.html",
+      "target_url": "https://preview.wafer.space/pr-145/technology",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/template",
+      "target_url": "https://github.com/wafer-space/gf180mcu-project-template",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/template/",
+      "target_url": "https://github.com/wafer-space/gf180mcu-project-template",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/template/index.html",
+      "target_url": "https://github.com/wafer-space/gf180mcu-project-template",
+      "status_code": 302,
+      "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/tiny-riscv-proof",
+      "target_url": "https://docs.google.com/document/d/1U5tQairqGWx1kK3jr6FB_aSNz2RWzo8jpJg-MWs9UXI/edit?tab=t.0",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/tiny-riscv-proof/",
+      "target_url": "https://docs.google.com/document/d/1U5tQairqGWx1kK3jr6FB_aSNz2RWzo8jpJg-MWs9UXI/edit?tab=t.0",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/tiny-riscv-proof/index.html",
+      "target_url": "https://docs.google.com/document/d/1U5tQairqGWx1kK3jr6FB_aSNz2RWzo8jpJg-MWs9UXI/edit?tab=t.0",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/tsri26",
+      "target_url": "https://docs.google.com/presentation/d/e/2PACX-1vSq7LHYVNLKqVNTeTo2HjW1YTte4D013nCKtIm_KcPNQrQ-xpJtGbTAtxL3Z-83VDDBLU9549V3OTY8/pub?start=false&loop=false&delayms=3000",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/tsri26/",
+      "target_url": "https://docs.google.com/presentation/d/e/2PACX-1vSq7LHYVNLKqVNTeTo2HjW1YTte4D013nCKtIm_KcPNQrQ-xpJtGbTAtxL3Z-83VDDBLU9549V3OTY8/pub?start=false&loop=false&delayms=3000",
+      "status_code": 302
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "preview.wafer.space/pr-145/tsri26/index.html",
       "target_url": "https://docs.google.com/presentation/d/e/2PACX-1vSq7LHYVNLKqVNTeTo2HjW1YTte4D013nCKtIm_KcPNQrQ-xpJtGbTAtxL3Z-83VDDBLU9549V3OTY8/pub?start=false&loop=false&delayms=3000",
       "status_code": 302
     }
