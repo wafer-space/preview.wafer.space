@@ -1,9 +1,9 @@
 [
   {
-    "comment": "v0.0-526-g2009cd7d30f9028320a61477b27b0a826e921bee",
+    "comment": "v0.0-529-gcdb6a2d0f138d7b7ffdb83cc24b25086d1f1419d",
     "redirect": {
       "source_url": "wafer.space/revision",
-      "target_url": "https://github.com/wafer-space/wafer-space.github.io/commit/2009cd7d30f9028320a61477b27b0a826e921bee",
+      "target_url": "https://github.com/wafer-space/wafer-space.github.io/commit/cdb6a2d0f138d7b7ffdb83cc24b25086d1f1419d",
       "status_code": 302
     }
   },

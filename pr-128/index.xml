@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://wafer.space/pr-128/index.xml" rel="self" type="application/atom+xml" /><link href="https://wafer.space/pr-128/" rel="alternate" type="text/html" /><updated>2026-10-26T00:29:36+00:00</updated><id>https://wafer.space/pr-128/index.xml</id><entry><title type="html">wafer.space x Tiny Tapeout - Hackaday 2026 Collaboration</title><link href="https://wafer.space/pr-128/news/ws-tt-hackaday-collab-2026" rel="alternate" type="text/html" title="wafer.space x Tiny Tapeout - Hackaday 2026 Collaboration" /><published>2026-10-14T19:00:00+00:00</published><updated>2026-10-14T19:00:00+00:00</updated><id>https://wafer.space/pr-128/news/ws-tt-hackaday-collab-2026</id><content type="html" xml:base="https://wafer.space/pr-128/news/ws-tt-hackaday-collab-2026"><![CDATA[<h1 id="waferspace-x-tiny-tapeout---hackaday-europe-2026-collaboration">wafer.space x Tiny Tapeout - Hackaday Europe 2026 Collaboration</h1>
-
-<p>Earlier this year the <a href="https://wafer.space">wafer.space</a> team attended Hackaday Europe 2026, and if you did too, then your
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://wafer.space/pr-128/index.xml" rel="self" type="application/atom+xml" /><link href="https://wafer.space/pr-128/" rel="alternate" type="text/html" /><updated>2026-10-27T14:05:48+00:00</updated><id>https://wafer.space/pr-128/index.xml</id><entry><title type="html">wafer.space x Tiny Tapeout - Hackaday 2026 Collaboration</title><link href="https://wafer.space/pr-128/news/ws-tt-hackaday-collab-2026" rel="alternate" type="text/html" title="wafer.space x Tiny Tapeout - Hackaday 2026 Collaboration" /><published>2026-10-14T19:00:00+00:00</published><updated>2026-10-14T19:00:00+00:00</updated><id>https://wafer.space/pr-128/news/ws-tt-hackaday-collab-2026</id><content type="html" xml:base="https://wafer.space/pr-128/news/ws-tt-hackaday-collab-2026"><![CDATA[<p>Earlier this year the <a href="https://wafer.space">wafer.space</a> team attended Hackaday Europe 2026, and if you did too, then your
 swag bag had a bit of open source silicon inside!</p>
 
 <div class="post-gallery light-gallery-wrapper mb-30">
@@ -195,9 +193,15 @@ with a protective transparent epoxy. But not before some pictures!</p>
     </figure>
 </div>
 
-<!--
-TODO video, see CS
--->
+<div>
+    
+        <p class="text-center text-muted mb-10">
+            <small></small>
+        </p>
+    
+    <iframe style="width:100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/OnXY0xpLpRU?start=&amp;end=&amp;autoplay=1&amp;mute=1&amp;playsinline=1&amp;fs=1&amp;disablekb=1&amp;controls=1&amp;loop=1&amp;playlist=OnXY0xpLpRU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+    </iframe>
+</div>
 
 <p>These are then moved into an oven for curing, and a vacuum is pulled to ensure that the epoxy is properly degassed.</p>
 
@@ -219,14 +223,12 @@ TODO video, see CS
 out <a href="/pr-128/news/chip-on-board-progress">our update</a> on it for more close-ups!</p>
 
 <h2 id="get-started-today">Get Started Today</h2>
-<p>Run #3 is in full swing at the moment, so don’t miss your opportunity to tape out. You’ve got until <strong>9 December 2026</strong>
-to purchase a slot, and the submission deadline a week after on <strong>16 December 2026</strong>.</p>
+<p>Tiny Tapeout will be at Pasadena, CA for the <a href="https://hackaday.com/tag/2026-hackaday-supercon/">2026 Hackaday Supercon</a>
+with a bunch more breakout boards — come for a chance of getting your very own!</p>
 
 <p>Read more on our <a href="https://www.crowdsupply.com/wafer-space/gf180mcu-run-3">Crowd Supply</a> page, jump in with our
 <a href="https://github.com/wafer-space/gf180mcu-project-template">project template</a> and join our
-<a href="https://wafer.space/discord">community Discord</a> to chat to other designers and get help.</p>]]></content><author><name>Kristaps Jurkans</name></author><category term="news" /><category term="gf180mcu" /><category term="tiny-tapeout" /><summary type="html"><![CDATA[A look behind the scenes of open source silicon swag made in collaboration with Tiny Tapeout.]]></summary></entry><entry><title type="html">SRAMs on Open Source Silicon</title><link href="https://wafer.space/pr-128/news/srams-on-open-source-silicon" rel="alternate" type="text/html" title="SRAMs on Open Source Silicon" /><published>2026-10-07T12:00:00+00:00</published><updated>2026-10-07T12:00:00+00:00</updated><id>https://wafer.space/pr-128/news/3v3-sram</id><content type="html" xml:base="https://wafer.space/pr-128/news/srams-on-open-source-silicon"><![CDATA[<h1 id="srams-on-open-source-silicon">SRAMs on Open Source Silicon</h1>
-
-<p>In November 2022, three months after the GF180MCU PDK was made open source, someone on the
+<a href="https://wafer.space/discord">community Discord</a> to chat to other designers and get help.</p>]]></content><author><name>Kristaps Jurkans</name></author><category term="news" /><category term="gf180mcu" /><category term="tiny-tapeout" /><summary type="html"><![CDATA[A look behind the scenes of open source silicon swag made in collaboration with Tiny Tapeout.]]></summary></entry><entry><title type="html">SRAMs on Open Source Silicon</title><link href="https://wafer.space/pr-128/news/srams-on-open-source-silicon" rel="alternate" type="text/html" title="SRAMs on Open Source Silicon" /><published>2026-10-07T12:00:00+00:00</published><updated>2026-10-07T12:00:00+00:00</updated><id>https://wafer.space/pr-128/news/3v3-sram</id><content type="html" xml:base="https://wafer.space/pr-128/news/srams-on-open-source-silicon"><![CDATA[<p>In November 2022, three months after the GF180MCU PDK was made open source, someone on the
 <a href="https://web.open-source-silicon.dev/t/5096040/holy-cow-these-gf180-sram-are-huge-compared-to-the-sky130-on">open source silicon forum posted a complaint</a>:</p>
 
 <blockquote>
