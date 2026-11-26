@@ -1,6 +1,24 @@
 [
   
     {
+      "title"    : "wafer.space x Tiny Tapeout - Hackaday 2026 Collaboration",
+      "category" : "",
+      "tags"     : "gf180mcu, tiny-tapeout",
+      "url"      : "/pr-161/news/ws-tt-hackaday-collab-2026",
+      "date"     : "2026-10-14 19:00:00 +0000",
+      "desc"     : "wafer.space x Tiny Tapeout - Hackaday 2026 Collaboration"
+    } ,
+  
+    {
+      "title"    : "SRAMs on Open Source Silicon",
+      "category" : "",
+      "tags"     : "gf180mcu",
+      "url"      : "/pr-161/news/srams-on-open-source-silicon",
+      "date"     : "2026-10-07 12:00:00 +0000",
+      "desc"     : "SRAMs on Open Source Silicon"
+    } ,
+  
+    {
       "title"    : "A Need for Speed: Tholin&#39;s Own Standard Cell Library",
       "category" : "",
       "tags"     : "gf180mcu, tholin, featured-project",

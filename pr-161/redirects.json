@@ -1,9 +1,9 @@
 [
   {
-    "comment": "v0.0-525-g39fafd74ce0d0a1392d0ccebc91cd33a764286e4",
+    "comment": "v0.0-554-ga600dc6b3f97a0991179ceed6ecdce1728fba9e3",
     "redirect": {
       "source_url": "wafer.space/revision",
-      "target_url": "https://github.com/wafer-space/wafer-space.github.io/commit/39fafd74ce0d0a1392d0ccebc91cd33a764286e4",
+      "target_url": "https://github.com/wafer-space/wafer-space.github.io/commit/a600dc6b3f97a0991179ceed6ecdce1728fba9e3",
       "status_code": 302
     }
   },
@@ -148,7 +148,7 @@
   {
     "redirect": {
       "source_url": "wafer.space/discord",
-      "target_url": "https://discord.gg/43y2t53jpE",
+      "target_url": "https://discord.gg/Qphn3AQDB8",
       "status_code": 301,
       "preserve_query_string": true
     }
@@ -156,7 +156,7 @@
   {
     "redirect": {
       "source_url": "wafer.space/discord/",
-      "target_url": "https://discord.gg/43y2t53jpE",
+      "target_url": "https://discord.gg/Qphn3AQDB8",
       "status_code": 301,
       "preserve_query_string": true
     }
@@ -164,7 +164,7 @@
   {
     "redirect": {
       "source_url": "wafer.space/discord/index.html",
-      "target_url": "https://discord.gg/43y2t53jpE",
+      "target_url": "https://discord.gg/Qphn3AQDB8",
       "status_code": 301,
       "preserve_query_string": true
     }
@@ -933,6 +933,48 @@
       "target_url": "https://docs.google.com/spreadsheets/d/1FnvCsk6R_SQZfqlJ2hrF43pzV0cVuwTJ28z773s_1fI/edit",
       "status_code": 301,
       "preserve_query_string": true
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "wafer.space/scifoo26",
+      "target_url": "https://docs.google.com/presentation/d/e/2PACX-1vQp_3o-ml0AwJPDHo3Zmy-s-Epy0ANR4bWLX-IYKseuM4zgrDYkx_N3h3oaynOFz6PuOcdyMaAOn4Zy/pub?start=false&loop=false&delayms=3000",
+      "status_code": 301
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "wafer.space/scifoo26/",
+      "target_url": "https://docs.google.com/presentation/d/e/2PACX-1vQp_3o-ml0AwJPDHo3Zmy-s-Epy0ANR4bWLX-IYKseuM4zgrDYkx_N3h3oaynOFz6PuOcdyMaAOn4Zy/pub?start=false&loop=false&delayms=3000",
+      "status_code": 301
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "wafer.space/scifoo26/index.html",
+      "target_url": "https://docs.google.com/presentation/d/e/2PACX-1vQp_3o-ml0AwJPDHo3Zmy-s-Epy0ANR4bWLX-IYKseuM4zgrDYkx_N3h3oaynOFz6PuOcdyMaAOn4Zy/pub?start=false&loop=false&delayms=3000",
+      "status_code": 301
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "wafer.space/shenzhen26",
+      "target_url": "https://docs.google.com/presentation/d/e/2PACX-1vQYYTSjSmDXkKTKmPHTbPBphuhkvYOIpJbYLideSk2I5NS7ixi14PlPr7wF1pEFmoMQ90fDXxWT3vQK/pub?start=false&loop=false&delayms=3000",
+      "status_code": 301
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "wafer.space/shenzhen26/",
+      "target_url": "https://docs.google.com/presentation/d/e/2PACX-1vQYYTSjSmDXkKTKmPHTbPBphuhkvYOIpJbYLideSk2I5NS7ixi14PlPr7wF1pEFmoMQ90fDXxWT3vQK/pub?start=false&loop=false&delayms=3000",
+      "status_code": 301
+    }
+  },
+  {
+    "redirect": {
+      "source_url": "wafer.space/shenzhen26/index.html",
+      "target_url": "https://docs.google.com/presentation/d/e/2PACX-1vQYYTSjSmDXkKTKmPHTbPBphuhkvYOIpJbYLideSk2I5NS7ixi14PlPr7wF1pEFmoMQ90fDXxWT3vQK/pub?start=false&loop=false&delayms=3000",
+      "status_code": 301
     }
   },
   {
